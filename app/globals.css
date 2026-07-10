@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/*
+  Charte graphique
+  ----------------
+  Navy   #0E1B35  — fond principal, texte sur fond clair
+  Or     #C6A15B  — accent, liens, éléments actifs
+  Crème  #F7F4EC  — fond clair, texte sur fond navy
+
+  Fraunces    → titres
+  Inter       → corps de texte
+  Space Mono  → labels / code / métadonnées
+*/
+
+:root {
+  --color-navy: #0e1b35;
+  --color-navy-light: #16264a; /* surfaces/cards sur fond navy */
+  --color-gold: #c6a15b;
+  --color-gold-dim: #a9875073;
+  --color-cream: #f7f4ec;
+  --color-ink: #10121a; /* texte sur fond clair */
+}
+
+@theme inline {
+  --color-navy: var(--color-navy);
+  --color-navy-light: var(--color-navy-light);
+  --color-gold: var(--color-gold);
+  --color-gold-dim: var(--color-gold-dim);
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-space-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "qcms": [
+    {
+      "id": "suites-numeriques-terminale",
+      "matiere": "mathematiques",
+      "niveau": "terminale",
+      "titre": "Suites numériques",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Une suite $(u_n)$ est dite arithmétique si :",
+          "choix": [
+            "$u_{n+1} = u_n \\times q$",
+            "$u_{n+1} = u_n + r$",
+            "$u_{n+1} = u_n^2$",
+            "$u_{n+1} = \\dfrac{1}{u_n}$"
+          ],
+          "bonneReponse": 1,
+          "explication": "Une suite arithmétique se définit par l'ajout d'une raison constante $r$ à chaque terme : $u_{n+1} = u_n + r$."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Soit $(u_n)$ une suite géométrique de premier terme $u_0 = 2$ et de raison $q = 3$. Quelle est la valeur de $u_3$ ?",
+          "choix": ["$18$", "$54$", "$6$", "$27$"],
+          "bonneReponse": 1,
+          "explication": "$u_n = u_0 \\times q^n$, donc $u_3 = 2 \\times 3^3 = 2 \\times 27 = 54$."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Si $q > 1$, que vaut $\\lim_{n \\to +\\infty} q^n$ ?",
+          "choix": ["$0$", "$1$", "$+\\infty$", "Cela dépend de $q$"],
+          "bonneReponse": 2,
+          "explication": "Pour $q > 1$, la suite géométrique $(q^n)$ diverge vers $+\\infty$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Que dit le théorème de la limite monotone pour une suite croissante et majorée ?",
+          "choix": [
+            "Elle diverge nécessairement vers $+\\infty$",
+            "Elle converge vers une limite finie",
+            "Elle est constante à partir d'un certain rang",
+            "Elle n'admet pas de limite"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le théorème de la limite monotone énonce que toute suite croissante et majorée est convergente (elle admet une limite finie). De même, toute suite décroissante et minorée converge."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Quelle propriété permet de démontrer qu'une propriété $P(n)$ est vraie pour tout $n \\geq n_0$ ?",
+          "choix": [
+            "Le théorème des valeurs intermédiaires",
+            "Le raisonnement par récurrence",
+            "Le théorème de Rolle",
+            "La formule du binôme"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le raisonnement par récurrence permet de démontrer qu'une propriété est vraie pour tout rang $n$, en vérifiant l'initialisation et l'hérédité."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Soit $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = 2u_n + 1$. Que vaut $u_2$ ?",
+          "choix": ["$5$", "$7$", "$3$", "$9$"],
+          "bonneReponse": 1,
+          "explication": "$u_1 = 2 \\times 1 + 1 = 3$, puis $u_2 = 2 \\times 3 + 1 = 7$."
+        },
+        {
+          "id": "q-007",
+          "numero": 7,
+          "question": "Soit $(u_n)$ définie par $u_0 = 2$ et $u_{n+1} = \\dfrac{1}{2}u_n + 3$. On admet que $(u_n)$ converge vers une limite $\\ell$. Quelle est la valeur de $\\ell$ ?",
+          "choix": ["$3$", "$6$", "$2$", "$1$"],
+          "bonneReponse": 1,
+          "explication": "Si $(u_n)$ converge vers $\\ell$, alors $\\ell$ vérifie $\\ell = \\dfrac{1}{2}\\ell + 3$ (point fixe). On résout : $\\dfrac{1}{2}\\ell = 3$, donc $\\ell = 6$."
+        },
+        {
+          "id": "q-008",
+          "numero": 8,
+          "question": "Soit $(u_n)$ une suite telle que, pour tout $n \\geq 1$ : $2 - \\dfrac{1}{n} \\leq u_n \\leq 2 + \\dfrac{1}{n}$. Que peut-on conclure ?",
+          "choix": [
+            "$(u_n)$ diverge vers $+\\infty$",
+            "$(u_n)$ converge vers $2$ (théorème des gendarmes)",
+            "$(u_n)$ est bornée mais n'a pas de limite",
+            "On ne peut rien conclure"
+          ],
+          "bonneReponse": 1,
+          "explication": "Les deux suites encadrantes $2-\\frac1n$ et $2+\\frac1n$ convergent toutes deux vers $2$. D'après le théorème des gendarmes (théorème d'encadrement), $(u_n)$ converge donc aussi vers $2$."
+        }
+      ]
+    }
+  ]
+}

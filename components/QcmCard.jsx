@@ -3,19 +3,29 @@
 import { useState } from "react";
 import "katex/dist/katex.min.css";
 import { renderAvecLatex } from "@/lib/latex";
+import { useProgression } from "@/lib/progression";
 
 /**
  * Affiche une question de QCM avec sélection, correction visuelle et
- * explication dépliable.
+ * explication dépliable. La question est automatiquement marquée comme
+ * "faite" dès qu'une réponse est sélectionnée.
  *
  * @param {Object} props
+ * @param {string} props.qcmId - id du QCM parent (qcm.json > qcms[].id)
  * @param {Object} props.question - un item de qcm.json > qcms[].questions[]
- *   ({ numero, question, choix, bonneReponse, explication })
+ *   ({ id, numero, question, choix, bonneReponse, explication })
  */
-export default function QcmCard({ question }) {
+export default function QcmCard({ qcmId, question }) {
   const [selection, setSelection] = useState(null);
-  const { numero, question: enonce, choix, bonneReponse, explication } =
+  const { id, numero, question: enonce, choix, bonneReponse, explication } =
     question;
+  const { marquerFait } = useProgression();
+  const cle = `qcm:${qcmId}:${id}`;
+
+  function handleSelection(index) {
+    setSelection(index);
+    marquerFait(cle);
+  }
 
   return (
     <div className="rounded-lg border border-gold-dim bg-navy-light p-6">
@@ -34,7 +44,7 @@ export default function QcmCard({ question }) {
             <li key={index}>
               <button
                 type="button"
-                onClick={() => setSelection(index)}
+                onClick={() => handleSelection(index)}
                 className={`w-full rounded-md border px-4 py-2 text-left font-sans text-sm transition-colors ${
                   afficherEtat && estCorrecte
                     ? "border-gold bg-gold/10 text-gold"

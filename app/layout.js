@@ -26,9 +26,13 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata = {
-  title: "Cours particuliers — Maths, Physique-Chimie, Techno",
+  title: {
+    default:
+      "Paul Gibouin — Cours particuliers Maths, Physique-Chimie, Techno",
+    template: "%s | Paul Gibouin",
+  },
   description:
-    "Cours particuliers en mathématiques, physique-chimie et technologie pour collégiens et lycéens, en présentiel et en ligne.",
+    "Cours particuliers en mathématiques, physique-chimie et NSI pour collégiens et lycéens, en présentiel à [TA_VILLE] et en ligne.",
 };
 
 export default function RootLayout({ children }) {

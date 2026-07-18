@@ -1,0 +1,14 @@
+{
+  "codes": [
+    {
+      "code": "DEMO2026",
+      "prenom": "Exemple",
+      "actif": false
+    },
+    {
+      "code": "paul2026",
+      "prenom": "PaulG",
+      "actif": true
+    }
+  ]
+}

@@ -1,27 +1,27 @@
 const PARCOURS = [
   {
-    periode: "2026 – aujourd'hui",
-    titre: "École d'ingénieurs",
-    lieu: "[NOM_ÉCOLE]",
-  },
-  {
-    periode: "2024 - 2026",
-    titre: "Classe préparatoire scientifique MP2I/MPI*",
+    periode: "[ANNÉE-2]–[ANNÉE]",
+    titre: "Classe préparatoire scientifique MPI/MPI*",
     lieu: "Lycée Clemenceau, Nantes",
   },
-  
   {
-    periode: "2021 - 2024",
-    titre: "BAC mention TB",
-    lieu: "Lycée Jean-Dautet - La Rochelle",
+    periode: "[ANNÉE]–aujourd'hui",
+    titre: "École d'ingénieurs",
+    lieu: "[NOM_ÉCOLE]",
   },
 ];
 
 const MATIERES_ENSEIGNEES = [
   "Mathématiques (collège, lycée)",
   "Physique-Chimie (collège, lycée)",
-  "Technologie (collège)",
+  "NSI (spécialité, lycée)",
 ];
+
+export const metadata = {
+  title: "À propos",
+  description:
+    "Parcours, méthode pédagogique et matières enseignées par Paul Gibouin, élève ingénieur passé par une classe préparatoire scientifique MPI/MPI*.",
+};
 
 export default function AProposPage() {
   return (
@@ -31,8 +31,8 @@ export default function AProposPage() {
       <div className="mt-8 flex flex-col gap-5 font-sans text-lg leading-relaxed text-cream/80">
         <p>
           Je m&apos;appelle Paul. Après deux années de classe préparatoire
-          scientifique (MP2I/MPI) au lycée Clemenceau à Nantes,
-          j&apos;intègre une école d&apos;ingénieurs à la rentrée 2026.
+          scientifique (MPI/MPI*) au lycée Clemenceau à Nantes,
+          j&apos;intègre une école d&apos;ingénieurs à la rentrée [ANNÉE].
         </p>
         <p>
           Cette expérience m&apos;a appris une chose essentielle : la
@@ -45,7 +45,7 @@ export default function AProposPage() {
         <p>
           C&apos;est pour ça que je donne des cours particuliers en
           mathématiques et physique-chimie, du collège au lycée, ainsi
-          qu&apos;en technologie pour les collégiens. Mon objectif
+          qu&apos;en NSI pour les lycéens. Mon objectif
           n&apos;est pas de faire du bachotage, mais de reconstruire une
           compréhension solide — pour que les progrès tiennent dans la
           durée.

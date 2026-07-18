@@ -14,10 +14,10 @@ const MATIERES = [
       "Électricité, mécanique, réactions chimiques rendues concrètes.",
   },
   {
-    titre: "Technologie",
-    niveau: "Collège",
+    titre: "NSI",
+    niveau: "Spécialité Lycée",
     description:
-      "Algorithmique, chaînes d'énergie/information, matériaux.",
+      "Python, structures de données, algorithmique, bases de données.",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function AccueilPage() {
         </p>
         <div className="mt-10 flex gap-4">
           <Link
-            href="/tarifs"
+            href="/tarifs#contact"
             className="rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90"
           >
             Réserver un premier cours
@@ -137,7 +137,7 @@ export default function AccueilPage() {
           Places limitées pour un suivi personnalisé.
         </p>
         <Link
-          href="/tarifs"
+          href="/tarifs#contact"
           className="mt-8 inline-block rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90"
         >
           Réserver mon premier cours

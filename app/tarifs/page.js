@@ -1,9 +1,9 @@
-import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 const FORMULES = [
   {
     label: "En ligne (visioconférence)",
-    tarif: "20 € / heure",
+    tarif: "20 – 22 € / heure",
     points: [
       "Cours en visio, matériel interactif partagé à l'écran",
       "Accès inclus à la plateforme d'exercices et QCM",
@@ -12,7 +12,7 @@ const FORMULES = [
   },
   {
     label: "Présentiel",
-    tarif: "22 € / heure",
+    tarif: "25 – 28 € / heure",
     points: [
       "Cours au domicile de l'élève (zone : [ZONE_GÉOGRAPHIQUE])",
       "Support papier et numérique combinés",
@@ -27,6 +27,12 @@ const INFOS = [
   "Premier cours : échange gratuit de 15 min pour définir les objectifs",
   "Modes de paiement : [MODES_PAIEMENT]",
 ];
+
+export const metadata = {
+  title: "Tarifs",
+  description:
+    "Tarifs des cours particuliers avec Paul Gibouin : 20–22€/h en ligne, 25–28€/h en présentiel. Premier échange gratuit.",
+};
 
 export default function TarifsPage() {
   return (
@@ -68,12 +74,16 @@ export default function TarifsPage() {
         ))}
       </ul>
 
-      <Link
-        href="/"
-        className="mt-12 inline-block rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90"
-      >
-        Réserver mon premier cours
-      </Link>
+      <h2 id="contact" className="mt-16 font-display text-2xl text-cream">
+        Réserver un premier échange
+      </h2>
+      <p className="mt-2 font-sans text-cream/70">
+        Remplis ce formulaire, je te réponds sous 48h pour organiser le
+        premier cours.
+      </p>
+      <div className="mt-6">
+        <ContactForm />
+      </div>
     </section>
   );
 }

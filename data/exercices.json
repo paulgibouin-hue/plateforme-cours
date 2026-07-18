@@ -1,1 +1,851 @@
-{"chapitres": [{"id": "equations-second-degre-premiere", "matiere": "mathematiques", "niveau": "premiere", "titre": "Équations du second degré", "rappelCours": ["Forme $ax^2+bx+c=0$ avec $a\\neq 0$. Discriminant $\\Delta=b^2-4ac$.", "$\\Delta>0$ : $x_1=\\dfrac{-b-\\sqrt\\Delta}{2a}$, $x_2=\\dfrac{-b+\\sqrt\\Delta}{2a}$", "$\\Delta=0$ : $x_0=\\dfrac{-b}{2a}$", "$\\Delta<0$ : aucune solution réelle"], "exercices": [{"id": "sd-001", "numero": 1, "titre": "Calcul du discriminant", "difficulte": 1, "enonce": "Pour chaque équation, calculer $\\Delta$ et en déduire le nombre de solutions.\n1. $x^2 - 5x + 6 = 0$\n2. $2x^2 + 3x + 5 = 0$\n3. $x^2 - 6x + 9 = 0$\n4. $-3x^2 + 2x + 1 = 0$", "correction": "1. $\\Delta = 1 > 0$ → deux solutions\n2. $\\Delta = -31 < 0$ → aucune solution\n3. $\\Delta = 0$ → une solution\n4. $\\Delta = 16 > 0$ → deux solutions"}, {"id": "sd-002", "numero": 2, "titre": "Résolution classique", "difficulte": 1, "enonce": "Résoudre dans $\\mathbb{R}$ :\n1. $x^2-3x-4=0$\n2. $2x^2+5x-3=0$\n3. $x^2+4x+4=0$", "correction": "1. $x_1=-1$, $x_2=4$\n2. $x_1=-3$, $x_2=\\dfrac{1}{2}$\n3. $x_0=-2$ (racine double)"}, {"id": "sd-003", "numero": 3, "titre": "Forme canonique", "difficulte": 2, "enonce": "Forme canonique puis résoudre $f(x)=0$ :\n1. $f(x)=x^2-4x+1$\n2. $f(x)=-x^2+2x+3$", "correction": "1. $(x-2)^2-3$ ; $x=2\\pm\\sqrt{3}$\n2. $-(x-1)^2+4$ ; $x=-1$ ou $3$"}, {"id": "sd-004", "numero": 4, "titre": "Problème : aire rectangle", "difficulte": 2, "enonce": "Longueur $=$ largeur $+3$, aire $=40\\text{ cm}^2$. Trouver les dimensions.", "correction": "$x^2+3x-40=0$, $x=5$ → largeur $5\\text{ cm}$, longueur $8\\text{ cm}$"}, {"id": "sd-005", "numero": 5, "titre": "Paramètre", "difficulte": 3, "enonce": "$x^2-2x+m=0$.\n1. Valeurs de $m$ pour 2 solutions.\n2. Résoudre pour $m=-3$.", "correction": "1. $m<1$\n2. $x_1=-1$, $x_2=3$"}]}, {"id": "electricite-brevet", "matiere": "physique", "niveau": "brevet", "titre": "Électricité", "rappelCours": ["$U=RI$ (loi d'Ohm)", "$P=UI$ (puissance)", "$E=Pt$ (énergie)"], "exercices": [{"id": "el-001", "numero": 1, "titre": "Loi d'Ohm simple", "difficulte": 1, "enonce": "$R=220\\ \\Omega$, $U=110\\text{ V}$. Calculer $I$ et $P$.", "correction": "$I=0,5\\text{ A}$, $P=55\\text{ W}$"}, {"id": "el-002", "numero": 2, "titre": "Tension/résistance", "difficulte": 1, "enonce": "$U=230\\text{ V}$, $I=5\\text{ A}$. Calculer $R$ et $P$.", "correction": "$R=46\\ \\Omega$, $P=1150\\text{ W}$"}, {"id": "el-003", "numero": 3, "titre": "Énergie consommée", "difficulte": 2, "enonce": "$P=12\\text{ W}$ pendant $8\\text{ h}$. Énergie et coût à $0,15\\ €/\\text{kWh}$ ?", "correction": "$E=0,096\\text{ kWh}$, coût $=0,0144\\ €$"}, {"id": "el-004", "numero": 4, "titre": "Série/parallèle", "difficulte": 2, "enonce": "$R_1=100\\ \\Omega$, $R_2=150\\ \\Omega$, $U=250\\text{ V}$. Série puis parallèle.", "correction": "Série : $R=250\\ \\Omega$, $I=1\\text{ A}$. Parallèle : $R\\approx60\\ \\Omega$, $I\\approx4,17\\text{ A}$"}, {"id": "el-005", "numero": 5, "titre": "Facture électricité", "difficulte": 3, "enonce": "Frigo $400\\text{ W}$ ($24\\text{ h/j}$), machine $2000\\text{ W}$ ($5\\text{ h/sem}$), télé $150\\text{ W}$ ($4\\text{ h/j}$), sur $30$ jours. Énergie totale et facture à $0,18\\ €/\\text{kWh}$ ?", "correction": "$346\\text{ kWh}$ au total, facture $=62,28\\ €$, frigo $\\approx83\\%$ de la consommation"}]}, {"id": "pythagore-trigonometrie-brevet", "matiere": "mathematiques", "niveau": "brevet", "titre": "Pythagore & Trigonométrie", "rappelCours": ["$a^2+b^2=c^2$", "$\\sin=\\dfrac{\\text{opp}}{\\text{hyp}}$, $\\cos=\\dfrac{\\text{adj}}{\\text{hyp}}$, $\\tan=\\dfrac{\\text{opp}}{\\text{adj}}$", "SOH-CAH-TOA"], "exercices": [{"id": "pt-001", "numero": 1, "titre": "Pythagore simple", "difficulte": 1, "enonce": "$AB=3\\text{ cm}$, $BC=4\\text{ cm}$ (angle droit en $B$). Trouver $AC$.", "correction": "$AC^2=25$, $AC=5\\text{ cm}$"}, {"id": "pt-002", "numero": 2, "titre": "Pythagore : trouver côté", "difficulte": 1, "enonce": "Hypoténuse $=13\\text{ cm}$, côté $=5\\text{ cm}$. Trouver le 3ᵉ côté et l'aire.", "correction": "$b=12\\text{ cm}$, aire $=30\\text{ cm}^2$"}, {"id": "pt-003", "numero": 3, "titre": "Trigo : angle", "difficulte": 2, "enonce": "$AB=6\\text{ cm}$ (côté opposé à $C$), $AC=10\\text{ cm}$ (hypoténuse). Calculer l'angle $C$.", "correction": "$\\sin(C)=0,6$, $C\\approx37°$"}, {"id": "pt-004", "numero": 4, "titre": "Trigo : longueur", "difficulte": 2, "enonce": "Angle $=30°$, hypoténuse $=8\\text{ cm}$. Calculer le côté opposé et le côté adjacent.", "correction": "opposé $=4\\text{ cm}$, adjacent $\\approx6,93\\text{ cm}$"}, {"id": "pt-005", "numero": 5, "titre": "Hauteur tour", "difficulte": 3, "enonce": "Distance $=50\\text{ m}$, angle d'élévation $=35°$. Hauteur et distance au sommet ?", "correction": "$h\\approx35\\text{ m}$, distance $\\approx61\\text{ m}$"}], "note": "Figures SVG disponibles dans la version pièce-jointe précédente sur la page Notion"}, {"id": "reactions-equilibres-bac", "matiere": "chimie", "niveau": "bac", "titre": "Réactions chimiques & Équilibres", "rappelCours": ["$aA+bB \\rightleftharpoons cC+dD$", "$K_c=\\dfrac{[C]^c[D]^d}{[A]^a[B]^b}$", "$n=\\dfrac{m}{M}$, $[X]=\\dfrac{n}{V}$"], "exercices": [{"id": "ch-001", "numero": 1, "titre": "Stoechiométrie", "difficulte": 1, "enonce": "$N_2+3H_2 \\rightleftharpoons 2NH_3$. $5,6\\text{ g}$ de $N_2$ + $3\\text{ g}$ de $H_2$. Réactif limitant et masse de $NH_3$ formée ?", "correction": "$N_2$ limitant, $m(NH_3)=6,8\\text{ g}$"}, {"id": "ch-002", "numero": 2, "titre": "Concentration/dilution", "difficulte": 1, "enonce": "$3,65\\text{ g}$ de $HCl$ dans $100\\text{ mL}$. Concentration, puis dilution de $10\\text{ mL}$ vers $50\\text{ mL}$.", "correction": "$[HCl]=1\\text{ mol/L}$ puis $0,2\\text{ mol/L}$"}, {"id": "ch-003", "numero": 3, "titre": "Constante Kc", "difficulte": 2, "enonce": "$N_2O_4 \\rightleftharpoons 2NO_2$. $[N_2O_4]=0,1$, $[NO_2]=0,4$. Calculer $K_c$ et l'effet d'une augmentation de pression.", "correction": "$K_c=1,6$, déplacement vers la gauche si la pression augmente"}, {"id": "ch-004", "numero": 4, "titre": "Tableau avancement", "difficulte": 2, "enonce": "$A+B \\rightleftharpoons C+D$, $n_0(A)=2$, $n_0(B)=3$, $V=1\\text{ L}$, $[A]_{\\text{éq}}=1$. Calculer $K_c$.", "correction": "$[A]=1$, $[B]=2$, $[C]=1$, $[D]=1$, $K_c=0,5$"}, {"id": "ch-005", "numero": 5, "titre": "Estérification", "difficulte": 3, "enonce": "$5,2\\text{ g}$ d'acide acétique + $6,2\\text{ g}$ d'éthanol, $V=100\\text{ mL}$, $K_c=4$, rendement $70\\%$. Quantité d'ester et d'eau formés ?", "correction": "$n(\\text{ester})=0,061\\text{ mol}$, $[H_2O]=0,61\\text{ mol/L}$"}]}, {"id": "mecanique-newtonienne-bac", "matiere": "physique", "niveau": "bac", "titre": "Mécanique newtonienne", "rappelCours": ["PFD : $\\sum \\vec{F} = m\\vec{a}$ (référentiel galiléen)", "$P=mg$", "$E_p=mgh$, $E_c=\\dfrac12 mv^2$, $E_m=E_c+E_p$"], "exercices": [{"id": "me-001", "numero": 1, "titre": "Chute libre", "difficulte": 1, "enonce": "$h=20\\text{ m}$, chute libre. Durée de chute et vitesse au sol ?", "correction": "$t\\approx2,02\\text{ s}$, $v\\approx19,8\\text{ m/s}$"}, {"id": "me-002", "numero": 2, "titre": "2e loi de Newton", "difficulte": 1, "enonce": "$m=1200\\text{ kg}$, de $0$ à $100\\text{ km/h}$ en $8\\text{ s}$. Accélération et force ?", "correction": "$a\\approx3,47\\text{ m/s}^2$, $F\\approx4164\\text{ N}$"}, {"id": "me-003", "numero": 3, "titre": "Plan incliné", "difficulte": 2, "enonce": "$m=2\\text{ kg}$, plan incliné à $20°$, sans frottement. Montrer que $a=g\\sin\\theta$, puis calculer $a$.", "correction": "$a\\approx3,35\\text{ m/s}^2$"}, {"id": "me-004", "numero": 4, "titre": "MRUV freinage", "difficulte": 2, "enonce": "$a=-2\\text{ m/s}^2$, $v_0=30\\text{ m/s}$. Temps d'arrêt, distance parcourue, arrêt possible avant $200\\text{ m}$ ?", "correction": "$t=15\\text{ s}$, $\\Delta x=225\\text{ m}$, non ($225>200$)"}, {"id": "me-005", "numero": 5, "titre": "Projectile", "difficulte": 3, "enonce": "$h=45\\text{ m}$, $v_0=12\\text{ m/s}$ horizontal. Temps de chute, portée, vitesse à l'impact ?", "correction": "$t\\approx3,03\\text{ s}$, $x\\approx36,4\\text{ m}$, $v\\approx32\\text{ m/s}$"}]}, {"id": "technologie-brevet", "matiere": "technologie", "niveau": "brevet", "titre": "Chaînes d'énergie/information, algorithmique, matériaux", "rappelCours": ["Chaîne énergie : Alimenter → Distribuer → Convertir → Transmettre", "Chaîne information : Acquérir → Traiter → Communiquer", "SI ... ALORS ... SINON ... FIN SI"], "exercices": [{"id": "te-001", "numero": 1, "titre": "Chaînes énergie/information", "difficulte": 1, "enonce": "Lampe vélo à dynamo : dynamo, bouton, LED, roue, capteur de luminosité. Classer chaque élément.", "correction": "Énergie : roue (source), dynamo (convertir), bouton (distribuer), LED (convertir). Information : capteur (acquérir)"}, {"id": "te-002", "numero": 2, "titre": "Algo conditionnelle", "difficulte": 2, "enonce": "Éclairage automatique : SI luminosité $<20$ ALORS ___ SINON ___. Compléter et étudier le cas limite (luminosité $=20$).", "correction": "SI : allumer. SINON : éteindre. Si luminosité $=20$ : condition fausse (inégalité stricte), la lampe reste éteinte."}, {"id": "te-003", "numero": 3, "titre": "Choix matériaux", "difficulte": 2, "enonce": "Cadre de vélo : acier / aluminium / fibre de carbone (masse, résistance, coût). Quel choix pour la course et pour le grand public ?", "correction": "Course : fibre de carbone (léger et résistant). Grand public : acier (moins cher)."}]}]}
+{
+  "chapitres": [
+    {
+      "id": "equations-second-degre-premiere",
+      "matiere": "mathematiques",
+      "niveau": "premiere",
+      "titre": "Équations du second degré",
+      "rappelCours": [
+        "Forme $ax^2+bx+c=0$ avec $a\\neq 0$. Discriminant $\\Delta=b^2-4ac$.",
+        "$\\Delta>0$ : $x_1=\\dfrac{-b-\\sqrt\\Delta}{2a}$, $x_2=\\dfrac{-b+\\sqrt\\Delta}{2a}$",
+        "$\\Delta=0$ : $x_0=\\dfrac{-b}{2a}$",
+        "$\\Delta<0$ : aucune solution réelle"
+      ],
+      "exercices": [
+        {
+          "id": "sd-001",
+          "numero": 1,
+          "titre": "Calcul du discriminant",
+          "difficulte": 1,
+          "enonce": "Pour chaque équation, calculer $\\Delta$ et en déduire le nombre de solutions.\n1. $x^2 - 5x + 6 = 0$\n2. $2x^2 + 3x + 5 = 0$\n3. $x^2 - 6x + 9 = 0$\n4. $-3x^2 + 2x + 1 = 0$",
+          "correction": "1. $\\Delta = 1 > 0$ → deux solutions\n2. $\\Delta = -31 < 0$ → aucune solution\n3. $\\Delta = 0$ → une solution\n4. $\\Delta = 16 > 0$ → deux solutions"
+        },
+        {
+          "id": "sd-002",
+          "numero": 2,
+          "titre": "Résolution classique",
+          "difficulte": 1,
+          "enonce": "Résoudre dans $\\mathbb{R}$ :\n1. $x^2-3x-4=0$\n2. $2x^2+5x-3=0$\n3. $x^2+4x+4=0$",
+          "correction": "1. $x_1=-1$, $x_2=4$\n2. $x_1=-3$, $x_2=\\dfrac{1}{2}$\n3. $x_0=-2$ (racine double)"
+        },
+        {
+          "id": "sd-003",
+          "numero": 3,
+          "titre": "Forme canonique",
+          "difficulte": 2,
+          "enonce": "Forme canonique puis résoudre $f(x)=0$ :\n1. $f(x)=x^2-4x+1$\n2. $f(x)=-x^2+2x+3$",
+          "correction": "1. $(x-2)^2-3$ ; $x=2\\pm\\sqrt{3}$\n2. $-(x-1)^2+4$ ; $x=-1$ ou $3$"
+        },
+        {
+          "id": "sd-004",
+          "numero": 4,
+          "titre": "Problème : aire rectangle",
+          "difficulte": 2,
+          "enonce": "Longueur $=$ largeur $+3$, aire $=40\\text{ cm}^2$. Trouver les dimensions.",
+          "correction": "$x^2+3x-40=0$, $x=5$ → largeur $5\\text{ cm}$, longueur $8\\text{ cm}$"
+        },
+        {
+          "id": "sd-005",
+          "numero": 5,
+          "titre": "Paramètre",
+          "difficulte": 3,
+          "enonce": "$x^2-2x+m=0$.\n1. Valeurs de $m$ pour 2 solutions.\n2. Résoudre pour $m=-3$.",
+          "correction": "1. $m<1$\n2. $x_1=-1$, $x_2=3$"
+        }
+      ]
+    },
+    {
+      "id": "derivation-premiere",
+      "matiere": "mathematiques",
+      "niveau": "premiere",
+      "titre": "Dérivation et étude de fonctions",
+      "rappelCours": [
+        "Nombre dérivé en $a$ : $f'(a)=\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}$",
+        "Dérivées usuelles : $(x^n)'=nx^{n-1}$, $(\\sqrt{x})'=\\dfrac{1}{2\\sqrt{x}}$, $\\left(\\dfrac1x\\right)'=-\\dfrac{1}{x^2}$",
+        "Opérations : $(u+v)'=u'+v'$, $(uv)'=u'v+uv'$, $\\left(\\dfrac uv\\right)'=\\dfrac{u'v-uv'}{v^2}$",
+        "Le signe de $f'$ donne les variations de $f$ : $f'>0$ → $f$ croissante, $f'<0$ → $f$ décroissante"
+      ],
+      "exercices": [
+        {
+          "id": "dv-001",
+          "numero": 1,
+          "titre": "Dérivées usuelles",
+          "difficulte": 1,
+          "enonce": "Calculer $f'(x)$ :\n1. $f(x)=x^3-2x^2+5$\n2. $f(x)=\\dfrac1x+\\sqrt{x}$\n3. $f(x)=3x^2-4x+1$",
+          "correction": "1. $f'(x)=3x^2-4x$\n2. $f'(x)=-\\dfrac{1}{x^2}+\\dfrac{1}{2\\sqrt{x}}$\n3. $f'(x)=6x-4$"
+        },
+        {
+          "id": "dv-002",
+          "numero": 2,
+          "titre": "Dérivée d'un produit",
+          "difficulte": 1,
+          "enonce": "$f(x)=(2x+1)(x-3)$. Calculer $f'(x)$ de deux façons : en développant puis en dérivant, puis avec la formule du produit.",
+          "correction": "Développement : $f(x)=2x^2-5x-3$, donc $f'(x)=4x-5$.\nFormule du produit : $u=2x+1$, $u'=2$, $v=x-3$, $v'=1$ ; $f'(x)=2(x-3)+(2x+1)\\times1=2x-6+2x+1=4x-5$. Les deux méthodes donnent le même résultat."
+        },
+        {
+          "id": "dv-003",
+          "numero": 3,
+          "titre": "Dérivée d'un quotient",
+          "difficulte": 2,
+          "enonce": "$f(x)=\\dfrac{x+1}{x-2}$.\n1. Donner l'ensemble de définition.\n2. Calculer $f'(x)$.",
+          "correction": "1. $D_f=\\mathbb{R}\\setminus\\{2\\}$\n2. $u=x+1$, $u'=1$, $v=x-2$, $v'=1$ ; $f'(x)=\\dfrac{1\\times(x-2)-(x+1)\\times1}{(x-2)^2}=\\dfrac{-3}{(x-2)^2}$"
+        },
+        {
+          "id": "dv-004",
+          "numero": 4,
+          "titre": "Étude des variations",
+          "difficulte": 2,
+          "enonce": "$f(x)=x^3-3x$ sur $\\mathbb{R}$.\n1. Calculer $f'(x)$.\n2. Étudier son signe.\n3. Dresser le tableau de variations de $f$.",
+          "correction": "1. $f'(x)=3x^2-3=3(x-1)(x+1)$\n2. $f'(x)>0$ pour $x<-1$ ou $x>1$ ; $f'(x)<0$ pour $-1<x<1$\n3. $f$ croissante sur $]-\\infty;-1]$, décroissante sur $[-1;1]$, croissante sur $[1;+\\infty[$. Maximum local $f(-1)=2$, minimum local $f(1)=-2$."
+        },
+        {
+          "id": "dv-005",
+          "numero": 5,
+          "titre": "Tangente à une courbe",
+          "difficulte": 3,
+          "enonce": "$f(x)=x^2-4x+3$. Déterminer l'équation de la tangente à la courbe de $f$ au point d'abscisse $a=1$.",
+          "correction": "$f(1)=0$, $f'(x)=2x-4$ donc $f'(1)=-2$. Tangente : $y=f'(1)(x-1)+f(1)=-2(x-1)+0=-2x+2$."
+        }
+      ]
+    },
+    {
+      "id": "suites-numeriques-terminale",
+      "matiere": "mathematiques",
+      "niveau": "terminale",
+      "titre": "Suites numériques",
+      "rappelCours": [
+        "Suite arithmétique : $u_{n+1}=u_n+r$, terme général $u_n=u_0+nr$",
+        "Suite géométrique : $u_{n+1}=u_n\\times q$, terme général $u_n=u_0\\times q^n$",
+        "Somme des $n+1$ premiers termes arithmétiques : $\\dfrac{(n+1)(u_0+u_n)}{2}$",
+        "Somme géométrique ($q\\neq1$) : $u_0\\dfrac{1-q^{n+1}}{1-q}$",
+        "Suite croissante et majorée (ou décroissante et minorée) $\\Rightarrow$ convergente (théorème de la limite monotone)"
+      ],
+      "exercices": [
+        {
+          "id": "su-001",
+          "numero": 1,
+          "titre": "Suite arithmétique",
+          "difficulte": 1,
+          "enonce": "$(u_n)$ arithmétique de raison $r=3$ et $u_0=5$.\n1. Calculer $u_{10}$.\n2. Calculer la somme des 11 premiers termes ($u_0$ à $u_{10}$).",
+          "correction": "1. $u_{10}=5+10\\times3=35$\n2. $S=\\dfrac{11\\times(5+35)}{2}=220$"
+        },
+        {
+          "id": "su-002",
+          "numero": 2,
+          "titre": "Suite géométrique",
+          "difficulte": 1,
+          "enonce": "$(u_n)$ géométrique de raison $q=2$ et $u_0=3$.\n1. Calculer $u_5$.\n2. Calculer la somme des 6 premiers termes ($u_0$ à $u_5$).",
+          "correction": "1. $u_5=3\\times2^5=96$\n2. $S=3\\times\\dfrac{1-2^6}{1-2}=3\\times63=189$"
+        },
+        {
+          "id": "su-003",
+          "numero": 3,
+          "titre": "Étude du sens de variation",
+          "difficulte": 2,
+          "enonce": "$(u_n)$ définie par $u_0=0$ et $u_{n+1}=u_n+n^2+1$. Montrer que $(u_n)$ est croissante.",
+          "correction": "$u_{n+1}-u_n=n^2+1>0$ pour tout $n$, donc $(u_n)$ est strictement croissante."
+        },
+        {
+          "id": "su-004",
+          "numero": 4,
+          "titre": "Limite d'une suite récurrente",
+          "difficulte": 2,
+          "enonce": "$(u_n)$ définie par $u_0=1$ et $u_{n+1}=\\dfrac12u_n+2$. On pose $v_n=u_n-4$.\n1. Montrer que $(v_n)$ est géométrique de raison $\\dfrac12$.\n2. En déduire la limite de $(u_n)$.",
+          "correction": "1. $v_{n+1}=u_{n+1}-4=\\dfrac12u_n+2-4=\\dfrac12u_n-2=\\dfrac12(u_n-4)=\\dfrac12v_n$, donc $(v_n)$ est géométrique de raison $\\dfrac12$.\n2. $|q|<1$ donc $v_n\\to0$, donc $u_n=v_n+4\\to4$."
+        },
+        {
+          "id": "su-005",
+          "numero": 5,
+          "titre": "Démonstration par récurrence",
+          "difficulte": 3,
+          "enonce": "$(u_n)$ définie par $u_0=0$ et $u_{n+1}=2u_n+1$. Démontrer par récurrence que pour tout $n$, $u_n=2^n-1$.",
+          "correction": "Initialisation : $u_0=0=2^0-1$, vrai.\nHérédité : on suppose $u_n=2^n-1$. Alors $u_{n+1}=2u_n+1=2(2^n-1)+1=2^{n+1}-2+1=2^{n+1}-1$.\nLa propriété est vraie au rang $n+1$, donc par récurrence, pour tout $n$, $u_n=2^n-1$."
+        }
+      ]
+    },
+    {
+      "id": "exponentielle-terminale",
+      "matiere": "mathematiques",
+      "niveau": "terminale",
+      "titre": "Fonction exponentielle et logarithme",
+      "rappelCours": [
+        "$(e^x)'=e^x$, $e^0=1$, $e^{a+b}=e^a\\times e^b$",
+        "$\\ln$ est la réciproque de $\\exp$ sur $]0;+\\infty[$ : $e^{\\ln x}=x$, $\\ln(e^x)=x$",
+        "$\\ln(ab)=\\ln a+\\ln b$, $\\ln\\left(\\dfrac ab\\right)=\\ln a-\\ln b$, $\\ln(a^n)=n\\ln a$",
+        "Croissances comparées : $\\lim_{x\\to+\\infty}\\dfrac{e^x}{x}=+\\infty$"
+      ],
+      "exercices": [
+        {
+          "id": "ex-001",
+          "numero": 1,
+          "titre": "Résolution d'équations exponentielles",
+          "difficulte": 1,
+          "enonce": "Résoudre dans $\\mathbb{R}$ :\n1. $e^x=5$\n2. $e^{2x-1}=1$",
+          "correction": "1. $x=\\ln5$\n2. $e^{2x-1}=1=e^0$ donc $2x-1=0$, $x=\\dfrac12$"
+        },
+        {
+          "id": "ex-002",
+          "numero": 2,
+          "titre": "Dérivées avec l'exponentielle",
+          "difficulte": 1,
+          "enonce": "Calculer $f'(x)$ :\n1. $f(x)=e^{3x+1}$\n2. $f(x)=xe^x$",
+          "correction": "1. $f'(x)=3e^{3x+1}$\n2. $f'(x)=1\\times e^x+x\\times e^x=(1+x)e^x$"
+        },
+        {
+          "id": "ex-003",
+          "numero": 3,
+          "titre": "Résolution d'équations logarithmiques",
+          "difficulte": 2,
+          "enonce": "Résoudre dans $\\mathbb{R}$ :\n1. $\\ln(x)=2$ (préciser la condition d'existence)\n2. $\\ln(x+1)=0$",
+          "correction": "1. Condition $x>0$. $x=e^2$\n2. Condition $x>-1$. $x+1=1$ donc $x=0$"
+        },
+        {
+          "id": "ex-004",
+          "numero": 4,
+          "titre": "Étude des variations",
+          "difficulte": 2,
+          "enonce": "$f(x)=xe^{-x}$ sur $\\mathbb{R}$. Étudier les variations de $f$.",
+          "correction": "$f'(x)=e^{-x}+x\\times(-e^{-x})=(1-x)e^{-x}$. Comme $e^{-x}>0$, $f'(x)$ a le signe de $1-x$ : $f'(x)>0$ pour $x<1$, $f'(x)<0$ pour $x>1$. $f$ est croissante sur $]-\\infty;1]$ puis décroissante sur $[1;+\\infty[$, avec un maximum $f(1)=e^{-1}$."
+        },
+        {
+          "id": "ex-005",
+          "numero": 5,
+          "titre": "Équation avec changement de variable",
+          "difficulte": 3,
+          "enonce": "Résoudre dans $\\mathbb{R}$ : $e^{2x}-3e^x+2=0$.",
+          "correction": "On pose $X=e^x>0$. L'équation devient $X^2-3X+2=0$, de solutions $X=1$ ou $X=2$.\n$e^x=1\\Rightarrow x=0$ ; $e^x=2\\Rightarrow x=\\ln2$."
+        }
+      ]
+    },
+    {
+      "id": "probabilites-conditionnelles-terminale",
+      "matiere": "mathematiques",
+      "niveau": "terminale",
+      "titre": "Probabilités conditionnelles",
+      "rappelCours": [
+        "Probabilité conditionnelle : $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}$ (probabilité de $B$ sachant que $A$ est réalisé)",
+        "Formule des probabilités totales : si $A_1,\\dots,A_n$ forment une partition de l'univers, alors $P(B)=\\sum_i P(A_i)\\times P_{A_i}(B)$",
+        "Indépendance : $A$ et $B$ sont indépendants $\\iff P(A\\cap B)=P(A)\\times P(B) \\iff P_A(B)=P(B)$",
+        "Dans un arbre pondéré, la somme des probabilités sur les branches issues d'un même nœud vaut $1$"
+      ],
+      "exercices": [
+        {
+          "id": "pc-001",
+          "numero": 1,
+          "titre": "Lecture d'un arbre pondéré",
+          "difficulte": 1,
+          "enonce": "On donne $P(A)=0,6$, $P_A(B)=0,3$ et $P_{\\overline{A}}(B)=0,5$.\n1. Calculer $P(A\\cap B)$.\n2. Calculer $P(\\overline{A}\\cap B)$.",
+          "correction": "1. Par définition de la probabilité conditionnelle, $P(A\\cap B)=P(A)\\times P_A(B)=0,6\\times0,3=0,18$.\n2. $P(\\overline{A})=1-P(A)=0,4$, donc $P(\\overline{A}\\cap B)=P(\\overline{A})\\times P_{\\overline{A}}(B)=0,4\\times0,5=0,20$."
+        },
+        {
+          "id": "pc-002",
+          "numero": 2,
+          "titre": "Probabilité conditionnelle directe",
+          "difficulte": 1,
+          "enonce": "Dans une classe, $55\\%$ des élèves sont des filles. Parmi les filles, $40\\%$ pratiquent un sport en club. Calculer la probabilité qu'un élève choisi au hasard soit une fille pratiquant un sport en club.",
+          "correction": "On note $F$ l'événement « être une fille » et $S$ l'événement « pratiquer un sport en club ». On a $P(F)=0,55$ et $P_F(S)=0,40$.\nD'après la définition de la probabilité conditionnelle : $P(F\\cap S)=P(F)\\times P_F(S)=0,55\\times0,40=0,22$.\nIl y a donc $22\\%$ de chances que l'élève choisi soit une fille pratiquant un sport en club."
+        },
+        {
+          "id": "pc-003",
+          "numero": 3,
+          "titre": "Formule des probabilités totales",
+          "difficulte": 2,
+          "enonce": "On reprend les données de l'exercice « Lecture d'un arbre pondéré » : $P(A)=0,6$, $P_A(B)=0,3$, $P_{\\overline{A}}(B)=0,5$. Calculer $P(B)$.",
+          "correction": "$A$ et $\\overline{A}$ forment une partition de l'univers, donc d'après la formule des probabilités totales :\n$P(B)=P(A\\cap B)+P(\\overline{A}\\cap B)=P(A)\\times P_A(B)+P(\\overline{A})\\times P_{\\overline{A}}(B)$\n$P(B)=0,6\\times0,3+0,4\\times0,5=0,18+0,20=0,38$."
+        },
+        {
+          "id": "pc-004",
+          "numero": 4,
+          "titre": "Tester l'indépendance de deux événements",
+          "difficulte": 2,
+          "enonce": "On donne $P(A)=0,5$, $P(B)=0,4$ et $P(A\\cap B)=0,2$. Les événements $A$ et $B$ sont-ils indépendants ? Justifier.",
+          "correction": "$A$ et $B$ sont indépendants si et seulement si $P(A\\cap B)=P(A)\\times P(B)$.\nOn calcule $P(A)\\times P(B)=0,5\\times0,4=0,2$.\nOr $P(A\\cap B)=0,2$ : l'égalité est vérifiée, donc $A$ et $B$ sont bien indépendants."
+        },
+        {
+          "id": "pc-005",
+          "numero": 5,
+          "titre": "Problème type : test de dépistage",
+          "difficulte": 3,
+          "enonce": "Une maladie touche $2\\%$ d'une population. Un test de dépistage donne un résultat positif dans $98\\%$ des cas lorsque la personne est malade, et dans $3\\%$ des cas lorsqu'elle ne l'est pas (faux positif).\n1. Construire l'arbre pondéré et calculer la probabilité qu'une personne prise au hasard soit testée positive.\n2. Sachant que le test d'une personne est positif, calculer la probabilité que cette personne soit réellement malade.",
+          "correction": "On note $M$ l'événement « être malade » et $T$ l'événement « être testé positif ». On a $P(M)=0,02$, $P_M(T)=0,98$ et $P_{\\overline{M}}(T)=0,03$.\n\n1. D'après la formule des probabilités totales :\n$P(T)=P(M)\\times P_M(T)+P(\\overline{M})\\times P_{\\overline{M}}(T)$\n$P(T)=0,02\\times0,98+0,98\\times0,03=0,0196+0,0294=0,049$.\nLa probabilité qu'une personne soit testée positive est donc de $4,9\\%$.\n\n2. On cherche $P_T(M)=\\dfrac{P(M\\cap T)}{P(T)}$.\n$P(M\\cap T)=P(M)\\times P_M(T)=0,0196$.\nDonc $P_T(M)=\\dfrac{0,0196}{0,049}\\approx0,40$.\nMême avec un test fiable à $98\\%$, seulement $40\\%$ environ des personnes testées positives sont réellement malades : cela s'explique par la faible proportion de malades dans la population (les faux positifs, bien que rares individuellement, deviennent nombreux en valeur absolue car ils s'appliquent à une population saine très majoritaire)."
+        }
+      ]
+    },
+    {
+      "id": "pythagore-trigonometrie-brevet",
+      "matiere": "mathematiques",
+      "niveau": "brevet",
+      "titre": "Pythagore & Trigonométrie",
+      "rappelCours": [
+        "$a^2+b^2=c^2$",
+        "$\\sin=\\dfrac{\\text{opp}}{\\text{hyp}}$, $\\cos=\\dfrac{\\text{adj}}{\\text{hyp}}$, $\\tan=\\dfrac{\\text{opp}}{\\text{adj}}$",
+        "SOH-CAH-TOA"
+      ],
+      "exercices": [
+        {
+          "id": "pt-001",
+          "numero": 1,
+          "titre": "Pythagore simple",
+          "difficulte": 1,
+          "enonce": "$AB=3\\text{ cm}$, $BC=4\\text{ cm}$ (angle droit en $B$). Trouver $AC$.",
+          "correction": "$AC^2=25$, $AC=5\\text{ cm}$"
+        },
+        {
+          "id": "pt-002",
+          "numero": 2,
+          "titre": "Pythagore : trouver côté",
+          "difficulte": 1,
+          "enonce": "Hypoténuse $=13\\text{ cm}$, côté $=5\\text{ cm}$. Trouver le 3ᵉ côté et l'aire.",
+          "correction": "$b=12\\text{ cm}$, aire $=30\\text{ cm}^2$"
+        },
+        {
+          "id": "pt-003",
+          "numero": 3,
+          "titre": "Trigo : angle",
+          "difficulte": 2,
+          "enonce": "$AB=6\\text{ cm}$ (côté opposé à $C$), $AC=10\\text{ cm}$ (hypoténuse). Calculer l'angle $C$.",
+          "correction": "$\\sin(C)=0,6$, $C\\approx37°$"
+        },
+        {
+          "id": "pt-004",
+          "numero": 4,
+          "titre": "Trigo : longueur",
+          "difficulte": 2,
+          "enonce": "Angle $=30°$, hypoténuse $=8\\text{ cm}$. Calculer le côté opposé et le côté adjacent.",
+          "correction": "opposé $=4\\text{ cm}$, adjacent $\\approx6,93\\text{ cm}$"
+        },
+        {
+          "id": "pt-005",
+          "numero": 5,
+          "titre": "Hauteur tour",
+          "difficulte": 3,
+          "enonce": "Distance $=50\\text{ m}$, angle d'élévation $=35°$. Hauteur et distance au sommet ?",
+          "correction": "$h\\approx35\\text{ m}$, distance $\\approx61\\text{ m}$"
+        }
+      ],
+      "note": "Figures SVG disponibles dans la version pièce-jointe précédente sur la page Notion"
+    },
+    {
+      "id": "electricite-brevet",
+      "matiere": "physique",
+      "niveau": "brevet",
+      "titre": "Électricité",
+      "rappelCours": [
+        "$U=RI$ (loi d'Ohm)",
+        "$P=UI$ (puissance)",
+        "$E=Pt$ (énergie)"
+      ],
+      "exercices": [
+        {
+          "id": "el-001",
+          "numero": 1,
+          "titre": "Loi d'Ohm simple",
+          "difficulte": 1,
+          "enonce": "$R=220\\ \\Omega$, $U=110\\text{ V}$. Calculer $I$ et $P$.",
+          "correction": "$I=0,5\\text{ A}$, $P=55\\text{ W}$"
+        },
+        {
+          "id": "el-002",
+          "numero": 2,
+          "titre": "Tension/résistance",
+          "difficulte": 1,
+          "enonce": "$U=230\\text{ V}$, $I=5\\text{ A}$. Calculer $R$ et $P$.",
+          "correction": "$R=46\\ \\Omega$, $P=1150\\text{ W}$"
+        },
+        {
+          "id": "el-003",
+          "numero": 3,
+          "titre": "Énergie consommée",
+          "difficulte": 2,
+          "enonce": "$P=12\\text{ W}$ pendant $8\\text{ h}$. Énergie et coût à $0,15\\ €/\\text{kWh}$ ?",
+          "correction": "$E=0,096\\text{ kWh}$, coût $=0,0144\\ €$"
+        },
+        {
+          "id": "el-004",
+          "numero": 4,
+          "titre": "Série/parallèle",
+          "difficulte": 2,
+          "enonce": "$R_1=100\\ \\Omega$, $R_2=150\\ \\Omega$, $U=250\\text{ V}$. Série puis parallèle.",
+          "correction": "Série : $R=250\\ \\Omega$, $I=1\\text{ A}$. Parallèle : $R\\approx60\\ \\Omega$, $I\\approx4,17\\text{ A}$"
+        },
+        {
+          "id": "el-005",
+          "numero": 5,
+          "titre": "Facture électricité",
+          "difficulte": 3,
+          "enonce": "Frigo $400\\text{ W}$ ($24\\text{ h/j}$), machine $2000\\text{ W}$ ($5\\text{ h/sem}$), télé $150\\text{ W}$ ($4\\text{ h/j}$), sur $30$ jours. Énergie totale et facture à $0,18\\ €/\\text{kWh}$ ?",
+          "correction": "$346\\text{ kWh}$ au total, facture $=62,28\\ €$, frigo $\\approx83\\%$ de la consommation"
+        }
+      ]
+    },
+    {
+      "id": "mecanique-newtonienne-bac",
+      "matiere": "physique",
+      "niveau": "terminale",
+      "titre": "Mécanique newtonienne",
+      "rappelCours": [
+        "PFD : $\\sum \\vec{F} = m\\vec{a}$ (référentiel galiléen)",
+        "$P=mg$",
+        "$E_p=mgh$, $E_c=\\dfrac12 mv^2$, $E_m=E_c+E_p$"
+      ],
+      "exercices": [
+        {
+          "id": "me-001",
+          "numero": 1,
+          "titre": "Chute libre",
+          "difficulte": 1,
+          "enonce": "$h=20\\text{ m}$, chute libre. Durée de chute et vitesse au sol ?",
+          "correction": "$t\\approx2,02\\text{ s}$, $v\\approx19,8\\text{ m/s}$"
+        },
+        {
+          "id": "me-002",
+          "numero": 2,
+          "titre": "2e loi de Newton",
+          "difficulte": 1,
+          "enonce": "$m=1200\\text{ kg}$, de $0$ à $100\\text{ km/h}$ en $8\\text{ s}$. Accélération et force ?",
+          "correction": "$a\\approx3,47\\text{ m/s}^2$, $F\\approx4164\\text{ N}$"
+        },
+        {
+          "id": "me-003",
+          "numero": 3,
+          "titre": "Plan incliné",
+          "difficulte": 2,
+          "enonce": "$m=2\\text{ kg}$, plan incliné à $20°$, sans frottement. Montrer que $a=g\\sin\\theta$, puis calculer $a$.",
+          "correction": "$a\\approx3,35\\text{ m/s}^2$"
+        },
+        {
+          "id": "me-004",
+          "numero": 4,
+          "titre": "MRUV freinage",
+          "difficulte": 2,
+          "enonce": "$a=-2\\text{ m/s}^2$, $v_0=30\\text{ m/s}$. Temps d'arrêt, distance parcourue, arrêt possible avant $200\\text{ m}$ ?",
+          "correction": "$t=15\\text{ s}$, $\\Delta x=225\\text{ m}$, non ($225>200$)"
+        },
+        {
+          "id": "me-005",
+          "numero": 5,
+          "titre": "Projectile",
+          "difficulte": 3,
+          "enonce": "$h=45\\text{ m}$, $v_0=12\\text{ m/s}$ horizontal. Temps de chute, portée, vitesse à l'impact ?",
+          "correction": "$t\\approx3,03\\text{ s}$, $x\\approx36,4\\text{ m}$, $v\\approx32\\text{ m/s}$"
+        }
+      ]
+    },
+    {
+      "id": "ondes-signaux-terminale",
+      "matiere": "physique",
+      "niveau": "terminale",
+      "titre": "Ondes et signaux",
+      "rappelCours": [
+        "Onde mécanique : une onde transporte de l'énergie, pas de matière. Célérité $v=\\dfrac{d}{t}$",
+        "Relation fondamentale : $v=\\lambda\\times f$ (célérité, longueur d'onde, fréquence)",
+        "Célérité du son dans l'air $\\approx340\\text{ m/s}$",
+        "Diffraction : l'écart angulaire $\\theta$ (en radians) vérifie $\\theta\\approx\\dfrac{\\lambda}{a}$ ($a$ = largeur de la fente)"
+      ],
+      "exercices": [
+        {
+          "id": "on-001",
+          "numero": 1,
+          "titre": "Écho",
+          "difficulte": 1,
+          "enonce": "Une falaise se trouve à $850\\text{ m}$. Calculer la durée entre l'émission d'un son et la perception de son écho ($v=340\\text{ m/s}$).",
+          "correction": "Aller-retour $=2\\times850=1700\\text{ m}$. $t=\\dfrac{1700}{340}=5\\text{ s}$"
+        },
+        {
+          "id": "on-002",
+          "numero": 2,
+          "titre": "Longueur d'onde d'un son",
+          "difficulte": 1,
+          "enonce": "La note « la » a une fréquence $f=440\\text{ Hz}$. Calculer sa longueur d'onde dans l'air ($v=340\\text{ m/s}$).",
+          "correction": "$\\lambda=\\dfrac{v}{f}=\\dfrac{340}{440}\\approx0,77\\text{ m}$"
+        },
+        {
+          "id": "on-003",
+          "numero": 3,
+          "titre": "Propagation d'un tsunami",
+          "difficulte": 2,
+          "enonce": "Un tsunami se propage à $v=200\\text{ m/s}$ sur une distance de $6000\\text{ km}$. Calculer la durée du trajet, en heures.",
+          "correction": "$t=\\dfrac{6\\times10^6}{200}=3\\times10^4\\text{ s}\\approx8,3\\text{ h}$"
+        },
+        {
+          "id": "on-004",
+          "numero": 4,
+          "titre": "Diffraction d'un laser",
+          "difficulte": 3,
+          "enonce": "Un laser de longueur d'onde $\\lambda=633\\text{ nm}$ traverse une fente de largeur $a=0,1\\text{ mm}$. Calculer l'écart angulaire $\\theta$ en degrés.",
+          "correction": "$\\theta=\\dfrac{\\lambda}{a}=\\dfrac{633\\times10^{-9}}{0,1\\times10^{-3}}\\approx6,33\\times10^{-3}\\text{ rad}$. En degrés : $\\theta\\approx6,33\\times10^{-3}\\times\\dfrac{180}{\\pi}\\approx0,36°$"
+        }
+      ]
+    },
+    {
+      "id": "circuits-electriques-premiere",
+      "matiere": "physique",
+      "niveau": "premiere",
+      "titre": "Circuits électriques en courant continu",
+      "rappelCours": [
+        "Loi d'Ohm : $U=RI$",
+        "Circuit série : même intensité en tout point, $U_{\\text{total}}=\\sum U_i$, $R_{\\text{éq}}=\\sum R_i$",
+        "Circuit en dérivation (parallèle) : même tension aux bornes de chaque branche, $I_{\\text{total}}=\\sum I_i$, $\\dfrac{1}{R_{\\text{éq}}}=\\sum\\dfrac{1}{R_i}$",
+        "Loi des mailles : la somme des tensions le long d'une maille fermée est nulle",
+        "Loi des nœuds : la somme des intensités entrant dans un nœud égale la somme des intensités qui en sortent"
+      ],
+      "exercices": [
+        {
+          "id": "ce-001",
+          "numero": 1,
+          "titre": "Circuit série",
+          "difficulte": 1,
+          "enonce": "Un circuit série comporte deux résistances $R_1=10\\ \\Omega$ et $R_2=20\\ \\Omega$, alimentées par une pile de $U=12\\text{ V}$. Calculer l'intensité $I$ du courant, puis les tensions $U_1$ et $U_2$ aux bornes de chaque résistance.",
+          "correction": "En série, la résistance équivalente est $R_{\\text{éq}}=R_1+R_2=10+20=30\\ \\Omega$.\nD'après la loi d'Ohm appliquée au circuit entier : $I=\\dfrac{U}{R_{\\text{éq}}}=\\dfrac{12}{30}=0,4\\text{ A}$.\nComme l'intensité est la même en tout point d'un circuit série : $U_1=R_1\\times I=10\\times0,4=4\\text{ V}$ et $U_2=R_2\\times I=20\\times0,4=8\\text{ V}$.\nOn vérifie bien $U_1+U_2=4+8=12\\text{ V}=U$, conformément à la loi des mailles."
+        },
+        {
+          "id": "ce-002",
+          "numero": 2,
+          "titre": "Circuit en dérivation",
+          "difficulte": 1,
+          "enonce": "Deux résistances $R_1=30\\ \\Omega$ et $R_2=60\\ \\Omega$ sont montées en dérivation aux bornes d'un générateur de tension $U=12\\text{ V}$. Calculer $I_1$, $I_2$, l'intensité totale $I$, et la résistance équivalente $R_{\\text{éq}}$.",
+          "correction": "En dérivation, chaque branche est soumise à la même tension $U=12\\text{ V}$.\n$I_1=\\dfrac{U}{R_1}=\\dfrac{12}{30}=0,4\\text{ A}$ et $I_2=\\dfrac{U}{R_2}=\\dfrac{12}{60}=0,2\\text{ A}$.\nD'après la loi des nœuds, l'intensité totale est $I=I_1+I_2=0,4+0,2=0,6\\text{ A}$.\nRésistance équivalente : $\\dfrac{1}{R_{\\text{éq}}}=\\dfrac{1}{R_1}+\\dfrac{1}{R_2}=\\dfrac{1}{30}+\\dfrac{1}{60}=\\dfrac{2+1}{60}=\\dfrac{3}{60}=\\dfrac{1}{20}$, donc $R_{\\text{éq}}=20\\ \\Omega$. On vérifie : $I=\\dfrac{U}{R_{\\text{éq}}}=\\dfrac{12}{20}=0,6\\text{ A}$, cohérent."
+        },
+        {
+          "id": "ce-003",
+          "numero": 3,
+          "titre": "Application de la loi des mailles",
+          "difficulte": 2,
+          "enonce": "Un circuit série comporte un générateur $U=9\\text{ V}$, une résistance $R_1=15\\ \\Omega$ et une résistance $R_2$ inconnue. La tension mesurée aux bornes de $R_1$ est $U_1=3\\text{ V}$. Déterminer l'intensité $I$ dans le circuit, la tension $U_2$ aux bornes de $R_2$, puis la valeur de $R_2$.",
+          "correction": "L'intensité dans $R_1$ se déduit de la loi d'Ohm : $I=\\dfrac{U_1}{R_1}=\\dfrac{3}{15}=0,2\\text{ A}$.\nD'après la loi des mailles, la somme des tensions dans le circuit série vaut la tension du générateur : $U=U_1+U_2$, donc $U_2=U-U_1=9-3=6\\text{ V}$.\nComme le circuit est en série, la même intensité $I=0,2\\text{ A}$ traverse $R_2$ : $R_2=\\dfrac{U_2}{I}=\\dfrac{6}{0,2}=30\\ \\Omega$."
+        },
+        {
+          "id": "ce-004",
+          "numero": 4,
+          "titre": "Application de la loi des nœuds",
+          "difficulte": 2,
+          "enonce": "Dans un circuit comportant un nœud, deux branches apportent des intensités $I_1=2\\text{ A}$ et $I_2=1,3\\text{ A}$, et une seule branche repart de ce nœud avec une intensité $I_3$. Déterminer $I_3$.",
+          "correction": "D'après la loi des nœuds, la somme des intensités qui entrent dans un nœud est égale à la somme des intensités qui en sortent.\nIci, deux branches entrent ($I_1$ et $I_2$) et une seule branche sort ($I_3$), donc $I_3=I_1+I_2=2+1,3=3,3\\text{ A}$."
+        },
+        {
+          "id": "ce-005",
+          "numero": 5,
+          "titre": "Circuit mixte",
+          "difficulte": 3,
+          "enonce": "Un générateur $U=24\\text{ V}$ alimente une résistance $R_1=10\\ \\Omega$ placée en série avec un groupement de deux résistances $R_2=20\\ \\Omega$ et $R_3=30\\ \\Omega$ montées en dérivation. Calculer la résistance équivalente du groupement $R_2/R_3$, la résistance équivalente totale du circuit, puis l'intensité totale délivrée par le générateur.",
+          "correction": "On calcule d'abord la résistance équivalente du groupement en dérivation $R_2/R_3$ :\n$\\dfrac{1}{R_{23}}=\\dfrac{1}{R_2}+\\dfrac{1}{R_3}=\\dfrac{1}{20}+\\dfrac{1}{30}=\\dfrac{3+2}{60}=\\dfrac{5}{60}=\\dfrac{1}{12}$, donc $R_{23}=12\\ \\Omega$.\nCe groupement est en série avec $R_1$, donc la résistance équivalente totale du circuit est $R_{\\text{éq}}=R_1+R_{23}=10+12=22\\ \\Omega$.\nL'intensité totale délivrée par le générateur est alors $I=\\dfrac{U}{R_{\\text{éq}}}=\\dfrac{24}{22}\\approx1,09\\text{ A}$."
+        }
+      ]
+    },
+    {
+      "id": "reactions-equilibres-bac",
+      "matiere": "chimie",
+      "niveau": "terminale",
+      "titre": "Réactions chimiques & Équilibres",
+      "rappelCours": [
+        "$aA+bB \\rightleftharpoons cC+dD$",
+        "$K_c=\\dfrac{[C]^c[D]^d}{[A]^a[B]^b}$",
+        "$n=\\dfrac{m}{M}$, $[X]=\\dfrac{n}{V}$"
+      ],
+      "exercices": [
+        {
+          "id": "ch-001",
+          "numero": 1,
+          "titre": "Stoechiométrie",
+          "difficulte": 1,
+          "enonce": "$N_2+3H_2 \\rightleftharpoons 2NH_3$. $5,6\\text{ g}$ de $N_2$ + $3\\text{ g}$ de $H_2$. Réactif limitant et masse de $NH_3$ formée ?",
+          "correction": "$N_2$ limitant, $m(NH_3)=6,8\\text{ g}$"
+        },
+        {
+          "id": "ch-002",
+          "numero": 2,
+          "titre": "Concentration/dilution",
+          "difficulte": 1,
+          "enonce": "$3,65\\text{ g}$ de $HCl$ dans $100\\text{ mL}$. Concentration, puis dilution de $10\\text{ mL}$ vers $50\\text{ mL}$.",
+          "correction": "$[HCl]=1\\text{ mol/L}$ puis $0,2\\text{ mol/L}$"
+        },
+        {
+          "id": "ch-003",
+          "numero": 3,
+          "titre": "Constante Kc",
+          "difficulte": 2,
+          "enonce": "$N_2O_4 \\rightleftharpoons 2NO_2$. $[N_2O_4]=0,1$, $[NO_2]=0,4$. Calculer $K_c$ et l'effet d'une augmentation de pression.",
+          "correction": "$K_c=1,6$, déplacement vers la gauche si la pression augmente"
+        },
+        {
+          "id": "ch-004",
+          "numero": 4,
+          "titre": "Tableau avancement",
+          "difficulte": 2,
+          "enonce": "$A+B \\rightleftharpoons C+D$, $n_0(A)=2$, $n_0(B)=3$, $V=1\\text{ L}$, $[A]_{\\text{éq}}=1$. Calculer $K_c$.",
+          "correction": "$[A]=1$, $[B]=2$, $[C]=1$, $[D]=1$, $K_c=0,5$"
+        },
+        {
+          "id": "ch-005",
+          "numero": 5,
+          "titre": "Estérification",
+          "difficulte": 3,
+          "enonce": "$5,2\\text{ g}$ d'acide acétique + $6,2\\text{ g}$ d'éthanol, $V=100\\text{ mL}$, $K_c=4$, rendement $70\\%$. Quantité d'ester et d'eau formés ?",
+          "correction": "$n(\\text{ester})=0,061\\text{ mol}$, $[H_2O]=0,61\\text{ mol/L}$"
+        }
+      ]
+    },
+    {
+      "id": "acides-bases-terminale",
+      "matiere": "chimie",
+      "niveau": "terminale",
+      "titre": "Acides, bases et pH",
+      "rappelCours": [
+        "$pH=-\\log[H_3O^+]$ donc $[H_3O^+]=10^{-pH}$",
+        "Solution acide : $pH<7$ ; basique : $pH>7$ ; neutre : $pH=7$ (à $25°C$)",
+        "Réaction acide-base : transfert d'un proton $H^+$ (théorie de Brønsted)",
+        "Dosage acide-base : à l'équivalence, $n(\\text{acide})=n(\\text{base})$ (réaction 1:1)"
+      ],
+      "exercices": [
+        {
+          "id": "ab-001",
+          "numero": 1,
+          "titre": "pH et concentration",
+          "difficulte": 1,
+          "enonce": "1. Calculer le pH d'une solution où $[H_3O^+]=1\\times10^{-3}\\text{ mol/L}$.\n2. Calculer $[H_3O^+]$ d'une solution de $pH=5$.",
+          "correction": "1. $pH=-\\log(10^{-3})=3$\n2. $[H_3O^+]=10^{-5}\\text{ mol/L}$"
+        },
+        {
+          "id": "ab-002",
+          "numero": 2,
+          "titre": "Nature d'une solution",
+          "difficulte": 1,
+          "enonce": "Classer ces solutions en acide, basique ou neutre : $pH=2$ ; $pH=7$ ; $pH=11$ ; $pH=6,5$.",
+          "correction": "$pH=2$ : acide. $pH=7$ : neutre. $pH=11$ : basique. $pH=6,5$ : acide (légèrement)."
+        },
+        {
+          "id": "ab-003",
+          "numero": 3,
+          "titre": "Dosage acide-base",
+          "difficulte": 2,
+          "enonce": "Un volume $V_a=20\\text{ mL}$ d'acide de concentration $C_a$ inconnue est dosé par une base de concentration $C_b=0,1\\text{ mol/L}$. L'équivalence est atteinte pour $V_b=12\\text{ mL}$. Calculer $C_a$ (réaction 1:1).",
+          "correction": "À l'équivalence : $C_aV_a=C_bV_b$, donc $C_a=\\dfrac{0,1\\times12}{20}=0,06\\text{ mol/L}$"
+        },
+        {
+          "id": "ab-004",
+          "numero": 4,
+          "titre": "Dilution d'un acide fort",
+          "difficulte": 3,
+          "enonce": "Une solution d'acide fort a un $pH=2$. On la dilue $100$ fois. Quel est le nouveau pH ?",
+          "correction": "Pour un acide fort, une dilution par $10$ augmente le pH de $1$ unité. Une dilution par $100=10^2$ augmente donc le pH de $2$ unités : $pH=4$."
+        }
+      ]
+    },
+    {
+      "id": "cinetique-chimique-terminale",
+      "matiere": "chimie",
+      "niveau": "terminale",
+      "titre": "Cinétique chimique",
+      "rappelCours": [
+        "La vitesse d'une réaction décrit la rapidité avec laquelle l'avancement $x$ évolue au cours du temps",
+        "Temps de demi-réaction $t_{1/2}$ : durée au bout de laquelle l'avancement atteint la moitié de sa valeur finale $x_{\\text{max}}$",
+        "Facteurs cinétiques : température, concentration des réactifs, catalyseur — ils modifient la vitesse de la réaction",
+        "Un catalyseur accélère une réaction sans être consommé et sans modifier l'état final (l'avancement maximal reste le même)"
+      ],
+      "exercices": [
+        {
+          "id": "ci-001",
+          "numero": 1,
+          "titre": "Lecture d'un suivi temporel",
+          "difficulte": 1,
+          "enonce": "Un suivi expérimental donne l'avancement $x$ (en mmol) au cours du temps $t$ (en min), pour une réaction d'avancement maximal $x_{\\text{max}}=5,0\\text{ mmol}$ :\n$t=0$ : $x=0$ ; $t=5$ : $x=2,0$ ; $t=10$ : $x=3,4$ ; $t=15$ : $x=4,2$ ; $t=20$ : $x=4,6$ ; $t=30$ : $x=5,0$.\nDéterminer par interpolation le temps de demi-réaction $t_{1/2}$.",
+          "correction": "Le temps de demi-réaction correspond à $x=\\dfrac{x_{\\text{max}}}{2}=\\dfrac{5,0}{2}=2,5\\text{ mmol}$.\nCette valeur se situe entre $t=5$ ($x=2,0$) et $t=10$ ($x=3,4$). On interpole linéairement entre ces deux points :\n$t_{1/2}\\approx5+\\dfrac{2,5-2,0}{3,4-2,0}\\times(10-5)=5+\\dfrac{0,5}{1,4}\\times5\\approx5+1,8\\approx6,8\\text{ min}$."
+        },
+        {
+          "id": "ci-002",
+          "numero": 2,
+          "titre": "Identifier les facteurs cinétiques",
+          "difficulte": 1,
+          "enonce": "Pour chacune des modifications suivantes, indiquer si elle accélère, ralentit ou ne change pas la vitesse de la réaction, et préciser si elle modifie l'avancement final :\n1. Augmentation de la température.\n2. Ajout d'un catalyseur.\n3. Dilution du mélange réactionnel.\n4. Augmentation de la concentration initiale d'un réactif.",
+          "correction": "1. Accélère la réaction ; l'avancement final n'est pas modifié (la température est un facteur cinétique).\n2. Accélère la réaction ; l'avancement final n'est pas modifié (le catalyseur n'est pas consommé et ne déplace pas l'état final).\n3. Ralentit la réaction, car les concentrations des réactifs diminuent.\n4. Accélère la réaction, car les réactifs sont statistiquement plus susceptibles de se rencontrer."
+        },
+        {
+          "id": "ci-003",
+          "numero": 3,
+          "titre": "Calcul d'une vitesse moyenne",
+          "difficulte": 2,
+          "enonce": "En reprenant le tableau de l'exercice « Lecture d'un suivi temporel », calculer la vitesse volumique moyenne de la réaction entre $t=10\\text{ min}$ et $t=20\\text{ min}$, dans un volume réactionnel $V=100\\text{ mL}$.",
+          "correction": "Entre $t=10\\text{ min}$ et $t=20\\text{ min}$, l'avancement varie de $\\Delta x=4,6-3,4=1,2\\text{ mmol}=1,2\\times10^{-3}\\text{ mol}$, sur une durée $\\Delta t=10\\text{ min}=600\\text{ s}$.\nLa vitesse volumique moyenne est $v=\\dfrac{1}{V}\\times\\dfrac{\\Delta x}{\\Delta t}=\\dfrac{1,2\\times10^{-3}}{0,1\\times600}=2,0\\times10^{-5}\\text{ mol}\\cdot\\text{L}^{-1}\\cdot\\text{s}^{-1}$."
+        },
+        {
+          "id": "ci-004",
+          "numero": 4,
+          "titre": "Interpolation d'un avancement cible",
+          "difficulte": 2,
+          "enonce": "En reprenant toujours le même tableau ($x_{\\text{max}}=5,0\\text{ mmol}$), déterminer par interpolation l'instant où l'avancement atteint $80\\%$ de $x_{\\text{max}}$.",
+          "correction": "$80\\%$ de $x_{\\text{max}}$ correspond à $0,8\\times5,0=4,0\\text{ mmol}$.\nCette valeur se situe entre $t=10$ ($x=3,4$) et $t=15$ ($x=4,2$). On interpole linéairement :\n$t\\approx10+\\dfrac{4,0-3,4}{4,2-3,4}\\times(15-10)=10+\\dfrac{0,6}{0,8}\\times5=10+3,75\\approx13,8\\text{ min}$."
+        },
+        {
+          "id": "ci-005",
+          "numero": 5,
+          "titre": "Effet d'un catalyseur",
+          "difficulte": 3,
+          "enonce": "Un chimiste reproduit la même réaction avec un catalyseur : le temps de demi-réaction passe de $t_{1/2}\\approx6,8\\text{ min}$ (sans catalyseur, cf. exercice « Lecture d'un suivi temporel ») à $t_{1/2}=1,5\\text{ min}$ (avec catalyseur).\n1. Comparer les vitesses de réaction dans les deux cas.\n2. L'avancement final $x_{\\text{max}}$ est-il modifié par le catalyseur ? Justifier.\n3. Si cette réaction produit un gaz, proposer une méthode expérimentale pour suivre son avancement au cours du temps.",
+          "correction": "1. Le temps de demi-réaction est divisé par un facteur $\\dfrac{6,8}{1,5}\\approx4,5$ : la réaction est donc environ $4,5$ fois plus rapide avec le catalyseur.\n2. Non, l'avancement final $x_{\\text{max}}$ n'est pas modifié : un catalyseur est un facteur cinétique, il modifie uniquement la vitesse à laquelle l'état final est atteint, pas cet état final lui-même.\n3. On peut mesurer le volume de gaz dégagé au cours du temps (à l'aide d'une seringue graduée ou d'un capteur de pression relié à un système d'acquisition), le volume de gaz étant directement lié à l'avancement de la réaction."
+        }
+      ]
+    },
+    {
+      "id": "structures-donnees-premiere",
+      "matiere": "nsi",
+      "niveau": "premiere",
+      "titre": "Structures de données : listes, n-uplets, dictionnaires",
+      "rappelCours": [
+        "Liste (list) : collection ordonnée et modifiable, indexée à partir de $0$ : `l[0]`",
+        "n-uplet (tuple) : collection ordonnée et non modifiable : `t = (1, 2, 3)`",
+        "Dictionnaire (dict) : associations clé → valeur : `d = {\"nom\": \"Ana\", \"age\": 17}`",
+        "Parcours d'une liste : `for element in liste:` ou `for i in range(len(liste)):`"
+      ],
+      "exercices": [
+        {
+          "id": "ns-001",
+          "numero": 1,
+          "titre": "Manipulation de listes",
+          "difficulte": 1,
+          "enonce": "Soit `l = [3, 7, 1, 9, 4]`. Donner la valeur de : `len(l)`, `l[2]`, `l[-1]`, `sum(l)`.",
+          "correction": "`len(l)` → 5 ; `l[2]` → 1 (indice 2, donc 3ᵉ élément) ; `l[-1]` → 4 (dernier élément) ; `sum(l)` → 24"
+        },
+        {
+          "id": "ns-002",
+          "numero": 2,
+          "titre": "Tuples vs listes",
+          "difficulte": 1,
+          "enonce": "Expliquer pourquoi `t = (1, 2); t[0] = 5` provoque une erreur, alors que `l = [1, 2]; l[0] = 5` fonctionne.",
+          "correction": "Un tuple est non modifiable (immuable) : on ne peut pas réaffecter un de ses éléments après création, Python lève une `TypeError`. Une liste est modifiable (mutable), on peut donc réaffecter `l[0]` sans problème."
+        },
+        {
+          "id": "ns-003",
+          "numero": 3,
+          "titre": "Parcours et accumulation",
+          "difficulte": 2,
+          "enonce": "Écrire une fonction `maximum(l)` qui renvoie le plus grand élément d'une liste, sans utiliser `max()`. Faire le déroulé sur `l = [4, 9, 2, 7]`.",
+          "correction": "def maximum(l):\n    m = l[0]\n    for x in l:\n        if x > m:\n            m = x\n    return m\n\nDéroulé sur $[4,9,2,7]$ : $m=4$ ; $x=4$, pas de changement ; $x=9>4$, $m=9$ ; $x=2$, pas de changement ; $x=7$, pas de changement. Résultat : $9$."
+        },
+        {
+          "id": "ns-004",
+          "numero": 4,
+          "titre": "Parcours d'un dictionnaire",
+          "difficulte": 2,
+          "enonce": "Soit `d = {\"Alice\": 15, \"Bob\": 17, \"Chloé\": 16}`. Écrire du code qui affiche chaque prénom avec son âge, puis qui détermine le prénom de la personne la plus âgée.",
+          "correction": "for prenom, age in d.items():\n    print(prenom, age)\n\nplus_age = None\nfor prenom, age in d.items():\n    if plus_age is None or age > d[plus_age]:\n        plus_age = prenom\nprint(plus_age)  # Bob"
+        },
+        {
+          "id": "ns-005",
+          "numero": 5,
+          "titre": "Construction d'une nouvelle liste",
+          "difficulte": 3,
+          "enonce": "Écrire une fonction `carres_pairs(l)` qui renvoie la liste des carrés des éléments pairs de `l`. Dérouler sur `l = [1, 2, 3, 4, 5, 6]`.",
+          "correction": "def carres_pairs(l):\n    resultat = []\n    for x in l:\n        if x % 2 == 0:\n            resultat.append(x ** 2)\n    return resultat\n\nSur $[1,2,3,4,5,6]$ : éléments pairs $2,4,6$, carrés $4,16,36$. Résultat : $[4,16,36]$."
+        }
+      ]
+    },
+    {
+      "id": "tri-recherche-terminale",
+      "matiere": "nsi",
+      "niveau": "terminale",
+      "titre": "Algorithmes de tri et de recherche",
+      "rappelCours": [
+        "Recherche séquentielle : parcourt la liste élément par élément, complexité $O(n)$",
+        "Recherche dichotomique : nécessite une liste triée, complexité $O(\\log n)$",
+        "Tri par sélection : recherche le minimum du reste de la liste et le place en tête, on répète sur le reste",
+        "Tri par insertion : insère chaque élément à sa place parmi les éléments déjà triés qui le précèdent"
+      ],
+      "exercices": [
+        {
+          "id": "na-001",
+          "numero": 1,
+          "titre": "Recherche séquentielle",
+          "difficulte": 1,
+          "enonce": "On recherche la valeur $8$ dans la liste $[5, 2, 8, 1, 9]$ par recherche séquentielle. Combien de comparaisons sont nécessaires ?",
+          "correction": "On compare $8$ successivement à $5$, $2$, puis $8$ : $3$ comparaisons suffisent pour trouver l'élément (à l'indice $2$)."
+        },
+        {
+          "id": "na-002",
+          "numero": 2,
+          "titre": "Recherche dichotomique",
+          "difficulte": 1,
+          "enonce": "On recherche $7$ dans la liste triée $[1, 3, 5, 7, 9, 11, 13]$ par dichotomie. Détailler les étapes (bornes gauche/droite et élément du milieu à chaque étape).",
+          "correction": "Étape 1 : gauche=0, droite=6, milieu=3 → $l[3]=7$. La valeur cherchée est trouvée dès la première étape, à l'indice $3$."
+        },
+        {
+          "id": "na-003",
+          "numero": 3,
+          "titre": "Tri par sélection",
+          "difficulte": 2,
+          "enonce": "Dérouler complètement le tri par sélection sur la liste $[4, 1, 3, 2]$ (donner l'état de la liste après chaque étape).",
+          "correction": "Départ : $[4,1,3,2]$\nÉtape 1 (min du reste = 1) : $[1,4,3,2]$\nÉtape 2 (min du reste = 2) : $[1,2,3,4]$\nÉtape 3 (min du reste = 3, déjà en place) : $[1,2,3,4]$\nListe triée : $[1,2,3,4]$"
+        },
+        {
+          "id": "na-004",
+          "numero": 4,
+          "titre": "Tri par insertion",
+          "difficulte": 2,
+          "enonce": "Dérouler complètement le tri par insertion sur la liste $[5, 2, 4, 1]$ (donner l'état de la liste après l'insertion de chaque élément).",
+          "correction": "Départ : $[5,2,4,1]$\nInsertion de $2$ : $[2,5,4,1]$\nInsertion de $4$ : $[2,4,5,1]$\nInsertion de $1$ : $[1,2,4,5]$\nListe triée : $[1,2,4,5]$"
+        },
+        {
+          "id": "na-005",
+          "numero": 5,
+          "titre": "Comparaison de complexités",
+          "difficulte": 3,
+          "enonce": "Pourquoi la recherche dichotomique est-elle beaucoup plus efficace que la recherche séquentielle sur une grande liste triée (par exemple $1$ million d'éléments) ? Donner un ordre de grandeur du nombre d'étapes pour chacune.",
+          "correction": "La recherche séquentielle peut nécessiter jusqu'à $n=10^6$ comparaisons dans le pire cas. La recherche dichotomique divise l'intervalle de recherche par $2$ à chaque étape, donc nécessite au plus $\\log_2(10^6)\\approx20$ étapes : elle est extrêmement plus rapide sur de grandes listes triées."
+        }
+      ]
+    },
+    {
+      "id": "recursivite-terminale",
+      "matiere": "nsi",
+      "niveau": "terminale",
+      "titre": "Récursivité",
+      "rappelCours": [
+        "Une fonction récursive est une fonction qui s'appelle elle-même sur une version plus petite du problème",
+        "Elle doit toujours comporter un cas de base (condition d'arrêt) et un cas récursif qui se rapproche de ce cas de base",
+        "Sans cas de base atteignable, la récursion ne se termine jamais (`RecursionError` en Python)",
+        "Chaque appel récursif est empilé (pile d'appels) jusqu'à ce que le cas de base soit atteint, puis les résultats sont dépilés dans l'ordre inverse"
+      ],
+      "exercices": [
+        {
+          "id": "re-001",
+          "numero": 1,
+          "titre": "Factorielle récursive",
+          "difficulte": 1,
+          "enonce": "Écrire une fonction récursive `factorielle(n)` qui calcule $n!$. Dérouler son exécution pour `factorielle(4)`.",
+          "correction": "def factorielle(n):\n    if n == 0:\n        return 1\n    return n * factorielle(n - 1)\n\nCas de base : `n == 0`, qui renvoie $1$. Cas récursif : `n * factorielle(n - 1)`.\nDéroulé de `factorielle(4)` : `factorielle(4)` appelle `4 * factorielle(3)`, qui appelle `3 * factorielle(2)`, qui appelle `2 * factorielle(1)`, qui appelle `1 * factorielle(0)`, qui renvoie $1$ (cas de base).\nEn remontant la pile d'appels : `factorielle(1) = 1*1 = 1`, `factorielle(2) = 2*1 = 2`, `factorielle(3) = 3*2 = 6`, `factorielle(4) = 4*6 = 24`."
+        },
+        {
+          "id": "re-002",
+          "numero": 2,
+          "titre": "Identifier cas de base et cas récursif",
+          "difficulte": 1,
+          "enonce": "On donne la fonction suivante :\n\ndef mystere(n):\n    if n <= 1:\n        return n\n    return mystere(n - 1) + mystere(n - 2)\n\n1. Identifier le cas de base et le cas récursif.\n2. Que calcule cette fonction pour `mystere(5)` ?",
+          "correction": "1. Cas de base : `n <= 1`, qui renvoie directement `n`. Cas récursif : `mystere(n - 1) + mystere(n - 2)`, qui rapproche le calcul du cas de base en diminuant `n`.\n2. Il s'agit de la suite de Fibonacci. En déroulant : $mystere(0)=0$, $mystere(1)=1$, $mystere(2)=1$, $mystere(3)=2$, $mystere(4)=3$, $mystere(5)=5$."
+        },
+        {
+          "id": "re-003",
+          "numero": 3,
+          "titre": "Somme récursive d'une liste",
+          "difficulte": 2,
+          "enonce": "Écrire une fonction récursive `somme(l)` qui calcule la somme des éléments d'une liste, sans utiliser `sum()`. Dérouler l'exécution sur `l = [3, 5, 2]`.",
+          "correction": "def somme(l):\n    if len(l) == 0:\n        return 0\n    return l[0] + somme(l[1:])\n\nCas de base : liste vide, qui renvoie $0$. Cas récursif : on ajoute le premier élément à la somme récursive du reste de la liste.\nDéroulé sur $[3,5,2]$ : $somme([3,5,2]) = 3+somme([5,2])$, $somme([5,2])=5+somme([2])$, $somme([2])=2+somme([])$, $somme([])=0$.\nEn remontant : $somme([2])=2+0=2$, $somme([5,2])=5+2=7$, $somme([3,5,2])=3+7=10$."
+        },
+        {
+          "id": "re-004",
+          "numero": 4,
+          "titre": "Puissance récursive",
+          "difficulte": 2,
+          "enonce": "Écrire une fonction récursive `puissance(x, n)` qui calcule $x^n$ pour $n$ entier positif. Dérouler l'exécution pour `puissance(2, 4)`.",
+          "correction": "def puissance(x, n):\n    if n == 0:\n        return 1\n    return x * puissance(x, n - 1)\n\nCas de base : `n == 0`, qui renvoie $1$ (car $x^0=1$). Cas récursif : `x * puissance(x, n - 1)`.\nDéroulé de `puissance(2, 4)` : $2\\times puissance(2,3)$, $puissance(2,3)=2\\times puissance(2,2)$, $puissance(2,2)=2\\times puissance(2,1)$, $puissance(2,1)=2\\times puissance(2,0)$, $puissance(2,0)=1$.\nEn remontant : $puissance(2,1)=2\\times1=2$, $puissance(2,2)=2\\times2=4$, $puissance(2,3)=2\\times4=8$, $puissance(2,4)=2\\times8=16$."
+        },
+        {
+          "id": "re-005",
+          "numero": 5,
+          "titre": "Récursion naïve et efficacité",
+          "difficulte": 3,
+          "enonce": "La fonction `mystere` de l'exercice « Identifier cas de base et cas récursif » calcule la suite de Fibonacci de façon récursive naïve. Expliquer pourquoi cette approche devient très lente pour des valeurs de `n` grandes (par exemple `n = 40`), et proposer une amélioration.",
+          "correction": "Le problème vient du nombre d'appels récursifs : pour calculer `mystere(n)`, la fonction appelle `mystere(n-1)` et `mystere(n-2)`, qui eux-mêmes rappellent chacun deux fonctions, etc. Beaucoup de sous-calculs sont donc effectués plusieurs fois (par exemple, `mystere(2)` est recalculé un très grand nombre de fois pour un `n` élevé). Le nombre total d'appels croît de façon exponentielle avec `n` (environ $2^n$), ce qui rend le calcul extrêmement lent pour `n = 40`.\nUne amélioration possible est la mémoïsation : on stocke les résultats déjà calculés dans un dictionnaire, et avant de recalculer `mystere(k)`, on vérifie s'il n'a pas déjà été calculé. On peut aussi écrire une version itérative qui calcule les termes de proche en proche sans aucun appel récursif, avec une complexité linéaire en $n$."
+        }
+      ]
+    }
+  ]
+}

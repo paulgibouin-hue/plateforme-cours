@@ -7,7 +7,7 @@ const LABELS_MATIERE = {
   mathematiques: "Mathématiques",
   physique: "Physique",
   chimie: "Chimie",
-  technologie: "Technologie",
+  nsi: "NSI",
 };
 
 const LABELS_NIVEAU = {
@@ -19,6 +19,18 @@ const LABELS_NIVEAU = {
 
 export function generateStaticParams() {
   return data.qcms.map((qcm) => ({ id: qcm.id }));
+}
+
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const qcm = data.qcms.find((q) => q.id === id);
+
+  if (!qcm) return {};
+
+  return {
+    title: `QCM — ${qcm.titre}`,
+    description: `Teste tes connaissances sur ${qcm.titre} avec ce QCM interactif corrigé (${qcm.questions.length} questions).`,
+  };
 }
 
 export default async function QcmDetailPage({ params }) {
@@ -46,7 +58,7 @@ export default async function QcmDetailPage({ params }) {
 
       <div className="mt-10 flex flex-col gap-6">
         {qcm.questions.map((question) => (
-          <QcmCard key={question.id} question={question} />
+          <QcmCard key={question.id} qcmId={qcm.id} question={question} />
         ))}
       </div>
     </section>

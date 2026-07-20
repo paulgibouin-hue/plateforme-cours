@@ -27,7 +27,7 @@ export default async function EspaceElevePage() {
   if (!entree) {
     return (
       <section className="mx-auto max-w-md px-6 py-24">
-        <p className="font-mono text-xs uppercase tracking-widest text-gold">
+        <p className="font-mono text-xs uppercase tracking-widest text-lime">
           Espace élève
         </p>
         <h1 className="mt-4 font-display text-3xl text-cream">Accès privé</h1>
@@ -46,7 +46,7 @@ export default async function EspaceElevePage() {
     <section className="mx-auto max-w-3xl px-6 py-24">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-gold">
+          <p className="font-mono text-xs uppercase tracking-widest text-lime">
             Espace élève
           </p>
           <h1 className="mt-2 font-display text-3xl text-cream">
@@ -59,7 +59,7 @@ export default async function EspaceElevePage() {
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
         <Link
           href="/matieres/mathematiques"
-          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold"
+          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold hover:bg-white/20"
         >
           <p className="font-display text-lg text-cream">Exercices</p>
           <p className="mt-1 font-sans text-sm text-cream/60">
@@ -68,7 +68,7 @@ export default async function EspaceElevePage() {
         </Link>
         <Link
           href="/qcm"
-          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold"
+          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold hover:bg-white/20"
         >
           <p className="font-display text-lg text-cream">QCM</p>
           <p className="mt-1 font-sans text-sm text-cream/60">
@@ -79,7 +79,7 @@ export default async function EspaceElevePage() {
 
       <ProgressionListe />
 
-      <div className="mt-16">
+      <div id="chatbot" className="mt-16 scroll-mt-24">
         <h2 className="font-display text-xl text-cream">
           Une question ? Demande à l&apos;assistant
         </h2>

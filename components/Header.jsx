@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import BadgeChatbot from "@/components/BadgeChatbot";
 
 const NAV_LINKS = [
   { href: "/", label: "Accueil" },
@@ -22,7 +23,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-gold-dim">
+    <header className="sticky top-0 z-50 border-b border-gold-dim bg-navy/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <Link
           href="/"
@@ -54,16 +55,19 @@ export default function Header() {
               </Link>,
             ])}
           </nav>
-          <Link
-            href={ESPACE_ELEVE.href}
-            className={`rounded-full border px-4 py-1.5 font-sans text-sm transition-colors ${
-              pathname === ESPACE_ELEVE.href
-                ? "border-gold bg-gold/10 text-gold"
-                : "border-gold text-gold hover:bg-gold/10"
-            }`}
-          >
-            {ESPACE_ELEVE.label}
-          </Link>
+          <div className="relative">
+            <Link
+              href={ESPACE_ELEVE.href}
+              className={`rounded-full border px-4 py-1.5 font-sans text-sm transition-colors ${
+                pathname === ESPACE_ELEVE.href
+                  ? "border-gold bg-gold/10 text-gold"
+                  : "border-gold text-gold hover:bg-gold/10"
+              }`}
+            >
+              {ESPACE_ELEVE.label}
+            </Link>
+            <BadgeChatbot className="-top-5 -right-10" />
+          </div>
         </div>
 
         {/* Bouton hamburger, mobile uniquement */}
@@ -121,17 +125,23 @@ export default function Header() {
               {link.label}
             </Link>,
           ])}
-          <Link
-            href={ESPACE_ELEVE.href}
-            onClick={() => setMenuOuvert(false)}
-            className={`mt-2 rounded-md border px-3 py-2 text-center transition-colors ${
-              pathname === ESPACE_ELEVE.href
-                ? "border-gold bg-gold/10 text-gold"
-                : "border-gold text-gold hover:bg-gold/10"
-            }`}
-          >
-            {ESPACE_ELEVE.label}
-          </Link>
+          <div className="relative mt-2">
+            <Link
+              href={ESPACE_ELEVE.href}
+              onClick={() => setMenuOuvert(false)}
+              className={`block rounded-md border px-3 py-2 text-center transition-colors ${
+                pathname === ESPACE_ELEVE.href
+                  ? "border-gold bg-gold/10 text-gold"
+                  : "border-gold text-gold hover:bg-gold/10"
+              }`}
+            >
+              {ESPACE_ELEVE.label}
+            </Link>
+            <BadgeChatbot
+              className="-top-5 -right-8"
+              onClick={() => setMenuOuvert(false)}
+            />
+          </div>
         </nav>
       ) : null}
     </header>

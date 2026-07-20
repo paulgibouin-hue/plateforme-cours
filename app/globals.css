@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
 /*
-  Charte graphique
-  ----------------
-  Navy   #0E1B35  — fond principal, texte sur fond clair
-  Or     #C6A15B  — accent, liens, éléments actifs
-  Crème  #F7F4EC  — fond clair, texte sur fond navy
+  Charte graphique — "Liquid Blue" (refonte)
+  -------------------------------------------
+  Ardoise   #1B2233  — fond principal (var. --color-navy, conservée pour
+                       limiter les changements dans les composants)
+  Bleu vif  #0367FC  — accent principal, liens, éléments actifs (var. --color-gold)
+  Lime      #D2F801  — accent secondaire, labels et mise en avant
+  Cream     #F5F7FA  — texte sur fond sombre / texte sur boutons bleus
+
+  Les cartes utilisent un effet verre dépoli (glassmorphism) : voir la classe
+  .bg-navy-light plus bas, qui ajoute un flou d'arrière-plan en plus de la
+  couleur transparente définie par le token.
 
   Fraunces    → titres
   Inter       → corps de texte
@@ -13,12 +19,13 @@
 */
 
 :root {
-  --color-navy: #0e1b35;
-  --color-navy-light: #16264a; /* surfaces/cards sur fond navy */
-  --color-gold: #c6a15b;
-  --color-gold-dim: #a9875073;
-  --color-cream: #f7f4ec;
-  --color-ink: #10121a; /* texte sur fond clair */
+  --color-navy: #1b2233;
+  --color-navy-light: rgba(255, 255, 255, 0.09); /* surface verre dépoli sur fond navy */
+  --color-gold: #0367fc;
+  --color-gold-dim: rgba(3, 103, 252, 0.4);
+  --color-cream: #f5f7fa;
+  --color-ink: #0b0c10; /* texte sur fond clair */
+  --color-lime: #d2f801;
 }
 
 @theme inline {
@@ -28,10 +35,18 @@
   --color-gold-dim: var(--color-gold-dim);
   --color-cream: var(--color-cream);
   --color-ink: var(--color-ink);
+  --color-lime: var(--color-lime);
 
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-space-mono);
+}
+
+/* Effet verre dépoli sur les surfaces "cartes" (même classe que la couleur,
+   le flou s'ajoute par-dessus la transparence définie par le token). */
+.bg-navy-light {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 html {

@@ -57,7 +57,7 @@ export default function QcmPage() {
 
   return (
     <section className="mx-auto max-w-3xl px-6 py-24">
-      <p className="font-mono text-xs uppercase tracking-widest text-gold">
+      <p className="font-mono text-xs uppercase tracking-widest text-lime">
         QCM interactifs
       </p>
       <h1 className="mt-4 font-display text-4xl text-cream">
@@ -73,7 +73,7 @@ export default function QcmPage() {
             <div className="mt-6 flex flex-col gap-6">
               {niveaux.map(({ niveau, qcms }) => (
                 <div key={niveau}>
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-gold">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-lime">
                     {LABELS_NIVEAU[niveau] ?? niveau}
                   </h3>
                   <ul className="mt-3 flex flex-col gap-3">
@@ -81,12 +81,12 @@ export default function QcmPage() {
                       <li key={qcm.id}>
                         <Link
                           href={`/qcm/${qcm.id}`}
-                          className="flex items-center justify-between rounded-lg border border-gold-dim bg-navy-light px-6 py-4 transition-colors hover:border-gold"
+                          className="flex items-center justify-between rounded-lg border border-gold-dim bg-navy-light px-6 py-4 transition-colors hover:border-gold hover:bg-white/20"
                         >
                           <span className="font-sans text-cream">
                             {qcm.titre}
                           </span>
-                          <span className="font-mono text-xs uppercase tracking-widest text-gold/70">
+                          <span className="font-mono text-xs uppercase tracking-widest text-lime/70">
                             {qcm.questions.length} questions
                           </span>
                         </Link>

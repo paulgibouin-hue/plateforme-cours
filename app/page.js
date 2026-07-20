@@ -43,31 +43,41 @@ export default function AccueilPage() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-5xl px-6 py-24">
-        <p className="font-mono text-xs uppercase tracking-widest text-gold">
-          Cours particuliers à [TA_VILLE] et en ligne
-        </p>
-        <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-cream sm:text-5xl">
-          Des maths et de la physique qui deviennent enfin claires.
-        </h1>
-        <p className="mt-6 max-w-xl font-sans text-lg text-cream/80">
-          Cours particuliers pour collégiens et lycéens, par un étudiant en
-          école d&apos;ingénieur passé par une classe préparatoire
-          scientifique. Méthode rigoureuse, pédagogie accessible.
-        </p>
-        <div className="mt-10 flex gap-4">
-          <Link
-            href="/tarifs#contact"
-            className="rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90"
-          >
-            Réserver un premier cours
-          </Link>
-          <a
-            href="#matieres"
-            className="rounded-md border border-gold-dim px-6 py-3 font-sans text-sm font-medium text-cream transition-colors hover:border-gold"
-          >
-            Découvrir les matières
-          </a>
+      <section className="relative overflow-hidden">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-48 -right-16 -z-10 h-[36rem] w-[36rem] rounded-full bg-gold/25 blur-[160px]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-32 top-52 -z-10 h-[28rem] w-[28rem] rounded-full bg-lime/20 blur-[160px]"
+        />
+        <div className="relative mx-auto max-w-5xl px-6 py-24">
+          <p className="font-mono text-xs uppercase tracking-widest text-lime">
+            Cours particuliers à [TA_VILLE] et en ligne
+          </p>
+          <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-cream sm:text-5xl">
+            Des maths et de la physique qui deviennent enfin claires.
+          </h1>
+          <p className="mt-6 max-w-xl font-sans text-lg text-cream/80">
+            Cours particuliers pour collégiens et lycéens, par un étudiant en
+            école d&apos;ingénieur passé par une classe préparatoire
+            scientifique. Méthode rigoureuse, pédagogie accessible.
+          </p>
+          <div className="mt-10 flex gap-4">
+            <Link
+              href="/tarifs#contact"
+              className="rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-cream transition-opacity hover:opacity-90"
+            >
+              Réserver un premier cours
+            </Link>
+            <a
+              href="#matieres"
+              className="rounded-md border border-lime/40 px-6 py-3 font-sans text-sm font-medium text-cream transition-colors hover:border-lime"
+            >
+              Découvrir les matières
+            </a>
+          </div>
         </div>
       </section>
 
@@ -80,7 +90,7 @@ export default function AccueilPage() {
               key={matiere.titre}
               className="rounded-lg border border-gold-dim bg-navy-light p-6"
             >
-              <p className="font-mono text-xs uppercase tracking-widest text-gold">
+              <p className="font-mono text-xs uppercase tracking-widest text-lime">
                 {matiere.niveau}
               </p>
               <h3 className="mt-3 font-display text-xl text-cream">
@@ -118,7 +128,7 @@ export default function AccueilPage() {
         <ol className="mt-8 grid gap-6 sm:grid-cols-3">
           {ETAPES.map((etape) => (
             <li key={etape.numero}>
-              <p className="font-mono text-2xl text-gold">{etape.numero}</p>
+              <p className="font-mono text-2xl text-lime">{etape.numero}</p>
               <p className="mt-2 font-display text-lg text-cream">
                 {etape.titre}
               </p>
@@ -138,7 +148,7 @@ export default function AccueilPage() {
         </p>
         <Link
           href="/tarifs#contact"
-          className="mt-8 inline-block rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90"
+          className="mt-8 inline-block rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-cream transition-opacity hover:opacity-90"
         >
           Réserver mon premier cours
         </Link>

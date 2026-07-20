@@ -91,6 +91,305 @@
           "explication": "Les deux suites encadrantes $2-\\frac1n$ et $2+\\frac1n$ convergent toutes deux vers $2$. D'après le théorème des gendarmes (théorème d'encadrement), $(u_n)$ converge donc aussi vers $2$."
         }
       ]
+    },
+    {
+      "id": "probabilites-conditionnelles-terminale",
+      "matiere": "mathematiques",
+      "niveau": "terminale",
+      "titre": "Probabilités conditionnelles",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Que représente $P_A(B)$ ?",
+          "choix": [
+            "La probabilité que $A$ et $B$ soient tous les deux réalisés",
+            "La probabilité que $B$ soit réalisé sachant que $A$ est réalisé",
+            "La probabilité que $A$ soit réalisé sachant que $B$ est réalisé",
+            "La probabilité que $A$ ou $B$ soit réalisé"
+          ],
+          "bonneReponse": 1,
+          "explication": "$P_A(B)$ se lit « probabilité de $B$ sachant $A$ » : c'est la probabilité que $B$ se réalise, dans l'univers restreint où $A$ est déjà réalisé."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "On donne $P(A) = 0,4$ et $P_A(B) = 0,5$. Que vaut $P(A \\cap B)$ ?",
+          "choix": ["$0,1$", "$0,2$", "$0,9$", "$1,25$"],
+          "bonneReponse": 1,
+          "explication": "$P(A \\cap B) = P(A) \\times P_A(B) = 0,4 \\times 0,5 = 0,2$."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Dans un arbre pondéré, que doit valoir la somme des probabilités inscrites sur les branches issues d'un même nœud ?",
+          "choix": ["$0$", "$0,5$", "$1$", "Cela dépend du nœud"],
+          "bonneReponse": 2,
+          "explication": "Les branches issues d'un même nœud représentent des événements qui partitionnent l'univers à cette étape : leur somme vaut donc toujours $1$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "$A$ et $B$ sont indépendants si et seulement si :",
+          "choix": [
+            "$P(A \\cap B) = 0$",
+            "$P(A \\cap B) = P(A) + P(B)$",
+            "$P(A \\cap B) = P(A) \\times P(B)$",
+            "$P_A(B) = P_B(A)$"
+          ],
+          "bonneReponse": 2,
+          "explication": "Par définition, $A$ et $B$ sont indépendants si et seulement si $P(A \\cap B) = P(A) \\times P(B)$, ce qui équivaut aussi à $P_A(B) = P(B)$."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "$A$ et $\\overline{A}$ partitionnent l'univers. $P(A) = 0,3$, $P_A(B) = 0,6$, $P_{\\overline{A}}(B) = 0,2$. Que vaut $P(B)$ ?",
+          "choix": ["$0,18$", "$0,32$", "$0,8$", "$0,44$"],
+          "bonneReponse": 1,
+          "explication": "$P(B) = P(A)\\times P_A(B) + P(\\overline{A})\\times P_{\\overline{A}}(B) = 0,3\\times0,6 + 0,7\\times0,2 = 0,18+0,14 = 0,32$."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Un test médical donne un résultat positif chez $95\\%$ des malades et chez $4\\%$ des personnes non malades. Que représente ce deuxième pourcentage ?",
+          "choix": [
+            "Le taux de vrais positifs",
+            "Le taux de faux positifs",
+            "Le taux de vrais négatifs",
+            "La prévalence de la maladie"
+          ],
+          "bonneReponse": 1,
+          "explication": "Un résultat positif chez une personne non malade est un faux positif : ce $4\\%$ correspond donc au taux de faux positifs du test."
+        }
+      ]
+    },
+    {
+      "id": "mecanique-newtonienne-bac",
+      "matiere": "physique",
+      "niveau": "terminale",
+      "titre": "Mécanique newtonienne",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Que dit la deuxième loi de Newton (principe fondamental de la dynamique) ?",
+          "choix": [
+            "$\\sum \\vec F = m\\vec v$",
+            "$\\sum \\vec F = m\\vec a$",
+            "$\\sum \\vec F = \\dfrac{m}{a}$",
+            "$\\sum \\vec F = \\vec a$"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le PFD énonce que la somme des forces appliquées à un système est égale au produit de sa masse par son accélération : $\\sum \\vec F = m\\vec a$, dans un référentiel galiléen."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Dans quel type de référentiel le principe fondamental de la dynamique s'applique-t-il directement ?",
+          "choix": [
+            "N'importe quel référentiel",
+            "Un référentiel galiléen",
+            "Un référentiel en rotation",
+            "Un référentiel accéléré uniquement"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le PFD, sous cette forme simple, ne s'applique que dans un référentiel galiléen (référentiel terrestre en bonne approximation pour la plupart des exercices de lycée)."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Un objet est en chute libre depuis une hauteur $h$, sans vitesse initiale. Quelle est l'expression de la durée de chute ?",
+          "choix": [
+            "$t=\\sqrt{\\dfrac{2h}{g}}$",
+            "$t=\\dfrac{2h}{g}$",
+            "$t=\\sqrt{2gh}$",
+            "$t=\\dfrac{g}{2h}$"
+          ],
+          "bonneReponse": 0,
+          "explication": "En chute libre sans vitesse initiale, $h=\\dfrac12 g t^2$, donc $t=\\sqrt{\\dfrac{2h}{g}}$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Quelle est l'expression de l'énergie mécanique d'un système ?",
+          "choix": [
+            "$E_m = E_c \\times E_p$",
+            "$E_m = E_c - E_p$",
+            "$E_m = E_c + E_p$",
+            "$E_m = \\dfrac{E_c}{E_p}$"
+          ],
+          "bonneReponse": 2,
+          "explication": "L'énergie mécanique est la somme de l'énergie cinétique et de l'énergie potentielle : $E_m = E_c + E_p$."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "En l'absence de frottement, comment évolue l'énergie mécanique d'un système au cours du mouvement ?",
+          "choix": [
+            "Elle augmente",
+            "Elle diminue",
+            "Elle se conserve",
+            "Elle devient nulle"
+          ],
+          "bonneReponse": 2,
+          "explication": "Sans frottement (ni autre force non conservative), l'énergie mécanique se conserve : l'énergie cinétique et l'énergie potentielle se transforment l'une en l'autre sans perte."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Une voiture de masse $m=1000\\text{ kg}$ subit une force résultante de $2000\\text{ N}$. Quelle est son accélération ?",
+          "choix": ["$0,5\\text{ m/s}^2$", "$2\\text{ m/s}^2$", "$2000\\text{ m/s}^2$", "$500\\text{ m/s}^2$"],
+          "bonneReponse": 1,
+          "explication": "D'après le PFD, $a=\\dfrac{F}{m}=\\dfrac{2000}{1000}=2\\text{ m/s}^2$."
+        }
+      ]
+    },
+    {
+      "id": "acides-bases-terminale",
+      "matiere": "chimie",
+      "niveau": "terminale",
+      "titre": "Acides, bases et pH",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Quelle est la relation entre le pH et la concentration en ions oxonium $[H_3O^+]$ ?",
+          "choix": [
+            "$pH = [H_3O^+]$",
+            "$pH = -\\log[H_3O^+]$",
+            "$pH = \\log[H_3O^+]$",
+            "$pH = 10^{[H_3O^+]}$"
+          ],
+          "bonneReponse": 1,
+          "explication": "Par définition, $pH = -\\log[H_3O^+]$, donc $[H_3O^+] = 10^{-pH}$."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Une solution de $pH = 9$ est :",
+          "choix": ["Acide", "Neutre", "Basique", "On ne peut pas savoir"],
+          "bonneReponse": 2,
+          "explication": "À $25°C$, une solution est basique si $pH>7$. Ici $pH=9>7$, la solution est donc basique."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Une solution d'acide fort a un $pH=3$. Si on la dilue $10$ fois, quel est le nouveau pH ?",
+          "choix": ["$pH=2$", "$pH=3$", "$pH=4$", "$pH=30$"],
+          "bonneReponse": 2,
+          "explication": "Pour un acide fort, diluer la solution $10$ fois augmente le pH d'une unité : $pH=3+1=4$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Lors d'un dosage acide-base (réaction 1:1), quelle relation est vérifiée à l'équivalence ?",
+          "choix": [
+            "$C_a = C_b$",
+            "$C_a V_a = C_b V_b$",
+            "$V_a = V_b$",
+            "$C_a + V_a = C_b + V_b$"
+          ],
+          "bonneReponse": 1,
+          "explication": "À l'équivalence d'un dosage acide-base 1:1, les quantités de matière d'acide et de base introduites sont égales : $C_aV_a=C_bV_b$."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Selon la théorie de Brønsted, une réaction acide-base correspond à :",
+          "choix": [
+            "Un transfert d'électrons",
+            "Un transfert de protons $H^+$",
+            "Un transfert de neutrons",
+            "Une précipitation"
+          ],
+          "bonneReponse": 1,
+          "explication": "La théorie de Brønsted définit une réaction acide-base comme un transfert d'un proton $H^+$ de l'acide (qui le cède) vers la base (qui le capte)."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Quelle est la concentration $[H_3O^+]$ d'une solution de $pH=4$ ?",
+          "choix": [
+            "$4\\text{ mol/L}$",
+            "$10^{-4}\\text{ mol/L}$",
+            "$10^{4}\\text{ mol/L}$",
+            "$-4\\text{ mol/L}$"
+          ],
+          "bonneReponse": 1,
+          "explication": "$[H_3O^+] = 10^{-pH} = 10^{-4}\\text{ mol/L}$."
+        }
+      ]
+    },
+    {
+      "id": "tri-recherche-terminale",
+      "matiere": "nsi",
+      "niveau": "terminale",
+      "titre": "Algorithmes de tri et de recherche",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Quelle est la complexité, dans le pire des cas, de la recherche séquentielle dans une liste de $n$ éléments ?",
+          "choix": ["$O(1)$", "$O(\\log n)$", "$O(n)$", "$O(n^2)$"],
+          "bonneReponse": 2,
+          "explication": "Dans le pire des cas (élément absent ou en dernière position), la recherche séquentielle doit parcourir les $n$ éléments : sa complexité est $O(n)$."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Quelle condition est nécessaire pour utiliser la recherche dichotomique ?",
+          "choix": [
+            "La liste doit contenir des entiers",
+            "La liste doit être triée",
+            "La liste doit avoir moins de $100$ éléments",
+            "Aucune condition particulière"
+          ],
+          "bonneReponse": 1,
+          "explication": "La recherche dichotomique compare l'élément cherché au milieu de la liste pour éliminer une moitié à chaque étape : cela ne fonctionne que si la liste est triée."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Quelle est la complexité de la recherche dichotomique sur une liste triée de $n$ éléments ?",
+          "choix": ["$O(1)$", "$O(\\log n)$", "$O(n)$", "$O(n\\log n)$"],
+          "bonneReponse": 1,
+          "explication": "En divisant l'intervalle de recherche par $2$ à chaque étape, la recherche dichotomique atteint une complexité en $O(\\log n)$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Le tri par sélection fonctionne en :",
+          "choix": [
+            "Insérant chaque élément à sa place parmi les précédents triés",
+            "Recherchant le minimum du reste de la liste et en le plaçant en tête",
+            "Divisant la liste en deux et en fusionnant les résultats",
+            "Échangeant des éléments au hasard jusqu'à ce que la liste soit triée"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le tri par sélection recherche à chaque étape le plus petit élément du reste de la liste et le place à sa position définitive, puis répète sur le reste."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Sur une liste triée d'un million d'éléments, pourquoi préfère-t-on la recherche dichotomique à la recherche séquentielle ?",
+          "choix": [
+            "Elle utilise moins de mémoire",
+            "Elle ne nécessite pas de liste triée",
+            "Elle nécessite beaucoup moins de comparaisons dans le pire des cas",
+            "Elle fonctionne aussi sur des listes non ordonnées"
+          ],
+          "bonneReponse": 2,
+          "explication": "La recherche dichotomique ne nécessite qu'environ $\\log_2(10^6)\\approx20$ comparaisons dans le pire des cas, contre $10^6$ pour la recherche séquentielle."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Dans le tri par insertion appliqué à $[3, 1, 2]$, quel est l'état de la liste juste après l'insertion du deuxième élément ($1$) ?",
+          "choix": ["$[3, 1, 2]$", "$[1, 3, 2]$", "$[1, 2, 3]$", "$[3, 2, 1]$"],
+          "bonneReponse": 1,
+          "explication": "On part de $[3,1,2]$. On insère $1$ à sa place parmi les éléments déjà triés qui le précèdent (juste $3$) : $1$ étant plus petit que $3$, il est inséré avant, donnant $[1,3,2]$."
+        }
+      ]
     }
   ]
 }

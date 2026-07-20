@@ -38,12 +38,12 @@ function ExercicesFaits({ progression }) {
         <li key={exercice.id}>
           <Link
             href={`/matieres/${chapitre.matiere}/${chapitre.id}#${exercice.id}`}
-            className="flex items-center justify-between gap-4 rounded-md border border-gold-dim bg-navy px-4 py-2 text-sm transition-colors hover:border-gold"
+            className="flex items-center justify-between gap-4 rounded-md border border-gold-dim bg-navy px-4 py-2 text-sm transition-colors hover:border-gold hover:bg-white/10"
           >
             <span className="font-sans text-cream/90">
               {exercice.numero}. {exercice.titre}
             </span>
-            <span className="font-mono text-xs uppercase tracking-widest text-gold/70">
+            <span className="font-mono text-xs uppercase tracking-widest text-lime/70">
               {LABELS_MATIERE[chapitre.matiere] ?? chapitre.matiere}
             </span>
           </Link>
@@ -77,10 +77,10 @@ function QcmFaits({ progression }) {
         <li key={qcm.id}>
           <Link
             href={`/qcm/${qcm.id}`}
-            className="flex items-center justify-between gap-4 rounded-md border border-gold-dim bg-navy px-4 py-2 text-sm transition-colors hover:border-gold"
+            className="flex items-center justify-between gap-4 rounded-md border border-gold-dim bg-navy px-4 py-2 text-sm transition-colors hover:border-gold hover:bg-white/10"
           >
             <span className="font-sans text-cream/90">{qcm.titre}</span>
-            <span className="font-mono text-xs uppercase tracking-widest text-gold/70">
+            <span className="font-mono text-xs uppercase tracking-widest text-lime/70">
               {nbFaites}/{qcm.questions.length} questions
             </span>
           </Link>

@@ -50,7 +50,7 @@ export default async function QcmDetailPage({ params }) {
         ← Tous les QCM
       </Link>
 
-      <p className="mt-4 font-mono text-xs uppercase tracking-widest text-gold">
+      <p className="mt-4 font-mono text-xs uppercase tracking-widest text-lime">
         {LABELS_MATIERE[qcm.matiere] ?? qcm.matiere} ·{" "}
         {LABELS_NIVEAU[qcm.niveau] ?? qcm.niveau}
       </p>

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import codesData from "@/data/codes-acces.json";
+import { lireCodes } from "@/lib/codesAcces";
 
 const NOM_COOKIE = "espace_eleve_code";
 const DUREE_COOKIE = 60 * 60 * 24 * 30; // 30 jours
@@ -17,7 +17,8 @@ export async function POST(request) {
   }
 
   const codeNormalise = code.trim().toUpperCase();
-  const entree = codesData.codes.find(
+  const codes = await lireCodes();
+  const entree = codes.find(
     (c) => c.code.toUpperCase() === codeNormalise && c.actif !== false
   );
 

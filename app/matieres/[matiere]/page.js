@@ -60,7 +60,7 @@ export default async function MatierePage({ params }) {
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-24">
-      <p className="font-mono text-xs uppercase tracking-widest text-gold">
+      <p className="font-mono text-xs uppercase tracking-widest text-lime">
         Fiches d&apos;exercices
       </p>
       <h1 className="mt-4 font-display text-4xl text-cream">{label}</h1>
@@ -72,7 +72,7 @@ export default async function MatierePage({ params }) {
       <div className="mt-12 flex flex-col gap-12">
         {groupes.map(({ niveau, chapitres }) => (
           <div key={niveau}>
-            <h2 className="font-mono text-xs uppercase tracking-widest text-gold">
+            <h2 className="font-mono text-xs uppercase tracking-widest text-lime">
               {LABELS_NIVEAU[niveau] ?? niveau}
             </h2>
             <div className="mt-4 grid gap-6 sm:grid-cols-2">
@@ -80,7 +80,7 @@ export default async function MatierePage({ params }) {
                 <Link
                   key={chapitre.id}
                   href={`/matieres/${matiere}/${chapitre.id}`}
-                  className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold"
+                  className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold hover:bg-white/20"
                 >
                   <h3 className="font-display text-xl text-cream">
                     {chapitre.titre}

@@ -73,7 +73,7 @@ export default async function ChapitrePage({ params }) {
 
       {chapitre.rappelCours?.length ? (
         <div className="mt-8 rounded-lg border border-gold bg-gold/10 p-6">
-          <p className="font-mono text-xs uppercase tracking-widest text-gold">
+          <p className="font-mono text-xs uppercase tracking-widest text-lime">
             Rappel de cours
           </p>
           <ul className="mt-3 flex flex-col gap-2 font-sans text-sm text-cream/90">
@@ -95,7 +95,7 @@ export default async function ChapitrePage({ params }) {
           </p>
           <Link
             href="/espace-eleve"
-            className="mt-4 inline-block rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90"
+            className="mt-4 inline-block rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-cream transition-opacity hover:opacity-90"
           >
             Accéder à mon espace élève
           </Link>

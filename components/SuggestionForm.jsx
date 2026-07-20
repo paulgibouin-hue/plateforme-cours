@@ -114,7 +114,7 @@ export default function SuggestionForm({ prenom }) {
       <button
         type="submit"
         disabled={enCours}
-        className="self-start rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90 disabled:opacity-50"
+        className="self-start rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-cream transition-opacity hover:opacity-90 disabled:opacity-50"
       >
         {enCours ? "Envoi..." : "Envoyer ma suggestion"}
       </button>

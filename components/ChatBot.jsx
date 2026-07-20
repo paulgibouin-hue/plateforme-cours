@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import "katex/dist/katex.min.css";
+import { renderAvecLatex } from "@/lib/latex";
 
 export default function ChatBot() {
   const [messages, setMessages] = useState([]);
@@ -63,7 +65,7 @@ export default function ChatBot() {
                   : "mr-8 bg-navy text-cream/90"
               }`}
             >
-              {message.contenu}
+              {renderAvecLatex(message.contenu)}
             </div>
           ))
         )}
@@ -89,7 +91,7 @@ export default function ChatBot() {
         <button
           type="submit"
           disabled={enCours || !saisie.trim()}
-          className="rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90 disabled:opacity-50"
+          className="rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-cream transition-opacity hover:opacity-90 disabled:opacity-50"
         >
           Envoyer
         </button>

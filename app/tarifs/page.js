@@ -3,16 +3,16 @@ import ContactForm from "@/components/ContactForm";
 const FORMULES = [
   {
     label: "En ligne (visioconférence)",
-    tarif: "20 – 22 € / heure",
+    tarif: "20€ / heure",
     points: [
       "Cours en visio, matériel interactif partagé à l'écran",
       "Accès inclus à la plateforme d'exercices et QCM",
-      "Flexibilité totale sur les horaires",
+      "Flexibilité sur les horaires",
     ],
   },
   {
     label: "Présentiel",
-    tarif: "25 – 28 € / heure",
+    tarif: "22€ / heure",
     points: [
       "Cours au domicile de l'élève (zone : [ZONE_GÉOGRAPHIQUE])",
       "Support papier et numérique combinés",
@@ -22,16 +22,16 @@ const FORMULES = [
 ];
 
 const INFOS = [
-  "Durée : 1h ou 1h30 au choix",
+  "Durée : 1h, 1h30 ou 2h au choix",
   "Fréquence : hebdomadaire recommandée, ajustable",
   "Premier cours : échange gratuit de 15 min pour définir les objectifs",
-  "Modes de paiement : [MODES_PAIEMENT]",
+  "Modes de paiement : Espèces, virement bancaire, PayPal",
 ];
 
 export const metadata = {
   title: "Tarifs",
   description:
-    "Tarifs des cours particuliers avec Paul Gibouin : 20–22€/h en ligne, 25–28€/h en présentiel. Premier échange gratuit.",
+    "Tarifs des cours particuliers avec Paul Gibouin : 20€/h en ligne, 22€/h en présentiel. Premier échange gratuit.",
 };
 
 export default function TarifsPage() {
@@ -50,7 +50,7 @@ export default function TarifsPage() {
             key={formule.label}
             className="rounded-lg border border-gold-dim bg-navy-light p-6"
           >
-            <p className="font-mono text-xs uppercase tracking-widest text-gold">
+            <p className="font-mono text-xs uppercase tracking-widest text-lime">
               {formule.label}
             </p>
             <p className="mt-3 font-display text-2xl text-cream">

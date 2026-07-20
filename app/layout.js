@@ -1,18 +1,17 @@
-import { Fraunces, Inter, Space_Mono } from "next/font/google";
+import { Space_Grotesk, Open_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 // Titres — charte graphique
-const fraunces = Fraunces({
+const spaceGrotesk = Space_Grotesk({
   variable: "--font-fraunces",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
 });
 
 // Corps de texte — charte graphique
-const inter = Inter({
+const openSans = Open_Sans({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -39,7 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="fr"
-      className={`${fraunces.variable} ${inter.variable} ${spaceMono.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${openSans.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-navy text-cream">
         <Header />

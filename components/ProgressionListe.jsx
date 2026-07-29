@@ -94,18 +94,22 @@ export default function ProgressionListe() {
   const { progression } = useProgression();
 
   return (
-    <div className="mt-10 flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       <div>
-        <h2 className="font-display text-xl text-cream">
+        <p className="font-mono text-xs uppercase tracking-widest text-cream/50">
           Exercices réalisés
-        </h2>
+        </p>
         <div className="mt-3">
           <ExercicesFaits progression={progression} />
         </div>
       </div>
 
+      <hr className="border-gold-dim/50" />
+
       <div>
-        <h2 className="font-display text-xl text-cream">QCM réalisés</h2>
+        <p className="font-mono text-xs uppercase tracking-widest text-cream/50">
+          QCM réalisés
+        </p>
         <div className="mt-3">
           <QcmFaits progression={progression} />
         </div>

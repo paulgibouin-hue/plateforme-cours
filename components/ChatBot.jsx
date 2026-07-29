@@ -47,7 +47,7 @@ export default function ChatBot() {
   }
 
   return (
-    <div className="flex flex-col gap-4 rounded-lg border border-gold-dim bg-navy-light p-6">
+    <div className="flex flex-col gap-4 rounded-lg border border-gold-dim/50 bg-navy p-4">
       <div className="flex max-h-96 flex-col gap-3 overflow-y-auto">
         {messages.length === 0 ? (
           <p className="font-sans text-sm text-cream/50">

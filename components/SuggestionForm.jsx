@@ -78,7 +78,7 @@ export default function SuggestionForm({ prenom }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-5 rounded-lg border border-gold-dim bg-navy-light p-6"
+      className="flex flex-col gap-5"
     >
       <label className="flex flex-col gap-1 font-sans text-sm text-cream/80">
         Type de suggestion

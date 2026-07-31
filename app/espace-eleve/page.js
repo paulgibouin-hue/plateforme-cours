@@ -1,11 +1,15 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { cookies } from "next/headers";
 import { lireCodes } from "@/lib/codesAcces";
 import { lireDevoirsEleve } from "@/lib/devoirs";
+import {
+  lireProgressionEleveServeur,
+  lireTendanceHebdomadaire,
+} from "@/lib/progressionServeur";
+import { calculerBarresMatieres, calculerBarreQcm } from "@/lib/statsProgression";
 import CodeForm from "@/components/CodeForm";
 import DeconnexionButton from "@/components/DeconnexionButton";
-import ProgressionListe from "@/components/ProgressionListe";
-import SuggestionForm from "@/components/SuggestionForm";
+import ProgressionDashboard from "@/components/ProgressionDashboard";
 import ChatBot from "@/components/ChatBot";
 import CahierTexte from "@/components/CahierTexte";
 
@@ -44,7 +48,14 @@ export default async function EspaceElevePage() {
     );
   }
 
-  const devoirs = await lireDevoirsEleve(entree.code.toUpperCase());
+  const codeEleve = entree.code.toUpperCase();
+  const [devoirs, progressionEleve, tendance] = await Promise.all([
+    lireDevoirsEleve(codeEleve),
+    lireProgressionEleveServeur(codeEleve),
+    lireTendanceHebdomadaire(codeEleve),
+  ]);
+  const barresMatieres = calculerBarresMatieres(progressionEleve);
+  const barreQcm = calculerBarreQcm(progressionEleve);
 
   return (
     <section className="relative overflow-hidden">
@@ -56,77 +67,14 @@ export default async function EspaceElevePage() {
         aria-hidden="true"
         className="animate-blob-drift-reverse pointer-events-none absolute -left-24 top-96 -z-10 h-96 w-96 rounded-full bg-lime/10 blur-[140px]"
       />
-      <div className="relative mx-auto max-w-6xl px-6 py-24">
-      <div className="flex items-center justify-between gap-4">
-        <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-lime">
-            Espace élève
-          </p>
-          <h1 className="mt-2 font-display text-3xl text-cream">
-            Bonjour {entree.prenom}
-          </h1>
-        </div>
-        <DeconnexionButton />
-      </div>
-
-      <section className="mt-12 rounded-lg border border-gold-dim bg-navy-light p-6">
-        <p className="font-mono text-xs uppercase tracking-widest text-lime">
-          Cahier de texte
-        </p>
-        <h2 className="mt-2 font-display text-xl text-cream">
-          Tes tâches à faire
-        </h2>
-        <div className="mt-6">
-          <CahierTexte devoirsInitiaux={devoirs} />
-        </div>
-      </section>
-
-      <p className="mt-12 font-mono text-xs uppercase tracking-widest text-lime">
-        Continuer
-      </p>
-      <div className="mt-4 grid gap-6 sm:grid-cols-2">
-        <Link
-          href="/matieres/mathematiques"
-          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
-        >
-          <p className="font-display text-lg text-cream">Exercices</p>
-          <p className="mt-1 font-sans text-sm text-cream/60">
-            Reprends les fiches classées par matière
-          </p>
-        </Link>
-        <Link
-          href="/qcm"
-          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
-        >
-          <p className="font-display text-lg text-cream">QCM</p>
-          <p className="mt-1 font-sans text-sm text-cream/60">
-            Teste tes connaissances
-          </p>
-        </Link>
-      </div>
-
-      <div className="mt-8 grid gap-6 lg:grid-cols-3 lg:items-start">
-        <section
-          id="chatbot"
-          className="scroll-mt-24 rounded-lg border border-gold-dim bg-navy-light p-6 lg:col-span-2"
-        >
-          <p className="font-mono text-xs uppercase tracking-widest text-lime">
-            Assistant
-          </p>
-          <h2 className="mt-2 font-display text-xl text-cream">
-            Une question ? Demande à l&apos;assistant
-          </h2>
-          <p className="mt-2 max-w-xl font-sans text-sm text-cream/70">
-            Un exercice bloque, une notion pas claire ? Discute avec
-            l&apos;assistant pédagogique de la plateforme.
-          </p>
-          <div className="mt-6">
-            <ChatBot />
-          </div>
-        </section>
-
-        <div className="flex flex-col gap-6">
-          <section className="rounded-lg border border-gold-dim bg-navy-light p-6">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 left-0 -z-10 hidden w-[32rem] bg-gradient-to-r from-gold/20 via-lime/10 to-transparent lg:block"
+      />
+      <div className="relative mx-auto max-w-[100rem] px-6 py-24 lg:px-12">
+        <div className="lg:flex lg:items-start">
+          {/* Colonne latérale : suivi de progression */}
+          <aside className="relative lg:sticky lg:top-28 lg:w-80 lg:shrink-0 lg:border-r lg:border-gold-dim/60 lg:pr-8">
             <p className="font-mono text-xs uppercase tracking-widest text-lime">
               Suivi
             </p>
@@ -134,27 +82,112 @@ export default async function EspaceElevePage() {
               Ma progression
             </h2>
             <div className="mt-6">
-              <ProgressionListe />
+              <ProgressionDashboard
+                tendance={tendance}
+                barresMatieres={barresMatieres}
+                barreQcm={barreQcm}
+              />
             </div>
-          </section>
+          </aside>
 
-          <section className="rounded-lg border border-gold-dim bg-navy-light p-6">
-            <p className="font-mono text-xs uppercase tracking-widest text-lime">
-              Suggestions
-            </p>
-            <h2 className="mt-2 font-display text-xl text-cream">
-              Une idée à proposer ?
-            </h2>
-            <p className="mt-2 font-sans text-sm text-cream/70">
-              Un chapitre, un exercice, une fonctionnalité ? Dis-le à Paul,
-              ton message part directement par mail.
-            </p>
-            <div className="mt-6">
-              <SuggestionForm prenom={entree.prenom} />
+          {/* Contenu principal */}
+          <div className="mt-12 min-w-0 flex-1 lg:mt-0 lg:pl-10">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="font-mono text-xs uppercase tracking-widest text-lime">
+                  Espace élève
+                </p>
+                <h1 className="mt-2 font-display text-3xl text-cream">
+                  Bonjour {entree.prenom}
+                </h1>
+              </div>
+              <DeconnexionButton />
             </div>
-          </section>
+
+            <section className="mt-12 rounded-lg border border-gold-dim border-l-4 border-l-gold bg-navy-light p-6">
+              <div className="flex items-center gap-2">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-gold/15 text-gold">
+                  <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5">
+                    <rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.4" />
+                    <path d="M6 7h8M6 10h8M6 13h5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+                  </svg>
+                </span>
+                <p className="font-mono text-xs uppercase tracking-widest text-lime">
+                  Cahier de texte
+                </p>
+              </div>
+              <h2 className="mt-2 font-display text-xl text-cream">
+                Tes tâches à faire
+              </h2>
+              <div className="mt-6">
+                <CahierTexte devoirsInitiaux={devoirs} />
+              </div>
+            </section>
+
+            <p className="mt-12 font-mono text-xs uppercase tracking-widest text-lime">
+              Continuer
+            </p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <Link
+                href="/matieres/mathematiques"
+                className="flex items-center gap-3 rounded-lg bg-navy px-5 py-4 transition hover:-translate-y-0.5 hover:bg-white/10"
+              >
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gold/15 text-gold">
+                  <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4">
+                    <path d="M3 4.5c2-1 5-1 7 0v11c-2-1-5-1-7 0v-11zM17 4.5c-2-1-5-1-7 0v11c2-1 5-1 7 0v-11z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <span className="flex-1">
+                  <span className="block font-display text-lg text-cream">Exercices</span>
+                  <span className="block font-sans text-xs text-cream/50">Fiches classées par matière</span>
+                </span>
+                <span className="font-mono text-gold">→</span>
+              </Link>
+              <Link
+                href="/qcm"
+                className="flex items-center gap-3 rounded-lg bg-navy px-5 py-4 transition hover:-translate-y-0.5 hover:bg-white/10"
+              >
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gold/15 text-gold">
+                  <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4">
+                    <circle cx="10" cy="10" r="7.2" stroke="currentColor" strokeWidth="1.3" />
+                    <path d="M7 10.2l2 2 4-4.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <span className="flex-1">
+                  <span className="block font-display text-lg text-cream">QCM</span>
+                  <span className="block font-sans text-xs text-cream/50">Teste tes connaissances</span>
+                </span>
+                <span className="font-mono text-gold">→</span>
+              </Link>
+            </div>
+
+            <section
+              id="chatbot"
+              className="mt-8 scroll-mt-24 rounded-lg border border-gold-dim border-l-4 border-l-lime bg-navy-light p-6"
+            >
+              <div className="flex items-center gap-2">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-lime/15 text-lime">
+                  <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5">
+                    <path d="M3 4h14v9H8l-3 3v-3H3V4z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <p className="font-mono text-xs uppercase tracking-widest text-lime">
+                  Assistant
+                </p>
+              </div>
+              <h2 className="mt-2 font-display text-xl text-cream">
+                Une question ? Demande à l&apos;assistant
+              </h2>
+              <p className="mt-2 max-w-xl font-sans text-sm text-cream/70">
+                Un exercice bloque, une notion pas claire ? Discute avec
+                l&apos;assistant pédagogique de la plateforme.
+              </p>
+              <div className="mt-6">
+                <ChatBot />
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
       </div>
     </section>
   );

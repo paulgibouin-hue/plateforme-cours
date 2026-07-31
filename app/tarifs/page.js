@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import Reveal from "@/components/Reveal";
 
 const FORMULES = [
   {
@@ -45,34 +46,35 @@ export default function TarifsPage() {
       </p>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {FORMULES.map((formule) => (
-          <div
-            key={formule.label}
-            className="rounded-lg border border-gold-dim bg-navy-light p-6"
-          >
-            <p className="font-mono text-xs uppercase tracking-widest text-lime">
-              {formule.label}
-            </p>
-            <p className="mt-3 font-display text-2xl text-cream">
-              {formule.tarif}
-            </p>
-            <ul className="mt-5 flex flex-col gap-2 font-sans text-sm text-cream/70">
-              {formule.points.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </div>
+        {FORMULES.map((formule, index) => (
+          <Reveal key={formule.label} delay={index * 100}>
+            <div className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold">
+              <p className="font-mono text-xs uppercase tracking-widest text-lime">
+                {formule.label}
+              </p>
+              <p className="mt-3 font-display text-2xl text-cream">
+                {formule.tarif}
+              </p>
+              <ul className="mt-5 flex flex-col gap-2 font-sans text-sm text-cream/70">
+                {formule.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
         ))}
       </div>
 
-      <h2 className="mt-16 font-display text-2xl text-cream">
-        Informations complémentaires
-      </h2>
-      <ul className="mt-6 flex flex-col gap-2 font-sans text-cream/80">
-        {INFOS.map((info) => (
-          <li key={info}>{info}</li>
-        ))}
-      </ul>
+      <Reveal as="div">
+        <h2 className="mt-16 font-display text-2xl text-cream">
+          Informations complémentaires
+        </h2>
+        <ul className="mt-6 flex flex-col gap-2 font-sans text-cream/80">
+          {INFOS.map((info) => (
+            <li key={info}>{info}</li>
+          ))}
+        </ul>
+      </Reveal>
 
       <h2 id="contact" className="mt-16 font-display text-2xl text-cream">
         Réserver un premier échange

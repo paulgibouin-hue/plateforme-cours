@@ -1,6 +1,7 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { notFound } from "next/navigation";
 import data from "@/data/exercices.json";
+import Reveal from "@/components/Reveal";
 
 const LABELS_MATIERE = {
   mathematiques: "Mathématiques",
@@ -69,30 +70,31 @@ export default async function MatierePage({ params }) {
         détaillées.
       </p>
 
-      <div className="mt-12 flex flex-col gap-12">
+      <div className="mt-8 flex flex-col gap-8 sm:mt-12 sm:gap-12">
         {groupes.map(({ niveau, chapitres }) => (
-          <div key={niveau}>
+          <Reveal key={niveau}>
             <h2 className="font-mono text-xs uppercase tracking-widest text-lime">
               {LABELS_NIVEAU[niveau] ?? niveau}
             </h2>
-            <div className="mt-4 grid gap-6 sm:grid-cols-2">
-              {chapitres.map((chapitre) => (
-                <Link
-                  key={chapitre.id}
-                  href={`/matieres/${matiere}/${chapitre.id}`}
-                  className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
-                >
-                  <h3 className="font-display text-xl text-cream">
-                    {chapitre.titre}
-                  </h3>
-                  <p className="mt-2 font-sans text-sm text-cream/60">
-                    {chapitre.exercices.length} exercice
-                    {chapitre.exercices.length > 1 ? "s" : ""}
-                  </p>
-                </Link>
+            <div className="mt-3 grid gap-3 sm:mt-4 sm:gap-6 sm:grid-cols-2">
+              {chapitres.map((chapitre, index) => (
+                <Reveal key={chapitre.id} delay={index * 80}>
+                  <Link
+                    href={`/matieres/${matiere}/${chapitre.id}`}
+                    className="flex items-center justify-between gap-4 rounded-lg border border-gold-dim bg-navy-light p-4 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20 sm:block sm:p-6"
+                  >
+                    <h3 className="font-display text-base text-cream sm:text-xl">
+                      {chapitre.titre}
+                    </h3>
+                    <p className="shrink-0 font-sans text-xs text-cream/60 sm:mt-2 sm:text-sm">
+                      {chapitre.exercices.length} exercice
+                      {chapitre.exercices.length > 1 ? "s" : ""}
+                    </p>
+                  </Link>
+                </Reveal>
               ))}
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Space_Grotesk, Open_Sans, Space_Mono } from "next/font/google";
+import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -36,15 +37,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="fr"
-      className={`${spaceGrotesk.variable} ${openSans.variable} ${spaceMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-navy text-cream">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html
+        lang="fr"
+        className={`${spaceGrotesk.variable} ${openSans.variable} ${spaceMono.variable} h-full antialiased`}
+      >
+        <body className="min-h-full flex flex-col bg-navy text-cream">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import data from "@/data/qcm.json";
+import Reveal from "@/components/Reveal";
 
 const LABELS_MATIERE = {
   mathematiques: "Mathématiques",
@@ -66,7 +67,7 @@ export default function QcmPage() {
 
       <div className="mt-12 flex flex-col gap-12">
         {groupes.map(({ matiere, niveaux }) => (
-          <div key={matiere}>
+          <Reveal key={matiere}>
             <h2 className="font-display text-2xl text-cream">
               {LABELS_MATIERE[matiere] ?? matiere}
             </h2>
@@ -77,8 +78,8 @@ export default function QcmPage() {
                     {LABELS_NIVEAU[niveau] ?? niveau}
                   </h3>
                   <ul className="mt-3 flex flex-col gap-3">
-                    {qcms.map((qcm) => (
-                      <li key={qcm.id}>
+                    {qcms.map((qcm, index) => (
+                      <Reveal key={qcm.id} as="li" delay={index * 80}>
                         <Link
                           href={`/qcm/${qcm.id}`}
                           className="flex items-center justify-between rounded-lg border border-gold-dim bg-navy-light px-6 py-4 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
@@ -90,13 +91,13 @@ export default function QcmPage() {
                             {qcm.questions.length} questions
                           </span>
                         </Link>
-                      </li>
+                      </Reveal>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

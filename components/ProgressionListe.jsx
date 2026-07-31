@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import exercicesData from "@/data/exercices.json";
 import qcmData from "@/data/qcm.json";
 import { useProgression } from "@/lib/progression";

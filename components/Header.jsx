@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import BadgeChatbot from "@/components/BadgeChatbot";
 
@@ -34,7 +34,7 @@ export default function Header() {
         </Link>
 
         {/* Navigation desktop + bouton Espace élève */}
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-4 lg:flex">
           <nav className="flex items-center gap-6 font-sans text-sm text-cream/80">
             {NAV_LINKS.flatMap((link) => [
               link.separateur ? (
@@ -76,7 +76,7 @@ export default function Header() {
           onClick={() => setMenuOuvert((ouvert) => !ouvert)}
           aria-label={menuOuvert ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={menuOuvert}
-          className="flex h-9 w-9 items-center justify-center rounded-md border border-gold-dim text-cream md:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-md border border-gold-dim text-cream lg:hidden"
         >
           <svg
             width="18"
@@ -106,7 +106,7 @@ export default function Header() {
 
       {/* Panneau de navigation mobile */}
       {menuOuvert ? (
-        <nav className="flex flex-col gap-1 border-t border-gold-dim px-6 py-4 font-sans text-sm text-cream/80 md:hidden">
+        <nav className="flex flex-col gap-1 border-t border-gold-dim px-6 py-4 font-sans text-sm text-cream/80 lg:hidden">
           {NAV_LINKS.flatMap((link) => [
             link.separateur ? (
               <hr
@@ -138,7 +138,7 @@ export default function Header() {
               {ESPACE_ELEVE.label}
             </Link>
             <BadgeChatbot
-              className="-top-5 -right-8"
+              className="-top-4 right-0"
               onClick={() => setMenuOuvert(false)}
             />
           </div>

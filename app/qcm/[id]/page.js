@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { notFound } from "next/navigation";
 import data from "@/data/qcm.json";
 import QcmCard from "@/components/QcmCard";

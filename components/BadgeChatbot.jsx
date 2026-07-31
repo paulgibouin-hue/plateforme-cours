@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 /**
  * Badge en forme d'étoile éclatée ("burst") annonçant le chatbot,

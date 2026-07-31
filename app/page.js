@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import exercicesData from "@/data/exercices.json";
 import qcmData from "@/data/qcm.json";
 import Reveal from "@/components/Reveal";
@@ -93,16 +93,16 @@ export default function AccueilPage() {
             école d&apos;ingénieur passé par une classe préparatoire
             scientifique. Méthode rigoureuse, pédagogie accessible.
           </p>
-          <div className="mt-10 flex gap-4">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/tarifs#contact"
-              className="rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-cream transition active:scale-95 hover:opacity-90"
+              className="rounded-md bg-gold px-6 py-3 text-center font-sans text-sm font-medium text-cream transition active:scale-95 hover:opacity-90"
             >
               Réserver un premier cours
             </Link>
             <a
               href="#matieres"
-              className="rounded-md border border-lime/40 px-6 py-3 font-sans text-sm font-medium text-cream transition active:scale-95 hover:border-lime"
+              className="rounded-md border border-lime/40 px-6 py-3 text-center font-sans text-sm font-medium text-cream transition active:scale-95 hover:border-lime"
             >
               Découvrir les matières
             </a>
@@ -112,11 +112,11 @@ export default function AccueilPage() {
 
       {/* Stats */}
       <Reveal as="section" className="relative mx-auto max-w-5xl px-6 py-4">
-        <div className="flex flex-wrap divide-x divide-gold-dim">
+        <div className="grid grid-cols-2 gap-y-6 sm:flex sm:flex-wrap sm:gap-y-0 sm:divide-x sm:divide-gold-dim">
           {STATS.map((stat, index) => (
             <div
               key={stat.label}
-              className={`px-8 first:pl-0 sm:px-10 ${
+              className={`px-4 sm:px-10 sm:first:pl-0 ${
                 index % 2 === 1 ? "sm:translate-y-3" : ""
               }`}
             >

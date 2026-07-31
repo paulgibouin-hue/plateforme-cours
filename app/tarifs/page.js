@@ -14,7 +14,7 @@ const FORMULES = [
     label: "Présentiel",
     tarif: "22€ / heure",
     points: [
-      "Cours au domicile de l'élève (zone : [ZONE_GÉOGRAPHIQUE])",
+      "Cours au domicile de l'élève (Évry-Courcouronnes et communes proches : Corbeil-Essonnes, Ris-Orangis, Bondoufle, Lisses...)",
       "Support papier et numérique combinés",
       "Accès inclus à la plateforme d'exercices et QCM",
     ],

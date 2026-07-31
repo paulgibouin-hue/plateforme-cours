@@ -90,7 +90,7 @@ export default function ContactForm() {
       setChamps(CHAMPS_INITIAUX);
     } catch {
       setErreur(
-        "L'envoi a échoué. Réessaie, ou écris-moi directement à [TON_EMAIL]."
+        "L'envoi a échoué. Réessaie, ou écris-moi directement à paul.gibouin.17@gmail.com."
       );
     } finally {
       setEnCours(false);

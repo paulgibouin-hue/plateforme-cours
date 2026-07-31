@@ -31,7 +31,7 @@ export const metadata = {
     template: "%s | Paul Gibouin",
   },
   description:
-    "Cours particuliers en mathématiques, physique-chimie et NSI pour collégiens et lycéens, en présentiel à [TA_VILLE] et en ligne.",
+    "Cours particuliers en mathématiques, physique-chimie et NSI pour collégiens et lycéens, en présentiel à Évry-Courcouronnes et en ligne.",
 };
 
 export default function RootLayout({ children }) {

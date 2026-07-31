@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const PARCOURS = [
   {
     periode: "2021 – 2024",
@@ -12,7 +14,7 @@ const PARCOURS = [
   {
     periode: "2026 – aujourd'hui",
     titre: "École d'ingénieurs",
-    lieu: "[NOM_ÉCOLE]",
+    lieu: "ENSIIE, Évry-Courcouronnes",
   },
 ];
 
@@ -37,7 +39,9 @@ export default function AProposPage() {
         <p>
           Je m&apos;appelle Paul. Après deux années de classe préparatoire
           scientifique (MPI/MPI*) au lycée Clemenceau à Nantes,
-          j&apos;intègre une école d&apos;ingénieurs à la rentrée 2026 : [ECOLE].
+          j&apos;intègre l&apos;ENSIIE (École Nationale Supérieure
+          d&apos;Informatique pour l&apos;Industrie et l&apos;Entreprise) à
+          Évry-Courcouronnes à la rentrée 2026.
         </p>
         <p>
           Cette expérience m&apos;a appris une chose essentielle : la
@@ -65,18 +69,25 @@ export default function AProposPage() {
       </p>
 
       <h2 className="mt-16 font-display text-2xl text-cream">Parcours</h2>
-      <ul className="mt-6 flex flex-col gap-4">
-        {PARCOURS.map((etape) => (
-          <li
-            key={etape.titre}
-            className="rounded-lg border border-gold-dim bg-navy-light p-5"
-          >
-            <p className="font-mono text-xs uppercase tracking-widest text-lime">
-              {etape.periode}
-            </p>
-            <p className="mt-2 font-sans text-cream">{etape.titre}</p>
-            <p className="font-sans text-sm text-cream/60">{etape.lieu}</p>
-          </li>
+      <ul className="relative mt-6 flex flex-col gap-6">
+        <span
+          aria-hidden="true"
+          className="absolute top-2 bottom-2 left-[7px] w-px bg-gold-dim"
+        />
+        {PARCOURS.map((etape, index) => (
+          <Reveal key={etape.titre} as="li" delay={index * 200} className="relative pl-8">
+            <span
+              aria-hidden="true"
+              className="absolute top-2 left-0 h-3.5 w-3.5 rounded-full border-2 border-lime bg-navy"
+            />
+            <div className="rounded-lg border border-gold-dim bg-navy-light p-5">
+              <p className="font-mono text-xs uppercase tracking-widest text-lime">
+                {etape.periode}
+              </p>
+              <p className="mt-2 font-sans text-cream">{etape.titre}</p>
+              <p className="font-sans text-sm text-cream/60">{etape.lieu}</p>
+            </div>
+          </Reveal>
         ))}
       </ul>
 

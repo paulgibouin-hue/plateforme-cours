@@ -83,7 +83,7 @@ export default function AccueilPage() {
         />
         <div className="relative mx-auto max-w-5xl px-6 py-24">
           <p className="font-mono text-xs uppercase tracking-widest text-lime">
-            Cours particuliers à [TA_VILLE] et en ligne
+            Cours particuliers à Évry-Courcouronnes et en ligne
           </p>
           <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-cream sm:text-5xl">
             Des maths et de la physique qui deviennent enfin claires.
@@ -207,7 +207,8 @@ export default function AccueilPage() {
         className="mx-auto max-w-5xl px-6 py-24 text-center"
       >
         <p className="font-sans text-lg text-cream/90">
-          Prêt à commencer ? Premier cours possible dès [DATE_DISPONIBILITE].
+          Prêt à commencer ? Premier cours possible dès la rentrée de
+          septembre 2026.
           Places limitées pour un suivi personnalisé.
         </p>
         <Link

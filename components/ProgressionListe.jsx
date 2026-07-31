@@ -12,6 +12,62 @@ const LABELS_MATIERE = {
   nsi: "NSI",
 };
 
+const ORDRE_MATIERES = ["mathematiques", "physique", "chimie", "nsi"];
+
+function calculerBarresMatieres(progression) {
+  const parMatiere = {};
+  for (const chapitre of exercicesData.chapitres) {
+    const stats = (parMatiere[chapitre.matiere] ??= { total: 0, fait: 0 });
+    for (const exercice of chapitre.exercices) {
+      stats.total += 1;
+      if (progression[`exercice:${exercice.id}`]) stats.fait += 1;
+    }
+  }
+
+  return ORDRE_MATIERES.filter((m) => parMatiere[m]).map((matiere) => {
+    const { total, fait } = parMatiere[matiere];
+    return {
+      matiere,
+      total,
+      fait,
+      pourcentage: total === 0 ? 0 : Math.round((fait / total) * 100),
+    };
+  });
+}
+
+function calculerBarreQcm(progression) {
+  let total = 0;
+  let fait = 0;
+  for (const qcm of qcmData.qcms) {
+    total += qcm.questions.length;
+    fait += qcm.questions.filter(
+      (question) => progression[`qcm:${qcm.id}:${question.id}`]
+    ).length;
+  }
+  return { total, fait, pourcentage: total === 0 ? 0 : Math.round((fait / total) * 100) };
+}
+
+function BarreProgression({ label, fait, total, pourcentage, accent = "gold" }) {
+  return (
+    <div>
+      <div className="flex items-center justify-between font-sans text-sm text-cream/80">
+        <span>{label}</span>
+        <span className="font-mono text-xs text-cream/50">
+          {fait}/{total}
+        </span>
+      </div>
+      <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-navy">
+        <div
+          className={`h-full rounded-full ${
+            accent === "gold" ? "bg-gold" : "bg-lime"
+          }`}
+          style={{ width: `${pourcentage}%` }}
+        />
+      </div>
+    </div>
+  );
+}
+
 function ExercicesFaits({ progression }) {
   const exercicesFaits = [];
 
@@ -92,28 +148,57 @@ function QcmFaits({ progression }) {
 
 export default function ProgressionListe() {
   const { progression } = useProgression();
+  const barresMatieres = calculerBarresMatieres(progression);
+  const barreQcm = calculerBarreQcm(progression);
 
   return (
     <div className="flex flex-col gap-6">
-      <div>
-        <p className="font-mono text-xs uppercase tracking-widest text-cream/50">
-          Exercices réalisés
-        </p>
-        <div className="mt-3">
-          <ExercicesFaits progression={progression} />
-        </div>
+      <div className="flex flex-col gap-4">
+        {barresMatieres.map((b) => (
+          <BarreProgression
+            key={b.matiere}
+            label={LABELS_MATIERE[b.matiere] ?? b.matiere}
+            fait={b.fait}
+            total={b.total}
+            pourcentage={b.pourcentage}
+            accent="gold"
+          />
+        ))}
+        <BarreProgression
+          label="QCM (toutes matières)"
+          fait={barreQcm.fait}
+          total={barreQcm.total}
+          pourcentage={barreQcm.pourcentage}
+          accent="lime"
+        />
       </div>
 
-      <hr className="border-gold-dim/50" />
+      <details className="group">
+        <summary className="cursor-pointer font-mono text-xs uppercase tracking-widest text-cream/50 hover:text-cream/80">
+          Voir le détail
+        </summary>
+        <div className="mt-4 flex flex-col gap-6">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-cream/50">
+              Exercices réalisés
+            </p>
+            <div className="mt-3">
+              <ExercicesFaits progression={progression} />
+            </div>
+          </div>
 
-      <div>
-        <p className="font-mono text-xs uppercase tracking-widest text-cream/50">
-          QCM réalisés
-        </p>
-        <div className="mt-3">
-          <QcmFaits progression={progression} />
+          <hr className="border-gold-dim/50" />
+
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-cream/50">
+              QCM réalisés
+            </p>
+            <div className="mt-3">
+              <QcmFaits progression={progression} />
+            </div>
+          </div>
         </div>
-      </div>
+      </details>
 
       <p className="font-mono text-xs text-cream/40">
         Cette progression est enregistrée uniquement sur cet appareil et ce

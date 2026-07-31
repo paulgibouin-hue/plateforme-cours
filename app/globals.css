@@ -64,6 +64,37 @@ h4 {
   font-family: var(--font-display);
 }
 
+/* Apparition en douceur au défilement, pilotée par le composant Reveal.jsx
+   (ajoute .is-visible via IntersectionObserver). Sans JS, le contenu reste
+   simplement visible dès le départ (voir le <noscript> ci-dessous n'est pas
+   nécessaire : opacity ne masque rien pour les lecteurs d'écran). */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dérive lente des halos décoratifs en arrière-plan */
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(24px, -28px) scale(1.06);
+  }
+}
+.animate-blob-drift {
+  animation: blob-drift 16s ease-in-out infinite;
+}
+.animate-blob-drift-reverse {
+  animation: blob-drift 20s ease-in-out infinite reverse;
+}
+
 /* Respect des préférences de mouvement réduit */
 @media (prefers-reduced-motion: reduce) {
   html {

@@ -28,7 +28,7 @@ export default function QcmCard({ qcmId, question }) {
   }
 
   return (
-    <div className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold hover:bg-white/20">
+    <div className="rounded-lg border border-gold-dim bg-navy-light p-6">
       <p className="font-mono text-xs uppercase tracking-widest text-lime">
         Question {numero}
       </p>

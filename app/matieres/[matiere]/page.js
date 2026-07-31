@@ -80,7 +80,7 @@ export default async function MatierePage({ params }) {
                 <Link
                   key={chapitre.id}
                   href={`/matieres/${matiere}/${chapitre.id}`}
-                  className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold hover:bg-white/20"
+                  className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
                 >
                   <h3 className="font-display text-xl text-cream">
                     {chapitre.titre}

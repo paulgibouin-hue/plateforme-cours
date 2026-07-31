@@ -81,7 +81,7 @@ export default function QcmPage() {
                       <li key={qcm.id}>
                         <Link
                           href={`/qcm/${qcm.id}`}
-                          className="flex items-center justify-between rounded-lg border border-gold-dim bg-navy-light px-6 py-4 transition-colors hover:border-gold hover:bg-white/20"
+                          className="flex items-center justify-between rounded-lg border border-gold-dim bg-navy-light px-6 py-4 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
                         >
                           <span className="font-sans text-cream">
                             {qcm.titre}

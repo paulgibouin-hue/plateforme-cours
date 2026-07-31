@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { lireCodes } from "@/lib/codesAcces";
+import { lireDevoirsEleve } from "@/lib/devoirs";
 import CodeForm from "@/components/CodeForm";
 import DeconnexionButton from "@/components/DeconnexionButton";
 import ProgressionListe from "@/components/ProgressionListe";
 import SuggestionForm from "@/components/SuggestionForm";
 import ChatBot from "@/components/ChatBot";
+import CahierTexte from "@/components/CahierTexte";
 
 const NOM_COOKIE = "espace_eleve_code";
 
@@ -42,8 +44,19 @@ export default async function EspaceElevePage() {
     );
   }
 
+  const devoirs = await lireDevoirsEleve(entree.code.toUpperCase());
+
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
+    <section className="relative overflow-hidden">
+      <div
+        aria-hidden="true"
+        className="animate-blob-drift pointer-events-none absolute -top-40 right-0 -z-10 h-[32rem] w-[32rem] rounded-full bg-gold/15 blur-[160px]"
+      />
+      <div
+        aria-hidden="true"
+        className="animate-blob-drift-reverse pointer-events-none absolute -left-24 top-96 -z-10 h-96 w-96 rounded-full bg-lime/10 blur-[140px]"
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-24">
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-lime">
@@ -56,13 +69,25 @@ export default async function EspaceElevePage() {
         <DeconnexionButton />
       </div>
 
+      <section className="mt-12 rounded-lg border border-gold-dim bg-navy-light p-6">
+        <p className="font-mono text-xs uppercase tracking-widest text-lime">
+          Cahier de texte
+        </p>
+        <h2 className="mt-2 font-display text-xl text-cream">
+          Tes tâches à faire
+        </h2>
+        <div className="mt-6">
+          <CahierTexte devoirsInitiaux={devoirs} />
+        </div>
+      </section>
+
       <p className="mt-12 font-mono text-xs uppercase tracking-widest text-lime">
         Continuer
       </p>
       <div className="mt-4 grid gap-6 sm:grid-cols-2">
         <Link
           href="/matieres/mathematiques"
-          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold hover:bg-white/20"
+          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
         >
           <p className="font-display text-lg text-cream">Exercices</p>
           <p className="mt-1 font-sans text-sm text-cream/60">
@@ -71,7 +96,7 @@ export default async function EspaceElevePage() {
         </Link>
         <Link
           href="/qcm"
-          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold hover:bg-white/20"
+          className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
         >
           <p className="font-display text-lg text-cream">QCM</p>
           <p className="mt-1 font-sans text-sm text-cream/60">
@@ -129,6 +154,7 @@ export default async function EspaceElevePage() {
             </div>
           </section>
         </div>
+      </div>
       </div>
     </section>
   );

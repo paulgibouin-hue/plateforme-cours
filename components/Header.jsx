@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import BadgeChatbot from "@/components/BadgeChatbot";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const NAV_LINKS = [
   { href: "/", label: "Accueil" },
@@ -23,7 +24,10 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gold-dim bg-navy/70 backdrop-blur-xl">
+    <header className="relative border-b border-gold-dim bg-navy-deep">
+      <div className="hidden lg:block">
+        <ThemeToggle className="absolute right-6 top-1/2 -translate-y-1/2 xl:right-12" />
+      </div>
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <Link
           href="/"
@@ -70,38 +74,41 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Bouton hamburger, mobile uniquement */}
-        <button
-          type="button"
-          onClick={() => setMenuOuvert((ouvert) => !ouvert)}
-          aria-label={menuOuvert ? "Fermer le menu" : "Ouvrir le menu"}
-          aria-expanded={menuOuvert}
-          className="flex h-9 w-9 items-center justify-center rounded-md border border-gold-dim text-cream lg:hidden"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 18 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        {/* Bouton hamburger + bascule thème, mobile uniquement */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <button
+            type="button"
+            onClick={() => setMenuOuvert((ouvert) => !ouvert)}
+            aria-label={menuOuvert ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={menuOuvert}
+            className="flex h-9 w-9 items-center justify-center rounded-md border border-gold-dim text-cream"
           >
-            {menuOuvert ? (
-              <path
-                d="M2 2L16 16M16 2L2 16"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-              />
-            ) : (
-              <path
-                d="M2 4.5H16M2 9H16M2 13.5H16"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-              />
-            )}
-          </svg>
-        </button>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {menuOuvert ? (
+                <path
+                  d="M2 2L16 16M16 2L2 16"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                />
+              ) : (
+                <path
+                  d="M2 4.5H16M2 9H16M2 13.5H16"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                />
+              )}
+            </svg>
+          </button>
+          <ThemeToggle />
+        </div>
       </div>
 
       {/* Panneau de navigation mobile */}

@@ -214,7 +214,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={enCours}
-        className="self-start rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-cream transition active:scale-95 hover:opacity-90 disabled:opacity-50"
+        className="self-start rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-white transition active:scale-95 hover:opacity-90 disabled:opacity-50"
       >
         {enCours ? "Envoi..." : "Envoyer la demande"}
       </button>

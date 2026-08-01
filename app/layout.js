@@ -35,6 +35,8 @@ export const metadata = {
     "Cours particuliers en mathématiques, physique-chimie et NSI pour collégiens et lycéens, en présentiel à Évry-Courcouronnes et en ligne.",
 };
 
+const SCRIPT_THEME = `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"||s==="dark"?s:(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
+
 export default function RootLayout({ children }) {
   return (
     <ViewTransitions>
@@ -42,6 +44,9 @@ export default function RootLayout({ children }) {
         lang="fr"
         className={`${spaceGrotesk.variable} ${openSans.variable} ${spaceMono.variable} h-full antialiased`}
       >
+        <head>
+          <script dangerouslySetInnerHTML={{ __html: SCRIPT_THEME }} />
+        </head>
         <body className="min-h-full flex flex-col bg-navy text-cream">
           <Header />
           <main className="flex-1">{children}</main>

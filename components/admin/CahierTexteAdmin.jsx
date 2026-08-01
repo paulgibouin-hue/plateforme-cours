@@ -117,7 +117,7 @@ export default function CahierTexteAdmin({ codes, devoirsInitiaux }) {
         <button
           type="submit"
           disabled={enCours || codes.length === 0}
-          className="self-start rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-cream transition active:scale-95 hover:opacity-90 disabled:opacity-50"
+          className="self-start rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-white transition active:scale-95 hover:opacity-90 disabled:opacity-50"
         >
           Assigner
         </button>

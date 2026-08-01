@@ -91,7 +91,7 @@ export default function ChatBot() {
         <button
           type="submit"
           disabled={enCours || !saisie.trim()}
-          className="rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-cream transition active:scale-95 hover:opacity-90 disabled:opacity-50"
+          className="rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-white transition active:scale-95 hover:opacity-90 disabled:opacity-50"
         >
           Envoyer
         </button>

@@ -1,6 +1,7 @@
 import { Link } from "next-view-transitions";
 import data from "@/data/qcm.json";
 import Reveal from "@/components/Reveal";
+import IconeNiveau from "@/components/IconeNiveau";
 
 const LABELS_MATIERE = {
   mathematiques: "Mathématiques",
@@ -57,7 +58,7 @@ export default function QcmPage() {
   const groupes = groupParMatiere(data.qcms);
 
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24">
+    <section className="mx-auto max-w-4xl px-6 py-24">
       <p className="font-mono text-xs uppercase tracking-widest text-lime">
         QCM interactifs
       </p>
@@ -65,29 +66,37 @@ export default function QcmPage() {
         Teste tes connaissances
       </h1>
 
-      <div className="mt-12 flex flex-col gap-12">
-        {groupes.map(({ matiere, niveaux }) => (
-          <Reveal key={matiere}>
+      <div className="mt-12 flex flex-col divide-y divide-gold-dim/30">
+        {groupes.map(({ matiere, niveaux }, index) => (
+          <Reveal
+            key={matiere}
+            className={index === 0 ? "pb-12" : "pt-12 pb-12"}
+          >
             <h2 className="font-display text-2xl text-cream">
               {LABELS_MATIERE[matiere] ?? matiere}
             </h2>
             <div className="mt-6 flex flex-col gap-6">
               {niveaux.map(({ niveau, qcms }) => (
                 <div key={niveau}>
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-lime">
-                    {LABELS_NIVEAU[niveau] ?? niveau}
-                  </h3>
-                  <ul className="mt-3 flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-gold/15 text-gold">
+                      <IconeNiveau niveau={niveau} />
+                    </span>
+                    <h3 className="font-mono text-xs uppercase tracking-widest text-gold">
+                      {LABELS_NIVEAU[niveau] ?? niveau}
+                    </h3>
+                  </div>
+                  <ul className="mt-3 grid gap-3 sm:grid-cols-2">
                     {qcms.map((qcm, index) => (
                       <Reveal key={qcm.id} as="li" delay={index * 80}>
                         <Link
                           href={`/qcm/${qcm.id}`}
-                          className="flex items-center justify-between rounded-lg border border-gold-dim bg-navy-light px-6 py-4 transition hover:-translate-y-1 hover:border-gold hover:bg-white/20"
+                          className="flex items-center justify-between gap-3 rounded-lg border-l-4 border-l-gold bg-navy-light px-6 py-4 transition hover:-translate-y-1 hover:bg-white/10 hover:ring-1 hover:ring-gold/50"
                         >
                           <span className="font-sans text-cream">
                             {qcm.titre}
                           </span>
-                          <span className="font-mono text-xs uppercase tracking-widest text-lime/70">
+                          <span className="shrink-0 font-mono text-xs uppercase tracking-widest text-lime/80">
                             {qcm.questions.length} questions
                           </span>
                         </Link>

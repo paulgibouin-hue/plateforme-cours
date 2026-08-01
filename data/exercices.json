@@ -5,6 +5,7 @@
       "matiere": "mathematiques",
       "niveau": "premiere",
       "titre": "Équations du second degré",
+      "description": "Discriminant, factorisation, signe du trinôme.",
       "rappelCours": [
         "Forme $ax^2+bx+c=0$ avec $a\\neq 0$. Discriminant $\\Delta=b^2-4ac$.",
         "$\\Delta>0$ : $x_1=\\dfrac{-b-\\sqrt\\Delta}{2a}$, $x_2=\\dfrac{-b+\\sqrt\\Delta}{2a}$",
@@ -59,6 +60,7 @@
       "matiere": "mathematiques",
       "niveau": "premiere",
       "titre": "Dérivation et étude de fonctions",
+      "description": "Nombre dérivé, tangentes, variations — le chapitre pivot de l'année.",
       "rappelCours": [
         "Nombre dérivé en $a$ : $f'(a)=\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}$",
         "Dérivées usuelles : $(x^n)'=nx^{n-1}$, $(\\sqrt{x})'=\\dfrac{1}{2\\sqrt{x}}$, $\\left(\\dfrac1x\\right)'=-\\dfrac{1}{x^2}$",
@@ -113,6 +115,7 @@
       "matiere": "mathematiques",
       "niveau": "terminale",
       "titre": "Suites numériques",
+      "description": "Suites arithmétiques et géométriques, limites, récurrence.",
       "rappelCours": [
         "Suite arithmétique : $u_{n+1}=u_n+r$, terme général $u_n=u_0+nr$",
         "Suite géométrique : $u_{n+1}=u_n\\times q$, terme général $u_n=u_0\\times q^n$",
@@ -168,6 +171,7 @@
       "matiere": "mathematiques",
       "niveau": "terminale",
       "titre": "Fonction exponentielle et logarithme",
+      "description": "Fonction exponentielle, logarithme, croissances comparées.",
       "rappelCours": [
         "$(e^x)'=e^x$, $e^0=1$, $e^{a+b}=e^a\\times e^b$",
         "$\\ln$ est la réciproque de $\\exp$ sur $]0;+\\infty[$ : $e^{\\ln x}=x$, $\\ln(e^x)=x$",
@@ -222,6 +226,7 @@
       "matiere": "mathematiques",
       "niveau": "terminale",
       "titre": "Probabilités conditionnelles",
+      "description": "Arbres pondérés, indépendance, formule des probabilités totales.",
       "rappelCours": [
         "Probabilité conditionnelle : $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}$ (probabilité de $B$ sachant que $A$ est réalisé)",
         "Formule des probabilités totales : si $A_1,\\dots,A_n$ forment une partition de l'univers, alors $P(B)=\\sum_i P(A_i)\\times P_{A_i}(B)$",
@@ -276,6 +281,7 @@
       "matiere": "mathematiques",
       "niveau": "brevet",
       "titre": "Pythagore & Trigonométrie",
+      "description": "Triangles rectangles, cosinus, sinus et applications au brevet.",
       "rappelCours": [
         "$a^2+b^2=c^2$",
         "$\\sin=\\dfrac{\\text{opp}}{\\text{hyp}}$, $\\cos=\\dfrac{\\text{adj}}{\\text{hyp}}$, $\\tan=\\dfrac{\\text{opp}}{\\text{adj}}$",
@@ -330,6 +336,7 @@
       "matiere": "physique",
       "niveau": "brevet",
       "titre": "Électricité",
+      "description": "Loi d'Ohm, puissance, énergie — les bases de l'électricité.",
       "rappelCours": [
         "$U=RI$ (loi d'Ohm)",
         "$P=UI$ (puissance)",
@@ -383,6 +390,7 @@
       "matiere": "physique",
       "niveau": "terminale",
       "titre": "Mécanique newtonienne",
+      "description": "Chute libre, deuxième loi de Newton, énergie mécanique.",
       "rappelCours": [
         "PFD : $\\sum \\vec{F} = m\\vec{a}$ (référentiel galiléen)",
         "$P=mg$",
@@ -436,6 +444,7 @@
       "matiere": "physique",
       "niveau": "terminale",
       "titre": "Ondes et signaux",
+      "description": "Ondes mécaniques, célérité, diffraction.",
       "rappelCours": [
         "Onde mécanique : une onde transporte de l'énergie, pas de matière. Célérité $v=\\dfrac{d}{t}$",
         "Relation fondamentale : $v=\\lambda\\times f$ (célérité, longueur d'onde, fréquence)",
@@ -482,6 +491,7 @@
       "matiere": "physique",
       "niveau": "premiere",
       "titre": "Circuits électriques en courant continu",
+      "description": "Lois des mailles et des nœuds, circuits série et dérivation.",
       "rappelCours": [
         "Loi d'Ohm : $U=RI$",
         "Circuit série : même intensité en tout point, $U_{\\text{total}}=\\sum U_i$, $R_{\\text{éq}}=\\sum R_i$",
@@ -537,6 +547,7 @@
       "matiere": "chimie",
       "niveau": "terminale",
       "titre": "Réactions chimiques & Équilibres",
+      "description": "Stœchiométrie, constante d'équilibre, tableaux d'avancement.",
       "rappelCours": [
         "$aA+bB \\rightleftharpoons cC+dD$",
         "$K_c=\\dfrac{[C]^c[D]^d}{[A]^a[B]^b}$",
@@ -590,6 +601,7 @@
       "matiere": "chimie",
       "niveau": "terminale",
       "titre": "Acides, bases et pH",
+      "description": "pH, dosages, dilution des acides et bases.",
       "rappelCours": [
         "$pH=-\\log[H_3O^+]$ donc $[H_3O^+]=10^{-pH}$",
         "Solution acide : $pH<7$ ; basique : $pH>7$ ; neutre : $pH=7$ (à $25°C$)",
@@ -636,6 +648,7 @@
       "matiere": "chimie",
       "niveau": "terminale",
       "titre": "Cinétique chimique",
+      "description": "Vitesse de réaction, temps de demi-réaction, facteurs cinétiques.",
       "rappelCours": [
         "La vitesse d'une réaction décrit la rapidité avec laquelle l'avancement $x$ évolue au cours du temps",
         "Temps de demi-réaction $t_{1/2}$ : durée au bout de laquelle l'avancement atteint la moitié de sa valeur finale $x_{\\text{max}}$",
@@ -690,6 +703,7 @@
       "matiere": "nsi",
       "niveau": "premiere",
       "titre": "Structures de données : listes, n-uplets, dictionnaires",
+      "description": "Listes, n-uplets, dictionnaires en Python.",
       "rappelCours": [
         "Liste (list) : collection ordonnée et modifiable, indexée à partir de $0$ : `l[0]`",
         "n-uplet (tuple) : collection ordonnée et non modifiable : `t = (1, 2, 3)`",
@@ -744,6 +758,7 @@
       "matiere": "nsi",
       "niveau": "terminale",
       "titre": "Algorithmes de tri et de recherche",
+      "description": "Recherche séquentielle, dichotomie, tris par sélection et insertion.",
       "rappelCours": [
         "Recherche séquentielle : parcourt la liste élément par élément, complexité $O(n)$",
         "Recherche dichotomique : nécessite une liste triée, complexité $O(\\log n)$",
@@ -798,6 +813,7 @@
       "matiere": "nsi",
       "niveau": "terminale",
       "titre": "Récursivité",
+      "description": "Fonctions récursives, cas de base, pile d'appels.",
       "rappelCours": [
         "Une fonction récursive est une fonction qui s'appelle elle-même sur une version plus petite du problème",
         "Elle doit toujours comporter un cas de base (condition d'arrêt) et un cas récursif qui se rapproche de ce cas de base",
@@ -852,6 +868,7 @@
       "matiere": "mathematiques",
       "niveau": "terminale",
       "titre": "Géométrie dans l'espace",
+      "description": "Vecteurs, plans, droites et distances dans l'espace.",
       "rappelCours": [
         "Vecteur $\\vec{AB}$ de coordonnées $(x_B-x_A\\,;\\,y_B-y_A\\,;\\,z_B-z_A)$, norme $\\|\\vec{AB}\\|=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}$",
         "Produit scalaire : $\\vec u\\cdot\\vec v = x_ux_v+y_uy_v+z_uz_v$ ; $\\vec u$ et $\\vec v$ orthogonaux $\\iff \\vec u\\cdot\\vec v=0$",
@@ -906,6 +923,7 @@
       "matiere": "physique",
       "niveau": "terminale",
       "titre": "Radioactivité",
+      "description": "Décroissance radioactive, demi-vie, désintégrations.",
       "rappelCours": [
         "Décroissance radioactive : $N(t)=N_0e^{-\\lambda t}$ ($N_0$ = nombre de noyaux initial, $\\lambda$ = constante radioactive)",
         "Demi-vie $t_{1/2}$ : durée au bout de laquelle la moitié des noyaux initiaux ont disparu ; $t_{1/2}=\\dfrac{\\ln 2}{\\lambda}$",
@@ -960,6 +978,7 @@
       "matiere": "chimie",
       "niveau": "terminale",
       "titre": "Spectroscopie IR et RMN",
+      "description": "Spectres IR et RMN pour identifier une molécule.",
       "rappelCours": [
         "Spectroscopie IR : identifie des liaisons/groupes caractéristiques via leur nombre d'onde d'absorption (en $\\text{cm}^{-1}$)",
         "Bandes IR clés : $O-H$ alcool (large, $3200$–$3550$), $O-H$ acide carboxylique (très large, $2500$–$3200$), $C=O$ (fine, intense, $1700$–$1740$)",
@@ -1014,6 +1033,7 @@
       "matiere": "nsi",
       "niveau": "terminale",
       "titre": "Bases de données relationnelles",
+      "description": "Tables, clés primaires et étrangères, requêtes SQL.",
       "rappelCours": [
         "Une base de données relationnelle organise les données en tables (relations), constituées de lignes (n-uplets) et de colonnes (attributs)",
         "Clé primaire : attribut (ou ensemble d'attributs) qui identifie de façon unique chaque ligne d'une table",
@@ -1068,6 +1088,7 @@
       "matiere": "mathematiques",
       "niveau": "premiere",
       "titre": "Vecteurs et géométrie repérée",
+      "description": "Coordonnées, colinéarité, alignement dans le plan.",
       "rappelCours": [
         "Vecteur $\\vec{AB}$ dans le plan : coordonnées $(x_B-x_A\\,;\\,y_B-y_A)$",
         "Norme d'un vecteur : $\\|\\vec u\\|=\\sqrt{x^2+y^2}$",
@@ -1122,6 +1143,7 @@
       "matiere": "physique",
       "niveau": "premiere",
       "titre": "Cinématique : mouvement et vitesse",
+      "description": "Vitesse moyenne, mouvement uniforme et uniformément varié.",
       "rappelCours": [
         "Vitesse moyenne : $v_{moy}=\\dfrac{d}{\\Delta t}$",
         "Mouvement rectiligne uniforme (MRU) : vitesse constante, $x(t)=x_0+vt$",
@@ -1176,6 +1198,7 @@
       "matiere": "chimie",
       "niveau": "premiere",
       "titre": "Avancement d'une réaction chimique",
+      "description": "Réactif limitant, tableau d'avancement, stœchiométrie.",
       "rappelCours": [
         "Le tableau d'avancement suit les quantités de matière (mol) de chaque espèce au cours de la réaction, à partir des quantités initiales et de l'avancement $x$",
         "Réactif limitant : celui qui s'épuise en premier ; il détermine l'avancement maximal $x_{max}$",
@@ -1230,6 +1253,7 @@
       "matiere": "nsi",
       "niveau": "premiere",
       "titre": "Boucles et instructions conditionnelles",
+      "description": "Conditions, boucles for/while, algorithmes simples.",
       "rappelCours": [
         "Instruction conditionnelle : `if condition: ... elif autre_condition: ... else: ...`",
         "Boucle `for` : répète un bloc un nombre défini de fois, souvent avec `range(n)`",
@@ -1284,6 +1308,7 @@
       "matiere": "mathematiques",
       "niveau": "brevet",
       "titre": "Calcul littéral et équations",
+      "description": "Développer, réduire, factoriser et résoudre une équation.",
       "rappelCours": [
         "Développer avec la distributivité : $k(a+b)=ka+kb$",
         "Réduire une expression : regrouper les termes de même nature",
@@ -1338,6 +1363,7 @@
       "matiere": "physique",
       "niveau": "brevet",
       "titre": "Optique : la lumière",
+      "description": "Propagation, réflexion, ombres — les bases de l'optique.",
       "rappelCours": [
         "La lumière se propage en ligne droite dans un milieu transparent homogène (propagation rectiligne)",
         "Un objet opaque éclairé produit une ombre propre (sur l'objet) et une ombre portée (sur une surface derrière lui)",
@@ -1392,6 +1418,7 @@
       "matiere": "chimie",
       "niveau": "brevet",
       "titre": "Mélanges, corps purs et transformations",
+      "description": "Corps purs, mélanges, tests d'identification des gaz.",
       "rappelCours": [
         "Un corps pur ne contient qu'une seule espèce chimique ; un mélange en contient plusieurs",
         "Mélange homogène : les constituants ne sont pas distinguables à l'œil nu (ex : eau salée) ; mélange hétérogène : ils sont distinguables (ex : eau et huile)",

@@ -36,10 +36,10 @@
   Mode clair — même identité (bleu + lime), fond sombre remplacé par un
   fond clair cream/blanc cassé. --color-navy et --color-cream inversent
   leur rôle (fond <-> texte), ce qui suffit à retourner tout le site car
-  les composants ne référencent que ces tokens. Le lime est assombri
-  (verte olive) uniquement pour rester lisible en texte sur fond clair.
-  Le bleu (--color-gold) reste inchangé : son contraste sur blanc est déjà
-  suffisant (~4.8:1).
+  les composants ne référencent que ces tokens. Le lime devient #71d984
+  (vert plus franc) en mode clair, choisi manuellement pour rester lisible
+  sur fond clair. Le bleu (--color-gold) reste inchangé : son contraste
+  sur blanc est déjà suffisant (~4.8:1).
 */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
@@ -48,7 +48,7 @@
     --color-navy-deep: #e7ebf1;
     --color-gold-dim: rgba(3, 103, 252, 0.35);
     --color-cream: #12141c;
-    --color-lime: #5c7a00;
+    --color-lime: #71d984;
     --color-carte-opaque: #eaecef;
   }
 }
@@ -58,7 +58,7 @@
   --color-navy-deep: #e7ebf1;
   --color-gold-dim: rgba(3, 103, 252, 0.35);
   --color-cream: #12141c;
-  --color-lime: #5c7a00;
+  --color-lime: #71d984;
   --color-carte-opaque: #eaecef;
 }
 

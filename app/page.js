@@ -76,7 +76,11 @@ export default function AccueilPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="animate-blob-drift pointer-events-none absolute -top-48 -right-16 -z-10 h-[36rem] w-[36rem] rounded-full bg-gold/25 blur-[160px]"
+          className="animate-blob-drift pointer-events-none absolute -top-48 -right-16 -z-10 h-[36rem] w-[36rem] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(3,103,252,0.35) 0%, rgba(3,103,252,0) 70%)",
+          }}
         />
         <div
           aria-hidden="true"
@@ -181,7 +185,7 @@ export default function AccueilPage() {
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {MATIERES.map((matiere, index) => (
             <Reveal key={matiere.titre} delay={index * 100}>
-              <div className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold">
+              <div className="rounded-lg border border-gold-dim bg-navy-light p-6 shadow-md shadow-black/10 transition hover:-translate-y-1 hover:border-gold hover:shadow-lg hover:shadow-black/15">
                 <p className="font-mono text-xs uppercase tracking-widest text-lime">
                   {matiere.niveau}
                 </p>

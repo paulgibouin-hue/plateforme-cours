@@ -1,5 +1,5 @@
-const LARGEUR_GRAPHIQUE = 220;
-const HAUTEUR_GRAPHIQUE = 56;
+const LARGEUR_GRAPHIQUE = 600;
+const HAUTEUR_GRAPHIQUE = 70;
 const LABELS_SEMAINE = ["S-6", "S-5", "S-4", "S-3", "S-2", "Cette sem."];
 
 function TendanceHebdomadaire({ points }) {
@@ -110,15 +110,6 @@ function AnneauProgression({ label, fait, total, pourcentage, accent }) {
   );
 }
 
-/**
- * Tableau de bord de progression (colonne latérale de l'espace élève) :
- * tendance hebdomadaire + anneaux de progression par matière et pour les QCM.
- *
- * @param {Object} props
- * @param {number[]} props.tendance - 6 points (cumul d'items faits, du plus ancien au plus récent)
- * @param {Array} props.barresMatieres - [{ matiere, label, fait, total, pourcentage }]
- * @param {Object} props.barreQcm - { fait, total, pourcentage }
- */
 export default function ProgressionDashboard({
   tendance,
   barresMatieres,
@@ -127,7 +118,7 @@ export default function ProgressionDashboard({
   return (
     <div className="flex flex-col gap-4">
       <TendanceHebdomadaire points={tendance} />
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
         {barresMatieres.map((b) => (
           <AnneauProgression
             key={b.matiere}
@@ -139,7 +130,7 @@ export default function ProgressionDashboard({
           />
         ))}
         <AnneauProgression
-          label="QCM (toutes matières)"
+          label="QCM"
           fait={barreQcm.fait}
           total={barreQcm.total}
           pourcentage={barreQcm.pourcentage}

@@ -95,7 +95,7 @@ export default async function ChapitrePage({ params }) {
           </p>
           <Link
             href="/espace-eleve"
-            className="mt-4 inline-block rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-cream transition active:scale-95 hover:opacity-90"
+            className="mt-4 inline-block rounded-md bg-gold px-6 py-2 font-sans text-sm font-medium text-white transition active:scale-95 hover:opacity-90"
           >
             Accéder à mon espace élève
           </Link>

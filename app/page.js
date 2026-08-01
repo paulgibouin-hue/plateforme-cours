@@ -2,6 +2,7 @@ import { Link } from "next-view-transitions";
 import exercicesData from "@/data/exercices.json";
 import qcmData from "@/data/qcm.json";
 import Reveal from "@/components/Reveal";
+import Testimonials from "@/components/Testimonials";
 
 function arrondir(nombre, palier) {
   return Math.floor(nombre / palier) * palier;
@@ -81,31 +82,64 @@ export default function AccueilPage() {
           aria-hidden="true"
           className="animate-blob-drift-reverse pointer-events-none absolute -left-32 top-52 -z-10 h-[28rem] w-[28rem] rounded-full bg-lime/20 blur-[160px]"
         />
-        <div className="relative mx-auto max-w-5xl px-6 py-24">
-          <p className="font-mono text-xs uppercase tracking-widest text-lime">
-            Cours particuliers à Évry-Courcouronnes et en ligne
-          </p>
-          <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-cream sm:text-5xl">
-            Des maths et de la physique qui deviennent enfin claires.
-          </h1>
-          <p className="mt-6 max-w-xl font-sans text-lg text-cream/80">
-            Cours particuliers pour collégiens et lycéens, par un étudiant en
-            école d&apos;ingénieur passé par une classe préparatoire
-            scientifique. Méthode rigoureuse, pédagogie accessible.
-          </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="/tarifs#contact"
-              className="rounded-md bg-gold px-6 py-3 text-center font-sans text-sm font-medium text-cream transition active:scale-95 hover:opacity-90"
-            >
-              Réserver un premier cours
-            </Link>
-            <a
-              href="#matieres"
-              className="rounded-md border border-lime/40 px-6 py-3 text-center font-sans text-sm font-medium text-cream transition active:scale-95 hover:border-lime"
-            >
-              Découvrir les matières
-            </a>
+        <div className="relative mx-auto max-w-6xl px-6 py-24 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-lime">
+              Cours particuliers à Évry-Courcouronnes et en ligne
+            </p>
+            <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-cream sm:text-5xl">
+              Des maths et de la physique qui deviennent enfin claires.
+            </h1>
+            <p className="mt-6 max-w-xl font-sans text-lg text-cream/80">
+              Cours particuliers pour collégiens et lycéens, par un étudiant
+              en école d&apos;ingénieur passé par une classe préparatoire
+              scientifique. Méthode rigoureuse, pédagogie accessible.
+            </p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="/tarifs#contact"
+                className="rounded-md bg-gold px-6 py-3 text-center font-sans text-sm font-medium text-white transition active:scale-95 hover:opacity-90"
+              >
+                Réserver un premier cours
+              </Link>
+              <a
+                href="#matieres"
+                className="flex items-center justify-center gap-2 rounded-md border border-lime px-6 py-3 text-center font-sans text-sm font-medium text-lime transition active:scale-95 hover:bg-lime/10"
+              >
+                Découvrir les matières
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Aperçu de la plateforme : cartes flottantes */}
+          <div className="relative mt-16 hidden lg:mt-0 lg:block">
+            <div className="rounded-lg border-l-4 border-l-lime bg-carte-opaque p-6 shadow-2xl shadow-black/40">
+              <p className="font-mono text-xs uppercase tracking-widest text-lime">
+                Exercice 3 · Première
+              </p>
+              <h3 className="mt-2 font-display text-lg text-cream">
+                Équations du second degré
+              </h3>
+              <p className="mt-3 font-mono text-sm text-cream/80">
+                Δ = b² − 4ac = 25 &gt; 0
+              </p>
+              <p className="mt-4 flex items-center gap-1.5 font-mono text-xs text-lime">
+                <svg viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5">
+                  <path d="M3 8.5l3 3 7-7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Correction détaillée incluse
+              </p>
+            </div>
+            <div className="absolute -bottom-8 -right-4 z-10 w-56 rounded-lg border-l-4 border-l-gold bg-carte-opaque p-4 shadow-lg shadow-black/30 sm:-right-8">
+              <p className="flex items-center gap-1.5 font-display text-base text-cream">
+                <span className="text-lime">↗</span> +6 exercices cette
+                semaine
+              </p>
+              <p className="mt-1 font-sans text-xs text-cream/60">
+                Suivi dans ton espace élève
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -134,6 +168,8 @@ export default function AccueilPage() {
           ))}
         </div>
       </Reveal>
+
+      <Testimonials />
 
       {/* Ce que je propose */}
       <section id="matieres" className="mx-auto max-w-5xl px-6 py-16">
@@ -213,7 +249,7 @@ export default function AccueilPage() {
         </p>
         <Link
           href="/tarifs#contact"
-          className="mt-8 inline-block rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-cream transition active:scale-95 hover:opacity-90"
+          className="mt-8 inline-block rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-white transition active:scale-95 hover:opacity-90"
         >
           Réserver mon premier cours
         </Link>

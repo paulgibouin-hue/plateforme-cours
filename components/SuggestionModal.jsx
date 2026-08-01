@@ -18,7 +18,7 @@ export default function SuggestionModal({ prenom }) {
 
       {ouvert ? (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy/80 p-6 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/70 p-6 backdrop-blur-sm"
           onClick={() => setOuvert(false)}
         >
           <div

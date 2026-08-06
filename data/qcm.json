@@ -91,6 +91,787 @@
           "explication": "Les deux suites encadrantes $2-\\frac1n$ et $2+\\frac1n$ convergent toutes deux vers $2$. D'après le théorème des gendarmes (théorème d'encadrement), $(u_n)$ converge donc aussi vers $2$."
         }
       ]
+    },
+    {
+      "id": "probabilites-conditionnelles-terminale",
+      "matiere": "mathematiques",
+      "niveau": "terminale",
+      "titre": "Probabilités conditionnelles",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Que représente $P_A(B)$ ?",
+          "choix": [
+            "La probabilité que $A$ et $B$ soient tous les deux réalisés",
+            "La probabilité que $B$ soit réalisé sachant que $A$ est réalisé",
+            "La probabilité que $A$ soit réalisé sachant que $B$ est réalisé",
+            "La probabilité que $A$ ou $B$ soit réalisé"
+          ],
+          "bonneReponse": 1,
+          "explication": "$P_A(B)$ se lit « probabilité de $B$ sachant $A$ » : c'est la probabilité que $B$ se réalise, dans l'univers restreint où $A$ est déjà réalisé."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "On donne $P(A) = 0,4$ et $P_A(B) = 0,5$. Que vaut $P(A \\cap B)$ ?",
+          "choix": ["$0,1$", "$0,2$", "$0,9$", "$1,25$"],
+          "bonneReponse": 1,
+          "explication": "$P(A \\cap B) = P(A) \\times P_A(B) = 0,4 \\times 0,5 = 0,2$."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Dans un arbre pondéré, que doit valoir la somme des probabilités inscrites sur les branches issues d'un même nœud ?",
+          "choix": ["$0$", "$0,5$", "$1$", "Cela dépend du nœud"],
+          "bonneReponse": 2,
+          "explication": "Les branches issues d'un même nœud représentent des événements qui partitionnent l'univers à cette étape : leur somme vaut donc toujours $1$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "$A$ et $B$ sont indépendants si et seulement si :",
+          "choix": [
+            "$P(A \\cap B) = 0$",
+            "$P(A \\cap B) = P(A) + P(B)$",
+            "$P(A \\cap B) = P(A) \\times P(B)$",
+            "$P_A(B) = P_B(A)$"
+          ],
+          "bonneReponse": 2,
+          "explication": "Par définition, $A$ et $B$ sont indépendants si et seulement si $P(A \\cap B) = P(A) \\times P(B)$, ce qui équivaut aussi à $P_A(B) = P(B)$."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "$A$ et $\\overline{A}$ partitionnent l'univers. $P(A) = 0,3$, $P_A(B) = 0,6$, $P_{\\overline{A}}(B) = 0,2$. Que vaut $P(B)$ ?",
+          "choix": ["$0,18$", "$0,32$", "$0,8$", "$0,44$"],
+          "bonneReponse": 1,
+          "explication": "$P(B) = P(A)\\times P_A(B) + P(\\overline{A})\\times P_{\\overline{A}}(B) = 0,3\\times0,6 + 0,7\\times0,2 = 0,18+0,14 = 0,32$."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Un test médical donne un résultat positif chez $95\\%$ des malades et chez $4\\%$ des personnes non malades. Que représente ce deuxième pourcentage ?",
+          "choix": [
+            "Le taux de vrais positifs",
+            "Le taux de faux positifs",
+            "Le taux de vrais négatifs",
+            "La prévalence de la maladie"
+          ],
+          "bonneReponse": 1,
+          "explication": "Un résultat positif chez une personne non malade est un faux positif : ce $4\\%$ correspond donc au taux de faux positifs du test."
+        }
+      ]
+    },
+    {
+      "id": "mecanique-newtonienne-bac",
+      "matiere": "physique",
+      "niveau": "terminale",
+      "titre": "Mécanique newtonienne",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Que dit la deuxième loi de Newton (principe fondamental de la dynamique) ?",
+          "choix": [
+            "$\\sum \\vec F = m\\vec v$",
+            "$\\sum \\vec F = m\\vec a$",
+            "$\\sum \\vec F = \\dfrac{m}{a}$",
+            "$\\sum \\vec F = \\vec a$"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le PFD énonce que la somme des forces appliquées à un système est égale au produit de sa masse par son accélération : $\\sum \\vec F = m\\vec a$, dans un référentiel galiléen."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Dans quel type de référentiel le principe fondamental de la dynamique s'applique-t-il directement ?",
+          "choix": [
+            "N'importe quel référentiel",
+            "Un référentiel galiléen",
+            "Un référentiel en rotation",
+            "Un référentiel accéléré uniquement"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le PFD, sous cette forme simple, ne s'applique que dans un référentiel galiléen (référentiel terrestre en bonne approximation pour la plupart des exercices de lycée)."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Un objet est en chute libre depuis une hauteur $h$, sans vitesse initiale. Quelle est l'expression de la durée de chute ?",
+          "choix": [
+            "$t=\\sqrt{\\dfrac{2h}{g}}$",
+            "$t=\\dfrac{2h}{g}$",
+            "$t=\\sqrt{2gh}$",
+            "$t=\\dfrac{g}{2h}$"
+          ],
+          "bonneReponse": 0,
+          "explication": "En chute libre sans vitesse initiale, $h=\\dfrac12 g t^2$, donc $t=\\sqrt{\\dfrac{2h}{g}}$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Quelle est l'expression de l'énergie mécanique d'un système ?",
+          "choix": [
+            "$E_m = E_c \\times E_p$",
+            "$E_m = E_c - E_p$",
+            "$E_m = E_c + E_p$",
+            "$E_m = \\dfrac{E_c}{E_p}$"
+          ],
+          "bonneReponse": 2,
+          "explication": "L'énergie mécanique est la somme de l'énergie cinétique et de l'énergie potentielle : $E_m = E_c + E_p$."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "En l'absence de frottement, comment évolue l'énergie mécanique d'un système au cours du mouvement ?",
+          "choix": [
+            "Elle augmente",
+            "Elle diminue",
+            "Elle se conserve",
+            "Elle devient nulle"
+          ],
+          "bonneReponse": 2,
+          "explication": "Sans frottement (ni autre force non conservative), l'énergie mécanique se conserve : l'énergie cinétique et l'énergie potentielle se transforment l'une en l'autre sans perte."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Une voiture de masse $m=1000\\text{ kg}$ subit une force résultante de $2000\\text{ N}$. Quelle est son accélération ?",
+          "choix": ["$0,5\\text{ m/s}^2$", "$2\\text{ m/s}^2$", "$2000\\text{ m/s}^2$", "$500\\text{ m/s}^2$"],
+          "bonneReponse": 1,
+          "explication": "D'après le PFD, $a=\\dfrac{F}{m}=\\dfrac{2000}{1000}=2\\text{ m/s}^2$."
+        }
+      ]
+    },
+    {
+      "id": "acides-bases-terminale",
+      "matiere": "chimie",
+      "niveau": "terminale",
+      "titre": "Acides, bases et pH",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Quelle est la relation entre le pH et la concentration en ions oxonium $[H_3O^+]$ ?",
+          "choix": [
+            "$pH = [H_3O^+]$",
+            "$pH = -\\log[H_3O^+]$",
+            "$pH = \\log[H_3O^+]$",
+            "$pH = 10^{[H_3O^+]}$"
+          ],
+          "bonneReponse": 1,
+          "explication": "Par définition, $pH = -\\log[H_3O^+]$, donc $[H_3O^+] = 10^{-pH}$."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Une solution de $pH = 9$ est :",
+          "choix": ["Acide", "Neutre", "Basique", "On ne peut pas savoir"],
+          "bonneReponse": 2,
+          "explication": "À $25°C$, une solution est basique si $pH>7$. Ici $pH=9>7$, la solution est donc basique."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Une solution d'acide fort a un $pH=3$. Si on la dilue $10$ fois, quel est le nouveau pH ?",
+          "choix": ["$pH=2$", "$pH=3$", "$pH=4$", "$pH=30$"],
+          "bonneReponse": 2,
+          "explication": "Pour un acide fort, diluer la solution $10$ fois augmente le pH d'une unité : $pH=3+1=4$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Lors d'un dosage acide-base (réaction 1:1), quelle relation est vérifiée à l'équivalence ?",
+          "choix": [
+            "$C_a = C_b$",
+            "$C_a V_a = C_b V_b$",
+            "$V_a = V_b$",
+            "$C_a + V_a = C_b + V_b$"
+          ],
+          "bonneReponse": 1,
+          "explication": "À l'équivalence d'un dosage acide-base 1:1, les quantités de matière d'acide et de base introduites sont égales : $C_aV_a=C_bV_b$."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Selon la théorie de Brønsted, une réaction acide-base correspond à :",
+          "choix": [
+            "Un transfert d'électrons",
+            "Un transfert de protons $H^+$",
+            "Un transfert de neutrons",
+            "Une précipitation"
+          ],
+          "bonneReponse": 1,
+          "explication": "La théorie de Brønsted définit une réaction acide-base comme un transfert d'un proton $H^+$ de l'acide (qui le cède) vers la base (qui le capte)."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Quelle est la concentration $[H_3O^+]$ d'une solution de $pH=4$ ?",
+          "choix": [
+            "$4\\text{ mol/L}$",
+            "$10^{-4}\\text{ mol/L}$",
+            "$10^{4}\\text{ mol/L}$",
+            "$-4\\text{ mol/L}$"
+          ],
+          "bonneReponse": 1,
+          "explication": "$[H_3O^+] = 10^{-pH} = 10^{-4}\\text{ mol/L}$."
+        }
+      ]
+    },
+    {
+      "id": "tri-recherche-terminale",
+      "matiere": "nsi",
+      "niveau": "terminale",
+      "titre": "Algorithmes de tri et de recherche",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Quelle est la complexité, dans le pire des cas, de la recherche séquentielle dans une liste de $n$ éléments ?",
+          "choix": ["$O(1)$", "$O(\\log n)$", "$O(n)$", "$O(n^2)$"],
+          "bonneReponse": 2,
+          "explication": "Dans le pire des cas (élément absent ou en dernière position), la recherche séquentielle doit parcourir les $n$ éléments : sa complexité est $O(n)$."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Quelle condition est nécessaire pour utiliser la recherche dichotomique ?",
+          "choix": [
+            "La liste doit contenir des entiers",
+            "La liste doit être triée",
+            "La liste doit avoir moins de $100$ éléments",
+            "Aucune condition particulière"
+          ],
+          "bonneReponse": 1,
+          "explication": "La recherche dichotomique compare l'élément cherché au milieu de la liste pour éliminer une moitié à chaque étape : cela ne fonctionne que si la liste est triée."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Quelle est la complexité de la recherche dichotomique sur une liste triée de $n$ éléments ?",
+          "choix": ["$O(1)$", "$O(\\log n)$", "$O(n)$", "$O(n\\log n)$"],
+          "bonneReponse": 1,
+          "explication": "En divisant l'intervalle de recherche par $2$ à chaque étape, la recherche dichotomique atteint une complexité en $O(\\log n)$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Le tri par sélection fonctionne en :",
+          "choix": [
+            "Insérant chaque élément à sa place parmi les précédents triés",
+            "Recherchant le minimum du reste de la liste et en le plaçant en tête",
+            "Divisant la liste en deux et en fusionnant les résultats",
+            "Échangeant des éléments au hasard jusqu'à ce que la liste soit triée"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le tri par sélection recherche à chaque étape le plus petit élément du reste de la liste et le place à sa position définitive, puis répète sur le reste."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Sur une liste triée d'un million d'éléments, pourquoi préfère-t-on la recherche dichotomique à la recherche séquentielle ?",
+          "choix": [
+            "Elle utilise moins de mémoire",
+            "Elle ne nécessite pas de liste triée",
+            "Elle nécessite beaucoup moins de comparaisons dans le pire des cas",
+            "Elle fonctionne aussi sur des listes non ordonnées"
+          ],
+          "bonneReponse": 2,
+          "explication": "La recherche dichotomique ne nécessite qu'environ $\\log_2(10^6)\\approx20$ comparaisons dans le pire des cas, contre $10^6$ pour la recherche séquentielle."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Dans le tri par insertion appliqué à $[3, 1, 2]$, quel est l'état de la liste juste après l'insertion du deuxième élément ($1$) ?",
+          "choix": ["$[3, 1, 2]$", "$[1, 3, 2]$", "$[1, 2, 3]$", "$[3, 2, 1]$"],
+          "bonneReponse": 1,
+          "explication": "On part de $[3,1,2]$. On insère $1$ à sa place parmi les éléments déjà triés qui le précèdent (juste $3$) : $1$ étant plus petit que $3$, il est inséré avant, donnant $[1,3,2]$."
+        }
+      ]
+    },
+    {
+      "id": "calcul-litteral-equations-brevet",
+      "matiere": "mathematiques",
+      "niveau": "brevet",
+      "titre": "Calcul littéral et équations",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Développer $3(x+2)$ :",
+          "choix": ["$3x+2$", "$3x+6$", "$x+6$", "$3x+5$"],
+          "bonneReponse": 1,
+          "explication": "$3(x+2) = 3\\times x + 3\\times 2 = 3x+6$."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Résoudre $2x+5=11$ :",
+          "choix": ["$x=2$", "$x=3$", "$x=8$", "$x=16$"],
+          "bonneReponse": 1,
+          "explication": "$2x = 11-5 = 6$, donc $x = 3$."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Factoriser $x^2+5x$ :",
+          "choix": ["$x(x+5)$", "$x^2(x+5)$", "$5x(x+1)$", "$(x+5)^2$"],
+          "bonneReponse": 0,
+          "explication": "$x$ est facteur commun : $x^2+5x = x(x+5)$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Pour $x=4$, la valeur de $2x-3$ est :",
+          "choix": ["$5$", "$8$", "$1$", "$11$"],
+          "bonneReponse": 0,
+          "explication": "$2\\times4-3 = 8-3 = 5$."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Résoudre l'inéquation $3x-1>5$ :",
+          "choix": ["$x>2$", "$x>1$", "$x>6$", "$x<2$"],
+          "bonneReponse": 0,
+          "explication": "$3x>6$, donc $x>2$ (on ne change pas le sens de l'inégalité car on divise par un nombre positif)."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Si $a\\times b = 0$, que peut-on affirmer ?",
+          "choix": [
+            "$a$ et $b$ sont nuls",
+            "Au moins un des deux facteurs est nul",
+            "$a$ et $b$ sont positifs",
+            "Aucun des deux n'est nul"
+          ],
+          "bonneReponse": 1,
+          "explication": "Règle du produit nul : un produit de facteurs est nul si et seulement si au moins un des facteurs est nul."
+        }
+      ]
+    },
+    {
+      "id": "electricite-brevet",
+      "matiere": "physique",
+      "niveau": "brevet",
+      "titre": "Électricité",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Quelle est l'unité de l'intensité du courant électrique ?",
+          "choix": ["Le volt (V)", "L'ampère (A)", "L'ohm (Ω)", "Le watt (W)"],
+          "bonneReponse": 1,
+          "explication": "L'intensité du courant électrique se mesure en ampères (A), à l'aide d'un ampèremètre branché en série."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Dans un circuit en série, comment se comporte l'intensité du courant ?",
+          "choix": [
+            "Elle est la même en tout point du circuit",
+            "Elle diminue après chaque dipôle",
+            "Elle se répartit entre les dipôles",
+            "Elle double à chaque dipôle"
+          ],
+          "bonneReponse": 0,
+          "explication": "Dans un circuit série, il n'y a qu'un seul chemin pour le courant : l'intensité est donc la même partout."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Comment se branche un voltmètre pour mesurer la tension aux bornes d'un dipôle ?",
+          "choix": [
+            "En série avec le dipôle",
+            "En dérivation (parallèle) aux bornes du dipôle",
+            "Avant le générateur",
+            "Il ne se branche jamais dans un circuit"
+          ],
+          "bonneReponse": 1,
+          "explication": "Un voltmètre mesure une tension : il se branche toujours en dérivation, aux bornes du dipôle étudié."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "D'après la loi d'Ohm, quelle est la relation entre tension $U$, intensité $I$ et résistance $R$ ?",
+          "choix": ["$U = R + I$", "$U = R \\times I$", "$U = \\dfrac{I}{R}$", "$U = I^2 \\times R$"],
+          "bonneReponse": 1,
+          "explication": "La loi d'Ohm énonce que $U = R \\times I$ pour un conducteur ohmique."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Dans un circuit avec deux résistances en dérivation (parallèle), comment se répartit la tension ?",
+          "choix": [
+            "Elle se partage entre les deux résistances",
+            "Elle est la même aux bornes des deux résistances",
+            "Elle double sur chaque résistance",
+            "Elle est nulle sur l'une des deux"
+          ],
+          "bonneReponse": 1,
+          "explication": "Aux bornes de dipôles en dérivation, la tension est la même pour chacun d'eux."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Que se passe-t-il pour l'intensité totale délivrée par le générateur lorsqu'on ajoute une branche en dérivation ?",
+          "choix": ["Elle diminue", "Elle reste identique", "Elle augmente", "Elle devient nulle"],
+          "bonneReponse": 2,
+          "explication": "Ajouter une branche en dérivation ajoute un chemin supplémentaire pour le courant : l'intensité totale délivrée par le générateur augmente."
+        }
+      ]
+    },
+    {
+      "id": "melanges-corps-purs-brevet",
+      "matiere": "chimie",
+      "niveau": "brevet",
+      "titre": "Mélanges, corps purs et transformations",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Un corps pur est une substance :",
+          "choix": [
+            "Constituée d'un seul type d'espèce chimique",
+            "Constituée de plusieurs espèces mélangées",
+            "Toujours liquide",
+            "Toujours transparente"
+          ],
+          "bonneReponse": 0,
+          "explication": "Un corps pur ne contient qu'une seule espèce chimique, contrairement à un mélange qui en contient plusieurs."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Quelle technique permet de séparer un solide dispersé dans un liquide ?",
+          "choix": ["La distillation", "La filtration", "La fusion", "L'électrolyse"],
+          "bonneReponse": 1,
+          "explication": "La filtration permet de séparer un solide non dissous (résidu) d'un liquide (filtrat) à l'aide d'un filtre."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "L'eau bout à $100°C$ sous pression atmosphérique normale. Ce $100°C$ correspond à :",
+          "choix": [
+            "La température de fusion",
+            "La température d'ébullition",
+            "La température de solidification",
+            "La température ambiante"
+          ],
+          "bonneReponse": 1,
+          "explication": "La température d'ébullition est celle à laquelle un liquide se transforme en gaz ; pour l'eau pure à pression atmosphérique, elle vaut $100°C$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Lors d'un changement d'état d'un corps pur, la température :",
+          "choix": [
+            "Augmente continuellement",
+            "Diminue continuellement",
+            "Reste constante (palier)",
+            "Devient négative"
+          ],
+          "bonneReponse": 2,
+          "explication": "Pendant un changement d'état d'un corps pur, la température reste constante : c'est un palier de changement d'état."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Quelle technique permet de séparer les constituants d'un mélange homogène liquide grâce à leurs températures d'ébullition différentes ?",
+          "choix": ["La filtration", "La décantation", "La distillation", "L'aimantation"],
+          "bonneReponse": 2,
+          "explication": "La distillation sépare les constituants d'un mélange homogène en exploitant leurs différentes températures d'ébullition."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Un mélange homogène est un mélange dans lequel :",
+          "choix": [
+            "On distingue les différents constituants à l'œil nu",
+            "On ne distingue pas les différents constituants, l'aspect est uniforme",
+            "Il n'y a qu'un seul constituant",
+            "Les constituants se séparent naturellement"
+          ],
+          "bonneReponse": 1,
+          "explication": "Dans un mélange homogène, les constituants sont répartis de manière uniforme, on ne peut pas les distinguer à l'œil nu."
+        }
+      ]
+    },
+    {
+      "id": "equations-second-degre-premiere",
+      "matiere": "mathematiques",
+      "niveau": "premiere",
+      "titre": "Équations du second degré",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Le discriminant d'une équation $ax^2+bx+c=0$ est donné par :",
+          "choix": ["$\\Delta = b^2 - 4ac$", "$\\Delta = b^2 + 4ac$", "$\\Delta = a^2 - 4bc$", "$\\Delta = 4ac - b^2$"],
+          "bonneReponse": 0,
+          "explication": "Le discriminant d'un trinôme du second degré est $\\Delta = b^2 - 4ac$."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Si $\\Delta > 0$, l'équation $ax^2+bx+c=0$ admet :",
+          "choix": [
+            "Aucune solution réelle",
+            "Une solution double",
+            "Deux solutions réelles distinctes",
+            "Une infinité de solutions"
+          ],
+          "bonneReponse": 2,
+          "explication": "Lorsque $\\Delta>0$, l'équation du second degré admet exactement deux solutions réelles distinctes."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Résoudre $x^2 - 5x + 6 = 0$ :",
+          "choix": ["$x=2$ ou $x=3$", "$x=-2$ ou $x=-3$", "$x=1$ ou $x=6$", "Aucune solution"],
+          "bonneReponse": 0,
+          "explication": "$\\Delta = 25-24=1>0$. Les solutions sont $x=\\dfrac{5\\pm1}{2}$, soit $x=3$ ou $x=2$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "La forme canonique du trinôme $ax^2+bx+c$ s'écrit :",
+          "choix": ["$a(x-\\alpha)(x-\\beta)$", "$a(x-\\alpha)^2+\\beta$", "$ax+b$", "$\\dfrac{-b}{2a}$"],
+          "bonneReponse": 1,
+          "explication": "La forme canonique s'écrit $a(x-\\alpha)^2+\\beta$, où $\\alpha=\\dfrac{-b}{2a}$ est l'abscisse du sommet de la parabole."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Quand $\\Delta>0$, le signe du trinôme $ax^2+bx+c$ à l'extérieur des racines est :",
+          "choix": ["Toujours positif", "Toujours négatif", "Le signe de $a$", "Le signe de $c$"],
+          "bonneReponse": 2,
+          "explication": "Quand $\\Delta>0$, le trinôme est du signe de $a$ à l'extérieur des racines et du signe opposé à $a$ entre les racines."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Si $\\Delta = 0$, la parabole représentant $f(x)=ax^2+bx+c$ :",
+          "choix": [
+            "Ne coupe jamais l'axe des abscisses",
+            "Coupe l'axe des abscisses en deux points",
+            "Est tangente à l'axe des abscisses (un seul point)",
+            "Est une droite"
+          ],
+          "bonneReponse": 2,
+          "explication": "Quand $\\Delta=0$, la parabole touche l'axe des abscisses en un seul point : elle lui est tangente, correspondant à la racine double."
+        }
+      ]
+    },
+    {
+      "id": "circuits-electriques-premiere",
+      "matiere": "physique",
+      "niveau": "premiere",
+      "titre": "Circuits électriques en courant continu",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Dans un circuit série comportant deux résistances $R_1$ et $R_2$, la résistance équivalente est :",
+          "choix": ["$R_{eq}=R_1+R_2$", "$R_{eq}=\\dfrac{R_1 R_2}{R_1+R_2}$", "$R_{eq}=R_1-R_2$", "$R_{eq}=\\sqrt{R_1 R_2}$"],
+          "bonneReponse": 0,
+          "explication": "En série, les résistances s'additionnent : $R_{eq}=R_1+R_2$."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Pour deux résistances $R_1$ et $R_2$ montées en dérivation, la résistance équivalente vérifie :",
+          "choix": [
+            "$R_{eq}=R_1+R_2$",
+            "$\\dfrac{1}{R_{eq}}=\\dfrac{1}{R_1}+\\dfrac{1}{R_2}$",
+            "$R_{eq}=R_1\\times R_2$",
+            "$R_{eq}=R_1-R_2$"
+          ],
+          "bonneReponse": 1,
+          "explication": "En dérivation, l'inverse de la résistance équivalente est la somme des inverses : $\\dfrac{1}{R_{eq}}=\\dfrac{1}{R_1}+\\dfrac{1}{R_2}$."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "La loi des mailles énonce que, sur une maille fermée :",
+          "choix": [
+            "La somme des tensions vaut toujours $0$",
+            "La somme des intensités vaut $0$",
+            "La tension totale est infinie",
+            "Il n'y a aucune relation"
+          ],
+          "bonneReponse": 0,
+          "explication": "La loi des mailles énonce que la somme algébrique des tensions le long d'une maille fermée est nulle."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "La loi des nœuds énonce que :",
+          "choix": [
+            "La somme des intensités entrantes dans un nœud égale la somme des intensités sortantes",
+            "La tension est la même à chaque nœud",
+            "Le courant se divise également quel que soit le nombre de branches",
+            "L'intensité est nulle à un nœud"
+          ],
+          "bonneReponse": 0,
+          "explication": "D'après la loi des nœuds (conservation de la charge), la somme des intensités entrant dans un nœud est égale à la somme de celles qui en sortent."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Un générateur de f.é.m. $E$ et de résistance interne $r$ débite un courant $I$. La tension à ses bornes s'écrit :",
+          "choix": ["$U=E+rI$", "$U=E-rI$", "$U=\\dfrac{E}{rI}$", "$U=E\\times rI$"],
+          "bonneReponse": 1,
+          "explication": "La caractéristique d'un générateur réel s'écrit $U=E-rI$, où $r$ est sa résistance interne."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "La puissance électrique reçue par un dipôle est donnée par :",
+          "choix": ["$P=U+I$", "$P=U\\times I$", "$P=\\dfrac{U}{I}$", "$P=U^2\\times I^2$"],
+          "bonneReponse": 1,
+          "explication": "La puissance électrique reçue par un dipôle est $P=U\\times I$, avec $U$ en volts et $I$ en ampères."
+        }
+      ]
+    },
+    {
+      "id": "avancement-reaction-premiere",
+      "matiere": "chimie",
+      "niveau": "premiere",
+      "titre": "Avancement d'une réaction chimique",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "Le tableau d'avancement permet de suivre :",
+          "choix": [
+            "L'évolution des quantités de matière au cours de la réaction",
+            "Uniquement la couleur des espèces",
+            "La pression du système",
+            "Le volume du bécher"
+          ],
+          "bonneReponse": 0,
+          "explication": "Le tableau d'avancement suit l'évolution des quantités de matière des réactifs et produits en fonction de l'avancement $x$ de la réaction."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Le réactif limitant est le réactif qui :",
+          "choix": [
+            "Est en excès en fin de réaction",
+            "Est totalement consommé en premier, limitant l'avancement maximal",
+            "N'intervient pas dans la réaction",
+            "A la plus grande masse molaire"
+          ],
+          "bonneReponse": 1,
+          "explication": "Le réactif limitant est entièrement consommé le premier ; il fixe l'avancement maximal $x_{max}$ de la réaction."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Pour la réaction $A + bB \\rightarrow cC$, si à l'état initial $n(A)=2\\text{ mol}$, la quantité de $A$ restante à l'avancement $x$ est :",
+          "choix": ["$n(A)=2+x$", "$n(A)=2-x$", "$n(A)=2\\times x$", "$n(A)=\\dfrac{2}{x}$"],
+          "bonneReponse": 1,
+          "explication": "À l'avancement $x$, la quantité de $A$ consommée vaut $x$ (coefficient stœchiométrique $1$), donc $n(A)=2-x$."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "L'avancement maximal $x_{max}$ correspond à :",
+          "choix": [
+            "L'avancement pour lequel un des réactifs est totalement consommé",
+            "Le double de l'avancement initial",
+            "Un avancement toujours infini",
+            "La quantité totale de produit formé, quel que soit le réactif"
+          ],
+          "bonneReponse": 0,
+          "explication": "$x_{max}$ est atteint lorsque le réactif limitant a été totalement consommé : c'est la valeur maximale que peut atteindre $x$."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Si les réactifs sont introduits dans les proportions stœchiométriques, alors à la fin de la réaction :",
+          "choix": [
+            "Il reste un excès des deux réactifs",
+            "Les deux réactifs sont épuisés simultanément",
+            "Un seul réactif est consommé",
+            "La réaction ne peut pas avoir lieu"
+          ],
+          "bonneReponse": 1,
+          "explication": "Dans les proportions stœchiométriques, les deux réactifs sont consommés entièrement en même temps, sans excès."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "La quantité de matière d'un produit formé, à l'avancement $x$, pour un coefficient stœchiométrique $c$ (produit absent initialement), s'exprime :",
+          "choix": ["$n=c\\times x$", "$n=\\dfrac{c}{x}$", "$n=c-x$", "$n=c+x$"],
+          "bonneReponse": 0,
+          "explication": "Pour un produit de coefficient stœchiométrique $c$ formé à partir d'un état initial nul, la quantité formée est $n=c\\times x$."
+        }
+      ]
+    },
+    {
+      "id": "structures-donnees-premiere",
+      "matiere": "nsi",
+      "niveau": "premiere",
+      "titre": "Structures de données : listes, n-uplets, dictionnaires",
+      "questions": [
+        {
+          "id": "q-001",
+          "numero": 1,
+          "question": "En Python, comment accède-t-on au premier élément d'une liste `ma_liste` ?",
+          "choix": ["`ma_liste[1]`", "`ma_liste[0]`", "`ma_liste.first()`", "`ma_liste{0}`"],
+          "bonneReponse": 1,
+          "explication": "En Python, l'indexation commence à $0$ : le premier élément d'une liste est donc `ma_liste[0]`."
+        },
+        {
+          "id": "q-002",
+          "numero": 2,
+          "question": "Quelle est la principale différence entre une liste et un n-uplet (tuple) en Python ?",
+          "choix": [
+            "Une liste est mutable, un n-uplet est immuable",
+            "Un n-uplet est mutable, une liste est immuable",
+            "Il n'y a aucune différence",
+            "Les listes ne peuvent contenir que des entiers"
+          ],
+          "bonneReponse": 0,
+          "explication": "Une liste (`list`) peut être modifiée après sa création (mutable), alors qu'un n-uplet (`tuple`) ne peut plus être modifié une fois créé (immuable)."
+        },
+        {
+          "id": "q-003",
+          "numero": 3,
+          "question": "Comment déclare-t-on un dictionnaire vide en Python ?",
+          "choix": ["`d = []`", "`d = ()`", "`d = {}`", "`d = dict[]`"],
+          "bonneReponse": 2,
+          "explication": "Un dictionnaire vide se crée avec des accolades vides `{}` ou avec `dict()`."
+        },
+        {
+          "id": "q-004",
+          "numero": 4,
+          "question": "Dans un dictionnaire `d = {\"nom\": \"Alice\", \"age\": 17}`, comment accède-t-on à la valeur associée à `\"age\"` ?",
+          "choix": ["`d[1]`", "`d[\"age\"]`", "`d.age`", "`d(\"age\")`"],
+          "bonneReponse": 1,
+          "explication": "Dans un dictionnaire, on accède à une valeur par sa clé entre crochets : `d[\"age\"]`."
+        },
+        {
+          "id": "q-005",
+          "numero": 5,
+          "question": "Que renvoie `len([3, 7, 1, 9])` ?",
+          "choix": ["$3$", "$4$", "$9$", "Une erreur"],
+          "bonneReponse": 1,
+          "explication": "La fonction `len()` renvoie le nombre d'éléments de la liste, ici $4$ éléments."
+        },
+        {
+          "id": "q-006",
+          "numero": 6,
+          "question": "Quelle méthode permet d'ajouter un élément à la fin d'une liste Python ?",
+          "choix": ["`.add()`", "`.push()`", "`.append()`", "`.insert()` uniquement"],
+          "bonneReponse": 2,
+          "explication": "La méthode `.append()` ajoute un élément à la fin d'une liste Python."
+        }
+      ]
     }
   ]
 }

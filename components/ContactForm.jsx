@@ -90,7 +90,7 @@ export default function ContactForm() {
       setChamps(CHAMPS_INITIAUX);
     } catch {
       setErreur(
-        "L'envoi a échoué. Réessaie, ou écris-moi directement à [TON_EMAIL]."
+        "L'envoi a échoué. Réessaie, ou écris-moi directement à paul.gibouin.17@gmail.com."
       );
     } finally {
       setEnCours(false);
@@ -214,7 +214,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={enCours}
-        className="self-start rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90 disabled:opacity-50"
+        className="self-start rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-white transition active:scale-95 hover:opacity-90 disabled:opacity-50"
       >
         {enCours ? "Envoi..." : "Envoyer la demande"}
       </button>

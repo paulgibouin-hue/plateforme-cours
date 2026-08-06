@@ -16,14 +16,14 @@ export default function ExerciceVerrouille({ exercice }) {
   const { numero, titre, difficulte } = exercice;
 
   return (
-    <article className="rounded-lg border border-gold-dim bg-navy-light p-6 opacity-70">
+    <article className="rounded-lg border border-gold-dim bg-navy-light p-6 opacity-70 transition-colors hover:border-gold hover:bg-white/20">
       <div className="flex items-center justify-between gap-4">
         <h3 className="font-display text-xl text-cream">
           {numero}. {titre}
         </h3>
         {difficulte ? (
           <span
-            className="font-mono text-sm text-gold"
+            className="font-mono text-sm text-lime"
             title={`Difficulté ${difficulte}/3`}
           >
             {ETOILES[difficulte] ?? ""}

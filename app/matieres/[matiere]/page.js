@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
 import data from "@/data/exercices.json";
+import { notFound } from "next/navigation";
+import ChapitresFiltrables from "@/components/ChapitresFiltrables";
 
 const LABELS_MATIERE = {
   mathematiques: "Mathématiques",
@@ -8,29 +8,6 @@ const LABELS_MATIERE = {
   chimie: "Chimie",
   nsi: "NSI",
 };
-
-const LABELS_NIVEAU = {
-  brevet: "Collège (Brevet)",
-  seconde: "Seconde",
-  premiere: "Première",
-  terminale: "Terminale",
-};
-
-const ORDRE_NIVEAUX = ["brevet", "seconde", "premiere", "terminale"];
-
-function groupParNiveau(chapitres) {
-  const groupes = new Map();
-  for (const chapitre of chapitres) {
-    if (!groupes.has(chapitre.niveau)) groupes.set(chapitre.niveau, []);
-    groupes.get(chapitre.niveau).push(chapitre);
-  }
-  return ORDRE_NIVEAUX.filter((niveau) => groupes.has(niveau)).map(
-    (niveau) => ({
-      niveau,
-      chapitres: groupes.get(niveau),
-    })
-  );
-}
 
 export function generateStaticParams() {
   const matieres = new Set(data.chapitres.map((c) => c.matiere));
@@ -56,11 +33,10 @@ export default async function MatierePage({ params }) {
   }
 
   const label = LABELS_MATIERE[matiere] ?? matiere;
-  const groupes = groupParNiveau(chapitres);
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24">
-      <p className="font-mono text-xs uppercase tracking-widest text-gold">
+    <section className="mx-auto max-w-6xl px-6 py-24">
+      <p className="font-mono text-xs uppercase tracking-widest text-lime">
         Fiches d&apos;exercices
       </p>
       <h1 className="mt-4 font-display text-4xl text-cream">{label}</h1>
@@ -69,32 +45,7 @@ export default async function MatierePage({ params }) {
         détaillées.
       </p>
 
-      <div className="mt-12 flex flex-col gap-12">
-        {groupes.map(({ niveau, chapitres }) => (
-          <div key={niveau}>
-            <h2 className="font-mono text-xs uppercase tracking-widest text-gold">
-              {LABELS_NIVEAU[niveau] ?? niveau}
-            </h2>
-            <div className="mt-4 grid gap-6 sm:grid-cols-2">
-              {chapitres.map((chapitre) => (
-                <Link
-                  key={chapitre.id}
-                  href={`/matieres/${matiere}/${chapitre.id}`}
-                  className="rounded-lg border border-gold-dim bg-navy-light p-6 transition-colors hover:border-gold"
-                >
-                  <h3 className="font-display text-xl text-cream">
-                    {chapitre.titre}
-                  </h3>
-                  <p className="mt-2 font-sans text-sm text-cream/60">
-                    {chapitre.exercices.length} exercice
-                    {chapitre.exercices.length > 1 ? "s" : ""}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+      <ChapitresFiltrables matiere={matiere} chapitres={chapitres} />
     </section>
   );
 }

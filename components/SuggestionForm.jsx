@@ -6,15 +6,23 @@ const TYPES = ["Nouveau chapitre", "Nouvel exercice", "Fonctionnalité", "Autre"
 
 const ENDPOINT_FORMSPREE = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
 
-export default function SuggestionForm({ prenom }) {
+export default function SuggestionForm({ prenom: prenomConnu }) {
+  const [prenomSaisi, setPrenomSaisi] = useState("");
   const [type, setType] = useState(TYPES[0]);
   const [message, setMessage] = useState("");
   const [erreur, setErreur] = useState("");
   const [enCours, setEnCours] = useState(false);
   const [envoye, setEnvoye] = useState(false);
 
+  const prenom = prenomConnu || prenomSaisi;
+
   async function handleSubmit(event) {
     event.preventDefault();
+
+    if (!prenomConnu && !prenomSaisi.trim()) {
+      setErreur("Merci d'indiquer ton prénom.");
+      return;
+    }
 
     if (!message.trim()) {
       setErreur("Merci de décrire ta suggestion.");
@@ -50,6 +58,7 @@ export default function SuggestionForm({ prenom }) {
       setEnvoye(true);
       setType(TYPES[0]);
       setMessage("");
+      setPrenomSaisi("");
     } catch {
       setErreur("L'envoi a échoué. Réessaie dans quelques instants.");
     } finally {
@@ -78,8 +87,20 @@ export default function SuggestionForm({ prenom }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-5 rounded-lg border border-gold-dim bg-navy-light p-6"
+      className="flex flex-col gap-5"
     >
+      {!prenomConnu ? (
+        <label className="flex flex-col gap-1 font-sans text-sm text-cream/80">
+          Ton prénom
+          <input
+            type="text"
+            value={prenomSaisi}
+            onChange={(e) => setPrenomSaisi(e.target.value)}
+            className="rounded-md border border-gold-dim bg-navy px-3 py-2 text-cream outline-none focus:border-gold"
+          />
+        </label>
+      ) : null}
+
       <label className="flex flex-col gap-1 font-sans text-sm text-cream/80">
         Type de suggestion
         <select
@@ -114,7 +135,7 @@ export default function SuggestionForm({ prenom }) {
       <button
         type="submit"
         disabled={enCours}
-        className="self-start rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-navy transition-opacity hover:opacity-90 disabled:opacity-50"
+        className="self-start rounded-md bg-gold px-6 py-3 font-sans text-sm font-medium text-white transition active:scale-95 hover:opacity-90 disabled:opacity-50"
       >
         {enCours ? "Envoi..." : "Envoyer ma suggestion"}
       </button>

@@ -3,6 +3,7 @@ import { lireCodes } from "@/lib/codesAcces";
 
 const NOM_COOKIE = "espace_eleve_code";
 const MODELE = "llama-3.3-70b-versatile";
+/*constantes d'utilisation*/
 const MAX_MESSAGES = 20;
 const MAX_LONGUEUR_MESSAGE = 2000;
 
@@ -10,9 +11,11 @@ const INSTRUCTION_SYSTEME = `Tu es l'assistant pédagogique de la plateforme de 
 
 Règles :
 - Explique et guide le raisonnement, ne donne jamais directement la réponse finale d'un exercice ou devoir sans expliquer la méthode.
+- Explique qu'il est necessaire de copier coller un énoncé complet pour que tu puisses aider efficacement.
 - Adapte ton niveau de langage à un élève de collège ou lycée.
 - Reste uniquement sur les sujets scolaires (maths, physique-chimie, NSI). Si une question sort de ce cadre, réponds poliment que tu ne peux aider que sur ces matières.
-- Utilise des explications claires et concises, avec des étapes numérotées si utile.`;
+- Utilise des explications claires et concises, avec des étapes numérotées si utile.
+- Pour toute formule ou notation mathématique/scientifique, utilise exclusivement la syntaxe LaTeX entourée d'un unique symbole dollar de chaque côté, par exemple $x^2 + 1$ ou $(u_n)_{n \\in \\mathbb{N}}$. N'utilise jamais $$...$$, \\[...\\] ni \\(...\\).`;
 
 async function estEleveConnecte(request) {
   const code = request.cookies.get(NOM_COOKIE)?.value;

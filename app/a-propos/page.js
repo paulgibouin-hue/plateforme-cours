@@ -1,13 +1,20 @@
+import Reveal from "@/components/Reveal";
+
 const PARCOURS = [
   {
-    periode: "[ANNÉE-2]–[ANNÉE]",
+    periode: "2021 – 2024",
+    titre: "Baccalauréat scientifique, mention Très Bien",
+    lieu: "Lycée Jean-Dautet, La Rochelle",
+  },
+  {
+    periode: "2024 – 2026",
     titre: "Classe préparatoire scientifique MPI/MPI*",
     lieu: "Lycée Clemenceau, Nantes",
   },
   {
-    periode: "[ANNÉE]–aujourd'hui",
+    periode: "2026 – aujourd'hui",
     titre: "École d'ingénieurs",
-    lieu: "[NOM_ÉCOLE]",
+    lieu: "ENSIIE, Évry-Courcouronnes",
   },
 ];
 
@@ -32,48 +39,55 @@ export default function AProposPage() {
         <p>
           Je m&apos;appelle Paul. Après deux années de classe préparatoire
           scientifique (MPI/MPI*) au lycée Clemenceau à Nantes,
-          j&apos;intègre une école d&apos;ingénieurs à la rentrée [ANNÉE].
+          j&apos;intègre l&apos;ENSIIE (École Nationale Supérieure
+          d&apos;Informatique pour l&apos;Industrie et l&apos;Entreprise) à
+          Évry-Courcouronnes à la rentrée 2026.
         </p>
         <p>
           Cette expérience m&apos;a appris une chose essentielle : la
           réussite en sciences ne tient presque jamais à un manque de
           capacité, mais à des bases mal comprises à un moment donné —
-          souvent bien plus tôt qu&apos;on ne le pense. Un chapitre mal
-          digéré en troisième peut peser sur toute une scolarité
-          scientifique.
+          souvent bien plus tôt qu&apos;on ne le pense.
         </p>
         <p>
           C&apos;est pour ça que je donne des cours particuliers en
           mathématiques et physique-chimie, du collège au lycée, ainsi
-          qu&apos;en NSI pour les lycéens. Mon objectif
+          qu&apos;en NSI pour les lycéens. Passioné que je suis, mon objectif
           n&apos;est pas de faire du bachotage, mais de reconstruire une
           compréhension solide — pour que les progrès tiennent dans la
           durée.
         </p>
         <p>
           En parallèle, je développe une plateforme pédagogique en ligne :
-          fiches d&apos;exercices classées par difficulté avec corrections,
+          fiches d&apos;exercices avec corrections, chatbot directment intégré à la platefrome,
           et QCM interactifs pour réviser en autonomie.
         </p>
       </div>
 
-      <p className="mt-8 font-display text-xl italic text-gold">
-        Ma méthode en trois mots : rigueur, clarté, patience.
+      <p className="mt-8 font-display text-xl italic text-lime">
+        Ma méthode en trois mots : patience, rigueur, clarté.
       </p>
 
       <h2 className="mt-16 font-display text-2xl text-cream">Parcours</h2>
-      <ul className="mt-6 flex flex-col gap-4">
-        {PARCOURS.map((etape) => (
-          <li
-            key={etape.titre}
-            className="rounded-lg border border-gold-dim bg-navy-light p-5"
-          >
-            <p className="font-mono text-xs uppercase tracking-widest text-gold">
-              {etape.periode}
-            </p>
-            <p className="mt-2 font-sans text-cream">{etape.titre}</p>
-            <p className="font-sans text-sm text-cream/60">{etape.lieu}</p>
-          </li>
+      <ul className="relative mt-6 flex flex-col gap-6">
+        <span
+          aria-hidden="true"
+          className="absolute top-2 bottom-2 left-[7px] w-px bg-gold-dim"
+        />
+        {PARCOURS.map((etape, index) => (
+          <Reveal key={etape.titre} as="li" delay={index * 200} className="relative pl-8">
+            <span
+              aria-hidden="true"
+              className="absolute top-2 left-0 h-3.5 w-3.5 rounded-full border-2 border-lime bg-navy"
+            />
+            <div className="rounded-lg border border-gold-dim bg-navy-light p-5">
+              <p className="font-mono text-xs uppercase tracking-widest text-lime">
+                {etape.periode}
+              </p>
+              <p className="mt-2 font-sans text-cream">{etape.titre}</p>
+              <p className="font-sans text-sm text-cream/60">{etape.lieu}</p>
+            </div>
+          </Reveal>
         ))}
       </ul>
 

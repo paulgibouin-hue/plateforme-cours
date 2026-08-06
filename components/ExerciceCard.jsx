@@ -27,7 +27,9 @@ export default function ExerciceCard({ exercice }) {
     <article
       id={id}
       className={`rounded-lg border p-6 transition-colors ${
-        fait ? "border-gold bg-gold/5" : "border-gold-dim bg-navy-light"
+        fait
+          ? "border-gold bg-gold/5 hover:bg-gold/20"
+          : "border-gold-dim bg-navy-light hover:border-gold hover:bg-white/20"
       }`}
     >
       <div className="flex items-center justify-between gap-4">
@@ -36,7 +38,7 @@ export default function ExerciceCard({ exercice }) {
         </h3>
         {difficulte ? (
           <span
-            className="font-mono text-sm text-gold"
+            className="font-mono text-sm text-lime"
             title={`Difficulté ${difficulte}/3`}
           >
             {ETOILES[difficulte] ?? ""}

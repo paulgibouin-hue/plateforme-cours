@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
 /*
-  Charte graphique
-  ----------------
-  Navy   #0E1B35  — fond principal, texte sur fond clair
-  Or     #C6A15B  — accent, liens, éléments actifs
-  Crème  #F7F4EC  — fond clair, texte sur fond navy
+  Charte graphique — "Liquid Blue" (refonte)
+  -------------------------------------------
+  Ardoise   #1B2233  — fond principal (var. --color-navy, conservée pour
+                       limiter les changements dans les composants)
+  Bleu vif  #0367FC  — accent principal, liens, éléments actifs (var. --color-gold)
+  Lime      #D2F801  — accent secondaire, labels et mise en avant
+  Cream     #F5F7FA  — texte sur fond sombre / texte sur boutons bleus
+
+  Les cartes utilisent un effet verre dépoli (glassmorphism) : voir la classe
+  .bg-navy-light plus bas, qui ajoute un flou d'arrière-plan en plus de la
+  couleur transparente définie par le token.
 
   Fraunces    → titres
   Inter       → corps de texte
@@ -13,25 +19,71 @@
 */
 
 :root {
-  --color-navy: #0e1b35;
-  --color-navy-light: #16264a; /* surfaces/cards sur fond navy */
-  --color-gold: #c6a15b;
-  --color-gold-dim: #a9875073;
-  --color-cream: #f7f4ec;
-  --color-ink: #10121a; /* texte sur fond clair */
+  --color-navy: #1b2233;
+  --color-navy-light: rgba(255, 255, 255, 0.09); /* surface verre dépoli sur fond navy */
+  --color-navy-deep: #0f1420; /* fond plein et plus sombre, header/footer */
+  --color-gold: #0367fc;
+  --color-gold-dim: rgba(3, 103, 252, 0.4);
+  --color-cream: #f5f7fa;
+  --color-ink: #0b0c10; /* texte sur fond clair, constant dans les deux thèmes */
+  --color-lime: #d2f801;
+  --color-carte-opaque: #303645; /* équivalent plein (non transparent) de bg-navy-light */
+  --color-lime-vif: #d2f801; /* lime toujours clair, constant dans les deux thèmes :
+    pour les éléments qui portent un texte noir dessus (ex. badge chatbot) */
+}
+
+/*
+  Mode clair — même identité (bleu + lime), fond sombre remplacé par un
+  fond clair cream/blanc cassé. --color-navy et --color-cream inversent
+  leur rôle (fond <-> texte), ce qui suffit à retourner tout le site car
+  les composants ne référencent que ces tokens. Le lime devient #71d984
+  (vert plus franc) en mode clair, choisi manuellement pour rester lisible
+  sur fond clair. Le bleu (--color-gold) reste inchangé : son contraste
+  sur blanc est déjà suffisant (~4.8:1).
+*/
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-navy: #f5f7fa;
+    --color-navy-light: rgba(11, 12, 16, 0.045);
+    --color-navy-deep: #e7ebf1;
+    --color-gold-dim: rgba(3, 103, 252, 0.35);
+    --color-cream: #12141c;
+    --color-lime: #71d984;
+    --color-carte-opaque: #eaecef;
+  }
+}
+:root[data-theme="light"] {
+  --color-navy: #f5f7fa;
+  --color-navy-light: rgba(11, 12, 16, 0.045);
+  --color-navy-deep: #e7ebf1;
+  --color-gold-dim: rgba(3, 103, 252, 0.35);
+  --color-cream: #12141c;
+  --color-lime: #71d984;
+  --color-carte-opaque: #eaecef;
 }
 
 @theme inline {
   --color-navy: var(--color-navy);
   --color-navy-light: var(--color-navy-light);
+  --color-navy-deep: var(--color-navy-deep);
   --color-gold: var(--color-gold);
   --color-gold-dim: var(--color-gold-dim);
   --color-cream: var(--color-cream);
   --color-ink: var(--color-ink);
+  --color-lime: var(--color-lime);
+  --color-carte-opaque: var(--color-carte-opaque);
+  --color-lime-vif: var(--color-lime-vif);
 
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-space-mono);
+}
+
+/* Effet verre dépoli sur les surfaces "cartes" (même classe que la couleur,
+   le flou s'ajoute par-dessus la transparence définie par le token). */
+.bg-navy-light {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 html {
@@ -42,11 +94,100 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Bascule clair/sombre en douceur, plutôt qu'un changement brutal des
+   couleurs de fond/texte/bordures. */
+body,
+header,
+footer,
+main,
+button,
+input,
+textarea {
+  transition: background-color 0.2s ease-out, color 0.2s ease-out,
+    border-color 0.2s ease-out;
+}
+
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--font-display);
+}
+
+/* Apparition en douceur au défilement, pilotée par le composant Reveal.jsx
+   (ajoute .is-visible via IntersectionObserver). Sans JS, le contenu reste
+   simplement visible dès le départ (voir le <noscript> ci-dessous n'est pas
+   nécessaire : opacity ne masque rien pour les lecteurs d'écran). */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dérive lente des halos décoratifs en arrière-plan */
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(24px, -28px) scale(1.06);
+  }
+}
+.animate-blob-drift {
+  animation: blob-drift 16s ease-in-out infinite;
+}
+.animate-blob-drift-reverse {
+  animation: blob-drift 20s ease-in-out infinite reverse;
+}
+@keyframes blob-drift-alt {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-18px, 22px) scale(0.94);
+  }
+}
+.animate-blob-drift-alt {
+  animation: blob-drift-alt 12s ease-in-out infinite;
+}
+.animate-blob-drift-slow {
+  animation: blob-drift 26s ease-in-out infinite;
+}
+
+/* Transition douce entre les pages (next-view-transitions).
+   Fondu simple plutôt que le glissement par défaut du navigateur. */
+::view-transition-old(root) {
+  animation: page-fade-out 0.18s ease-out forwards;
+}
+::view-transition-new(root) {
+  animation: page-fade-in 0.18s ease-out forwards;
+}
+@keyframes page-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* État de chargement de page : petit bandeau qui glisse, sur la charte
+   (pas de spinner générique). */
+@keyframes chargement-glisse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
 }
 
 /* Respect des préférences de mouvement réduit */
@@ -60,5 +201,10 @@ h4 {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }

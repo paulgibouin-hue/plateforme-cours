@@ -1,20 +1,21 @@
 import ContactForm from "@/components/ContactForm";
+import Reveal from "@/components/Reveal";
 
 const FORMULES = [
   {
     label: "En ligne (visioconférence)",
-    tarif: "20 – 22 € / heure",
+    tarif: "20€ / heure",
     points: [
       "Cours en visio, matériel interactif partagé à l'écran",
       "Accès inclus à la plateforme d'exercices et QCM",
-      "Flexibilité totale sur les horaires",
+      "Flexibilité sur les horaires",
     ],
   },
   {
     label: "Présentiel",
-    tarif: "25 – 28 € / heure",
+    tarif: "22€ / heure",
     points: [
-      "Cours au domicile de l'élève (zone : [ZONE_GÉOGRAPHIQUE])",
+      "Cours au domicile de l'élève (Évry-Courcouronnes et communes proches : Corbeil-Essonnes, Ris-Orangis, Bondoufle, Lisses...)",
       "Support papier et numérique combinés",
       "Accès inclus à la plateforme d'exercices et QCM",
     ],
@@ -22,16 +23,16 @@ const FORMULES = [
 ];
 
 const INFOS = [
-  "Durée : 1h ou 1h30 au choix",
+  "Durée : 1h, 1h30 ou 2h au choix",
   "Fréquence : hebdomadaire recommandée, ajustable",
   "Premier cours : échange gratuit de 15 min pour définir les objectifs",
-  "Modes de paiement : [MODES_PAIEMENT]",
+  "Modes de paiement : Espèces, virement bancaire, PayPal",
 ];
 
 export const metadata = {
   title: "Tarifs",
   description:
-    "Tarifs des cours particuliers avec Paul Gibouin : 20–22€/h en ligne, 25–28€/h en présentiel. Premier échange gratuit.",
+    "Tarifs des cours particuliers avec Paul Gibouin : 20€/h en ligne, 22€/h en présentiel. Premier échange gratuit.",
 };
 
 export default function TarifsPage() {
@@ -45,34 +46,35 @@ export default function TarifsPage() {
       </p>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {FORMULES.map((formule) => (
-          <div
-            key={formule.label}
-            className="rounded-lg border border-gold-dim bg-navy-light p-6"
-          >
-            <p className="font-mono text-xs uppercase tracking-widest text-gold">
-              {formule.label}
-            </p>
-            <p className="mt-3 font-display text-2xl text-cream">
-              {formule.tarif}
-            </p>
-            <ul className="mt-5 flex flex-col gap-2 font-sans text-sm text-cream/70">
-              {formule.points.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </div>
+        {FORMULES.map((formule, index) => (
+          <Reveal key={formule.label} delay={index * 100}>
+            <div className="rounded-lg border border-gold-dim bg-navy-light p-6 transition hover:-translate-y-1 hover:border-gold">
+              <p className="font-mono text-xs uppercase tracking-widest text-lime">
+                {formule.label}
+              </p>
+              <p className="mt-3 font-display text-2xl text-cream">
+                {formule.tarif}
+              </p>
+              <ul className="mt-5 flex flex-col gap-2 font-sans text-sm text-cream/70">
+                {formule.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
         ))}
       </div>
 
-      <h2 className="mt-16 font-display text-2xl text-cream">
-        Informations complémentaires
-      </h2>
-      <ul className="mt-6 flex flex-col gap-2 font-sans text-cream/80">
-        {INFOS.map((info) => (
-          <li key={info}>{info}</li>
-        ))}
-      </ul>
+      <Reveal as="div">
+        <h2 className="mt-16 font-display text-2xl text-cream">
+          Informations complémentaires
+        </h2>
+        <ul className="mt-6 flex flex-col gap-2 font-sans text-cream/80">
+          {INFOS.map((info) => (
+            <li key={info}>{info}</li>
+          ))}
+        </ul>
+      </Reveal>
 
       <h2 id="contact" className="mt-16 font-display text-2xl text-cream">
         Réserver un premier échange

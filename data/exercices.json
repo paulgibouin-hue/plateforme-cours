@@ -5,6 +5,7 @@
       "matiere": "mathematiques",
       "niveau": "premiere",
       "titre": "Équations du second degré",
+      "description": "Discriminant, factorisation, signe du trinôme.",
       "rappelCours": [
         "Forme $ax^2+bx+c=0$ avec $a\\neq 0$. Discriminant $\\Delta=b^2-4ac$.",
         "$\\Delta>0$ : $x_1=\\dfrac{-b-\\sqrt\\Delta}{2a}$, $x_2=\\dfrac{-b+\\sqrt\\Delta}{2a}$",
@@ -59,6 +60,7 @@
       "matiere": "mathematiques",
       "niveau": "premiere",
       "titre": "Dérivation et étude de fonctions",
+      "description": "Nombre dérivé, tangentes, variations — le chapitre pivot de l'année.",
       "rappelCours": [
         "Nombre dérivé en $a$ : $f'(a)=\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}$",
         "Dérivées usuelles : $(x^n)'=nx^{n-1}$, $(\\sqrt{x})'=\\dfrac{1}{2\\sqrt{x}}$, $\\left(\\dfrac1x\\right)'=-\\dfrac{1}{x^2}$",
@@ -113,6 +115,7 @@
       "matiere": "mathematiques",
       "niveau": "terminale",
       "titre": "Suites numériques",
+      "description": "Suites arithmétiques et géométriques, limites, récurrence.",
       "rappelCours": [
         "Suite arithmétique : $u_{n+1}=u_n+r$, terme général $u_n=u_0+nr$",
         "Suite géométrique : $u_{n+1}=u_n\\times q$, terme général $u_n=u_0\\times q^n$",
@@ -168,6 +171,7 @@
       "matiere": "mathematiques",
       "niveau": "terminale",
       "titre": "Fonction exponentielle et logarithme",
+      "description": "Fonction exponentielle, logarithme, croissances comparées.",
       "rappelCours": [
         "$(e^x)'=e^x$, $e^0=1$, $e^{a+b}=e^a\\times e^b$",
         "$\\ln$ est la réciproque de $\\exp$ sur $]0;+\\infty[$ : $e^{\\ln x}=x$, $\\ln(e^x)=x$",
@@ -222,6 +226,7 @@
       "matiere": "mathematiques",
       "niveau": "terminale",
       "titre": "Probabilités conditionnelles",
+      "description": "Arbres pondérés, indépendance, formule des probabilités totales.",
       "rappelCours": [
         "Probabilité conditionnelle : $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}$ (probabilité de $B$ sachant que $A$ est réalisé)",
         "Formule des probabilités totales : si $A_1,\\dots,A_n$ forment une partition de l'univers, alors $P(B)=\\sum_i P(A_i)\\times P_{A_i}(B)$",
@@ -276,6 +281,7 @@
       "matiere": "mathematiques",
       "niveau": "brevet",
       "titre": "Pythagore & Trigonométrie",
+      "description": "Triangles rectangles, cosinus, sinus et applications au brevet.",
       "rappelCours": [
         "$a^2+b^2=c^2$",
         "$\\sin=\\dfrac{\\text{opp}}{\\text{hyp}}$, $\\cos=\\dfrac{\\text{adj}}{\\text{hyp}}$, $\\tan=\\dfrac{\\text{opp}}{\\text{adj}}$",
@@ -330,6 +336,7 @@
       "matiere": "physique",
       "niveau": "brevet",
       "titre": "Électricité",
+      "description": "Loi d'Ohm, puissance, énergie — les bases de l'électricité.",
       "rappelCours": [
         "$U=RI$ (loi d'Ohm)",
         "$P=UI$ (puissance)",
@@ -383,6 +390,7 @@
       "matiere": "physique",
       "niveau": "terminale",
       "titre": "Mécanique newtonienne",
+      "description": "Chute libre, deuxième loi de Newton, énergie mécanique.",
       "rappelCours": [
         "PFD : $\\sum \\vec{F} = m\\vec{a}$ (référentiel galiléen)",
         "$P=mg$",
@@ -436,6 +444,7 @@
       "matiere": "physique",
       "niveau": "terminale",
       "titre": "Ondes et signaux",
+      "description": "Ondes mécaniques, célérité, diffraction.",
       "rappelCours": [
         "Onde mécanique : une onde transporte de l'énergie, pas de matière. Célérité $v=\\dfrac{d}{t}$",
         "Relation fondamentale : $v=\\lambda\\times f$ (célérité, longueur d'onde, fréquence)",
@@ -482,6 +491,7 @@
       "matiere": "physique",
       "niveau": "premiere",
       "titre": "Circuits électriques en courant continu",
+      "description": "Lois des mailles et des nœuds, circuits série et dérivation.",
       "rappelCours": [
         "Loi d'Ohm : $U=RI$",
         "Circuit série : même intensité en tout point, $U_{\\text{total}}=\\sum U_i$, $R_{\\text{éq}}=\\sum R_i$",
@@ -537,6 +547,7 @@
       "matiere": "chimie",
       "niveau": "terminale",
       "titre": "Réactions chimiques & Équilibres",
+      "description": "Stœchiométrie, constante d'équilibre, tableaux d'avancement.",
       "rappelCours": [
         "$aA+bB \\rightleftharpoons cC+dD$",
         "$K_c=\\dfrac{[C]^c[D]^d}{[A]^a[B]^b}$",
@@ -590,6 +601,7 @@
       "matiere": "chimie",
       "niveau": "terminale",
       "titre": "Acides, bases et pH",
+      "description": "pH, dosages, dilution des acides et bases.",
       "rappelCours": [
         "$pH=-\\log[H_3O^+]$ donc $[H_3O^+]=10^{-pH}$",
         "Solution acide : $pH<7$ ; basique : $pH>7$ ; neutre : $pH=7$ (à $25°C$)",
@@ -636,6 +648,7 @@
       "matiere": "chimie",
       "niveau": "terminale",
       "titre": "Cinétique chimique",
+      "description": "Vitesse de réaction, temps de demi-réaction, facteurs cinétiques.",
       "rappelCours": [
         "La vitesse d'une réaction décrit la rapidité avec laquelle l'avancement $x$ évolue au cours du temps",
         "Temps de demi-réaction $t_{1/2}$ : durée au bout de laquelle l'avancement atteint la moitié de sa valeur finale $x_{\\text{max}}$",
@@ -690,6 +703,7 @@
       "matiere": "nsi",
       "niveau": "premiere",
       "titre": "Structures de données : listes, n-uplets, dictionnaires",
+      "description": "Listes, n-uplets, dictionnaires en Python.",
       "rappelCours": [
         "Liste (list) : collection ordonnée et modifiable, indexée à partir de $0$ : `l[0]`",
         "n-uplet (tuple) : collection ordonnée et non modifiable : `t = (1, 2, 3)`",
@@ -744,6 +758,7 @@
       "matiere": "nsi",
       "niveau": "terminale",
       "titre": "Algorithmes de tri et de recherche",
+      "description": "Recherche séquentielle, dichotomie, tris par sélection et insertion.",
       "rappelCours": [
         "Recherche séquentielle : parcourt la liste élément par élément, complexité $O(n)$",
         "Recherche dichotomique : nécessite une liste triée, complexité $O(\\log n)$",
@@ -798,6 +813,7 @@
       "matiere": "nsi",
       "niveau": "terminale",
       "titre": "Récursivité",
+      "description": "Fonctions récursives, cas de base, pile d'appels.",
       "rappelCours": [
         "Une fonction récursive est une fonction qui s'appelle elle-même sur une version plus petite du problème",
         "Elle doit toujours comporter un cas de base (condition d'arrêt) et un cas récursif qui se rapproche de ce cas de base",
@@ -844,6 +860,611 @@
           "difficulte": 3,
           "enonce": "La fonction `mystere` de l'exercice « Identifier cas de base et cas récursif » calcule la suite de Fibonacci de façon récursive naïve. Expliquer pourquoi cette approche devient très lente pour des valeurs de `n` grandes (par exemple `n = 40`), et proposer une amélioration.",
           "correction": "Le problème vient du nombre d'appels récursifs : pour calculer `mystere(n)`, la fonction appelle `mystere(n-1)` et `mystere(n-2)`, qui eux-mêmes rappellent chacun deux fonctions, etc. Beaucoup de sous-calculs sont donc effectués plusieurs fois (par exemple, `mystere(2)` est recalculé un très grand nombre de fois pour un `n` élevé). Le nombre total d'appels croît de façon exponentielle avec `n` (environ $2^n$), ce qui rend le calcul extrêmement lent pour `n = 40`.\nUne amélioration possible est la mémoïsation : on stocke les résultats déjà calculés dans un dictionnaire, et avant de recalculer `mystere(k)`, on vérifie s'il n'a pas déjà été calculé. On peut aussi écrire une version itérative qui calcule les termes de proche en proche sans aucun appel récursif, avec une complexité linéaire en $n$."
+        }
+      ]
+    },
+    {
+      "id": "geometrie-espace-terminale",
+      "matiere": "mathematiques",
+      "niveau": "terminale",
+      "titre": "Géométrie dans l'espace",
+      "description": "Vecteurs, plans, droites et distances dans l'espace.",
+      "rappelCours": [
+        "Vecteur $\\vec{AB}$ de coordonnées $(x_B-x_A\\,;\\,y_B-y_A\\,;\\,z_B-z_A)$, norme $\\|\\vec{AB}\\|=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}$",
+        "Produit scalaire : $\\vec u\\cdot\\vec v = x_ux_v+y_uy_v+z_uz_v$ ; $\\vec u$ et $\\vec v$ orthogonaux $\\iff \\vec u\\cdot\\vec v=0$",
+        "Un plan de vecteur normal $\\vec n(a,b,c)$ passant par $A$ a pour équation $a(x-x_A)+b(y-y_A)+c(z-z_A)=0$",
+        "Représentation paramétrique d'une droite passant par $A$ de vecteur directeur $\\vec u(a,b,c)$ : $\\begin{cases}x=x_A+ta\\\\y=y_A+tb\\\\z=z_A+tc\\end{cases}$, $t\\in\\mathbb R$"
+      ],
+      "exercices": [
+        {
+          "id": "ge-001",
+          "numero": 1,
+          "titre": "Coordonnées d'un vecteur et norme",
+          "difficulte": 1,
+          "enonce": "$A(1\\,;2\\,;-1)$ et $B(3\\,;-1\\,;2)$. Calculer les coordonnées de $\\vec{AB}$ puis sa norme.",
+          "correction": "$\\vec{AB}=(3-1\\,;-1-2\\,;2-(-1))=(2\\,;-3\\,;3)$.\n$\\|\\vec{AB}\\|=\\sqrt{2^2+(-3)^2+3^2}=\\sqrt{4+9+9}=\\sqrt{22}$."
+        },
+        {
+          "id": "ge-002",
+          "numero": 2,
+          "titre": "Produit scalaire et orthogonalité",
+          "difficulte": 1,
+          "enonce": "$\\vec u(2\\,;-1\\,;3)$ et $\\vec v(1\\,;5\\,;1)$. Calculer $\\vec u\\cdot\\vec v$ et dire si $\\vec u$ et $\\vec v$ sont orthogonaux.",
+          "correction": "$\\vec u\\cdot\\vec v = 2\\times1+(-1)\\times5+3\\times1 = 2-5+3=0$.\nLe produit scalaire est nul, donc $\\vec u$ et $\\vec v$ sont orthogonaux."
+        },
+        {
+          "id": "ge-003",
+          "numero": 3,
+          "titre": "Équation cartésienne d'un plan",
+          "difficulte": 2,
+          "enonce": "Déterminer une équation cartésienne du plan passant par $A(1\\,;0\\,;2)$ et de vecteur normal $\\vec n(2\\,;-1\\,;3)$.",
+          "correction": "Une équation du plan est $2(x-1)-1(y-0)+3(z-2)=0$, soit $2x-y+3z-2-6=0$, c'est-à-dire $2x-y+3z-8=0$."
+        },
+        {
+          "id": "ge-004",
+          "numero": 4,
+          "titre": "Représentation paramétrique d'une droite",
+          "difficulte": 2,
+          "enonce": "Soit $(d)$ la droite passant par $A(1\\,;2\\,;0)$ dirigée par $\\vec u(3\\,;-1\\,;2)$.\n1. Donner une représentation paramétrique de $(d)$.\n2. Le point $B(4\\,;1\\,;2)$ appartient-il à $(d)$ ?",
+          "correction": "1. $\\begin{cases}x=1+3t\\\\y=2-t\\\\z=2t\\end{cases}$, $t\\in\\mathbb R$.\n2. On cherche $t$ tel que $1+3t=4$, soit $t=1$. On vérifie avec les deux autres coordonnées : $y=2-1=1$ (conforme à $B$) et $z=2\\times1=2$ (conforme à $B$). Les trois équations sont vérifiées pour $t=1$, donc $B$ appartient bien à $(d)$."
+        },
+        {
+          "id": "ge-005",
+          "numero": 5,
+          "titre": "Distance d'un point à un plan",
+          "difficulte": 3,
+          "enonce": "Soit le plan $\\mathcal P$ d'équation $2x-y+2z-3=0$ et le point $A(1\\,;2\\,;-1)$. Calculer la distance de $A$ au plan $\\mathcal P$, sachant que $d(A,\\mathcal P)=\\dfrac{|ax_A+by_A+cz_A+d|}{\\sqrt{a^2+b^2+c^2}}$.",
+          "correction": "Ici $a=2$, $b=-1$, $c=2$, $d=-3$.\n$d(A,\\mathcal P)=\\dfrac{|2\\times1+(-1)\\times2+2\\times(-1)-3|}{\\sqrt{2^2+(-1)^2+2^2}}=\\dfrac{|2-2-2-3|}{\\sqrt{9}}=\\dfrac{|-5|}{3}=\\dfrac{5}{3}$."
+        }
+      ]
+    },
+    {
+      "id": "radioactivite-terminale",
+      "matiere": "physique",
+      "niveau": "terminale",
+      "titre": "Radioactivité",
+      "description": "Décroissance radioactive, demi-vie, désintégrations.",
+      "rappelCours": [
+        "Décroissance radioactive : $N(t)=N_0e^{-\\lambda t}$ ($N_0$ = nombre de noyaux initial, $\\lambda$ = constante radioactive)",
+        "Demi-vie $t_{1/2}$ : durée au bout de laquelle la moitié des noyaux initiaux ont disparu ; $t_{1/2}=\\dfrac{\\ln 2}{\\lambda}$",
+        "Activité $A(t)=\\lambda N(t)$, exprimée en becquerels (Bq)",
+        "Lors d'une désintégration, il y a conservation du nombre de nucléons $A$ et du numéro atomique $Z$ (lois de Soddy)"
+      ],
+      "exercices": [
+        {
+          "id": "ra-001",
+          "numero": 1,
+          "titre": "Calcul d'une demi-vie",
+          "difficulte": 1,
+          "enonce": "L'iode 131 a une constante radioactive $\\lambda=0,0864\\text{ jour}^{-1}$. Calculer sa demi-vie $t_{1/2}$.",
+          "correction": "$t_{1/2}=\\dfrac{\\ln 2}{\\lambda}=\\dfrac{0,693}{0,0864}\\approx8,0\\text{ jours}$."
+        },
+        {
+          "id": "ra-002",
+          "numero": 2,
+          "titre": "Décroissance sur plusieurs demi-vies",
+          "difficulte": 1,
+          "enonce": "Un échantillon contient initialement $N_0=8\\times10^{10}$ noyaux radioactifs de demi-vie $t_{1/2}=5\\text{ jours}$. Combien de noyaux restent-ils après $15$ jours ?",
+          "correction": "$15\\text{ jours}=3\\times t_{1/2}$ : trois demi-vies se sont écoulées. Après chaque demi-vie, le nombre de noyaux est divisé par $2$ : $N=\\dfrac{N_0}{2^3}=\\dfrac{8\\times10^{10}}{8}=1\\times10^{10}$ noyaux."
+        },
+        {
+          "id": "ra-003",
+          "numero": 3,
+          "titre": "Calcul d'une activité",
+          "difficulte": 2,
+          "enonce": "Un échantillon contient $N=2\\times10^{15}$ noyaux radioactifs de constante $\\lambda=1,2\\times10^{-4}\\text{ s}^{-1}$. Calculer son activité $A$.",
+          "correction": "$A=\\lambda N=1,2\\times10^{-4}\\times2\\times10^{15}=2,4\\times10^{11}\\text{ Bq}$."
+        },
+        {
+          "id": "ra-004",
+          "numero": 4,
+          "titre": "Équation de désintégration alpha",
+          "difficulte": 2,
+          "enonce": "Le noyau d'uranium $^{238}_{92}U$ se désintègre en émettant une particule $\\alpha$ ($^4_2He$). Écrire l'équation de désintégration et identifier le noyau fils.",
+          "correction": "Conservation du nombre de nucléons : $238=A+4$, donc $A=234$. Conservation du numéro atomique : $92=Z+2$, donc $Z=90$ (thorium).\nÉquation : $^{238}_{92}U \\rightarrow \\, ^{234}_{90}Th + \\, ^4_2He$."
+        },
+        {
+          "id": "ra-005",
+          "numero": 5,
+          "titre": "Datation au carbone 14",
+          "difficulte": 3,
+          "enonce": "Un échantillon organique a une activité $4$ fois plus faible que celle d'un organisme vivant de référence. Sachant que la demi-vie du carbone 14 est $t_{1/2}=5730\\text{ ans}$, déterminer l'âge de l'échantillon.",
+          "correction": "Une activité divisée par $4=2^2$ correspond à $2$ demi-vies écoulées.\nÂge $=2\\times t_{1/2}=2\\times5730=11460$ ans."
+        }
+      ]
+    },
+    {
+      "id": "spectroscopie-terminale",
+      "matiere": "chimie",
+      "niveau": "terminale",
+      "titre": "Spectroscopie IR et RMN",
+      "description": "Spectres IR et RMN pour identifier une molécule.",
+      "rappelCours": [
+        "Spectroscopie IR : identifie des liaisons/groupes caractéristiques via leur nombre d'onde d'absorption (en $\\text{cm}^{-1}$)",
+        "Bandes IR clés : $O-H$ alcool (large, $3200$–$3550$), $O-H$ acide carboxylique (très large, $2500$–$3200$), $C=O$ (fine, intense, $1700$–$1740$)",
+        "RMN du proton : le nombre de signaux correspond au nombre de groupes de protons équivalents",
+        "Règle des $(n+1)$ : un proton ayant $n$ voisins non équivalents porte des protons voit son signal divisé en $(n+1)$ pics"
+      ],
+      "exercices": [
+        {
+          "id": "sp-001",
+          "numero": 1,
+          "titre": "Lecture d'un spectre IR",
+          "difficulte": 1,
+          "enonce": "Un spectre IR présente une bande large et intense vers $3300\\text{ cm}^{-1}$ et une bande fine et intense vers $1715\\text{ cm}^{-1}$. Identifier les groupes caractéristiques associés à chaque bande.",
+          "correction": "La bande large vers $3300\\text{ cm}^{-1}$ correspond à une liaison $O-H$ (alcool). La bande fine et intense vers $1715\\text{ cm}^{-1}$ correspond à une liaison $C=O$ (groupe carbonyle, cétone ou aldéhyde)."
+        },
+        {
+          "id": "sp-002",
+          "numero": 2,
+          "titre": "Règle des (n+1)",
+          "difficulte": 1,
+          "enonce": "Un proton possède $3$ voisins non équivalents portant des protons. En combien de pics son signal RMN est-il divisé ?",
+          "correction": "D'après la règle des $(n+1)$ : $n=3$ voisins, donc le signal est divisé en $3+1=4$ pics (quadruplet)."
+        },
+        {
+          "id": "sp-003",
+          "numero": 3,
+          "titre": "Nombre de signaux RMN",
+          "difficulte": 2,
+          "enonce": "L'éthanol a pour formule $CH_3-CH_2-OH$. Combien de groupes de protons équivalents (donc de signaux en RMN) possède-t-il ?",
+          "correction": "L'éthanol possède $3$ groupes de protons équivalents : les $3$ protons du $CH_3$, les $2$ protons du $CH_2$, et le proton du $OH$. Il y a donc $3$ signaux en RMN."
+        },
+        {
+          "id": "sp-004",
+          "numero": 4,
+          "titre": "Multiplicité et voisinage",
+          "difficulte": 2,
+          "enonce": "Dans l'éthanol, le signal du $CH_2$ apparaît sous forme de quadruplet (en négligeant le couplage avec le $OH$). Combien de protons voisins portent la responsabilité de cette multiplicité, et à quel groupe appartiennent-ils ?",
+          "correction": "Un quadruplet correspond à $(n+1)=4$, donc $n=3$ voisins portant des protons. Ces $3$ protons correspondent au groupe $CH_3$ adjacent au $CH_2$."
+        },
+        {
+          "id": "sp-005",
+          "numero": 5,
+          "titre": "Identification d'une molécule",
+          "difficulte": 3,
+          "enonce": "Un composé de formule brute $C_3H_6O$ ne présente aucune bande large vers $3300\\text{ cm}^{-1}$ en IR, mais une bande fine et intense vers $1715\\text{ cm}^{-1}$. Son spectre RMN ne présente qu'un seul signal (singulet). Proposer une formule semi-développée compatible et justifier.",
+          "correction": "L'absence de bande large vers $3300\\text{ cm}^{-1}$ écarte la présence d'un groupe $O-H$ (donc pas d'alcool ni d'acide carboxylique). La bande fine à $1715\\text{ cm}^{-1}$ indique un groupe $C=O$ de cétone (puisqu'il n'y a pas de $O-H$ associé pour un acide). Un seul signal RMN signifie que tous les protons sont équivalents.\nLa propanone (acétone) $CH_3-CO-CH_3$ convient parfaitement : ses $6$ protons sont tous équivalents (un seul singulet), elle possède un groupe $C=O$ de cétone, et sa formule brute est bien $C_3H_6O$."
+        }
+      ]
+    },
+    {
+      "id": "bases-donnees-terminale",
+      "matiere": "nsi",
+      "niveau": "terminale",
+      "titre": "Bases de données relationnelles",
+      "description": "Tables, clés primaires et étrangères, requêtes SQL.",
+      "rappelCours": [
+        "Une base de données relationnelle organise les données en tables (relations), constituées de lignes (n-uplets) et de colonnes (attributs)",
+        "Clé primaire : attribut (ou ensemble d'attributs) qui identifie de façon unique chaque ligne d'une table",
+        "Clé étrangère : attribut faisant référence à la clé primaire d'une autre table, ce qui permet de relier les tables entre elles",
+        "`SELECT ... FROM ... WHERE ...` interroge une table ; `JOIN` permet de combiner plusieurs tables ; `GROUP BY` regroupe des lignes pour appliquer une fonction d'agrégation (`AVG`, `SUM`, `COUNT`...)"
+      ],
+      "exercices": [
+        {
+          "id": "bd-001",
+          "numero": 1,
+          "titre": "Identifier une clé primaire",
+          "difficulte": 1,
+          "enonce": "On donne la table `Eleves(id_eleve, nom, prenom, classe)`. Quel attribut est le plus adapté comme clé primaire ? Pourquoi `nom` ne conviendrait-il pas ?",
+          "correction": "`id_eleve` est l'attribut le plus adapté comme clé primaire, car il identifie chaque élève de façon unique. `nom` ne convient pas car deux élèves différents peuvent porter le même nom : l'unicité ne serait pas garantie."
+        },
+        {
+          "id": "bd-002",
+          "numero": 2,
+          "titre": "Requête SELECT simple",
+          "difficulte": 1,
+          "enonce": "En reprenant la table `Eleves(id_eleve, nom, prenom, classe)`, écrire une requête SQL affichant le nom et le prénom de tous les élèves de la classe `'Terminale 3'`.",
+          "correction": "SELECT nom, prenom FROM Eleves WHERE classe = 'Terminale 3';"
+        },
+        {
+          "id": "bd-003",
+          "numero": 3,
+          "titre": "Rôle d'une clé étrangère",
+          "difficulte": 2,
+          "enonce": "On donne la table `Notes(id_note, id_eleve, matiere, valeur)`. Quel rôle joue l'attribut `id_eleve` dans cette table, et à quelle table fait-il référence ?",
+          "correction": "`id_eleve` est une clé étrangère : elle fait référence à la clé primaire `id_eleve` de la table `Eleves`. Cela permet de savoir à quel élève appartient chaque note, sans dupliquer les informations de l'élève dans la table `Notes`."
+        },
+        {
+          "id": "bd-004",
+          "numero": 4,
+          "titre": "Jointure entre deux tables",
+          "difficulte": 2,
+          "enonce": "En utilisant `Eleves(id_eleve, nom, prenom)` et `Notes(id_eleve, matiere, valeur)`, écrire une requête SQL qui affiche le nom des élèves et leur note de mathématiques.",
+          "correction": "SELECT Eleves.nom, Notes.valeur\nFROM Eleves\nJOIN Notes ON Eleves.id_eleve = Notes.id_eleve\nWHERE Notes.matiere = 'Mathématiques';\n\nLa clause `JOIN ... ON` associe chaque ligne de `Eleves` aux lignes de `Notes` qui partagent le même `id_eleve`, puis `WHERE` filtre sur la matière souhaitée."
+        },
+        {
+          "id": "bd-005",
+          "numero": 5,
+          "titre": "Agrégation avec GROUP BY",
+          "difficulte": 3,
+          "enonce": "En utilisant `Notes(id_eleve, matiere, valeur)`, écrire une requête SQL qui calcule la moyenne des notes de chaque élève.",
+          "correction": "SELECT id_eleve, AVG(valeur)\nFROM Notes\nGROUP BY id_eleve;\n\n`GROUP BY id_eleve` regroupe toutes les lignes ayant le même `id_eleve` avant d'appliquer la fonction d'agrégation `AVG`, qui calcule alors la moyenne des notes pour chaque groupe (donc pour chaque élève)."
+        }
+      ]
+    },
+    {
+      "id": "vecteurs-geometrie-repere-premiere",
+      "matiere": "mathematiques",
+      "niveau": "premiere",
+      "titre": "Vecteurs et géométrie repérée",
+      "description": "Coordonnées, colinéarité, alignement dans le plan.",
+      "rappelCours": [
+        "Vecteur $\\vec{AB}$ dans le plan : coordonnées $(x_B-x_A\\,;\\,y_B-y_A)$",
+        "Norme d'un vecteur : $\\|\\vec u\\|=\\sqrt{x^2+y^2}$",
+        "$\\vec u(x\\,;y)$ et $\\vec v(x'\\,;y')$ sont colinéaires $\\iff xy'-x'y=0$",
+        "Coordonnées du milieu $I$ de $[AB]$ : $I=\\left(\\dfrac{x_A+x_B}{2}\\,;\\,\\dfrac{y_A+y_B}{2}\\right)$"
+      ],
+      "exercices": [
+        {
+          "id": "ve-001",
+          "numero": 1,
+          "titre": "Coordonnées d'un vecteur et norme",
+          "difficulte": 1,
+          "enonce": "$A(1\\,;2)$ et $B(4\\,;6)$. Calculer les coordonnées de $\\vec{AB}$ puis sa norme.",
+          "correction": "$\\vec{AB}=(4-1\\,;6-2)=(3\\,;4)$.\n$\\|\\vec{AB}\\|=\\sqrt{3^2+4^2}=\\sqrt{9+16}=\\sqrt{25}=5$."
+        },
+        {
+          "id": "ve-002",
+          "numero": 2,
+          "titre": "Milieu d'un segment",
+          "difficulte": 1,
+          "enonce": "$A(-2\\,;3)$ et $B(4\\,;-1)$. Calculer les coordonnées du milieu $I$ de $[AB]$.",
+          "correction": "$I=\\left(\\dfrac{-2+4}{2}\\,;\\,\\dfrac{3+(-1)}{2}\\right)=\\left(\\dfrac{2}{2}\\,;\\,\\dfrac{2}{2}\\right)=(1\\,;1)$."
+        },
+        {
+          "id": "ve-003",
+          "numero": 3,
+          "titre": "Colinéarité de deux vecteurs",
+          "difficulte": 2,
+          "enonce": "$\\vec u(2\\,;3)$ et $\\vec v(4\\,;6)$. Ces deux vecteurs sont-ils colinéaires ?",
+          "correction": "On calcule $xy'-x'y=2\\times6-4\\times3=12-12=0$.\nLe résultat est nul, donc $\\vec u$ et $\\vec v$ sont colinéaires."
+        },
+        {
+          "id": "ve-004",
+          "numero": 4,
+          "titre": "Points alignés",
+          "difficulte": 2,
+          "enonce": "$A(1\\,;1)$, $B(3\\,;5)$, $C(5\\,;9)$. Les points $A$, $B$ et $C$ sont-ils alignés ?",
+          "correction": "$\\vec{AB}=(2\\,;4)$ et $\\vec{AC}=(4\\,;8)$.\n$A$, $B$, $C$ sont alignés si et seulement si $\\vec{AB}$ et $\\vec{AC}$ sont colinéaires : $2\\times8-4\\times4=16-16=0$.\nLe résultat est nul, donc $A$, $B$ et $C$ sont alignés."
+        },
+        {
+          "id": "ve-005",
+          "numero": 5,
+          "titre": "Quatrième sommet d'un parallélogramme",
+          "difficulte": 3,
+          "enonce": "$A(0\\,;0)$, $B(3\\,;1)$, $C(5\\,;4)$. Déterminer les coordonnées du point $D$ tel que $ABCD$ soit un parallélogramme.",
+          "correction": "Dans le parallélogramme $ABCD$, les côtés $[AB]$ et $[DC]$ sont parallèles et de même longueur : $\\vec{AB}=\\vec{DC}$.\n$\\vec{AB}=(3\\,;1)$. On cherche $D(x\\,;y)$ tel que $\\vec{DC}=(5-x\\,;4-y)=(3\\,;1)$.\nDonc $5-x=3 \\Rightarrow x=2$ et $4-y=1 \\Rightarrow y=3$. Ainsi $D(2\\,;3)$."
+        }
+      ]
+    },
+    {
+      "id": "cinematique-premiere",
+      "matiere": "physique",
+      "niveau": "premiere",
+      "titre": "Cinématique : mouvement et vitesse",
+      "description": "Vitesse moyenne, mouvement uniforme et uniformément varié.",
+      "rappelCours": [
+        "Vitesse moyenne : $v_{moy}=\\dfrac{d}{\\Delta t}$",
+        "Mouvement rectiligne uniforme (MRU) : vitesse constante, $x(t)=x_0+vt$",
+        "Mouvement rectiligne uniformément varié (MRUV) : accélération constante, $v(t)=v_0+at$, $x(t)=x_0+v_0t+\\dfrac12at^2$",
+        "Relation utile sans le temps : $v^2=v_0^2+2a\\Delta x$"
+      ],
+      "exercices": [
+        {
+          "id": "cn-001",
+          "numero": 1,
+          "titre": "Vitesse moyenne",
+          "difficulte": 1,
+          "enonce": "Un cycliste parcourt $15\\text{ km}$ en $40\\text{ min}$. Calculer sa vitesse moyenne en $\\text{km/h}$ puis en $\\text{m/s}$.",
+          "correction": "$40\\text{ min}=\\dfrac{40}{60}\\text{ h}\\approx0,667\\text{ h}$.\n$v_{moy}=\\dfrac{15}{0,667}\\approx22,5\\text{ km/h}$.\nEn m/s : $22,5\\times\\dfrac{1000}{3600}\\approx6,25\\text{ m/s}$."
+        },
+        {
+          "id": "cn-002",
+          "numero": 2,
+          "titre": "Mouvement rectiligne uniforme",
+          "difficulte": 1,
+          "enonce": "Un mobile se déplace à vitesse constante $v=20\\text{ m/s}$. Quelle distance parcourt-il en $12\\text{ s}$ ?",
+          "correction": "$d=v\\times t=20\\times12=240\\text{ m}$."
+        },
+        {
+          "id": "cn-003",
+          "numero": 3,
+          "titre": "Mouvement uniformément varié",
+          "difficulte": 2,
+          "enonce": "Un mobile part avec $v_0=5\\text{ m/s}$ et une accélération constante $a=2\\text{ m/s}^2$ ($x_0=0$). Calculer sa vitesse et sa position à $t=4\\text{ s}$.",
+          "correction": "$v(4)=v_0+at=5+2\\times4=13\\text{ m/s}$.\n$x(4)=x_0+v_0t+\\dfrac12at^2=0+5\\times4+\\dfrac12\\times2\\times4^2=20+16=36\\text{ m}$."
+        },
+        {
+          "id": "cn-004",
+          "numero": 4,
+          "titre": "Freinage",
+          "difficulte": 2,
+          "enonce": "Un véhicule roule à $v_0=25\\text{ m/s}$ et freine avec une décélération $a=-5\\text{ m/s}^2$. Calculer le temps d'arrêt et la distance de freinage.",
+          "correction": "À l'arrêt, $v=0$, donc $t=\\dfrac{v_0}{|a|}=\\dfrac{25}{5}=5\\text{ s}$.\nDistance : $\\Delta x=\\dfrac{v_0^2}{2|a|}=\\dfrac{25^2}{2\\times5}=\\dfrac{625}{10}=62,5\\text{ m}$."
+        },
+        {
+          "id": "cn-005",
+          "numero": 5,
+          "titre": "Vitesse sans connaître le temps",
+          "difficulte": 3,
+          "enonce": "Un mobile a une vitesse initiale $v_0=10\\text{ m/s}$ et une accélération $a=3\\text{ m/s}^2$. Après avoir parcouru $\\Delta x=20\\text{ m}$, quelle est sa vitesse ?",
+          "correction": "On utilise $v^2=v_0^2+2a\\Delta x=10^2+2\\times3\\times20=100+120=220$.\n$v=\\sqrt{220}\\approx14,8\\text{ m/s}$."
+        }
+      ]
+    },
+    {
+      "id": "avancement-reaction-premiere",
+      "matiere": "chimie",
+      "niveau": "premiere",
+      "titre": "Avancement d'une réaction chimique",
+      "description": "Réactif limitant, tableau d'avancement, stœchiométrie.",
+      "rappelCours": [
+        "Le tableau d'avancement suit les quantités de matière (mol) de chaque espèce au cours de la réaction, à partir des quantités initiales et de l'avancement $x$",
+        "Réactif limitant : celui qui s'épuise en premier ; il détermine l'avancement maximal $x_{max}$",
+        "$n=\\dfrac{m}{M}$ (mol) ; pour une solution, $n=C\\times V$",
+        "Pour une réaction totale, l'avancement final $x_f$ est égal à $x_{max}$"
+      ],
+      "exercices": [
+        {
+          "id": "av-001",
+          "numero": 1,
+          "titre": "Identifier le réactif limitant",
+          "difficulte": 1,
+          "enonce": "Réaction $A+B\\rightarrow C$ (coefficients $1$:$1$). $n_0(A)=0,3\\text{ mol}$, $n_0(B)=0,5\\text{ mol}$. Identifier le réactif limitant et l'avancement maximal $x_{max}$.",
+          "correction": "$A$ est en quantité plus faible ($0,3<0,5$) : c'est le réactif limitant.\n$x_{max}=n_0(A)=0,3\\text{ mol}$."
+        },
+        {
+          "id": "av-002",
+          "numero": 2,
+          "titre": "Quantités à l'état final",
+          "difficulte": 1,
+          "enonce": "En reprenant l'exercice précédent, calculer les quantités de matière finales de $A$, $B$ et $C$.",
+          "correction": "$n_f(A)=0,3-0,3=0\\text{ mol}$ (épuisé).\n$n_f(B)=0,5-0,3=0,2\\text{ mol}$.\n$n_f(C)=0+0,3=0,3\\text{ mol}$."
+        },
+        {
+          "id": "av-003",
+          "numero": 3,
+          "titre": "Réactif limitant avec coefficients différents",
+          "difficulte": 2,
+          "enonce": "Réaction $2A+B\\rightarrow C$. $n_0(A)=0,4\\text{ mol}$, $n_0(B)=0,3\\text{ mol}$. Identifier le réactif limitant et calculer $x_{max}$.",
+          "correction": "Pour consommer tout $B$ ($0,3\\text{ mol}$), il faudrait $2\\times0,3=0,6\\text{ mol}$ de $A$, mais on n'en a que $0,4\\text{ mol}$ : c'est donc $A$ le réactif limitant.\nÀ l'état final, $n_0(A)-2x_{max}=0$, donc $x_{max}=\\dfrac{0,4}{2}=0,2\\text{ mol}$.\nVérification sur $B$ : il en reste $0,3-0,2=0,1\\text{ mol}>0$, cohérent."
+        },
+        {
+          "id": "av-004",
+          "numero": 4,
+          "titre": "Stoechiométrie et masse",
+          "difficulte": 2,
+          "enonce": "$m=4,6\\text{ g}$ de sodium ($M=23\\text{ g/mol}$) réagit avec de l'eau en excès : $2Na+2H_2O\\rightarrow2NaOH+H_2$. Calculer la quantité de matière de dihydrogène $H_2$ formée.",
+          "correction": "$n(Na)=\\dfrac{m}{M}=\\dfrac{4,6}{23}=0,2\\text{ mol}$.\nD'après les coefficients stœchiométriques, $2\\text{ mol de }Na$ produisent $1\\text{ mol de }H_2$, donc $n(H_2)=\\dfrac{0,2}{2}=0,1\\text{ mol}$."
+        },
+        {
+          "id": "av-005",
+          "numero": 5,
+          "titre": "Composition finale complète",
+          "difficulte": 3,
+          "enonce": "On mélange $0,5\\text{ mol}$ de $A$ et $0,5\\text{ mol}$ de $B$ pour la réaction $A+2B\\rightarrow C$. Déterminer le réactif limitant, l'avancement maximal, puis la composition finale du mélange.",
+          "correction": "Pour consommer tout $A$ ($0,5\\text{ mol}$), il faudrait $2\\times0,5=1\\text{ mol}$ de $B$, mais on n'en a que $0,5\\text{ mol}$ : c'est donc $B$ le réactif limitant.\n$x_{max}$ vérifie $n_0(B)-2x_{max}=0$, donc $x_{max}=\\dfrac{0,5}{2}=0,25\\text{ mol}$.\nComposition finale : $n_f(A)=0,5-0,25=0,25\\text{ mol}$, $n_f(B)=0,5-2\\times0,25=0\\text{ mol}$, $n_f(C)=0,25\\text{ mol}$."
+        }
+      ]
+    },
+    {
+      "id": "boucles-conditions-premiere",
+      "matiere": "nsi",
+      "niveau": "premiere",
+      "titre": "Boucles et instructions conditionnelles",
+      "description": "Conditions, boucles for/while, algorithmes simples.",
+      "rappelCours": [
+        "Instruction conditionnelle : `if condition: ... elif autre_condition: ... else: ...`",
+        "Boucle `for` : répète un bloc un nombre défini de fois, souvent avec `range(n)`",
+        "Boucle `while condition:` : répète tant que la condition reste vraie — attention aux boucles infinies si la condition ne devient jamais fausse",
+        "Les opérateurs de comparaison (`==`, `!=`, `<`, `>`, `<=`, `>=`) renvoient un booléen (`True`/`False`)"
+      ],
+      "exercices": [
+        {
+          "id": "bc-001",
+          "numero": 1,
+          "titre": "Lecture d'une condition",
+          "difficulte": 1,
+          "enonce": "Que fait ce code ?\nn = 7\nif n % 2 == 0:\n    print(\"pair\")\nelse:\n    print(\"impair\")",
+          "correction": "$n=7$, donc `n % 2` vaut $1$ (différent de $0$) : la condition du `if` est fausse.\nLe programme exécute donc le bloc `else` et affiche \"impair\"."
+        },
+        {
+          "id": "bc-002",
+          "numero": 2,
+          "titre": "Boucle for simple",
+          "difficulte": 1,
+          "enonce": "Écrire une boucle `for` qui affiche les carrés des nombres de $1$ à $5$.",
+          "correction": "for i in range(1, 6):\n    print(i ** 2)\n\n`range(1, 6)` parcourt les entiers de $1$ à $5$ inclus. Le programme affiche donc successivement $1$, $4$, $9$, $16$, $25$."
+        },
+        {
+          "id": "bc-003",
+          "numero": 3,
+          "titre": "Déroulé d'une boucle while",
+          "difficulte": 2,
+          "enonce": "Dérouler l'exécution du code suivant et donner la valeur finale affichée.\ntotal = 0\ni = 1\nwhile i <= 4:\n    total = total + i\n    i = i + 1\nprint(total)",
+          "correction": "$i=1$ : `total`$=0+1=1$, puis $i=2$.\n$i=2$ : `total`$=1+2=3$, puis $i=3$.\n$i=3$ : `total`$=3+3=6$, puis $i=4$.\n$i=4$ : `total`$=6+4=10$, puis $i=5$.\nLa condition $i\\leq4$ devient fausse ($5\\leq4$ est faux) : on sort de la boucle. Le programme affiche $10$."
+        },
+        {
+          "id": "bc-004",
+          "numero": 4,
+          "titre": "Compter avec une condition",
+          "difficulte": 2,
+          "enonce": "Écrire une fonction `compte_multiples_3(l)` qui compte le nombre de multiples de $3$ dans une liste `l`, à l'aide d'une boucle `for` et d'une condition.",
+          "correction": "def compte_multiples_3(l):\n    compteur = 0\n    for x in l:\n        if x % 3 == 0:\n            compteur = compteur + 1\n    return compteur\n\nSur la liste $[3,4,6,7,9]$, les multiples de $3$ sont $3$, $6$ et $9$ : la fonction renvoie $3$."
+        },
+        {
+          "id": "bc-005",
+          "numero": 5,
+          "titre": "Identifier et corriger une boucle infinie",
+          "difficulte": 3,
+          "enonce": "Le code suivant boucle indéfiniment. Expliquer pourquoi, puis proposer une correction.\nn = 10\nwhile n > 0:\n    print(n)",
+          "correction": "La variable `n` n'est jamais modifiée à l'intérieur de la boucle : la condition `n > 0` reste donc toujours vraie, et la boucle ne se termine jamais.\nCorrection : il faut faire décroître `n` à chaque itération, par exemple :\nn = 10\nwhile n > 0:\n    print(n)\n    n = n - 1"
+        }
+      ]
+    },
+    {
+      "id": "calcul-litteral-equations-brevet",
+      "matiere": "mathematiques",
+      "niveau": "brevet",
+      "titre": "Calcul littéral et équations",
+      "description": "Développer, réduire, factoriser et résoudre une équation.",
+      "rappelCours": [
+        "Développer avec la distributivité : $k(a+b)=ka+kb$",
+        "Réduire une expression : regrouper les termes de même nature",
+        "Résoudre une équation du premier degré : effectuer la même opération des deux côtés pour isoler l'inconnue",
+        "Factoriser : $ka+kb=k(a+b)$"
+      ],
+      "exercices": [
+        {
+          "id": "cl-001",
+          "numero": 1,
+          "titre": "Développer une expression",
+          "difficulte": 1,
+          "enonce": "Développer :\n1. $3(x+5)$\n2. $-2(x-4)$",
+          "correction": "1. $3(x+5)=3x+15$\n2. $-2(x-4)=-2x+8$"
+        },
+        {
+          "id": "cl-002",
+          "numero": 2,
+          "titre": "Réduire une expression",
+          "difficulte": 1,
+          "enonce": "Réduire l'expression $3x+5-x+2$.",
+          "correction": "On regroupe les termes en $x$ et les nombres : $3x-x+5+2=2x+7$."
+        },
+        {
+          "id": "cl-003",
+          "numero": 3,
+          "titre": "Résoudre une équation simple",
+          "difficulte": 2,
+          "enonce": "Résoudre l'équation $2x+5=17$.",
+          "correction": "$2x=17-5=12$, donc $x=\\dfrac{12}{2}=6$."
+        },
+        {
+          "id": "cl-004",
+          "numero": 4,
+          "titre": "Équation avec l'inconnue des deux côtés",
+          "difficulte": 2,
+          "enonce": "Résoudre l'équation $3x-4=2x+9$.",
+          "correction": "On regroupe les termes en $x$ à gauche et les nombres à droite : $3x-2x=9+4$, donc $x=13$."
+        },
+        {
+          "id": "cl-005",
+          "numero": 5,
+          "titre": "Factoriser pour résoudre",
+          "difficulte": 3,
+          "enonce": "Résoudre l'équation $5x+15=0$ en factorisant d'abord le membre de gauche par $5$.",
+          "correction": "$5x+15=5(x+3)$. L'équation devient $5(x+3)=0$.\nUn produit de facteurs est nul si et seulement si l'un au moins des facteurs est nul, donc $x+3=0$, soit $x=-3$."
+        }
+      ]
+    },
+    {
+      "id": "optique-lumiere-brevet",
+      "matiere": "physique",
+      "niveau": "brevet",
+      "titre": "Optique : la lumière",
+      "description": "Propagation, réflexion, ombres — les bases de l'optique.",
+      "rappelCours": [
+        "La lumière se propage en ligne droite dans un milieu transparent homogène (propagation rectiligne)",
+        "Un objet opaque éclairé produit une ombre propre (sur l'objet) et une ombre portée (sur une surface derrière lui)",
+        "Loi de la réflexion : l'angle de réflexion est égal à l'angle d'incidence (mesurés par rapport à la normale)",
+        "Vitesse de la lumière dans le vide/air : $c\\approx3\\times10^8\\text{ m/s}$"
+      ],
+      "exercices": [
+        {
+          "id": "lu-001",
+          "numero": 1,
+          "titre": "Vitesse de la lumière Soleil-Terre",
+          "difficulte": 1,
+          "enonce": "La distance Terre-Soleil est d'environ $150$ millions de km. Calculer la durée mise par la lumière pour parcourir cette distance, et vérifier que l'on retrouve bien environ $8\\text{ min}$.",
+          "correction": "$d=150\\times10^9\\text{ m}$. $t=\\dfrac{d}{c}=\\dfrac{150\\times10^9}{3\\times10^8}=500\\text{ s}$.\n$500\\text{ s}=\\dfrac{500}{60}\\approx8,3\\text{ min}$, ce qui correspond bien à la valeur attendue."
+        },
+        {
+          "id": "lu-002",
+          "numero": 2,
+          "titre": "Matériaux opaques",
+          "difficulte": 1,
+          "enonce": "Expliquer pourquoi on ne peut pas voir à travers un mur.",
+          "correction": "Un mur est un matériau opaque : il absorbe et/ou réfléchit la lumière sans la laisser traverser. Comme aucune lumière ne passe à travers, aucune information visuelle ne peut nous parvenir de l'autre côté du mur."
+        },
+        {
+          "id": "lu-003",
+          "numero": 3,
+          "titre": "Loi de la réflexion",
+          "difficulte": 2,
+          "enonce": "Un rayon lumineux arrive sur un miroir plan avec un angle d'incidence de $30°$ (mesuré par rapport à la normale). Quel est l'angle de réflexion ?",
+          "correction": "D'après la loi de la réflexion, l'angle de réflexion est toujours égal à l'angle d'incidence : il vaut donc également $30°$."
+        },
+        {
+          "id": "lu-004",
+          "numero": 4,
+          "titre": "Ombre propre et ombre portée",
+          "difficulte": 2,
+          "enonce": "Une lampe éclaire un objet opaque posé sur une table. Expliquer la différence entre l'ombre propre et l'ombre portée de cet objet.",
+          "correction": "L'ombre propre est la partie de l'objet lui-même qui n'est pas directement éclairée (le côté opposé à la lampe).\nL'ombre portée est la zone sombre projetée par l'objet sur une autre surface (ici la table), à l'endroit où l'objet bloque la lumière de la lampe."
+        },
+        {
+          "id": "lu-005",
+          "numero": 5,
+          "titre": "Distance Terre-Lune",
+          "difficulte": 3,
+          "enonce": "La distance moyenne Terre-Lune est d'environ $384\\,000\\text{ km}$. Calculer la durée mise par la lumière pour parcourir cette distance.",
+          "correction": "$d=384\\,000\\text{ km}=384\\times10^6\\text{ m}$.\n$t=\\dfrac{d}{c}=\\dfrac{384\\times10^6}{3\\times10^8}\\approx1,28\\text{ s}$."
+        }
+      ]
+    },
+    {
+      "id": "melanges-corps-purs-brevet",
+      "matiere": "chimie",
+      "niveau": "brevet",
+      "titre": "Mélanges, corps purs et transformations",
+      "description": "Corps purs, mélanges, tests d'identification des gaz.",
+      "rappelCours": [
+        "Un corps pur ne contient qu'une seule espèce chimique ; un mélange en contient plusieurs",
+        "Mélange homogène : les constituants ne sont pas distinguables à l'œil nu (ex : eau salée) ; mélange hétérogène : ils sont distinguables (ex : eau et huile)",
+        "Test d'identification du dioxygène : une buchette incandescente se rallume à son contact",
+        "Test d'identification du dioxyde de carbone : il trouble l'eau de chaux"
+      ],
+      "exercices": [
+        {
+          "id": "mc-001",
+          "numero": 1,
+          "titre": "Corps pur ou mélange ?",
+          "difficulte": 1,
+          "enonce": "Classer chacun des éléments suivants en corps pur ou mélange : eau minérale, eau distillée, air, dioxygène pur.",
+          "correction": "Eau minérale : mélange (eau + sels minéraux dissous).\nEau distillée : corps pur.\nAir : mélange (diazote, dioxygène, dioxyde de carbone...).\nDioxygène pur : corps pur."
+        },
+        {
+          "id": "mc-002",
+          "numero": 2,
+          "titre": "Mélange homogène ou hétérogène ?",
+          "difficulte": 1,
+          "enonce": "Un mélange d'eau et d'huile est-il homogène ou hétérogène ? Justifier.",
+          "correction": "Il est hétérogène : on distingue à l'œil nu deux phases séparées (l'huile flotte à la surface de l'eau), les constituants ne sont pas répartis uniformément."
+        },
+        {
+          "id": "mc-003",
+          "numero": 3,
+          "titre": "Identifier le dioxygène",
+          "difficulte": 2,
+          "enonce": "Comment identifier expérimentalement la présence de dioxygène dans un tube à essai ?",
+          "correction": "On approche l'entrée du tube d'une buchette incandescente (qui rougeoie sans flamme) : si elle se rallume, le gaz présent contient du dioxygène."
+        },
+        {
+          "id": "mc-004",
+          "numero": 4,
+          "titre": "Identifier le dioxyde de carbone",
+          "difficulte": 2,
+          "enonce": "Comment identifier expérimentalement la présence de dioxyde de carbone dans un gaz ?",
+          "correction": "On fait barboter le gaz dans de l'eau de chaux : si celle-ci se trouble (devient laiteuse), le gaz contient du dioxyde de carbone."
+        },
+        {
+          "id": "mc-005",
+          "numero": 5,
+          "titre": "Combustion du carbone",
+          "difficulte": 3,
+          "enonce": "Lors de la combustion du carbone dans le dioxygène, on obtient du dioxyde de carbone. Identifier les réactifs et le produit de cette transformation, puis proposer un test permettant de vérifier la nature du gaz produit.",
+          "correction": "Réactifs : le carbone et le dioxygène.\nProduit : le dioxyde de carbone.\nTest : faire barboter le gaz obtenu dans de l'eau de chaux ; si elle se trouble, cela confirme qu'il s'agit bien de dioxyde de carbone."
         }
       ]
     }

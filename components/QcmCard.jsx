@@ -29,7 +29,7 @@ export default function QcmCard({ qcmId, question }) {
 
   return (
     <div className="rounded-lg border border-gold-dim bg-navy-light p-6">
-      <p className="font-mono text-xs uppercase tracking-widest text-gold">
+      <p className="font-mono text-xs uppercase tracking-widest text-lime">
         Question {numero}
       </p>
       <p className="mt-2 font-sans text-cream">{renderAvecLatex(enonce)}</p>

@@ -1,18 +1,18 @@
-import { Fraunces, Inter, Space_Mono } from "next/font/google";
+import { Space_Grotesk, Open_Sans, Space_Mono } from "next/font/google";
+import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 // Titres — charte graphique
-const fraunces = Fraunces({
+const spaceGrotesk = Space_Grotesk({
   variable: "--font-fraunces",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
 });
 
 // Corps de texte — charte graphique
-const inter = Inter({
+const openSans = Open_Sans({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -32,20 +32,27 @@ export const metadata = {
     template: "%s | Paul Gibouin",
   },
   description:
-    "Cours particuliers en mathématiques, physique-chimie et NSI pour collégiens et lycéens, en présentiel à [TA_VILLE] et en ligne.",
+    "Cours particuliers en mathématiques, physique-chimie et NSI pour collégiens et lycéens, en présentiel à Évry-Courcouronnes et en ligne.",
 };
+
+const SCRIPT_THEME = `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"||s==="dark"?s:(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="fr"
-      className={`${fraunces.variable} ${inter.variable} ${spaceMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-navy text-cream">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html
+        lang="fr"
+        className={`${spaceGrotesk.variable} ${openSans.variable} ${spaceMono.variable} h-full antialiased`}
+      >
+        <head>
+          <script dangerouslySetInnerHTML={{ __html: SCRIPT_THEME }} />
+        </head>
+        <body className="min-h-full flex flex-col bg-navy text-cream">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

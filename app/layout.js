@@ -4,6 +4,12 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
+
+const TITRE_SITE =
+  "Paul Gibouin — Cours particuliers Maths, Physique-Chimie, NSI";
+const DESCRIPTION_SITE =
+  "Cours particuliers en mathématiques, physique-chimie et NSI pour collégiens et lycéens, en présentiel à Évry-Courcouronnes et en ligne.";
 
 // Titres — charte graphique
 const spaceGrotesk = Space_Grotesk({
@@ -27,13 +33,34 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "Paul Gibouin — Cours particuliers Maths, Physique-Chimie, Techno",
+    default: TITRE_SITE,
     template: "%s | Paul Gibouin",
   },
-  description:
-    "Cours particuliers en mathématiques, physique-chimie et NSI pour collégiens et lycéens, en présentiel à Évry-Courcouronnes et en ligne.",
+  description: DESCRIPTION_SITE,
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: SITE_URL,
+    siteName: "Paul Gibouin — Cours particuliers",
+    title: TITRE_SITE,
+    description: DESCRIPTION_SITE,
+    images: [
+      {
+        url: "/logo.png",
+        width: 720,
+        height: 720,
+        alt: "Paul Gibouin — Cours particuliers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: TITRE_SITE,
+    description: DESCRIPTION_SITE,
+    images: ["/logo.png"],
+  },
 };
 
 const SCRIPT_THEME = `(function(){try{var s=localStorage.getItem("theme");var t=s==="light"||s==="dark"?s:(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;

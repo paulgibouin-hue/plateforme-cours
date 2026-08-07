@@ -1,28 +1,5 @@
 # Plateforme — Cours particuliers
 
-Projet Next.js (App Router) + Tailwind CSS v4, initialisé avec la charte
-graphique (Navy `#0E1B35` / Or `#C6A15B`, polices Fraunces / Inter / Space
-Mono) et les dépendances `react-katex` + `katex` pour le rendu des exercices.
-
-## Démarrage
-
-1. Décompresser l'archive puis ouvrir le dossier dans VSCode.
-2. Ouvrir un terminal (`Terminal` > `Nouveau terminal` dans VSCode) et lancer :
-
-   ```bash
-   npm install
-   npm run dev
-   ```
-
-3. Ouvrir http://localhost:3000 dans le navigateur.
-
-> Note : dans l'environnement où ce projet a été généré, l'accès à
-> `fonts.googleapis.com` est bloqué par le sandbox — le build échoue donc ici
-> avec une erreur de récupération des polices Google. Ce n'est pas un problème
-> de code : sur ton ordinateur, avec un accès internet normal, `next/font/google`
-> téléchargera Fraunces / Inter / Space Mono sans souci dès le premier
-> `npm run dev`.
-
 ## Structure
 
 ```

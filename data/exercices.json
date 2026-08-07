@@ -19,7 +19,7 @@
           "titre": "Calcul du discriminant",
           "difficulte": 1,
           "enonce": "Pour chaque équation, calculer $\\Delta$ et en déduire le nombre de solutions.\n1. $x^2 - 5x + 6 = 0$\n2. $2x^2 + 3x + 5 = 0$\n3. $x^2 - 6x + 9 = 0$\n4. $-3x^2 + 2x + 1 = 0$",
-          "correction": "1. $\\Delta = 1 > 0$ → deux solutions\n2. $\\Delta = -31 < 0$ → aucune solution\n3. $\\Delta = 0$ → une solution\n4. $\\Delta = 16 > 0$ → deux solutions"
+          "correction": "1. $x^2-5x+6=0$ : $a=1$, $b=-5$, $c=6$. $\\Delta=(-5)^2-4\\times1\\times6=25-24=1>0$ → deux solutions réelles distinctes.\n2. $2x^2+3x+5=0$ : $a=2$, $b=3$, $c=5$. $\\Delta=3^2-4\\times2\\times5=9-40=-31<0$ → aucune solution réelle.\n3. $x^2-6x+9=0$ : $a=1$, $b=-6$, $c=9$. $\\Delta=(-6)^2-4\\times1\\times9=36-36=0$ → une solution réelle (racine double).\n4. $-3x^2+2x+1=0$ : $a=-3$, $b=2$, $c=1$. $\\Delta=2^2-4\\times(-3)\\times1=4+12=16>0$ → deux solutions réelles distinctes."
         },
         {
           "id": "sd-002",
@@ -27,7 +27,7 @@
           "titre": "Résolution classique",
           "difficulte": 1,
           "enonce": "Résoudre dans $\\mathbb{R}$ :\n1. $x^2-3x-4=0$\n2. $2x^2+5x-3=0$\n3. $x^2+4x+4=0$",
-          "correction": "1. $x_1=-1$, $x_2=4$\n2. $x_1=-3$, $x_2=\\dfrac{1}{2}$\n3. $x_0=-2$ (racine double)"
+          "correction": "1. $x^2-3x-4=0$ : $a=1$, $b=-3$, $c=-4$. $\\Delta=(-3)^2-4\\times1\\times(-4)=9+16=25$, $\\sqrt\\Delta=5$. $x_1=\\dfrac{3-5}{2}=-1$, $x_2=\\dfrac{3+5}{2}=4$.\n2. $2x^2+5x-3=0$ : $a=2$, $b=5$, $c=-3$. $\\Delta=5^2-4\\times2\\times(-3)=25+24=49$, $\\sqrt\\Delta=7$. $x_1=\\dfrac{-5-7}{4}=-3$, $x_2=\\dfrac{-5+7}{4}=\\dfrac12$.\n3. $x^2+4x+4=0$ : $a=1$, $b=4$, $c=4$. $\\Delta=4^2-4\\times1\\times4=16-16=0$. $x_0=\\dfrac{-4}{2}=-2$ (racine double)."
         },
         {
           "id": "sd-003",
@@ -35,7 +35,7 @@
           "titre": "Forme canonique",
           "difficulte": 2,
           "enonce": "Forme canonique puis résoudre $f(x)=0$ :\n1. $f(x)=x^2-4x+1$\n2. $f(x)=-x^2+2x+3$",
-          "correction": "1. $(x-2)^2-3$ ; $x=2\\pm\\sqrt{3}$\n2. $-(x-1)^2+4$ ; $x=-1$ ou $3$"
+          "correction": "1. $f(x)=x^2-4x+1$. On écrit $x^2-4x=(x-2)^2-4$ (car $(x-2)^2=x^2-4x+4$), donc $f(x)=(x-2)^2-4+1=(x-2)^2-3$. Résolution de $f(x)=0$ : $(x-2)^2=3$, donc $x-2=\\pm\\sqrt3$, soit $x=2-\\sqrt3$ ou $x=2+\\sqrt3$.\n2. $f(x)=-x^2+2x+3$. On factorise par $-1$ le terme du second degré : $f(x)=-(x^2-2x)+3=-\\left[(x-1)^2-1\\right]+3=-(x-1)^2+1+3=-(x-1)^2+4$. Résolution de $f(x)=0$ : $(x-1)^2=4$, donc $x-1=\\pm2$, soit $x=-1$ ou $x=3$."
         },
         {
           "id": "sd-004",
@@ -43,7 +43,7 @@
           "titre": "Problème : aire rectangle",
           "difficulte": 2,
           "enonce": "Longueur $=$ largeur $+3$, aire $=40\\text{ cm}^2$. Trouver les dimensions.",
-          "correction": "$x^2+3x-40=0$, $x=5$ → largeur $5\\text{ cm}$, longueur $8\\text{ cm}$"
+          "correction": "On note $x$ la largeur du rectangle (en cm), donc la longueur vaut $x+3$. L'aire vaut $x(x+3)=40$, soit $x^2+3x-40=0$.\n$\\Delta=3^2-4\\times1\\times(-40)=9+160=169=13^2$, donc $\\sqrt\\Delta=13$.\n$x_1=\\dfrac{-3-13}{2}=-8$ (à rejeter : une longueur ne peut pas être négative) et $x_2=\\dfrac{-3+13}{2}=5$.\nLa largeur mesure donc $5\\text{ cm}$ et la longueur $5+3=8\\text{ cm}$. Vérification : $5\\times8=40\\text{ cm}^2$ ✓."
         },
         {
           "id": "sd-005",
@@ -51,7 +51,31 @@
           "titre": "Paramètre",
           "difficulte": 3,
           "enonce": "$x^2-2x+m=0$.\n1. Valeurs de $m$ pour 2 solutions.\n2. Résoudre pour $m=-3$.",
-          "correction": "1. $m<1$\n2. $x_1=-1$, $x_2=3$"
+          "correction": "1. L'équation $x^2-2x+m=0$ admet deux solutions distinctes si et seulement si $\\Delta>0$. Ici $\\Delta=(-2)^2-4\\times1\\times m=4-4m$. $\\Delta>0 \\iff 4-4m>0 \\iff m<1$.\n2. Pour $m=-3$ : $\\Delta=4-4\\times(-3)=4+12=16>0$, $\\sqrt\\Delta=4$. $x_1=\\dfrac{2-4}{2}=-1$, $x_2=\\dfrac{2+4}{2}=3$."
+        },
+        {
+          "id": "sd-006",
+          "numero": 6,
+          "titre": "Signe d'un trinôme et inéquation",
+          "difficulte": 2,
+          "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $-2x^2+3x+2\\geq0$.",
+          "correction": "On étudie le signe de $f(x)=-2x^2+3x+2$. $a=-2$, $b=3$, $c=2$. $\\Delta=3^2-4\\times(-2)\\times2=9+16=25>0$, $\\sqrt\\Delta=5$.\nLes racines sont $x_1=\\dfrac{-3-5}{2\\times(-2)}=\\dfrac{-8}{-4}=2$ et $x_2=\\dfrac{-3+5}{2\\times(-2)}=\\dfrac{2}{-4}=-\\dfrac12$.\nComme $a=-2<0$, le trinôme est positif entre les racines (et négatif à l'extérieur). Donc $f(x)\\geq0 \\iff x\\in\\left[-\\dfrac12\\,;\\,2\\right]$."
+        },
+        {
+          "id": "sd-007",
+          "numero": 7,
+          "titre": "Somme et produit des racines",
+          "difficulte": 2,
+          "enonce": "Sans calculer $\\Delta$, donner la somme $S$ et le produit $P$ des racines de $x^2-7x+10=0$ à l'aide des relations $S=-\\dfrac ba$ et $P=\\dfrac ca$, puis en déduire les deux racines. Vérifier ensuite le résultat en résolvant l'équation avec le discriminant.",
+          "correction": "Ici $a=1$, $b=-7$, $c=10$. $S=-\\dfrac{-7}{1}=7$ et $P=\\dfrac{10}{1}=10$.\nOn cherche deux nombres de somme $7$ et de produit $10$ : ce sont $2$ et $5$ (en effet $2+5=7$ et $2\\times5=10$).\nVérification par le discriminant : $\\Delta=(-7)^2-4\\times1\\times10=49-40=9>0$, $\\sqrt\\Delta=3$. $x_1=\\dfrac{7-3}{2}=2$, $x_2=\\dfrac{7+3}{2}=5$. On retrouve bien les mêmes racines."
+        },
+        {
+          "id": "sd-008",
+          "numero": 8,
+          "titre": "Équation paramétrée : discriminant toujours positif",
+          "difficulte": 3,
+          "enonce": "On considère l'équation $x^2-(m+1)x+m=0$, où $m$ est un paramètre réel.\n1. Montrer que cette équation admet toujours au moins une solution réelle, quel que soit $m$.\n2. Résoudre cette équation en fonction de $m$.\n3. Vérifier le résultat de la question 2 en résolvant directement l'équation pour $m=5$ à l'aide du discriminant.\n4. Pour quelle valeur de $m$ l'équation admet-elle $-3$ comme solution ? En déduire, sans nouveau calcul, la seconde solution.",
+          "correction": "1. $\\Delta=(m+1)^2-4\\times1\\times m=m^2+2m+1-4m=m^2-2m+1=(m-1)^2$. Un carré est toujours positif ou nul, donc $\\Delta\\geq0$ pour tout $m$ : l'équation admet toujours au moins une solution réelle (une solution double lorsque $m=1$, puisqu'alors $\\Delta=0$).\n2. Si $m\\neq1$, $\\Delta=(m-1)^2>0$ et $\\sqrt\\Delta=|m-1|$. En prenant $\\sqrt\\Delta=m-1$ ou $1-m$ selon le signe, on trouve dans tous les cas $x_1=\\dfrac{(m+1)-(m-1)}{2}=\\dfrac{2}{2}=1$ et $x_2=\\dfrac{(m+1)+(m-1)}{2}=\\dfrac{2m}{2}=m$. Les solutions sont donc $x=1$ et $x=m$ (qui coïncident en une racine double $x=1$ lorsque $m=1$). On peut d'ailleurs vérifier ce résultat directement : $(x-1)(x-m)=x^2-(m+1)x+m$, ce qui confirme la factorisation.\n3. Pour $m=5$, l'équation devient $x^2-6x+5=0$. $\\Delta=(-6)^2-4\\times1\\times5=36-20=16>0$, $\\sqrt\\Delta=4$. $x_1=\\dfrac{6-4}{2}=1$ et $x_2=\\dfrac{6+4}{2}=5$. On retrouve bien les solutions $x=1$ et $x=m=5$ trouvées à la question 2 : le résultat général est cohérent avec ce cas particulier.\n4. D'après la question 2, les solutions sont toujours $1$ et $m$. Pour que $-3$ soit solution, il faut donc que $m=-3$ (car $1\\neq-3$, la seule possibilité est $m=-3$). Dans ce cas, la seconde solution est directement $x=1$, sans nouveau calcul de discriminant : les solutions de $x^2+2x-3=0$ sont $1$ et $-3$."
         }
       ]
     },
@@ -74,7 +98,7 @@
           "titre": "Dérivées usuelles",
           "difficulte": 1,
           "enonce": "Calculer $f'(x)$ :\n1. $f(x)=x^3-2x^2+5$\n2. $f(x)=\\dfrac1x+\\sqrt{x}$\n3. $f(x)=3x^2-4x+1$",
-          "correction": "1. $f'(x)=3x^2-4x$\n2. $f'(x)=-\\dfrac{1}{x^2}+\\dfrac{1}{2\\sqrt{x}}$\n3. $f'(x)=6x-4$"
+          "correction": "1. $f(x)=x^3-2x^2+5$. On dérive terme à terme avec $(x^n)'=nx^{n-1}$ : $f'(x)=3x^2-2\\times2x+0=3x^2-4x$.\n2. $f(x)=\\dfrac1x+\\sqrt x$. On utilise $\\left(\\dfrac1x\\right)'=-\\dfrac1{x^2}$ et $(\\sqrt x)'=\\dfrac1{2\\sqrt x}$ : $f'(x)=-\\dfrac1{x^2}+\\dfrac1{2\\sqrt x}$.\n3. $f(x)=3x^2-4x+1$. $f'(x)=3\\times2x-4+0=6x-4$."
         },
         {
           "id": "dv-002",
@@ -107,6 +131,30 @@
           "difficulte": 3,
           "enonce": "$f(x)=x^2-4x+3$. Déterminer l'équation de la tangente à la courbe de $f$ au point d'abscisse $a=1$.",
           "correction": "$f(1)=0$, $f'(x)=2x-4$ donc $f'(1)=-2$. Tangente : $y=f'(1)(x-1)+f(1)=-2(x-1)+0=-2x+2$."
+        },
+        {
+          "id": "dv-006",
+          "numero": 6,
+          "titre": "Dérivée d'un quotient (bis)",
+          "difficulte": 1,
+          "enonce": "$f(x)=\\dfrac{2x-1}{x+3}$. 1. Donner l'ensemble de définition $D_f$. 2. Calculer $f'(x)$.",
+          "correction": "1. $f$ est définie tant que le dénominateur est non nul : $x+3\\neq0$, soit $x\\neq-3$. Donc $D_f=\\mathbb{R}\\setminus\\{-3\\}$.\n2. On pose $u=2x-1$, $u'=2$ et $v=x+3$, $v'=1$. D'après la formule $\\left(\\dfrac uv\\right)'=\\dfrac{u'v-uv'}{v^2}$ :\n$f'(x)=\\dfrac{2(x+3)-(2x-1)\\times1}{(x+3)^2}=\\dfrac{2x+6-2x+1}{(x+3)^2}=\\dfrac{7}{(x+3)^2}$."
+        },
+        {
+          "id": "dv-007",
+          "numero": 7,
+          "titre": "Problème d'optimisation : aire maximale",
+          "difficulte": 2,
+          "enonce": "Un rectangle a un périmètre fixé de $40\\text{ cm}$. On note $x$ la longueur d'un des côtés (avec $0<x<20$). 1. Exprimer l'aire $A(x)$ du rectangle en fonction de $x$. 2. Étudier les variations de $A$ et en déduire les dimensions du rectangle d'aire maximale, ainsi que la valeur de cette aire.",
+          "correction": "1. Le périmètre vaut $2(x+\\ell)=40$ où $\\ell$ est l'autre côté, donc $\\ell=20-x$. L'aire est $A(x)=x(20-x)=20x-x^2$, définie pour $x\\in\\,]0\\,;20[$.\n2. $A'(x)=20-2x$. $A'(x)=0 \\iff x=10$. Pour $x<10$, $A'(x)>0$ ($A$ croissante) ; pour $x>10$, $A'(x)<0$ ($A$ décroissante). $A$ admet donc un maximum en $x=10$.\nÀ $x=10$, l'autre côté vaut $\\ell=20-10=10$ : le rectangle d'aire maximale est donc un carré de côté $10\\text{ cm}$, d'aire $A(10)=10\\times10=100\\text{ cm}^2$."
+        },
+        {
+          "id": "dv-008",
+          "numero": 8,
+          "titre": "Nombre dérivé par la définition (taux d'accroissement)",
+          "difficulte": 3,
+          "enonce": "Soit $f(x)=x^2$.\n1. En utilisant la définition du nombre dérivé comme limite du taux d'accroissement, démontrer que $f'(2)=4$ (sans utiliser la formule $(x^n)'=nx^{n-1}$).\n2. En reprenant la même méthode avec un réel quelconque $a$, démontrer que $f'(a)=2a$ pour tout $a$.\n3. En déduire l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $a=2$.",
+          "correction": "1. Par définition, $f'(2)=\\lim_{h\\to0}\\dfrac{f(2+h)-f(2)}{h}$ (à condition que cette limite existe).\nOn calcule le taux d'accroissement pour $h\\neq0$ :\n$\\tau(h)=\\dfrac{f(2+h)-f(2)}{h}=\\dfrac{(2+h)^2-2^2}{h}=\\dfrac{4+4h+h^2-4}{h}=\\dfrac{4h+h^2}{h}=\\dfrac{h(4+h)}{h}=4+h$ (on peut simplifier par $h$ car $h\\neq0$).\nOr $\\lim_{h\\to0}(4+h)=4$. Donc $\\lim_{h\\to0}\\tau(h)=4$, ce qui prouve que $f'(2)=4$.\n2. On refait exactement le même raisonnement en remplaçant $2$ par un réel quelconque $a$ :\n$\\tau(h)=\\dfrac{f(a+h)-f(a)}{h}=\\dfrac{(a+h)^2-a^2}{h}=\\dfrac{a^2+2ah+h^2-a^2}{h}=\\dfrac{2ah+h^2}{h}=\\dfrac{h(2a+h)}{h}=2a+h$.\nOr $\\lim_{h\\to0}(2a+h)=2a$. Donc $f'(a)=2a$ pour tout réel $a$. On retrouve bien le cas particulier de la question 1 : $f'(2)=2\\times2=4$.\n3. La tangente à la courbe de $f$ au point d'abscisse $a=2$ a pour équation $y=f'(2)(x-2)+f(2)$. On a $f(2)=2^2=4$ et $f'(2)=4$ (questions 1 et 2), donc $y=4(x-2)+4=4x-8+4=4x-4$."
         }
       ]
     },
@@ -130,7 +178,7 @@
           "titre": "Suite arithmétique",
           "difficulte": 1,
           "enonce": "$(u_n)$ arithmétique de raison $r=3$ et $u_0=5$.\n1. Calculer $u_{10}$.\n2. Calculer la somme des 11 premiers termes ($u_0$ à $u_{10}$).",
-          "correction": "1. $u_{10}=5+10\\times3=35$\n2. $S=\\dfrac{11\\times(5+35)}{2}=220$"
+          "correction": "Rappel : pour une suite arithmétique, $u_n=u_0+nr$.\n1. $u_{10}=u_0+10r=5+10\\times3=5+30=35$.\n2. La somme des $11$ premiers termes ($u_0$ à $u_{10}$, soit $11$ termes) vaut : $S=\\dfrac{(\\text{nombre de termes})\\times(\\text{premier}+\\text{dernier})}{2}=\\dfrac{11\\times(5+35)}{2}=\\dfrac{11\\times40}{2}=11\\times20=220$."
         },
         {
           "id": "su-002",
@@ -138,7 +186,7 @@
           "titre": "Suite géométrique",
           "difficulte": 1,
           "enonce": "$(u_n)$ géométrique de raison $q=2$ et $u_0=3$.\n1. Calculer $u_5$.\n2. Calculer la somme des 6 premiers termes ($u_0$ à $u_5$).",
-          "correction": "1. $u_5=3\\times2^5=96$\n2. $S=3\\times\\dfrac{1-2^6}{1-2}=3\\times63=189$"
+          "correction": "Rappel : pour une suite géométrique, $u_n=u_0\\times q^n$.\n1. $u_5=u_0\\times q^5=3\\times2^5=3\\times32=96$.\n2. La somme des $6$ premiers termes ($u_0$ à $u_5$) vaut : $S=u_0\\times\\dfrac{1-q^6}{1-q}=3\\times\\dfrac{1-64}{1-2}=3\\times\\dfrac{-63}{-1}=3\\times63=189$."
         },
         {
           "id": "su-003",
@@ -163,6 +211,30 @@
           "difficulte": 3,
           "enonce": "$(u_n)$ définie par $u_0=0$ et $u_{n+1}=2u_n+1$. Démontrer par récurrence que pour tout $n$, $u_n=2^n-1$.",
           "correction": "Initialisation : $u_0=0=2^0-1$, vrai.\nHérédité : on suppose $u_n=2^n-1$. Alors $u_{n+1}=2u_n+1=2(2^n-1)+1=2^{n+1}-2+1=2^{n+1}-1$.\nLa propriété est vraie au rang $n+1$, donc par récurrence, pour tout $n$, $u_n=2^n-1$."
+        },
+        {
+          "id": "su-006",
+          "numero": 6,
+          "titre": "Sens de variation par étude de la différence",
+          "difficulte": 1,
+          "enonce": "$(u_n)$ est définie pour tout entier $n\\geq0$ par $u_n=\\dfrac{n}{n+1}$. Étudier le sens de variation de $(u_n)$.",
+          "correction": "On calcule $u_{n+1}-u_n=\\dfrac{n+1}{n+2}-\\dfrac{n}{n+1}$. On met au même dénominateur $(n+1)(n+2)$ :\n$u_{n+1}-u_n=\\dfrac{(n+1)^2-n(n+2)}{(n+1)(n+2)}=\\dfrac{n^2+2n+1-n^2-2n}{(n+1)(n+2)}=\\dfrac{1}{(n+1)(n+2)}$.\nPour tout $n\\geq0$, $(n+1)(n+2)>0$, donc $u_{n+1}-u_n>0$ : la suite $(u_n)$ est strictement croissante."
+        },
+        {
+          "id": "su-007",
+          "numero": 7,
+          "titre": "Somme géométrique : intérêts composés",
+          "difficulte": 2,
+          "enonce": "Un capital de $1000\\text{ €}$ est placé à intérêts composés au taux annuel de $3\\%$. On note $c_n$ le capital au bout de $n$ années. 1. Exprimer $c_n$ en fonction de $n$. 2. Calculer, arrondi à l'euro près, le total cumulé $c_0+c_1+\\dots+c_9$ des capitaux au fil des $10$ premières années.",
+          "correction": "1. Chaque année, le capital est multiplié par $1+0{,}03=1{,}03$. C'est une suite géométrique de premier terme $c_0=1000$ et de raison $q=1{,}03$ : $c_n=1000\\times1{,}03^n$.\n2. On somme les $10$ premiers termes ($n=0$ à $n=9$) : $S=c_0\\times\\dfrac{1-q^{10}}{1-q}=1000\\times\\dfrac{1-1{,}03^{10}}{1-1{,}03}$.\nOr $1{,}03^{10}\\approx1{,}343916$, donc $S\\approx1000\\times\\dfrac{1-1{,}343916}{-0{,}03}=1000\\times\\dfrac{-0{,}343916}{-0{,}03}\\approx1000\\times11{,}464\\approx11\\,464\\text{ €}$."
+        },
+        {
+          "id": "su-008",
+          "numero": 8,
+          "titre": "Suite arithmético-géométrique : limite et seuil",
+          "difficulte": 3,
+          "enonce": "$(u_n)$ est définie par $u_0=1$ et $u_{n+1}=\\dfrac13u_n+4$. On pose $v_n=u_n-6$.\n1. Montrer que $(v_n)$ est géométrique ; préciser sa raison et son premier terme.\n2. Exprimer $v_n$ puis $u_n$ en fonction de $n$.\n3. En déduire la limite de $(u_n)$, en justifiant.\n4. Déterminer le plus petit entier $n$ tel que $u_n>5{,}99$.\n5. Montrer que $(u_n)$ est strictement croissante, en étudiant le signe de $u_{n+1}-u_n$.",
+          "correction": "1. $v_{n+1}=u_{n+1}-6=\\dfrac13u_n+4-6=\\dfrac13u_n-2=\\dfrac13(u_n-6)=\\dfrac13v_n$. Donc $(v_n)$ est géométrique de raison $q=\\dfrac13$, de premier terme $v_0=u_0-6=1-6=-5$.\n2. $v_n=v_0\\times q^n=-5\\times\\left(\\dfrac13\\right)^n$. Comme $u_n=v_n+6$, on a $u_n=6-5\\times\\left(\\dfrac13\\right)^n$.\n3. Comme $-1<\\dfrac13<1$, on sait que $\\left(\\dfrac13\\right)^n\\to0$ quand $n\\to+\\infty$. Donc $u_n\\to6-5\\times0=6$ : la suite $(u_n)$ converge vers $6$.\n4. On résout $u_n>5{,}99$ : $6-5\\left(\\dfrac13\\right)^n>5{,}99 \\iff 5\\left(\\dfrac13\\right)^n<0{,}01 \\iff \\left(\\dfrac13\\right)^n<0{,}002$. En testant les valeurs : pour $n=5$, $\\left(\\dfrac13\\right)^5=\\dfrac1{243}\\approx0{,}004115$, encore trop grand ($u_5\\approx5{,}9794$) ; pour $n=6$, $\\left(\\dfrac13\\right)^6=\\dfrac1{729}\\approx0{,}001372<0{,}002$, ce qui convient ($u_6\\approx5{,}9931>5{,}99$). Le plus petit entier qui convient est donc $n=6$.\n5. En utilisant l'expression de la question 2 : $u_{n+1}-u_n=\\left[6-5\\left(\\dfrac13\\right)^{n+1}\\right]-\\left[6-5\\left(\\dfrac13\\right)^n\\right]=-5\\left[\\left(\\dfrac13\\right)^{n+1}-\\left(\\dfrac13\\right)^n\\right]=-5\\left(\\dfrac13\\right)^n\\left(\\dfrac13-1\\right)=-5\\left(\\dfrac13\\right)^n\\times\\left(-\\dfrac23\\right)=\\dfrac{10}{3}\\left(\\dfrac13\\right)^n$.\nComme $\\left(\\dfrac13\\right)^n>0$ pour tout $n$, on a $u_{n+1}-u_n>0$ pour tout $n$ : la suite $(u_n)$ est donc strictement croissante (ce qui est cohérent avec la question 3 : elle croît tout en restant bornée par sa limite $6$, qu'elle n'atteint jamais)."
         }
       ]
     },
@@ -185,7 +257,7 @@
           "titre": "Résolution d'équations exponentielles",
           "difficulte": 1,
           "enonce": "Résoudre dans $\\mathbb{R}$ :\n1. $e^x=5$\n2. $e^{2x-1}=1$",
-          "correction": "1. $x=\\ln5$\n2. $e^{2x-1}=1=e^0$ donc $2x-1=0$, $x=\\dfrac12$"
+          "correction": "1. $e^x=5$. La fonction exponentielle étant strictement positive et l'équivalence $e^x=e^y \\iff x=y$ étant valide, on applique $\\ln$ aux deux membres : $\\ln(e^x)=\\ln5$, donc $x=\\ln5$.\n2. $e^{2x-1}=1=e^0$. Par injectivité de la fonction exponentielle, on identifie les exposants : $2x-1=0$, donc $x=\\dfrac12$."
         },
         {
           "id": "ex-002",
@@ -193,7 +265,7 @@
           "titre": "Dérivées avec l'exponentielle",
           "difficulte": 1,
           "enonce": "Calculer $f'(x)$ :\n1. $f(x)=e^{3x+1}$\n2. $f(x)=xe^x$",
-          "correction": "1. $f'(x)=3e^{3x+1}$\n2. $f'(x)=1\\times e^x+x\\times e^x=(1+x)e^x$"
+          "correction": "1. $f(x)=e^{3x+1}$. On utilise la règle de dérivation $\\left(e^{u(x)}\\right)'=u'(x)e^{u(x)}$ avec $u(x)=3x+1$, $u'(x)=3$ : $f'(x)=3e^{3x+1}$.\n2. $f(x)=xe^x$ est un produit $u\\times v$ avec $u=x$ ($u'=1$) et $v=e^x$ ($v'=e^x$). D'après $(uv)'=u'v+uv'$ : $f'(x)=1\\times e^x+x\\times e^x=(1+x)e^x$."
         },
         {
           "id": "ex-003",
@@ -201,7 +273,7 @@
           "titre": "Résolution d'équations logarithmiques",
           "difficulte": 2,
           "enonce": "Résoudre dans $\\mathbb{R}$ :\n1. $\\ln(x)=2$ (préciser la condition d'existence)\n2. $\\ln(x+1)=0$",
-          "correction": "1. Condition $x>0$. $x=e^2$\n2. Condition $x>-1$. $x+1=1$ donc $x=0$"
+          "correction": "1. $\\ln(x)=2$. Condition d'existence : $x>0$. On applique $\\exp$ aux deux membres : $x=e^2$ (valeur bien positive, donc solution valide).\n2. $\\ln(x+1)=0$. Condition d'existence : $x+1>0$, soit $x>-1$. On écrit $0=\\ln(1)$, donc $\\ln(x+1)=\\ln(1)$, d'où $x+1=1$, soit $x=0$ (bien dans le domaine autorisé)."
         },
         {
           "id": "ex-004",
@@ -218,6 +290,30 @@
           "difficulte": 3,
           "enonce": "Résoudre dans $\\mathbb{R}$ : $e^{2x}-3e^x+2=0$.",
           "correction": "On pose $X=e^x>0$. L'équation devient $X^2-3X+2=0$, de solutions $X=1$ ou $X=2$.\n$e^x=1\\Rightarrow x=0$ ; $e^x=2\\Rightarrow x=\\ln2$."
+        },
+        {
+          "id": "ex-006",
+          "numero": 6,
+          "titre": "Simplifications avec exp et ln",
+          "difficulte": 1,
+          "enonce": "Simplifier les expressions suivantes :\n1. $\\ln\\left(e^3\\times e^{-5}\\right)$\n2. $e^{\\ln7-\\ln2}$\n3. $\\ln\\left(\\dfrac{1}{e^2}\\right)$",
+          "correction": "1. $e^3\\times e^{-5}=e^{3-5}=e^{-2}$, donc $\\ln\\left(e^3\\times e^{-5}\\right)=\\ln\\left(e^{-2}\\right)=-2$.\n2. $\\ln7-\\ln2=\\ln\\left(\\dfrac72\\right)$, donc $e^{\\ln7-\\ln2}=e^{\\ln(7/2)}=\\dfrac72=3{,}5$.\n3. $\\dfrac1{e^2}=e^{-2}$, donc $\\ln\\left(\\dfrac1{e^2}\\right)=\\ln\\left(e^{-2}\\right)=-2$."
+        },
+        {
+          "id": "ex-007",
+          "numero": 7,
+          "titre": "Étude complète d'une fonction avec exponentielle",
+          "difficulte": 2,
+          "enonce": "Soit $f(x)=(x-2)e^x$, définie sur $\\mathbb{R}$.\n1. Calculer $\\lim_{x\\to-\\infty}f(x)$ et $\\lim_{x\\to+\\infty}f(x)$ (on admettra que $\\lim_{x\\to-\\infty}xe^x=0$).\n2. Calculer $f'(x)$ et étudier son signe.\n3. Dresser le tableau de variations de $f$.",
+          "correction": "1. En $+\\infty$ : $(x-2)\\to+\\infty$ et $e^x\\to+\\infty$, donc par produit $f(x)\\to+\\infty$.\nEn $-\\infty$ : on écrit $f(x)=(x-2)e^x=xe^x-2e^x$. On sait (admis) que $xe^x\\to0$, et $e^x\\to0$ donc $-2e^x\\to0$. Par somme, $f(x)\\to0$.\n2. $f$ est un produit $u\\times v$ avec $u=x-2$ ($u'=1$) et $v=e^x$ ($v'=e^x$). $f'(x)=1\\times e^x+(x-2)\\times e^x=(1+x-2)e^x=(x-1)e^x$.\nComme $e^x>0$ pour tout $x$, le signe de $f'(x)$ est celui de $(x-1)$ : $f'(x)<0$ pour $x<1$, $f'(x)>0$ pour $x>1$, et $f'(1)=0$.\n3. $f$ est décroissante sur $]-\\infty\\,;1]$ (de limite $0$ à $-\\infty$ jusqu'au minimum) puis croissante sur $[1\\,;+\\infty[$ (vers $+\\infty$), avec un minimum en $x=1$ : $f(1)=(1-2)e^1=-e$."
+        },
+        {
+          "id": "ex-008",
+          "numero": 8,
+          "titre": "Croissances comparées",
+          "difficulte": 3,
+          "enonce": "1. Calculer $\\lim_{x\\to+\\infty}\\dfrac{e^x}{x^2}$, en justifiant à l'aide d'un théorème de croissances comparées. On rappelle que $\\lim_{x\\to+\\infty}\\dfrac{e^x}{x}=+\\infty$.\n2. Retrouver ce résultat en écrivant $\\dfrac{e^x}{x^2}$ à l'aide du résultat rappelé pour $n=1$ (poser $u=\\dfrac x2$).\n3. En déduire $\\lim_{x\\to+\\infty}x^2e^{-x}$.\n4. Plus généralement, que peut-on dire de $\\lim_{x\\to+\\infty}x^ne^{-x}$ pour un entier naturel $n$ quelconque ? Justifier brièvement.",
+          "correction": "1. On admet le résultat de croissances comparées $\\lim_{x\\to+\\infty}\\dfrac{e^x}{x^n}=+\\infty$ pour tout entier naturel $n$ ; avec $n=2$, on obtient directement $\\lim_{x\\to+\\infty}\\dfrac{e^x}{x^2}=+\\infty$.\n2. On pose $u=\\dfrac x2$, donc $x=2u$ et $u\\to+\\infty$ quand $x\\to+\\infty$. On écrit $\\dfrac{e^x}{x^2}=\\dfrac{e^{2u}}{(2u)^2}=\\dfrac{\\left(e^u\\right)^2}{4u^2}=\\dfrac14\\left(\\dfrac{e^u}{u}\\right)^2$. Or $\\dfrac{e^u}{u}\\to+\\infty$ quand $u\\to+\\infty$ (résultat admis pour $n=1$), donc son carré tend aussi vers $+\\infty$, et $\\dfrac{e^x}{x^2}\\to+\\infty$ : on retrouve bien le résultat de la question 1, cette fois démontré à partir du seul cas $n=1$.\n3. $x^2e^{-x}=\\dfrac{x^2}{e^x}=\\dfrac{1}{e^x/x^2}$. Comme $\\dfrac{e^x}{x^2}\\to+\\infty$ (question 1), son inverse tend vers $0$ : $\\lim_{x\\to+\\infty}x^2e^{-x}=0$.\n4. Par le même raisonnement, pour tout entier naturel $n$, $x^ne^{-x}=\\dfrac{1}{e^x/x^n}$. Or $\\dfrac{e^x}{x^n}\\to+\\infty$ quel que soit $n$ (théorème de croissances comparées), donc son inverse tend toujours vers $0$ : $\\lim_{x\\to+\\infty}x^ne^{-x}=0$ pour tout entier naturel $n$. Ce résultat traduit le fait que la fonction exponentielle « l'emporte » sur n'importe quelle puissance de $x$, aussi grande soit-elle."
         }
       ]
     },
@@ -273,6 +369,30 @@
           "difficulte": 3,
           "enonce": "Une maladie touche $2\\%$ d'une population. Un test de dépistage donne un résultat positif dans $98\\%$ des cas lorsque la personne est malade, et dans $3\\%$ des cas lorsqu'elle ne l'est pas (faux positif).\n1. Construire l'arbre pondéré et calculer la probabilité qu'une personne prise au hasard soit testée positive.\n2. Sachant que le test d'une personne est positif, calculer la probabilité que cette personne soit réellement malade.",
           "correction": "On note $M$ l'événement « être malade » et $T$ l'événement « être testé positif ». On a $P(M)=0,02$, $P_M(T)=0,98$ et $P_{\\overline{M}}(T)=0,03$.\n\n1. D'après la formule des probabilités totales :\n$P(T)=P(M)\\times P_M(T)+P(\\overline{M})\\times P_{\\overline{M}}(T)$\n$P(T)=0,02\\times0,98+0,98\\times0,03=0,0196+0,0294=0,049$.\nLa probabilité qu'une personne soit testée positive est donc de $4,9\\%$.\n\n2. On cherche $P_T(M)=\\dfrac{P(M\\cap T)}{P(T)}$.\n$P(M\\cap T)=P(M)\\times P_M(T)=0,0196$.\nDonc $P_T(M)=\\dfrac{0,0196}{0,049}\\approx0,40$.\nMême avec un test fiable à $98\\%$, seulement $40\\%$ environ des personnes testées positives sont réellement malades : cela s'explique par la faible proportion de malades dans la population (les faux positifs, bien que rares individuellement, deviennent nombreux en valeur absolue car ils s'appliquent à une population saine très majoritaire)."
+        },
+        {
+          "id": "pc-006",
+          "numero": 6,
+          "titre": "Formule d'addition des probabilités",
+          "difficulte": 1,
+          "enonce": "On donne $P(A)=0{,}4$, $P(B)=0{,}5$ et $P(A\\cap B)=0{,}15$. Calculer $P(A\\cup B)$.",
+          "correction": "D'après la formule d'addition (valable pour deux événements quelconques, pas nécessairement incompatibles) : $P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$.\n$P(A\\cup B)=0{,}4+0{,}5-0{,}15=0{,}75$."
+        },
+        {
+          "id": "pc-007",
+          "numero": 7,
+          "titre": "Tirages successifs sans remise",
+          "difficulte": 2,
+          "enonce": "Une urne contient $3$ boules rouges et $5$ boules vertes. On tire une boule au hasard, on note sa couleur, puis, sans la remettre dans l'urne, on tire une seconde boule. 1. Calculer la probabilité de tirer deux boules rouges. 2. Calculer la probabilité de tirer exactement une boule rouge (dans n'importe quel ordre).",
+          "correction": "L'urne contient $8$ boules au départ ($3$ rouges, $5$ vertes). On note $R_1$, $V_1$ la couleur du premier tirage et $R_2$, $V_2$ celle du second.\n$P(R_1)=\\dfrac38$ et $P(V_1)=\\dfrac58$.\nSi la première boule tirée est rouge, il reste $2$ rouges et $5$ vertes parmi $7$ boules : $P_{R_1}(R_2)=\\dfrac27$.\nSi la première boule tirée est verte, il reste $3$ rouges et $4$ vertes parmi $7$ boules : $P_{V_1}(R_2)=\\dfrac37$.\n1. $P(R_1\\cap R_2)=P(R_1)\\times P_{R_1}(R_2)=\\dfrac38\\times\\dfrac27=\\dfrac{6}{56}=\\dfrac{3}{28}$.\n2. « Exactement une boule rouge » correspond aux deux issues $R_1V_2$ et $V_1R_2$ :\n$P(R_1\\cap V_2)=\\dfrac38\\times\\dfrac57=\\dfrac{15}{56}$ et $P(V_1\\cap R_2)=\\dfrac58\\times\\dfrac37=\\dfrac{15}{56}$.\nCes deux issues étant incompatibles, $P(\\text{exactement une rouge})=\\dfrac{15}{56}+\\dfrac{15}{56}=\\dfrac{30}{56}=\\dfrac{15}{28}$."
+        },
+        {
+          "id": "pc-008",
+          "numero": 8,
+          "titre": "Problème type : contrôle qualité (Bayes)",
+          "difficulte": 3,
+          "enonce": "Dans une usine, deux machines produisent des pièces : la machine $A$ produit $60\\%$ des pièces, la machine $B$ produit le reste. On sait que $2\\%$ des pièces produites par $A$ sont défectueuses, et $5\\%$ de celles produites par $B$ le sont.\n1. Calculer la probabilité qu'une pièce prise au hasard soit défectueuse.\n2. Sachant qu'une pièce est défectueuse, calculer la probabilité qu'elle provienne de la machine $B$.\n3. Calculer également $P_D(A)$ et vérifier que $P_D(A)+P_D(B)=1$. En déduire quelle machine est responsable de la majorité des pièces défectueuses, et laquelle il faudrait cibler en priorité pour un contrôle qualité renforcé.",
+          "correction": "On note $A$ (resp. $B$) l'événement « la pièce provient de la machine $A$ (resp. $B$) » et $D$ l'événement « la pièce est défectueuse ». Les données sont $P(A)=0{,}6$, $P(B)=0{,}4$, $P_A(D)=0{,}02$ et $P_B(D)=0{,}05$.\n1. $A$ et $B$ formant une partition de l'univers, la formule des probabilités totales donne :\n$P(D)=P(A)\\times P_A(D)+P(B)\\times P_B(D)=0{,}6\\times0{,}02+0{,}4\\times0{,}05=0{,}012+0{,}02=0{,}032$.\nIl y a donc $3{,}2\\%$ de pièces défectueuses en moyenne.\n2. On cherche $P_D(B)=\\dfrac{P(B\\cap D)}{P(D)}$. On a $P(B\\cap D)=P(B)\\times P_B(D)=0{,}4\\times0{,}05=0{,}02$.\nDonc $P_D(B)=\\dfrac{0{,}02}{0{,}032}=0{,}625$ : sachant qu'une pièce est défectueuse, elle a $62{,}5\\%$ de chances de provenir de la machine $B$.\n3. De même, $P(A\\cap D)=P(A)\\times P_A(D)=0{,}6\\times0{,}02=0{,}012$, donc $P_D(A)=\\dfrac{P(A\\cap D)}{P(D)}=\\dfrac{0{,}012}{0{,}032}=0{,}375$.\nOn vérifie que $P_D(A)+P_D(B)=0{,}375+0{,}625=1$, ce qui est cohérent puisque toute pièce défectueuse provient nécessairement soit de $A$, soit de $B$ (ces deux événements formant une partition de l'univers, y compris conditionnellement à $D$).\nComme $P_D(B)=62{,}5\\%>P_D(A)=37{,}5\\%$, la majorité des pièces défectueuses proviennent de la machine $B$ — alors même que $B$ ne produit que $40\\%$ des pièces au total. Il faut donc cibler en priorité la machine $B$ pour un contrôle qualité renforcé : c'est elle qui est proportionnellement la plus défaillante et qui génère le plus de rebuts."
         }
       ]
     },
@@ -882,7 +1002,7 @@
           "titre": "Coordonnées d'un vecteur et norme",
           "difficulte": 1,
           "enonce": "$A(1\\,;2\\,;-1)$ et $B(3\\,;-1\\,;2)$. Calculer les coordonnées de $\\vec{AB}$ puis sa norme.",
-          "correction": "$\\vec{AB}=(3-1\\,;-1-2\\,;2-(-1))=(2\\,;-3\\,;3)$.\n$\\|\\vec{AB}\\|=\\sqrt{2^2+(-3)^2+3^2}=\\sqrt{4+9+9}=\\sqrt{22}$."
+          "correction": "Rappel : $\\vec{AB}=(x_B-x_A\\,;\\,y_B-y_A\\,;\\,z_B-z_A)$ et $\\|\\vec{AB}\\|=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}$.\n$\\vec{AB}=(3-1\\,;-1-2\\,;2-(-1))=(2\\,;-3\\,;3)$.\n$\\|\\vec{AB}\\|=\\sqrt{2^2+(-3)^2+3^2}=\\sqrt{4+9+9}=\\sqrt{22}$ (on ne peut pas simplifier davantage car $22=2\\times11$ ne contient aucun facteur carré)."
         },
         {
           "id": "ge-002",
@@ -890,7 +1010,7 @@
           "titre": "Produit scalaire et orthogonalité",
           "difficulte": 1,
           "enonce": "$\\vec u(2\\,;-1\\,;3)$ et $\\vec v(1\\,;5\\,;1)$. Calculer $\\vec u\\cdot\\vec v$ et dire si $\\vec u$ et $\\vec v$ sont orthogonaux.",
-          "correction": "$\\vec u\\cdot\\vec v = 2\\times1+(-1)\\times5+3\\times1 = 2-5+3=0$.\nLe produit scalaire est nul, donc $\\vec u$ et $\\vec v$ sont orthogonaux."
+          "correction": "Rappel : $\\vec u\\cdot\\vec v=x_ux_v+y_uy_v+z_uz_v$ ; deux vecteurs sont orthogonaux si et seulement si leur produit scalaire est nul.\n$\\vec u\\cdot\\vec v=2\\times1+(-1)\\times5+3\\times1=2-5+3=0$.\nLe produit scalaire est nul, donc $\\vec u$ et $\\vec v$ sont orthogonaux."
         },
         {
           "id": "ge-003",
@@ -915,6 +1035,30 @@
           "difficulte": 3,
           "enonce": "Soit le plan $\\mathcal P$ d'équation $2x-y+2z-3=0$ et le point $A(1\\,;2\\,;-1)$. Calculer la distance de $A$ au plan $\\mathcal P$, sachant que $d(A,\\mathcal P)=\\dfrac{|ax_A+by_A+cz_A+d|}{\\sqrt{a^2+b^2+c^2}}$.",
           "correction": "Ici $a=2$, $b=-1$, $c=2$, $d=-3$.\n$d(A,\\mathcal P)=\\dfrac{|2\\times1+(-1)\\times2+2\\times(-1)-3|}{\\sqrt{2^2+(-1)^2+2^2}}=\\dfrac{|2-2-2-3|}{\\sqrt{9}}=\\dfrac{|-5|}{3}=\\dfrac{5}{3}$."
+        },
+        {
+          "id": "ge-006",
+          "numero": 6,
+          "titre": "Vecteurs colinéaires dans l'espace",
+          "difficulte": 1,
+          "enonce": "$\\vec u(2\\,;-4\\,;6)$ et $\\vec v(-1\\,;2\\,;-3)$. Ces deux vecteurs sont-ils colinéaires ?",
+          "correction": "On cherche un réel $k$ tel que $\\vec u=k\\vec v$. En comparant les premières coordonnées : $2=k\\times(-1)$, donc $k=-2$.\nOn vérifie sur les deux autres coordonnées : $-4=-2\\times2=-4$ ✓ et $6=-2\\times(-3)=6$ ✓.\nLes trois coordonnées sont cohérentes avec $k=-2$, donc $\\vec u=-2\\vec v$ : les vecteurs sont colinéaires."
+        },
+        {
+          "id": "ge-007",
+          "numero": 7,
+          "titre": "Intersection d'une droite et d'un plan",
+          "difficulte": 2,
+          "enonce": "Soit $(d)$ la droite de représentation paramétrique $\\begin{cases}x=1+t\\\\y=2-t\\\\z=3+2t\\end{cases}$, $t\\in\\mathbb R$, et $\\mathcal P$ le plan d'équation $x+y+z-10=0$. Déterminer les coordonnées du point d'intersection de $(d)$ et $\\mathcal P$.",
+          "correction": "On remplace $x$, $y$, $z$ par leurs expressions en fonction de $t$ dans l'équation du plan :\n$(1+t)+(2-t)+(3+2t)-10=0$\n$1+t+2-t+3+2t-10=0$\n$(1+2+3-10)+(t-t+2t)=0$\n$-4+2t=0 \\iff t=2$.\nOn remplace $t=2$ dans la représentation paramétrique de $(d)$ : $x=1+2=3$, $y=2-2=0$, $z=3+2\\times2=7$.\nLe point d'intersection est donc $(3\\,;0\\,;7)$. Vérification dans l'équation du plan : $3+0+7-10=0$ ✓."
+        },
+        {
+          "id": "ge-008",
+          "numero": 8,
+          "titre": "Positions relatives de deux plans",
+          "difficulte": 3,
+          "enonce": "On considère les plans $\\mathcal P_1 : 2x-y+3z-5=0$ et $\\mathcal P_2 : -4x+2y-6z+1=0$.\n1. Donner un vecteur normal à chacun des deux plans.\n2. Montrer que $\\mathcal P_1$ et $\\mathcal P_2$ sont strictement parallèles (parallèles et distincts).\n3. Un troisième plan $\\mathcal P_3$ a pour équation $x+y+z-1=0$. Montrer que $\\mathcal P_3$ n'est pas parallèle à $\\mathcal P_1$, puis déterminer les coordonnées d'un point appartenant à la fois à $\\mathcal P_1$ et $\\mathcal P_3$.",
+          "correction": "1. Un vecteur normal à un plan d'équation $ax+by+cz+d=0$ est $\\vec n(a\\,;b\\,;c)$. Donc $\\vec n_1(2\\,;-1\\,;3)$ pour $\\mathcal P_1$ et $\\vec n_2(-4\\,;2\\,;-6)$ pour $\\mathcal P_2$.\n2. On remarque que $\\vec n_2=-2\\vec n_1$ (en effet $-2\\times2=-4$, $-2\\times(-1)=2$, $-2\\times3=-6$) : les deux vecteurs normaux sont colinéaires, donc $\\mathcal P_1$ et $\\mathcal P_2$ sont parallèles (ou confondus).\nPour vérifier qu'ils sont distincts, on prend un point de $\\mathcal P_1$, par exemple en posant $x=0$, $y=0$ dans son équation : $3z-5=0$, soit $z=\\dfrac53$. Le point $\\left(0\\,;0\\,;\\dfrac53\\right)$ appartient à $\\mathcal P_1$.\nOn teste ce point dans l'équation de $\\mathcal P_2$ : $-4\\times0+2\\times0-6\\times\\dfrac53+1=-10+1=-9\\neq0$. Ce point n'appartient donc pas à $\\mathcal P_2$ : les deux plans sont bien distincts. $\\mathcal P_1$ et $\\mathcal P_2$ sont donc strictement parallèles.\n3. Un vecteur normal à $\\mathcal P_3$ est $\\vec n_3(1\\,;1\\,;1)$. On compare avec $\\vec n_1(2\\,;-1\\,;3)$ : le rapport entre les premières coordonnées est $\\dfrac21=2$, celui entre les deuxièmes est $\\dfrac{-1}{1}=-1$. Ces deux rapports diffèrent, donc $\\vec n_1$ et $\\vec n_3$ ne sont pas colinéaires : $\\mathcal P_1$ et $\\mathcal P_3$ ne sont pas parallèles (ils sont donc sécants, leur intersection est une droite).\nPour trouver un point commun, on résout le système formé par les deux équations :\n$\\begin{cases}2x-y+3z-5=0\\\\x+y+z-1=0\\end{cases}$\nDe la seconde équation, $y=1-x-z$. On substitue dans la première : $2x-(1-x-z)+3z-5=0 \\iff 2x-1+x+z+3z-5=0 \\iff 3x+4z-6=0$.\nOn choisit une valeur simple, par exemple $x=0$ : $4z=6$, soit $z=\\dfrac32$. On en déduit $y=1-0-\\dfrac32=-\\dfrac12$.\nLe point $\\left(0\\,;-\\dfrac12\\,;\\dfrac32\\right)$ appartient donc à la fois à $\\mathcal P_1$ et à $\\mathcal P_3$ (on peut vérifier : $2\\times0-\\left(-\\dfrac12\\right)+3\\times\\dfrac32-5=0+0{,}5+4{,}5-5=0$ ✓ et $0+\\left(-\\dfrac12\\right)+\\dfrac32-1=0$ ✓)."
         }
       ]
     },
@@ -1102,7 +1246,7 @@
           "titre": "Coordonnées d'un vecteur et norme",
           "difficulte": 1,
           "enonce": "$A(1\\,;2)$ et $B(4\\,;6)$. Calculer les coordonnées de $\\vec{AB}$ puis sa norme.",
-          "correction": "$\\vec{AB}=(4-1\\,;6-2)=(3\\,;4)$.\n$\\|\\vec{AB}\\|=\\sqrt{3^2+4^2}=\\sqrt{9+16}=\\sqrt{25}=5$."
+          "correction": "Rappel : $\\vec{AB}=(x_B-x_A\\,;\\,y_B-y_A)$ et $\\|\\vec u\\|=\\sqrt{x^2+y^2}$.\n$\\vec{AB}=(4-1\\,;6-2)=(3\\,;4)$.\n$\\|\\vec{AB}\\|=\\sqrt{3^2+4^2}=\\sqrt{9+16}=\\sqrt{25}=5$."
         },
         {
           "id": "ve-002",
@@ -1110,7 +1254,7 @@
           "titre": "Milieu d'un segment",
           "difficulte": 1,
           "enonce": "$A(-2\\,;3)$ et $B(4\\,;-1)$. Calculer les coordonnées du milieu $I$ de $[AB]$.",
-          "correction": "$I=\\left(\\dfrac{-2+4}{2}\\,;\\,\\dfrac{3+(-1)}{2}\\right)=\\left(\\dfrac{2}{2}\\,;\\,\\dfrac{2}{2}\\right)=(1\\,;1)$."
+          "correction": "Rappel : le milieu $I$ de $[AB]$ a pour coordonnées $I=\\left(\\dfrac{x_A+x_B}{2}\\,;\\,\\dfrac{y_A+y_B}{2}\\right)$.\n$I=\\left(\\dfrac{-2+4}{2}\\,;\\,\\dfrac{3+(-1)}{2}\\right)=\\left(\\dfrac{2}{2}\\,;\\,\\dfrac{2}{2}\\right)=(1\\,;1)$."
         },
         {
           "id": "ve-003",
@@ -1135,6 +1279,30 @@
           "difficulte": 3,
           "enonce": "$A(0\\,;0)$, $B(3\\,;1)$, $C(5\\,;4)$. Déterminer les coordonnées du point $D$ tel que $ABCD$ soit un parallélogramme.",
           "correction": "Dans le parallélogramme $ABCD$, les côtés $[AB]$ et $[DC]$ sont parallèles et de même longueur : $\\vec{AB}=\\vec{DC}$.\n$\\vec{AB}=(3\\,;1)$. On cherche $D(x\\,;y)$ tel que $\\vec{DC}=(5-x\\,;4-y)=(3\\,;1)$.\nDonc $5-x=3 \\Rightarrow x=2$ et $4-y=1 \\Rightarrow y=3$. Ainsi $D(2\\,;3)$."
+        },
+        {
+          "id": "ve-006",
+          "numero": 6,
+          "titre": "Relation de Chasles",
+          "difficulte": 1,
+          "enonce": "$A(1\\,;2)$, $B(4\\,;3)$ et $C(2\\,;6)$. Calculer $\\vec{AB}+\\vec{BC}$, calculer également $\\vec{AC}$, et vérifier que les deux résultats sont égaux (relation de Chasles).",
+          "correction": "$\\vec{AB}=(4-1\\,;3-2)=(3\\,;1)$ et $\\vec{BC}=(2-4\\,;6-3)=(-2\\,;3)$.\n$\\vec{AB}+\\vec{BC}=(3+(-2)\\,;1+3)=(1\\,;4)$.\nD'autre part, $\\vec{AC}=(2-1\\,;6-2)=(1\\,;4)$.\nOn retrouve bien $\\vec{AB}+\\vec{BC}=\\vec{AC}$ : c'est la relation de Chasles, valable pour trois points quelconques."
+        },
+        {
+          "id": "ve-007",
+          "numero": 7,
+          "titre": "Décomposition d'un vecteur dans une base",
+          "difficulte": 2,
+          "enonce": "Les vecteurs $\\vec u(2\\,;1)$ et $\\vec v(1\\,;3)$ forment une base du plan (ils ne sont pas colinéaires). Décomposer $\\vec w(8\\,;9)$ dans cette base, c'est-à-dire trouver les réels $a$ et $b$ tels que $\\vec w=a\\vec u+b\\vec v$.",
+          "correction": "On cherche $a$ et $b$ tels que $a\\vec u+b\\vec v=\\vec w$, ce qui donne le système :\n$\\begin{cases}2a+b=8\\\\a+3b=9\\end{cases}$\nDe la première équation, $b=8-2a$. En substituant dans la seconde : $a+3(8-2a)=9 \\iff a+24-6a=9 \\iff -5a=-15 \\iff a=3$.\nOn en déduit $b=8-2\\times3=2$.\nVérification : $3\\vec u+2\\vec v=(3\\times2+2\\times1\\,;3\\times1+2\\times3)=(6+2\\,;3+6)=(8\\,;9)=\\vec w$ ✓. Donc $\\vec w=3\\vec u+2\\vec v$."
+        },
+        {
+          "id": "ve-008",
+          "numero": 8,
+          "titre": "Équation cartésienne d'une droite et appartenance",
+          "difficulte": 3,
+          "enonce": "Soit $(d)$ la droite passant par $A(1\\,;2)$ et de vecteur directeur $\\vec u(3\\,;-2)$.\n1. Déterminer une équation cartésienne de $(d)$.\n2. Le point $B(7\\,;-2)$ appartient-il à $(d)$ ?\n3. Une seconde droite $(d')$ a pour équation $4x+6y-1=0$. Les droites $(d)$ et $(d')$ sont-elles parallèles ? Justifier à l'aide des vecteurs normaux.\n4. Déterminer les coordonnées du point d'intersection de $(d)$ avec l'axe des abscisses (droite d'équation $y=0$).",
+          "correction": "1. On cherche un vecteur normal $\\vec n(a\\,;b)$ orthogonal à $\\vec u(3\\,;-2)$, c'est-à-dire tel que $3a-2b=0$ : on peut prendre $\\vec n(2\\,;3)$ (car $3\\times2-2\\times3=6-6=0$).\nL'équation de $(d)$ est alors $2(x-1)+3(y-2)=0$, soit $2x-2+3y-6=0$, c'est-à-dire $2x+3y-8=0$.\n2. On remplace les coordonnées de $B(7\\,;-2)$ dans l'équation : $2\\times7+3\\times(-2)-8=14-6-8=0$. L'égalité est vérifiée, donc $B$ appartient bien à $(d)$.\n3. Le vecteur normal de $(d)$ est $\\vec n(2\\,;3)$ (question 1). Pour $(d')\\,: 4x+6y-1=0$, un vecteur normal est $\\vec n'(4\\,;6)$. On remarque que $\\vec n'=2\\vec n$ (car $2\\times2=4$ et $2\\times3=6$) : les deux vecteurs normaux sont colinéaires, donc $(d)$ et $(d')$ sont parallèles. Elles sont de plus distinctes : en multipliant l'équation de $(d)$ par $2$, on obtient $4x+6y-16=0$, dont le terme constant ($-16$) diffère de celui de $(d')$ ($-1$) — ce ne sont donc pas la même droite.\n4. Sur l'axe des abscisses, $y=0$. On remplace dans l'équation de $(d)$ : $2x+3\\times0-8=0 \\iff 2x=8 \\iff x=4$. Le point d'intersection est donc $(4\\,;0)$."
         }
       ]
     },

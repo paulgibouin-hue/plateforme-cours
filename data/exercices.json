@@ -469,7 +469,7 @@
           "titre": "Loi d'Ohm simple",
           "difficulte": 1,
           "enonce": "$R=220\\ \\Omega$, $U=110\\text{ V}$. Calculer $I$ et $P$.",
-          "correction": "$I=0,5\\text{ A}$, $P=55\\text{ W}$"
+          "correction": "D'après la loi d'Ohm, $I=\\dfrac{U}{R}=\\dfrac{110}{220}=0,5\\text{ A}$. La puissance est $P=U\\times I=110\\times0,5=55\\text{ W}$."
         },
         {
           "id": "el-002",
@@ -477,7 +477,7 @@
           "titre": "Tension/résistance",
           "difficulte": 1,
           "enonce": "$U=230\\text{ V}$, $I=5\\text{ A}$. Calculer $R$ et $P$.",
-          "correction": "$R=46\\ \\Omega$, $P=1150\\text{ W}$"
+          "correction": "D'après la loi d'Ohm, $R=\\dfrac{U}{I}=\\dfrac{230}{5}=46\\ \\Omega$. La puissance est $P=U\\times I=230\\times5=1150\\text{ W}$."
         },
         {
           "id": "el-003",
@@ -485,7 +485,7 @@
           "titre": "Énergie consommée",
           "difficulte": 2,
           "enonce": "$P=12\\text{ W}$ pendant $8\\text{ h}$. Énergie et coût à $0,15\\ €/\\text{kWh}$ ?",
-          "correction": "$E=0,096\\text{ kWh}$, coût $=0,0144\\ €$"
+          "correction": "L'énergie consommée est $E=P\\times t=12\\times8=96\\text{ Wh}=0,096\\text{ kWh}$. | Le coût est $0,096\\times0,15=0,0144\\ €$, soit un peu plus d'un centime et demi."
         },
         {
           "id": "el-004",
@@ -493,7 +493,7 @@
           "titre": "Série/parallèle",
           "difficulte": 2,
           "enonce": "$R_1=100\\ \\Omega$, $R_2=150\\ \\Omega$, $U=250\\text{ V}$. Série puis parallèle.",
-          "correction": "Série : $R=250\\ \\Omega$, $I=1\\text{ A}$. Parallèle : $R\\approx60\\ \\Omega$, $I\\approx4,17\\text{ A}$"
+          "correction": "En série : $R_{\\text{éq}}=R_1+R_2=100+150=250\\ \\Omega$, donc $I=\\dfrac{U}{R_{\\text{éq}}}=\\dfrac{250}{250}=1\\text{ A}$.\nEn dérivation : $\\dfrac{1}{R_{\\text{éq}}}=\\dfrac{1}{R_1}+\\dfrac{1}{R_2}=\\dfrac{1}{100}+\\dfrac{1}{150}=\\dfrac{3+2}{300}=\\dfrac{5}{300}=\\dfrac{1}{60}$, donc $R_{\\text{éq}}=60\\ \\Omega$ et $I=\\dfrac{U}{R_{\\text{éq}}}=\\dfrac{250}{60}\\approx4,17\\text{ A}$."
         },
         {
           "id": "el-005",
@@ -501,7 +501,31 @@
           "titre": "Facture électricité",
           "difficulte": 3,
           "enonce": "Frigo $400\\text{ W}$ ($24\\text{ h/j}$), machine $2000\\text{ W}$ ($5\\text{ h/sem}$), télé $150\\text{ W}$ ($4\\text{ h/j}$), sur $30$ jours. Énergie totale et facture à $0,18\\ €/\\text{kWh}$ ?",
-          "correction": "$346\\text{ kWh}$ au total, facture $=62,28\\ €$, frigo $\\approx83\\%$ de la consommation"
+          "correction": "On calcule séparément l'énergie de chaque appareil sur les $30$ jours (on assimile $30$ jours à $4$ semaines pour simplifier) :\n- Frigo, en continu ($24\\text{ h/j}$) : $E_{frigo}=400\\times(24\\times30)=400\\times720=288\\,000\\text{ Wh}=288\\text{ kWh}$.\n- Machine, $5\\text{ h/semaine}$ pendant $4$ semaines : $E_{machine}=2000\\times(5\\times4)=2000\\times20=40\\,000\\text{ Wh}=40\\text{ kWh}$.\n- Télé, $4\\text{ h/j}$ pendant $30$ jours : $E_{tv}=150\\times(4\\times30)=150\\times120=18\\,000\\text{ Wh}=18\\text{ kWh}$.\nÉnergie totale : $E=288+40+18=346\\text{ kWh}$. Facture : $346\\times0,18=62,28\\ €$.\nPart du frigo : $\\dfrac{288}{346}\\times100\\approx83,2\\%$ : il domine largement la consommation car il fonctionne en continu, contrairement aux deux autres appareils."
+        },
+        {
+          "id": "el-006",
+          "numero": 6,
+          "titre": "Puissance d'une ampoule LED",
+          "difficulte": 1,
+          "enonce": "Une ampoule LED indique sur son emballage : « $220\\text{ V}$ – $0,045\\text{ A}$ ». Quelle est sa puissance ?",
+          "correction": "$P=U\\times I=220\\times0,045=9,9\\text{ W}$, soit environ $10\\text{ W}$."
+        },
+        {
+          "id": "el-007",
+          "numero": 7,
+          "titre": "Limite d'un disjoncteur",
+          "difficulte": 2,
+          "enonce": "Un disjoncteur limite l'intensité à $16\\text{ A}$ sous une tension de $230\\text{ V}$. 1. Quelle est la puissance maximale que peut supporter l'installation ? 2. Peut-on brancher simultanément un four de $2000\\text{ W}$ et un radiateur de $1500\\text{ W}$ sans faire disjoncter l'installation ?",
+          "correction": "1. $P_{max}=U\\times I_{max}=230\\times16=3680\\text{ W}$.\n2. La puissance totale demandée est $2000+1500=3500\\text{ W}$, ce qui est inférieur à $3680\\text{ W}$ : l'installation le supporte. On peut vérifier avec l'intensité : $I=\\dfrac{P}{U}=\\dfrac{3500}{230}\\approx15,2\\text{ A}$, bien en dessous des $16\\text{ A}$ limites."
+        },
+        {
+          "id": "el-008",
+          "numero": 8,
+          "titre": "Radiateur : consommation et économie",
+          "difficulte": 3,
+          "enonce": "Un radiateur électrique porte l'indication « $230\\text{ V}$ – $1000\\text{ W}$ ». 1. Calculer l'intensité qui le traverse en fonctionnement normal, ainsi que sa résistance. 2. On le fait fonctionner $6\\text{ h}$ par jour pendant un mois de $30$ jours : calculer l'énergie consommée en kWh, puis le coût correspondant à $0,20\\ €/\\text{kWh}$. 3. On envisage de le remplacer par un modèle plus efficace de $750\\text{ W}$ pour le même usage : calculer l'économie annuelle réalisée (on considérera $12$ mois identiques).",
+          "correction": "1. $I=\\dfrac{P}{U}=\\dfrac{1000}{230}\\approx4,35\\text{ A}$. La résistance se déduit de $P=\\dfrac{U^2}{R}$, donc $R=\\dfrac{U^2}{P}=\\dfrac{230^2}{1000}=\\dfrac{52\\,900}{1000}=52,9\\ \\Omega$.\n2. $E=P\\times t=1000\\times(6\\times30)=1000\\times180=180\\,000\\text{ Wh}=180\\text{ kWh}$. Coût : $180\\times0,20=36\\ €$ pour le mois.\n3. Avec le modèle de $750\\text{ W}$ : $E'=750\\times180=135\\,000\\text{ Wh}=135\\text{ kWh}$, coût $135\\times0,20=27\\ €$. Économie mensuelle : $36-27=9\\ €$. Sur $12$ mois : $9\\times12=108\\ €$ d'économie annuelle."
         }
       ]
     },
@@ -523,7 +547,7 @@
           "titre": "Chute libre",
           "difficulte": 1,
           "enonce": "$h=20\\text{ m}$, chute libre. Durée de chute et vitesse au sol ?",
-          "correction": "$t\\approx2,02\\text{ s}$, $v\\approx19,8\\text{ m/s}$"
+          "correction": "En chute libre sans vitesse initiale, $h=\\dfrac12gt^2$, donc $t=\\sqrt{\\dfrac{2h}{g}}=\\sqrt{\\dfrac{2\\times20}{9,8}}=\\sqrt{4,08}\\approx2,02\\text{ s}$.\nLa vitesse au sol se calcule par $v=gt=9,8\\times2,02\\approx19,8\\text{ m/s}$ (on peut vérifier avec $v=\\sqrt{2gh}=\\sqrt{2\\times9,8\\times20}=\\sqrt{392}\\approx19,8\\text{ m/s}$, cohérent)."
         },
         {
           "id": "me-002",
@@ -531,7 +555,7 @@
           "titre": "2e loi de Newton",
           "difficulte": 1,
           "enonce": "$m=1200\\text{ kg}$, de $0$ à $100\\text{ km/h}$ en $8\\text{ s}$. Accélération et force ?",
-          "correction": "$a\\approx3,47\\text{ m/s}^2$, $F\\approx4164\\text{ N}$"
+          "correction": "$100\\text{ km/h}=\\dfrac{100\\,000}{3600}\\approx27,8\\text{ m/s}$. D'après la définition de l'accélération moyenne : $a=\\dfrac{\\Delta v}{\\Delta t}=\\dfrac{27,8-0}{8}\\approx3,47\\text{ m/s}^2$.\nD'après la deuxième loi de Newton (PFD), en supposant la force résultante constante : $F=ma=1200\\times3,47\\approx4167\\text{ N}$."
         },
         {
           "id": "me-003",
@@ -539,7 +563,7 @@
           "titre": "Plan incliné",
           "difficulte": 2,
           "enonce": "$m=2\\text{ kg}$, plan incliné à $20°$, sans frottement. Montrer que $a=g\\sin\\theta$, puis calculer $a$.",
-          "correction": "$a\\approx3,35\\text{ m/s}^2$"
+          "correction": "Le mobile est soumis à son poids $\\vec P$ (vertical, $P=mg$) et à la réaction normale $\\vec N$ du plan (perpendiculaire au plan, sans composante le long de la pente puisqu'il n'y a pas de frottement).\nEn projetant $\\sum\\vec F=m\\vec a$ sur l'axe parallèle au plan incliné (dans le sens de la descente) : $\\vec N$ n'a pas de composante sur cet axe, et le poids y a pour composante $mg\\sin\\theta$. On obtient $mg\\sin\\theta=ma$, soit après simplification par $m$ : $a=g\\sin\\theta$.\nApplication numérique : $a=9,8\\times\\sin(20°)=9,8\\times0,342\\approx3,35\\text{ m/s}^2$."
         },
         {
           "id": "me-004",
@@ -547,7 +571,7 @@
           "titre": "MRUV freinage",
           "difficulte": 2,
           "enonce": "$a=-2\\text{ m/s}^2$, $v_0=30\\text{ m/s}$. Temps d'arrêt, distance parcourue, arrêt possible avant $200\\text{ m}$ ?",
-          "correction": "$t=15\\text{ s}$, $\\Delta x=225\\text{ m}$, non ($225>200$)"
+          "correction": "Le temps d'arrêt correspond à $v=0$ : $t=\\dfrac{v_0}{|a|}=\\dfrac{30}{2}=15\\text{ s}$.\nLa distance parcourue avant l'arrêt est $\\Delta x=\\dfrac{v_0^2}{2|a|}=\\dfrac{30^2}{2\\times2}=\\dfrac{900}{4}=225\\text{ m}$.\nComme $225\\text{ m}>200\\text{ m}$, le véhicule ne parvient pas à s'arrêter avant les $200\\text{ m}$ : il lui manque encore $25\\text{ m}$ pour s'immobiliser complètement à cet endroit."
         },
         {
           "id": "me-005",
@@ -555,7 +579,31 @@
           "titre": "Projectile",
           "difficulte": 3,
           "enonce": "$h=45\\text{ m}$, $v_0=12\\text{ m/s}$ horizontal. Temps de chute, portée, vitesse à l'impact ?",
-          "correction": "$t\\approx3,03\\text{ s}$, $x\\approx36,4\\text{ m}$, $v\\approx32\\text{ m/s}$"
+          "correction": "Le mouvement se décompose en une translation horizontale à vitesse constante $v_0$ et une chute verticale sous l'effet de la pesanteur.\nChute verticale (comme une chute libre sans vitesse initiale verticale) : $h=\\dfrac12gt^2 \\Rightarrow t=\\sqrt{\\dfrac{2h}{g}}=\\sqrt{\\dfrac{2\\times45}{9,8}}=\\sqrt{9,18}\\approx3,03\\text{ s}$.\nPortée horizontale : $x=v_0\\times t=12\\times3,03\\approx36,4\\text{ m}$.\nVitesse à l'impact : composante horizontale $v_x=v_0=12\\text{ m/s}$, composante verticale $v_y=gt=9,8\\times3,03\\approx29,7\\text{ m/s}$. Norme du vecteur vitesse : $v=\\sqrt{v_x^2+v_y^2}=\\sqrt{12^2+29,7^2}=\\sqrt{144+882}\\approx\\sqrt{1026}\\approx32,0\\text{ m/s}$."
+        },
+        {
+          "id": "me-006",
+          "numero": 6,
+          "titre": "Poids sur Terre et sur la Lune",
+          "difficulte": 1,
+          "enonce": "Un astronaute a une masse de $80\\text{ kg}$. Sur Terre, $g\\approx9,8\\text{ m/s}^2$ ; sur la Lune, $g_{Lune}\\approx1,6\\text{ m/s}^2$. Calculer son poids sur Terre puis sur la Lune.",
+          "correction": "$P_{Terre}=mg=80\\times9,8=784\\text{ N}$. $P_{Lune}=mg_{Lune}=80\\times1,6=128\\text{ N}$ : son poids est presque $6$ fois plus faible sur la Lune, alors que sa masse (quantité de matière) reste identique."
+        },
+        {
+          "id": "me-007",
+          "numero": 7,
+          "titre": "Tension d'un fil à l'équilibre",
+          "difficulte": 2,
+          "enonce": "Une masse $m=5\\text{ kg}$ est suspendue immobile à un fil vertical. 1. Faire le bilan des forces s'exerçant sur la masse. 2. En appliquant le PFD (l'objet étant immobile, son accélération est nulle), déterminer la tension $T$ du fil.",
+          "correction": "1. La masse est soumise à deux forces : son poids $\\vec P$ (vertical, vers le bas) et la tension $\\vec T$ du fil (vertical, vers le haut).\n2. L'objet étant immobile, $\\vec a=\\vec 0$, donc $\\sum\\vec F=m\\vec a=\\vec 0$ : les deux forces se compensent exactement. En projetant sur la verticale : $T-P=0$, donc $T=P=mg=5\\times9,8=49\\text{ N}$."
+        },
+        {
+          "id": "me-008",
+          "numero": 8,
+          "titre": "Freinage : dynamique et énergie",
+          "difficulte": 3,
+          "enonce": "Une voiture de masse $m=1000\\text{ kg}$ roule à $v_0=20\\text{ m/s}$ sur une route horizontale. Le conducteur freine ; la force de freinage exercée par les pneus vaut $F=4000\\text{ N}$ (supposée constante, dirigée dans le sens opposé au mouvement). 1. Calculer la décélération du véhicule à l'aide du PFD. 2. Calculer la distance de freinage. 3. Calculer l'énergie cinétique initiale du véhicule, puis retrouver la distance de freinage à l'aide du théorème de l'énergie cinétique ($\\Delta E_c=W(\\vec F)$, avec $W(\\vec F)=-F\\times d$ le travail résistant de la force de freinage sur la distance $d$).",
+          "correction": "1. D'après le PFD, $F=m|a|$ (en valeur absolue, la force de freinage s'oppose au mouvement), donc $|a|=\\dfrac{F}{m}=\\dfrac{4000}{1000}=4\\text{ m/s}^2$ (soit une décélération $a=-4\\text{ m/s}^2$).\n2. $d=\\dfrac{v_0^2}{2|a|}=\\dfrac{20^2}{2\\times4}=\\dfrac{400}{8}=50\\text{ m}$.\n3. Énergie cinétique initiale : $E_{c,i}=\\dfrac12mv_0^2=0,5\\times1000\\times20^2=200\\,000\\text{ J}=200\\text{ kJ}$. La voiture s'arrêtant, $E_{c,f}=0$, donc $\\Delta E_c=E_{c,f}-E_{c,i}=-200\\,000\\text{ J}$. Le théorème de l'énergie cinétique donne $\\Delta E_c=W(\\vec F)=-F\\times d$, soit $-200\\,000=-4000\\times d$, d'où $d=\\dfrac{200\\,000}{4000}=50\\text{ m}$ : on retrouve exactement le résultat de la question 2."
         }
       ]
     },
@@ -578,7 +626,7 @@
           "titre": "Écho",
           "difficulte": 1,
           "enonce": "Une falaise se trouve à $850\\text{ m}$. Calculer la durée entre l'émission d'un son et la perception de son écho ($v=340\\text{ m/s}$).",
-          "correction": "Aller-retour $=2\\times850=1700\\text{ m}$. $t=\\dfrac{1700}{340}=5\\text{ s}$"
+          "correction": "L'aller-retour du son correspond à une distance de $2\\times850=1700\\text{ m}$ (le son parcourt la distance jusqu'à la falaise, puis revient). En utilisant $v=\\dfrac{d}{t}$, soit $t=\\dfrac{d}{v}$ : $t=\\dfrac{1700}{340}=5\\text{ s}$."
         },
         {
           "id": "on-002",
@@ -586,7 +634,7 @@
           "titre": "Longueur d'onde d'un son",
           "difficulte": 1,
           "enonce": "La note « la » a une fréquence $f=440\\text{ Hz}$. Calculer sa longueur d'onde dans l'air ($v=340\\text{ m/s}$).",
-          "correction": "$\\lambda=\\dfrac{v}{f}=\\dfrac{340}{440}\\approx0,77\\text{ m}$"
+          "correction": "D'après la relation fondamentale $v=\\lambda\\times f$, on a $\\lambda=\\dfrac{v}{f}=\\dfrac{340}{440}\\approx0,77\\text{ m}$."
         },
         {
           "id": "on-003",
@@ -594,7 +642,7 @@
           "titre": "Propagation d'un tsunami",
           "difficulte": 2,
           "enonce": "Un tsunami se propage à $v=200\\text{ m/s}$ sur une distance de $6000\\text{ km}$. Calculer la durée du trajet, en heures.",
-          "correction": "$t=\\dfrac{6\\times10^6}{200}=3\\times10^4\\text{ s}\\approx8,3\\text{ h}$"
+          "correction": "$6000\\text{ km}=6\\times10^6\\text{ m}$. $t=\\dfrac{d}{v}=\\dfrac{6\\times10^6}{200}=3\\times10^4\\text{ s}$. En heures : $t=\\dfrac{3\\times10^4}{3600}\\approx8,3\\text{ h}$."
         },
         {
           "id": "on-004",
@@ -603,6 +651,38 @@
           "difficulte": 3,
           "enonce": "Un laser de longueur d'onde $\\lambda=633\\text{ nm}$ traverse une fente de largeur $a=0,1\\text{ mm}$. Calculer l'écart angulaire $\\theta$ en degrés.",
           "correction": "$\\theta=\\dfrac{\\lambda}{a}=\\dfrac{633\\times10^{-9}}{0,1\\times10^{-3}}\\approx6,33\\times10^{-3}\\text{ rad}$. En degrés : $\\theta\\approx6,33\\times10^{-3}\\times\\dfrac{180}{\\pi}\\approx0,36°$"
+        },
+        {
+          "id": "on-005",
+          "numero": 5,
+          "titre": "Fréquence d'une onde sonore dans l'eau",
+          "difficulte": 1,
+          "enonce": "Une onde sonore se propage dans l'eau à une célérité $v=1500\\text{ m/s}$, avec une longueur d'onde $\\lambda=0,3\\text{ m}$. Calculer sa fréquence.",
+          "correction": "D'après $v=\\lambda\\times f$ : $f=\\dfrac{v}{\\lambda}=\\dfrac{1500}{0,3}=5000\\text{ Hz}=5\\text{ kHz}$."
+        },
+        {
+          "id": "on-006",
+          "numero": 6,
+          "titre": "Sonar et profondeur de l'eau",
+          "difficulte": 2,
+          "enonce": "Un sonar émet une onde ultrasonore qui se réfléchit sur le fond marin et revient après une durée de $0,8\\text{ s}$. Sachant que la célérité du son dans l'eau est $v=1500\\text{ m/s}$, calculer la profondeur de l'eau à cet endroit.",
+          "correction": "La durée mesurée correspond à un aller-retour : distance totale parcourue $d=v\\times t=1500\\times0,8=1200\\text{ m}$. La profondeur est la moitié de cette distance : $\\text{profondeur}=\\dfrac{1200}{2}=600\\text{ m}$."
+        },
+        {
+          "id": "on-007",
+          "numero": 7,
+          "titre": "Influence de la largeur de fente sur la diffraction",
+          "difficulte": 2,
+          "enonce": "On reprend un laser de longueur d'onde $\\lambda=633\\text{ nm}$ traversant une fente de largeur $a=0,1\\text{ mm}$ (écart angulaire $\\theta\\approx6,33\\times10^{-3}\\text{ rad}$). On remplace la fente par une fente deux fois plus étroite, $a'=0,05\\text{ mm}$. L'écart angulaire $\\theta'$ est-il plus grand ou plus petit que $\\theta$ ? Justifier sans calcul, puis vérifier par le calcul.",
+          "correction": "La relation $\\theta\\approx\\dfrac{\\lambda}{a}$ montre que $\\theta$ est inversement proportionnel à $a$ : si la fente est plus étroite ($a$ diminue), l'écart angulaire de diffraction $\\theta$ augmente (la diffraction est plus marquée).\nVérification : $\\theta'=\\dfrac{\\lambda}{a'}=\\dfrac{633\\times10^{-9}}{0,05\\times10^{-3}}\\approx1,266\\times10^{-2}\\text{ rad}$, soit exactement le double de $\\theta\\approx6,33\\times10^{-3}\\text{ rad}$ — cohérent avec le fait que $a'$ est deux fois plus petit que $a$."
+        },
+        {
+          "id": "on-008",
+          "numero": 8,
+          "titre": "Longueur d'onde selon le milieu de propagation",
+          "difficulte": 3,
+          "enonce": "Une corde vibrante émet un son de fréquence $f=256\\text{ Hz}$. La célérité du son dans l'air est $v=340\\text{ m/s}$. 1. Calculer la longueur d'onde $\\lambda$ de ce son dans l'air. 2. Ce même son se propage aussi dans l'eau, où la célérité vaut $v_{eau}=1480\\text{ m/s}$ (la fréquence de la source reste identique). Calculer la nouvelle longueur d'onde $\\lambda_{eau}$. 3. Comparer $\\lambda$ et $\\lambda_{eau}$ : comment évolue la longueur d'onde quand la célérité augmente, à fréquence fixée ? 4. Un auditeur immergé perçoit-il un son de fréquence différente de celui d'un auditeur dans l'air ? Justifier.",
+          "correction": "1. $\\lambda=\\dfrac{v}{f}=\\dfrac{340}{256}\\approx1,33\\text{ m}$.\n2. $\\lambda_{eau}=\\dfrac{v_{eau}}{f}=\\dfrac{1480}{256}\\approx5,78\\text{ m}$.\n3. $\\lambda_{eau}\\approx5,78\\text{ m}>\\lambda\\approx1,33\\text{ m}$ : à fréquence fixée, la longueur d'onde est proportionnelle à la célérité ($\\lambda=\\dfrac{v}{f}$), donc elle augmente quand la célérité augmente.\n4. Non : la fréquence est une propriété de la source (ici la corde vibrante, qui vibre à $256\\text{ Hz}$ quel que soit le milieu) et ne dépend pas du milieu de propagation. Seules la célérité et la longueur d'onde changent selon le milieu. Les deux auditeurs perçoivent donc un son de même hauteur (même fréquence), qui se propage simplement plus vite dans l'eau."
         }
       ]
     },
@@ -659,6 +739,30 @@
           "difficulte": 3,
           "enonce": "Un générateur $U=24\\text{ V}$ alimente une résistance $R_1=10\\ \\Omega$ placée en série avec un groupement de deux résistances $R_2=20\\ \\Omega$ et $R_3=30\\ \\Omega$ montées en dérivation. Calculer la résistance équivalente du groupement $R_2/R_3$, la résistance équivalente totale du circuit, puis l'intensité totale délivrée par le générateur.",
           "correction": "On calcule d'abord la résistance équivalente du groupement en dérivation $R_2/R_3$ :\n$\\dfrac{1}{R_{23}}=\\dfrac{1}{R_2}+\\dfrac{1}{R_3}=\\dfrac{1}{20}+\\dfrac{1}{30}=\\dfrac{3+2}{60}=\\dfrac{5}{60}=\\dfrac{1}{12}$, donc $R_{23}=12\\ \\Omega$.\nCe groupement est en série avec $R_1$, donc la résistance équivalente totale du circuit est $R_{\\text{éq}}=R_1+R_{23}=10+12=22\\ \\Omega$.\nL'intensité totale délivrée par le générateur est alors $I=\\dfrac{U}{R_{\\text{éq}}}=\\dfrac{24}{22}\\approx1,09\\text{ A}$."
+        },
+        {
+          "id": "ce-006",
+          "numero": 6,
+          "titre": "Loi d'Ohm directe",
+          "difficulte": 1,
+          "enonce": "Une résistance $R=25\\ \\Omega$ est traversée par un courant d'intensité $I=0,8\\text{ A}$. Calculer la tension $U$ à ses bornes.",
+          "correction": "D'après la loi d'Ohm, $U=R\\times I=25\\times0,8=20\\text{ V}$."
+        },
+        {
+          "id": "ce-007",
+          "numero": 7,
+          "titre": "Retrouver une résistance inconnue",
+          "difficulte": 2,
+          "enonce": "Un circuit série comporte un générateur de $15\\text{ V}$ et deux résistances $R_1$ et $R_2$. On mesure une intensité $I=0,5\\text{ A}$ et une tension $U_2=4\\text{ V}$ aux bornes de $R_2$. 1. Calculer $R_2$. 2. Calculer $U_1$, puis en déduire $R_1$.",
+          "correction": "1. $R_2=\\dfrac{U_2}{I}=\\dfrac{4}{0,5}=8\\ \\Omega$.\n2. D'après la loi des mailles, $U=U_1+U_2$, donc $U_1=U-U_2=15-4=11\\text{ V}$. Comme le circuit est en série, la même intensité $I=0,5\\text{ A}$ traverse $R_1$ : $R_1=\\dfrac{U_1}{I}=\\dfrac{11}{0,5}=22\\ \\Omega$."
+        },
+        {
+          "id": "ce-008",
+          "numero": 8,
+          "titre": "Pont diviseur de tension",
+          "difficulte": 3,
+          "enonce": "On réalise un pont diviseur de tension avec deux résistances $R_1=2\\text{ k}\\Omega$ et $R_2=1\\text{ k}\\Omega$ placées en série aux bornes d'un générateur $U=12\\text{ V}$. 1. Calculer l'intensité $I$ dans le circuit. 2. Calculer la tension $U_s$ aux bornes de $R_2$. 3. À partir des questions 1 et 2, montrer que l'on peut écrire $U_s=U\\times\\dfrac{R_2}{R_1+R_2}$. 4. $R_1$ restant fixé à $2\\text{ k}\\Omega$, quelle valeur donner à $R_2$ pour obtenir $U_s=9\\text{ V}$ ?",
+          "correction": "1. $R_{\\text{éq}}=R_1+R_2=2000+1000=3000\\ \\Omega$. $I=\\dfrac{U}{R_{\\text{éq}}}=\\dfrac{12}{3000}=0,004\\text{ A}=4\\text{ mA}$.\n2. $U_s=R_2\\times I=1000\\times0,004=4\\text{ V}$.\n3. En combinant : $U_s=R_2\\times I=R_2\\times\\dfrac{U}{R_1+R_2}=U\\times\\dfrac{R_2}{R_1+R_2}$. Vérification : $12\\times\\dfrac{1000}{3000}=4\\text{ V}$, cohérent avec la question 2.\n4. On résout $9=12\\times\\dfrac{R_2}{2000+R_2}$ : $9(2000+R_2)=12R_2 \\iff 18\\,000+9R_2=12R_2 \\iff 18\\,000=3R_2 \\iff R_2=6000\\ \\Omega=6\\text{ k}\\Omega$."
         }
       ]
     },
@@ -680,7 +784,7 @@
           "titre": "Stoechiométrie",
           "difficulte": 1,
           "enonce": "$N_2+3H_2 \\rightleftharpoons 2NH_3$. $5,6\\text{ g}$ de $N_2$ + $3\\text{ g}$ de $H_2$. Réactif limitant et masse de $NH_3$ formée ?",
-          "correction": "$N_2$ limitant, $m(NH_3)=6,8\\text{ g}$"
+          "correction": "$M(N_2)=2\\times14=28\\text{ g/mol}$, donc $n(N_2)=\\dfrac{5,6}{28}=0,2\\text{ mol}$. $M(H_2)=2\\times1=2\\text{ g/mol}$, donc $n(H_2)=\\dfrac{3}{2}=1,5\\text{ mol}$.\nD'après les coefficients stœchiométriques ($1$ mol de $N_2$ pour $3$ mol de $H_2$), consommer tout le $N_2$ ($0,2\\text{ mol}$) nécessiterait $3\\times0,2=0,6\\text{ mol}$ de $H_2$. Comme on dispose de $1,5\\text{ mol}$ (bien plus que $0,6\\text{ mol}$), c'est $N_2$ le réactif limitant.\n$1$ mol de $N_2$ produit $2$ mol de $NH_3$, donc $n(NH_3)=2\\times0,2=0,4\\text{ mol}$. $M(NH_3)=14+3\\times1=17\\text{ g/mol}$, donc $m(NH_3)=0,4\\times17=6,8\\text{ g}$."
         },
         {
           "id": "ch-002",
@@ -688,7 +792,7 @@
           "titre": "Concentration/dilution",
           "difficulte": 1,
           "enonce": "$3,65\\text{ g}$ de $HCl$ dans $100\\text{ mL}$. Concentration, puis dilution de $10\\text{ mL}$ vers $50\\text{ mL}$.",
-          "correction": "$[HCl]=1\\text{ mol/L}$ puis $0,2\\text{ mol/L}$"
+          "correction": "$M(HCl)=1+35,5=36,5\\text{ g/mol}$, donc $n(HCl)=\\dfrac{3,65}{36,5}=0,1\\text{ mol}$. La concentration est $[HCl]=\\dfrac{n}{V}=\\dfrac{0,1}{0,1}=1\\text{ mol/L}$ (avec $V=100\\text{ mL}=0,1\\text{ L}$).\nLors d'une dilution, la quantité de matière prélevée est conservée : $C_1V_1=C_2V_2$, donc $1\\times10=C_2\\times50$, d'où $C_2=\\dfrac{10}{50}=0,2\\text{ mol/L}$."
         },
         {
           "id": "ch-003",
@@ -696,7 +800,7 @@
           "titre": "Constante Kc",
           "difficulte": 2,
           "enonce": "$N_2O_4 \\rightleftharpoons 2NO_2$. $[N_2O_4]=0,1$, $[NO_2]=0,4$. Calculer $K_c$ et l'effet d'une augmentation de pression.",
-          "correction": "$K_c=1,6$, déplacement vers la gauche si la pression augmente"
+          "correction": "$K_c=\\dfrac{[NO_2]^2}{[N_2O_4]}=\\dfrac{0,4^2}{0,1}=\\dfrac{0,16}{0,1}=1,6$.\nD'après le principe de modération (Le Chatelier), une augmentation de pression déplace l'équilibre dans le sens qui diminue le nombre total de moles de gaz. Ici, $1$ mole de gaz ($N_2O_4$) devient $2$ moles de gaz ($2NO_2$) dans le sens direct : une augmentation de pression favorise donc le sens indirect (formation de $N_2O_4$) : l'équilibre se déplace vers la gauche."
         },
         {
           "id": "ch-004",
@@ -704,7 +808,7 @@
           "titre": "Tableau avancement",
           "difficulte": 2,
           "enonce": "$A+B \\rightleftharpoons C+D$, $n_0(A)=2$, $n_0(B)=3$, $V=1\\text{ L}$, $[A]_{\\text{éq}}=1$. Calculer $K_c$.",
-          "correction": "$[A]=1$, $[B]=2$, $[C]=1$, $[D]=1$, $K_c=0,5$"
+          "correction": "On construit le tableau d'avancement pour $A+B\\rightleftharpoons C+D$ (coefficients $1$:$1$:$1$:$1$) : $n(A)_{\\text{éq}}=n_0(A)-x=2-x$.\nComme $V=1\\text{ L}$, $[A]_{\\text{éq}}=n(A)_{\\text{éq}}$, donc $2-x=1$, d'où $x=1\\text{ mol}$.\nOn en déduit : $n(B)_{\\text{éq}}=3-1=2\\text{ mol}$, donc $[B]=2\\text{ mol/L}$ ; $n(C)_{\\text{éq}}=n(D)_{\\text{éq}}=0+x=1\\text{ mol}$, donc $[C]=[D]=1\\text{ mol/L}$.\n$K_c=\\dfrac{[C][D]}{[A][B]}=\\dfrac{1\\times1}{1\\times2}=0,5$."
         },
         {
           "id": "ch-005",
@@ -712,7 +816,31 @@
           "titre": "Estérification",
           "difficulte": 3,
           "enonce": "$5,2\\text{ g}$ d'acide acétique + $6,2\\text{ g}$ d'éthanol, $V=100\\text{ mL}$, $K_c=4$, rendement $70\\%$. Quantité d'ester et d'eau formés ?",
-          "correction": "$n(\\text{ester})=0,061\\text{ mol}$, $[H_2O]=0,61\\text{ mol/L}$"
+          "correction": "$M(\\text{acide acétique})=2\\times12+4\\times1+2\\times16=60\\text{ g/mol}$, donc $n_0(\\text{acide})=\\dfrac{5,2}{60}\\approx0,0867\\text{ mol}$.\n$M(\\text{éthanol})=2\\times12+6\\times1+16=46\\text{ g/mol}$, donc $n_0(\\text{éthanol})=\\dfrac{6,2}{46}\\approx0,1348\\text{ mol}$.\nL'acide acétique est en quantité plus faible : il limite l'avancement maximal théorique si la réaction était totale, $x_{max}=n_0(\\text{acide})\\approx0,0867\\text{ mol}$.\nCette réaction d'estérification étant limitée par un équilibre (d'où la donnée de $K_c$), elle n'atteint ici qu'un rendement de $70\\%$ par rapport à cet avancement maximal théorique : $n(\\text{ester})\\approx0,70\\times0,0867\\approx0,061\\text{ mol}$.\nLa réaction produit autant d'eau que d'ester (coefficients $1$:$1$), donc $n(H_2O)\\approx0,061\\text{ mol}$, et $[H_2O]=\\dfrac{n(H_2O)}{V}=\\dfrac{0,061}{0,1}=0,61\\text{ mol/L}$."
+        },
+        {
+          "id": "ch-006",
+          "numero": 6,
+          "titre": "Concentration molaire simple",
+          "difficulte": 1,
+          "enonce": "On dissout $0,5\\text{ mol}$ de chlorure de sodium $NaCl$ dans $250\\text{ mL}$ d'eau. Calculer la concentration molaire de la solution obtenue.",
+          "correction": "$C=\\dfrac{n}{V}=\\dfrac{0,5}{0,250}=2\\text{ mol/L}$ (avec $V=250\\text{ mL}=0,250\\text{ L}$)."
+        },
+        {
+          "id": "ch-007",
+          "numero": 7,
+          "titre": "Quotient de réaction et sens d'évolution",
+          "difficulte": 2,
+          "enonce": "Pour la réaction $N_2O_4\\rightleftharpoons2NO_2$ de constante $K_c=1,6$, on prépare un mélange où $[N_2O_4]=0,2\\text{ mol/L}$ et $[NO_2]=0,4\\text{ mol/L}$. 1. Calculer le quotient de réaction $Q_r$ dans cet état. 2. Comparer $Q_r$ à $K_c$ et en déduire dans quel sens le système va évoluer pour atteindre l'équilibre.",
+          "correction": "1. $Q_r=\\dfrac{[NO_2]^2}{[N_2O_4]}=\\dfrac{0,4^2}{0,2}=\\dfrac{0,16}{0,2}=0,8$.\n2. On a $Q_r=0,8<K_c=1,6$ : le système n'est pas à l'équilibre et va évoluer dans le sens direct (formation de $NO_2$) pour faire augmenter $Q_r$ jusqu'à ce qu'il atteigne $K_c$."
+        },
+        {
+          "id": "ch-008",
+          "numero": 8,
+          "titre": "Tableau d'avancement complet et calcul de Kc",
+          "difficulte": 3,
+          "enonce": "On introduit initialement $n_0=1\\text{ mol}$ de $N_2O_4$ pur dans un récipient de volume $V=10\\text{ L}$, à température constante. À l'équilibre, on mesure $[NO_2]_{\\text{éq}}=0,08\\text{ mol/L}$. 1. Construire le tableau d'avancement de la réaction $N_2O_4\\rightleftharpoons2NO_2$ et exprimer les quantités de matière en fonction de l'avancement $x$. 2. Déterminer $x$ à partir de la donnée $[NO_2]_{\\text{éq}}$. 3. En déduire $[N_2O_4]_{\\text{éq}}$ puis $K_c$.",
+          "correction": "1. $n(N_2O_4)=n_0-x=1-x$ ; $n(NO_2)=0+2x=2x$.\n2. $[NO_2]_{\\text{éq}}=\\dfrac{2x}{V}=\\dfrac{2x}{10}=0,08$, donc $2x=0,8$, soit $x=0,4\\text{ mol}$.\n3. $n(N_2O_4)_{\\text{éq}}=1-0,4=0,6\\text{ mol}$, donc $[N_2O_4]_{\\text{éq}}=\\dfrac{0,6}{10}=0,06\\text{ mol/L}$.\n$K_c=\\dfrac{[NO_2]_{\\text{éq}}^2}{[N_2O_4]_{\\text{éq}}}=\\dfrac{0,08^2}{0,06}=\\dfrac{0,0064}{0,06}\\approx0,107$."
         }
       ]
     },
@@ -760,6 +888,38 @@
           "difficulte": 3,
           "enonce": "Une solution d'acide fort a un $pH=2$. On la dilue $100$ fois. Quel est le nouveau pH ?",
           "correction": "Pour un acide fort, une dilution par $10$ augmente le pH de $1$ unité. Une dilution par $100=10^2$ augmente donc le pH de $2$ unités : $pH=4$."
+        },
+        {
+          "id": "ab-005",
+          "numero": 5,
+          "titre": "pH d'une solution très diluée",
+          "difficulte": 1,
+          "enonce": "Calculer le pH d'une solution où $[H_3O^+]=5\\times10^{-9}\\text{ mol/L}$. Cette solution est-elle acide, basique ou neutre ?",
+          "correction": "$pH=-\\log(5\\times10^{-9})=-\\log(5)-\\log(10^{-9})\\approx-0,70+9=8,3$. Comme $pH>7$, la solution est basique."
+        },
+        {
+          "id": "ab-006",
+          "numero": 6,
+          "titre": "Volume à l'équivalence d'un dosage",
+          "difficulte": 2,
+          "enonce": "On dose $V_a=15\\text{ mL}$ d'une solution d'acide chlorhydrique de concentration $C_a=0,05\\text{ mol/L}$ par une solution d'hydroxyde de sodium de concentration $C_b=0,025\\text{ mol/L}$. Calculer le volume $V_b$ de base à verser pour atteindre l'équivalence (réaction $1$:$1$).",
+          "correction": "À l'équivalence, $C_aV_a=C_bV_b$, donc $V_b=\\dfrac{C_aV_a}{C_b}=\\dfrac{0,05\\times15}{0,025}=\\dfrac{0,75}{0,025}=30\\text{ mL}$."
+        },
+        {
+          "id": "ab-007",
+          "numero": 7,
+          "titre": "Acide fort ou acide faible ?",
+          "difficulte": 2,
+          "enonce": "Une solution d'acide $A$, de concentration $C=0,01\\text{ mol/L}$, a un $pH=2$. Une solution d'acide $B$, de même concentration $C=0,01\\text{ mol/L}$, a un $pH=3,4$. 1. Calculer, pour chaque solution, la concentration en ions $H_3O^+$. 2. En déduire laquelle correspond à un acide fort (totalement dissocié dans l'eau) et laquelle correspond à un acide faible (partiellement dissocié). Justifier.",
+          "correction": "1. Solution $A$ : $[H_3O^+]=10^{-2}=0,01\\text{ mol/L}$. Solution $B$ : $[H_3O^+]=10^{-3,4}\\approx4,0\\times10^{-4}\\text{ mol/L}$.\n2. Pour un acide fort de concentration $C$, la dissociation dans l'eau est totale, donc $[H_3O^+]=C$. C'est le cas de la solution $A$ ($[H_3O^+]=0,01\\text{ mol/L}=C$) : c'est un acide fort. Pour la solution $B$, $[H_3O^+]\\approx4\\times10^{-4}\\text{ mol/L}$ est très inférieur à $C=0,01\\text{ mol/L}$ : la dissociation est donc partielle, c'est un acide faible."
+        },
+        {
+          "id": "ab-008",
+          "numero": 8,
+          "titre": "Dosage d'un acide faible : pH à l'équivalence",
+          "difficulte": 3,
+          "enonce": "On dose un volume $V_a=20\\text{ mL}$ d'une solution d'acide éthanoïque (acide faible) de concentration inconnue $C_a$ par une solution d'hydroxyde de sodium de concentration $C_b=0,1\\text{ mol/L}$. L'équivalence est repérée pour $V_b=16\\text{ mL}$. 1. Calculer $C_a$. 2. Calculer la quantité de matière d'acide initialement présente $n_0(\\text{acide})$. 3. À l'équivalence, tout l'acide a été transformé en sa base conjuguée (l'ion éthanoate), qui rend le milieu légèrement basique. Le pH à l'équivalence de ce dosage est-il attendu égal à $7$, inférieur à $7$, ou supérieur à $7$ ? Justifier (sans calcul).",
+          "correction": "1. À l'équivalence, $C_aV_a=C_bV_b$, donc $C_a=\\dfrac{C_bV_b}{V_a}=\\dfrac{0,1\\times16}{20}=0,08\\text{ mol/L}$.\n2. $n_0(\\text{acide})=C_a\\times V_a=0,08\\times0,020=1,6\\times10^{-3}\\text{ mol}$.\n3. Le pH à l'équivalence est attendu supérieur à $7$ (milieu basique). En effet, à l'équivalence d'un dosage acide faible / base forte, l'espèce majoritairement présente en solution est la base conjuguée de l'acide (l'ion éthanoate), qui réagit partiellement avec l'eau pour régénérer un peu d'acide éthanoïque et des ions hydroxyde $HO^-$, rendant le milieu basique — contrairement au dosage d'un acide fort par une base forte, où le pH à l'équivalence vaut exactement $7$."
         }
       ]
     },
@@ -815,6 +975,30 @@
           "difficulte": 3,
           "enonce": "Un chimiste reproduit la même réaction avec un catalyseur : le temps de demi-réaction passe de $t_{1/2}\\approx6,8\\text{ min}$ (sans catalyseur, cf. exercice « Lecture d'un suivi temporel ») à $t_{1/2}=1,5\\text{ min}$ (avec catalyseur).\n1. Comparer les vitesses de réaction dans les deux cas.\n2. L'avancement final $x_{\\text{max}}$ est-il modifié par le catalyseur ? Justifier.\n3. Si cette réaction produit un gaz, proposer une méthode expérimentale pour suivre son avancement au cours du temps.",
           "correction": "1. Le temps de demi-réaction est divisé par un facteur $\\dfrac{6,8}{1,5}\\approx4,5$ : la réaction est donc environ $4,5$ fois plus rapide avec le catalyseur.\n2. Non, l'avancement final $x_{\\text{max}}$ n'est pas modifié : un catalyseur est un facteur cinétique, il modifie uniquement la vitesse à laquelle l'état final est atteint, pas cet état final lui-même.\n3. On peut mesurer le volume de gaz dégagé au cours du temps (à l'aide d'une seringue graduée ou d'un capteur de pression relié à un système d'acquisition), le volume de gaz étant directement lié à l'avancement de la réaction."
+        },
+        {
+          "id": "ci-006",
+          "numero": 6,
+          "titre": "Identifier un facteur cinétique en pratique",
+          "difficulte": 1,
+          "enonce": "Pour faire cuire des légumes plus rapidement, on utilise un autocuiseur (cocotte-minute), qui permet d'atteindre une température supérieure à $100°C$. Quel facteur cinétique est ici mis à profit pour accélérer la cuisson (qui est une transformation chimique) ?",
+          "correction": "C'est la température : son augmentation est un facteur cinétique qui accélère la vitesse de la réaction, ce qui permet une cuisson plus rapide."
+        },
+        {
+          "id": "ci-007",
+          "numero": 7,
+          "titre": "Calcul d'une vitesse volumique moyenne (bis)",
+          "difficulte": 2,
+          "enonce": "Un suivi expérimental donne $x=3,4\\text{ mmol}$ à $t=10\\text{ min}$ et $x=4,2\\text{ mmol}$ à $t=15\\text{ min}$, dans un volume réactionnel $V=50\\text{ mL}$. Calculer la vitesse volumique moyenne de la réaction sur cet intervalle.",
+          "correction": "$\\Delta x=4,2-3,4=0,8\\text{ mmol}=0,8\\times10^{-3}\\text{ mol}$. $\\Delta t=15-10=5\\text{ min}=300\\text{ s}$.\n$v=\\dfrac{1}{V}\\times\\dfrac{\\Delta x}{\\Delta t}=\\dfrac{1}{0,05}\\times\\dfrac{0,8\\times10^{-3}}{300}\\approx5,3\\times10^{-5}\\text{ mol}\\cdot\\text{L}^{-1}\\cdot\\text{s}^{-1}$."
+        },
+        {
+          "id": "ci-008",
+          "numero": 8,
+          "titre": "Effet de la concentration sur la vitesse",
+          "difficulte": 3,
+          "enonce": "On étudie la même réaction (même quantité initiale de réactif limitant, donc même avancement maximal $x_{max}$) dans deux expériences réalisées à la même température, mais avec des concentrations différentes d'un réactif en excès ($C_1$ pour l'expérience 1, $C_2=2C_1$ pour l'expérience 2). On mesure : expérience 1, $x=2,0\\text{ mmol}$ à $t=4\\text{ min}$ ; expérience 2, $x=2,0\\text{ mmol}$ dès $t=2\\text{ min}$. 1. Comparer qualitativement les vitesses des deux expériences pour atteindre ce même avancement. 2. Quel facteur cinétique explique cette différence ? 3. Les deux expériences atteignent-elles le même avancement final $x_{max}$ ? Justifier. 4. Le temps de demi-réaction est-il le même dans les deux expériences ? Justifier sans calcul.",
+          "correction": "1. L'expérience $2$ atteint le même avancement ($2,0\\text{ mmol}$) deux fois plus vite ($2\\text{ min}$ contre $4\\text{ min}$) : la réaction y est donc plus rapide.\n2. C'est la concentration du réactif en excès qui explique cette différence : une concentration plus élevée (facteur cinétique) accélère la réaction, les entités réactives se rencontrant statistiquement plus souvent.\n3. Oui : l'avancement maximal $x_{max}$ ne dépend que de la quantité initiale du réactif limitant, identique dans les deux expériences. La concentration du réactif en excès modifie uniquement la vitesse à laquelle cet avancement est atteint, pas sa valeur finale.\n4. Non : la réaction étant plus rapide dans l'expérience $2$, l'avancement y augmente plus vite et atteint donc plus tôt la moitié de $x_{max}$ : le temps de demi-réaction de l'expérience $2$ est plus court que celui de l'expérience $1$."
         }
       ]
     },
@@ -870,6 +1054,30 @@
           "difficulte": 3,
           "enonce": "Écrire une fonction `carres_pairs(l)` qui renvoie la liste des carrés des éléments pairs de `l`. Dérouler sur `l = [1, 2, 3, 4, 5, 6]`.",
           "correction": "def carres_pairs(l):\n    resultat = []\n    for x in l:\n        if x % 2 == 0:\n            resultat.append(x ** 2)\n    return resultat\n\nSur $[1,2,3,4,5,6]$ : éléments pairs $2,4,6$, carrés $4,16,36$. Résultat : $[4,16,36]$."
+        },
+        {
+          "id": "ns-006",
+          "numero": 6,
+          "titre": "Slicing (tranches) d'une liste",
+          "difficulte": 1,
+          "enonce": "Soit `l = [10, 20, 30, 40, 50]`. Donner la valeur de : `l[1:3]`, `l[:2]`, `l[3:]`.",
+          "correction": "`l[1:3]` → `[20, 30]` (les éléments d'indice $1$ inclus à $3$ exclu).\n`l[:2]` → `[10, 20]` (du début jusqu'à l'indice $2$ exclu, soit les indices $0$ et $1$).\n`l[3:]` → `[40, 50]` (de l'indice $3$ jusqu'à la fin)."
+        },
+        {
+          "id": "ns-007",
+          "numero": 7,
+          "titre": "Construire et modifier un dictionnaire",
+          "difficulte": 2,
+          "enonce": "On part d'un dictionnaire vide `stock = {}`. Écrire du code qui ajoute les entrées `\"pommes\": 12` et `\"poires\": 5`, puis qui augmente le stock de pommes de $3$ unités, puis qui affiche le dictionnaire final.",
+          "correction": "stock = {}\nstock[\"pommes\"] = 12\nstock[\"poires\"] = 5\nstock[\"pommes\"] = stock[\"pommes\"] + 3\nprint(stock)\n\nLe programme affiche `{'pommes': 15, 'poires': 5}` : ajouter une clé déjà existante avec `d[clé] = valeur` écrase simplement l'ancienne valeur, ce qui permet ici de mettre à jour le stock."
+        },
+        {
+          "id": "ns-008",
+          "numero": 8,
+          "titre": "Compréhension de liste et comptage d'occurrences",
+          "difficulte": 3,
+          "enonce": "1. Écrire une fonction `filtrer_pairs(l)` qui renvoie une nouvelle liste contenant uniquement les éléments pairs de `l`, à l'aide d'une compréhension de liste (list comprehension). 2. Écrire une fonction `compter_occurrences(l)` qui renvoie un dictionnaire associant à chaque élément de `l` le nombre de fois où il y apparaît. 3. Dérouler `compter_occurrences(['a', 'b', 'a', 'c', 'b', 'a'])` en donnant l'état du dictionnaire après chaque élément parcouru.",
+          "correction": "1. def filtrer_pairs(l):\n    return [x for x in l if x % 2 == 0]\n\n2. def compter_occurrences(l):\n    d = {}\n    for x in l:\n        if x in d:\n            d[x] = d[x] + 1\n        else:\n            d[x] = 1\n    return d\n\n3. Déroulé sur `['a', 'b', 'a', 'c', 'b', 'a']` : après `'a'` → `{'a': 1}` ; après `'b'` → `{'a': 1, 'b': 1}` ; après `'a'` → `{'a': 2, 'b': 1}` ; après `'c'` → `{'a': 2, 'b': 1, 'c': 1}` ; après `'b'` → `{'a': 2, 'b': 2, 'c': 1}` ; après `'a'` → `{'a': 3, 'b': 2, 'c': 1}`. Résultat final : `{'a': 3, 'b': 2, 'c': 1}`."
         }
       ]
     },
@@ -925,6 +1133,30 @@
           "difficulte": 3,
           "enonce": "Pourquoi la recherche dichotomique est-elle beaucoup plus efficace que la recherche séquentielle sur une grande liste triée (par exemple $1$ million d'éléments) ? Donner un ordre de grandeur du nombre d'étapes pour chacune.",
           "correction": "La recherche séquentielle peut nécessiter jusqu'à $n=10^6$ comparaisons dans le pire cas. La recherche dichotomique divise l'intervalle de recherche par $2$ à chaque étape, donc nécessite au plus $\\log_2(10^6)\\approx20$ étapes : elle est extrêmement plus rapide sur de grandes listes triées."
+        },
+        {
+          "id": "na-006",
+          "numero": 6,
+          "titre": "Nombre d'étapes d'une dichotomie",
+          "difficulte": 1,
+          "enonce": "Combien d'étapes au maximum sont nécessaires pour rechercher un élément par dichotomie dans une liste triée de $1000$ éléments ?",
+          "correction": "La recherche dichotomique nécessite au plus $\\lceil\\log_2(n)\\rceil$ étapes pour une liste de $n$ éléments. Ici $\\log_2(1000)\\approx9,97$, donc au maximum $10$ étapes suffisent pour une liste de $1000$ éléments."
+        },
+        {
+          "id": "na-007",
+          "numero": 7,
+          "titre": "Tri par sélection (bis)",
+          "difficulte": 2,
+          "enonce": "Dérouler complètement le tri par sélection sur la liste $[9, 3, 7, 1, 5]$ (donner l'état de la liste après chaque étape).",
+          "correction": "Départ : $[9,3,7,1,5]$.\nÉtape $1$ (minimum du reste = $1$, à l'indice $3$) : on échange avec l'indice $0$ → $[1,3,7,9,5]$.\nÉtape $2$ (minimum du reste $[3,7,9,5]$ = $3$, déjà en place) : $[1,3,7,9,5]$.\nÉtape $3$ (minimum du reste $[7,9,5]$ = $5$, à l'indice $4$) : on échange avec l'indice $2$ → $[1,3,5,9,7]$.\nÉtape $4$ (minimum du reste $[9,7]$ = $7$, à l'indice $4$) : on échange avec l'indice $3$ → $[1,3,5,7,9]$.\nListe triée : $[1,3,5,7,9]$."
+        },
+        {
+          "id": "na-008",
+          "numero": 8,
+          "titre": "Implémenter et dérouler une recherche dichotomique",
+          "difficulte": 3,
+          "enonce": "1. Écrire une fonction Python `dichotomie(l, cible)` qui effectue une recherche dichotomique itérative (à l'aide d'une boucle `while`) dans une liste triée `l`, et renvoie l'indice de `cible` si elle est présente, ou `-1` sinon. 2. Dérouler l'exécution de `dichotomie([2, 4, 6, 8, 10, 12, 14], 10)` en indiquant les bornes `gauche`, `droite` et l'indice `milieu` testé à chaque étape.",
+          "correction": "1. def dichotomie(l, cible):\n    gauche = 0\n    droite = len(l) - 1\n    while gauche <= droite:\n        milieu = (gauche + droite) // 2\n        if l[milieu] == cible:\n            return milieu\n        elif l[milieu] < cible:\n            gauche = milieu + 1\n        else:\n            droite = milieu - 1\n    return -1\n\n2. Liste $[2,4,6,8,10,12,14]$ (indices $0$ à $6$), recherche de $10$ :\nÉtape $1$ : gauche$=0$, droite$=6$, milieu$=(0+6)//2=3$. $l[3]=8<10$, donc gauche$=4$.\nÉtape $2$ : gauche$=4$, droite$=6$, milieu$=(4+6)//2=5$. $l[5]=12>10$, donc droite$=4$.\nÉtape $3$ : gauche$=4$, droite$=4$, milieu$=(4+4)//2=4$. $l[4]=10=$ cible : la fonction renvoie $4$ (l'indice de $10$ dans la liste)."
         }
       ]
     },
@@ -980,6 +1212,30 @@
           "difficulte": 3,
           "enonce": "La fonction `mystere` de l'exercice « Identifier cas de base et cas récursif » calcule la suite de Fibonacci de façon récursive naïve. Expliquer pourquoi cette approche devient très lente pour des valeurs de `n` grandes (par exemple `n = 40`), et proposer une amélioration.",
           "correction": "Le problème vient du nombre d'appels récursifs : pour calculer `mystere(n)`, la fonction appelle `mystere(n-1)` et `mystere(n-2)`, qui eux-mêmes rappellent chacun deux fonctions, etc. Beaucoup de sous-calculs sont donc effectués plusieurs fois (par exemple, `mystere(2)` est recalculé un très grand nombre de fois pour un `n` élevé). Le nombre total d'appels croît de façon exponentielle avec `n` (environ $2^n$), ce qui rend le calcul extrêmement lent pour `n = 40`.\nUne amélioration possible est la mémoïsation : on stocke les résultats déjà calculés dans un dictionnaire, et avant de recalculer `mystere(k)`, on vérifie s'il n'a pas déjà été calculé. On peut aussi écrire une version itérative qui calcule les termes de proche en proche sans aucun appel récursif, avec une complexité linéaire en $n$."
+        },
+        {
+          "id": "re-006",
+          "numero": 6,
+          "titre": "Compte à rebours récursif",
+          "difficulte": 1,
+          "enonce": "Écrire une fonction récursive `compte_a_rebours(n)` qui affiche les entiers de `n` à `0` (un par ligne), avec un cas de base `n < 0` qui ne fait rien (arrête simplement la récursion).",
+          "correction": "def compte_a_rebours(n):\n    if n < 0:\n        return\n    print(n)\n    compte_a_rebours(n - 1)\n\nLe cas de base `n < 0` arrête la récursion sans rien afficher. Le cas récursif affiche `n` puis s'appelle sur `n - 1`, ce qui produit bien l'affichage décroissant jusqu'à $0$ inclus."
+        },
+        {
+          "id": "re-007",
+          "numero": 7,
+          "titre": "Somme récursive des chiffres d'un nombre",
+          "difficulte": 2,
+          "enonce": "Écrire une fonction récursive `somme_chiffres(n)` qui calcule la somme des chiffres d'un entier positif `n` (par exemple, `somme_chiffres(1234)` doit renvoyer $1+2+3+4=10$). Indication : `n % 10` donne le dernier chiffre de `n`, et `n // 10` donne `n` privé de son dernier chiffre. Dérouler sur `n = 123`.",
+          "correction": "def somme_chiffres(n):\n    if n < 10:\n        return n\n    return n % 10 + somme_chiffres(n // 10)\n\nCas de base : `n < 10` (un seul chiffre), qui renvoie directement `n`. Cas récursif : on ajoute le dernier chiffre à la somme récursive du nombre privé de ce chiffre.\nDéroulé sur $123$ : `somme_chiffres(123)` $=3+$`somme_chiffres(12)`. `somme_chiffres(12)` $=2+$`somme_chiffres(1)`. `somme_chiffres(1)=1$ (cas de base, $1<10$). En remontant : `somme_chiffres(12)`$=2+1=3$, `somme_chiffres(123)`$=3+3=6$. On vérifie : $1+2+3=6$ ✓."
+        },
+        {
+          "id": "re-008",
+          "numero": 8,
+          "titre": "Récursion classique et récursion à accumulateur",
+          "difficulte": 3,
+          "enonce": "On donne deux versions de la fonction factorielle.\n\nVersion A :\ndef factorielle_a(n):\n    if n == 0:\n        return 1\n    return n * factorielle_a(n - 1)\n\nVersion B (avec un accumulateur) :\ndef factorielle_b(n, acc=1):\n    if n == 0:\n        return acc\n    return factorielle_b(n - 1, n * acc)\n\n1. Dérouler `factorielle_a(3)` en détaillant à quel moment les multiplications sont effectuées. 2. Dérouler `factorielle_b(3)` de la même façon. 3. Quelle différence essentielle observe-t-on entre les deux déroulés concernant le moment où les multiplications sont effectuées ?",
+          "correction": "1. `factorielle_a(3)` $=3\\times$`factorielle_a(2)`, qui attend le résultat de `factorielle_a(2)` $=2\\times$`factorielle_a(1)`, qui attend `factorielle_a(1)`$=1\\times$`factorielle_a(0)`, qui attend `factorielle_a(0)=1$ (cas de base). Les multiplications restent « en attente » pendant la descente, et ne s'effectuent qu'en remontant la pile d'appels : `factorielle_a(1)`$=1\\times1=1$, `factorielle_a(2)`$=2\\times1=2$, `factorielle_a(3)`$=3\\times2=6$.\n2. `factorielle_b(3)` (soit `factorielle_b(3, 1)`) appelle `factorielle_b(2, 3\\times1{=}3)`, qui appelle `factorielle_b(1, 2\\times3{=}6)`, qui appelle `factorielle_b(0, 1\\times6{=}6)`. Le cas de base `n == 0` est atteint : la fonction renvoie directement `acc`$=6$, sans aucune multiplication supplémentaire en remontant.\n3. Dans la version A, les multiplications s'accumulent en attente pendant la descente et ne sont réalisées qu'après avoir atteint le cas de base, en remontant la pile. Dans la version B, chaque multiplication est effectuée immédiatement (avant l'appel suivant), si bien que le résultat est déjà entièrement calculé dès que le cas de base est atteint : il suffit de le renvoyer tel quel. Cette seconde forme, dite récursion terminale (l'appel récursif est la toute dernière opération), permet dans certains langages une optimisation mémoire qui évite d'empiler tous les appels — ce n'est cependant pas le cas de Python, qui ne l'optimise pas nativement."
         }
       ]
     },
@@ -1114,6 +1370,30 @@
           "difficulte": 3,
           "enonce": "Un échantillon organique a une activité $4$ fois plus faible que celle d'un organisme vivant de référence. Sachant que la demi-vie du carbone 14 est $t_{1/2}=5730\\text{ ans}$, déterminer l'âge de l'échantillon.",
           "correction": "Une activité divisée par $4=2^2$ correspond à $2$ demi-vies écoulées.\nÂge $=2\\times t_{1/2}=2\\times5730=11460$ ans."
+        },
+        {
+          "id": "ra-006",
+          "numero": 6,
+          "titre": "Désintégration bêta-moins du carbone 14",
+          "difficulte": 1,
+          "enonce": "Le noyau de carbone 14 ($^{14}_6C$) est radioactif et se désintègre par émission bêta-moins ($^0_{-1}e$). Écrire l'équation de désintégration et identifier le noyau fils.",
+          "correction": "Conservation du nombre de nucléons : $14=A+0$, donc $A=14$. Conservation du numéro atomique : $6=Z+(-1)$, donc $Z=7$ (azote). Équation : $^{14}_6C \\rightarrow \\,^{14}_7N + \\,^0_{-1}e$."
+        },
+        {
+          "id": "ra-007",
+          "numero": 7,
+          "titre": "Nombre de noyaux restants après une durée donnée",
+          "difficulte": 2,
+          "enonce": "Un échantillon de plutonium 239 a une constante radioactive $\\lambda=2,88\\times10^{-5}\\text{ an}^{-1}$ et contient initialement $N_0=5\\times10^{20}$ noyaux. Calculer le nombre de noyaux restants après $1000$ ans.",
+          "correction": "D'après la loi de décroissance radioactive, $N(t)=N_0e^{-\\lambda t}$. $\\lambda t=2,88\\times10^{-5}\\times1000=0,0288$. $e^{-0,0288}\\approx0,9716$.\n$N(1000)\\approx5\\times10^{20}\\times0,9716\\approx4,86\\times10^{20}$ noyaux : sur $1000$ ans, à peine $2,8\\%$ des noyaux se sont désintégrés, cohérent avec une demi-vie très longue pour ce λ."
+        },
+        {
+          "id": "ra-008",
+          "numero": 8,
+          "titre": "Datation au carbone 14 par l'activité",
+          "difficulte": 3,
+          "enonce": "On souhaite dater un échantillon de bois ancien à l'aide du carbone 14, de demi-vie $t_{1/2}=5730\\text{ ans}$. L'activité mesurée de l'échantillon est $A=3,5\\text{ Bq}$, contre $A_0=14\\text{ Bq}$ pour un échantillon de bois vivant de même masse. 1. Calculer la constante radioactive $\\lambda$ du carbone 14. 2. En utilisant $A=A_0e^{-\\lambda t}$ (l'activité décroît de la même façon que le nombre de noyaux), déterminer l'âge $t$ de l'échantillon. 3. Vérifier ce résultat en exprimant $t$ comme un nombre entier de demi-vies.",
+          "correction": "1. $\\lambda=\\dfrac{\\ln2}{t_{1/2}}=\\dfrac{0,693}{5730}\\approx1,21\\times10^{-4}\\text{ an}^{-1}$.\n2. $\\dfrac{A}{A_0}=e^{-\\lambda t}$, donc $\\dfrac{3,5}{14}=0,25=e^{-\\lambda t}$. En passant au logarithme : $\\ln(0,25)=-\\lambda t$, donc $t=\\dfrac{-\\ln(0,25)}{\\lambda}=\\dfrac{\\ln4}{\\lambda}=\\dfrac{1,386}{1,21\\times10^{-4}}\\approx11\\,460$ ans.\n3. $0,25=\\dfrac14=\\left(\\dfrac12\\right)^2$ correspond exactement à $2$ demi-vies écoulées : $t=2\\times5730=11\\,460$ ans, ce qui confirme le résultat de la question 2."
         }
       ]
     },
@@ -1169,6 +1449,30 @@
           "difficulte": 3,
           "enonce": "Un composé de formule brute $C_3H_6O$ ne présente aucune bande large vers $3300\\text{ cm}^{-1}$ en IR, mais une bande fine et intense vers $1715\\text{ cm}^{-1}$. Son spectre RMN ne présente qu'un seul signal (singulet). Proposer une formule semi-développée compatible et justifier.",
           "correction": "L'absence de bande large vers $3300\\text{ cm}^{-1}$ écarte la présence d'un groupe $O-H$ (donc pas d'alcool ni d'acide carboxylique). La bande fine à $1715\\text{ cm}^{-1}$ indique un groupe $C=O$ de cétone (puisqu'il n'y a pas de $O-H$ associé pour un acide). Un seul signal RMN signifie que tous les protons sont équivalents.\nLa propanone (acétone) $CH_3-CO-CH_3$ convient parfaitement : ses $6$ protons sont tous équivalents (un seul singulet), elle possède un groupe $C=O$ de cétone, et sa formule brute est bien $C_3H_6O$."
+        },
+        {
+          "id": "sp-006",
+          "numero": 6,
+          "titre": "Absence de groupe O-H en IR",
+          "difficulte": 1,
+          "enonce": "Un spectre IR ne présente aucune bande large entre $2500$ et $3550\\text{ cm}^{-1}$, mais une bande fine et intense vers $1730\\text{ cm}^{-1}$. La molécule contient-elle un groupe $O-H$ ? Justifier, et proposer une ou plusieurs familles de composés cohérentes avec la bande à $1730\\text{ cm}^{-1}$.",
+          "correction": "L'absence de bande large dans la zone $2500$–$3550\\text{ cm}^{-1}$ indique l'absence de groupe $O-H$ (donc ni alcool, ni acide carboxylique). La bande fine et intense vers $1730\\text{ cm}^{-1}$ (zone $C=O$) indique un groupe carbonyle sans $O-H$ associé : la molécule appartient donc probablement à la famille des cétones, des aldéhydes ou des esters (mais pas des acides carboxyliques, qui présenteraient la bande large caractéristique)."
+        },
+        {
+          "id": "sp-007",
+          "numero": 7,
+          "titre": "Nombre de signaux RMN du propane",
+          "difficulte": 2,
+          "enonce": "Le propane a pour formule $CH_3-CH_2-CH_3$. Combien de groupes de protons équivalents (donc de signaux en RMN) possède-t-il ? Justifier en identifiant les groupes équivalents par symétrie.",
+          "correction": "La molécule de propane est symétrique : les deux groupes $CH_3$ situés aux extrémités sont équivalents entre eux. Il y a donc $2$ groupes de protons équivalents : les $6$ protons des deux $CH_3$ (équivalents entre eux) d'une part, et les $2$ protons du $CH_2$ central d'autre part. Le spectre RMN du propane présente donc $2$ signaux."
+        },
+        {
+          "id": "sp-008",
+          "numero": 8,
+          "titre": "Distinguer deux isomères par RMN",
+          "difficulte": 3,
+          "enonce": "On hésite entre deux structures possibles pour un composé de formule brute $C_3H_6O$ : la propanone $CH_3-CO-CH_3$ et le propanal $CH_3-CH_2-CHO$. Le spectre RMN du composé étudié présente $3$ signaux distincts. 1. Combien de groupes de protons équivalents possède la propanone ? Et le propanal ? 2. En déduire laquelle de ces deux structures correspond au composé étudié. 3. Cette structure devrait-elle présenter une bande IR large vers $2500$–$3200\\text{ cm}^{-1}$ ? Justifier.",
+          "correction": "1. Dans la propanone $CH_3-CO-CH_3$, les deux groupes $CH_3$ sont équivalents par symétrie (molécule symétrique de part et d'autre du $C=O$) : il n'y a qu'$1$ seul signal (les $6$ protons sont tous équivalents). Dans le propanal $CH_3-CH_2-CHO$, les trois groupes de protons ($CH_3$, $CH_2$, $CHO$) sont tous différents les uns des autres : il y a $3$ signaux.\n2. Le composé présentant $3$ signaux en RMN correspond donc au propanal.\n3. Non : le propanal ne possède pas de groupe $O-H$ (ce n'est ni un alcool ni un acide carboxylique), donc pas de bande large caractéristique dans cette zone. Il devrait en revanche présenter une bande fine et intense vers $1720$–$1740\\text{ cm}^{-1}$, correspondant au groupe $C=O$ de l'aldéhyde."
         }
       ]
     },
@@ -1224,6 +1528,30 @@
           "difficulte": 3,
           "enonce": "En utilisant `Notes(id_eleve, matiere, valeur)`, écrire une requête SQL qui calcule la moyenne des notes de chaque élève.",
           "correction": "SELECT id_eleve, AVG(valeur)\nFROM Notes\nGROUP BY id_eleve;\n\n`GROUP BY id_eleve` regroupe toutes les lignes ayant le même `id_eleve` avant d'appliquer la fonction d'agrégation `AVG`, qui calcule alors la moyenne des notes pour chaque groupe (donc pour chaque élève)."
+        },
+        {
+          "id": "bd-006",
+          "numero": 6,
+          "titre": "Requête avec tri (ORDER BY)",
+          "difficulte": 1,
+          "enonce": "En reprenant `Eleves(id_eleve, nom, prenom, classe)`, écrire une requête SQL qui affiche tous les élèves de la table, triés par nom dans l'ordre alphabétique.",
+          "correction": "SELECT * FROM Eleves ORDER BY nom;\n\nLa clause `ORDER BY nom` trie les lignes du résultat selon la colonne `nom`, par défaut dans l'ordre croissant (alphabétique)."
+        },
+        {
+          "id": "bd-007",
+          "numero": 7,
+          "titre": "Requête avec condition numérique",
+          "difficulte": 2,
+          "enonce": "En reprenant `Notes(id_note, id_eleve, matiere, valeur)`, écrire une requête SQL qui affiche les identifiants (`id_eleve`) des élèves ayant obtenu une note strictement inférieure à $10$ en mathématiques.",
+          "correction": "SELECT id_eleve FROM Notes WHERE matiere = 'Mathématiques' AND valeur < 10;\n\nLa clause `WHERE` combine deux conditions avec `AND` : seules les lignes vérifiant à la fois `matiere = 'Mathématiques'` et `valeur < 10` sont conservées."
+        },
+        {
+          "id": "bd-008",
+          "numero": 8,
+          "titre": "Jointure, GROUP BY et HAVING combinés",
+          "difficulte": 3,
+          "enonce": "En reprenant `Eleves(id_eleve, nom, prenom, classe)` et `Notes(id_eleve, matiere, valeur)`, écrire une requête SQL qui affiche le nom des élèves ainsi que leur moyenne générale (toutes matières confondues), mais uniquement pour les élèves dont la moyenne est supérieure ou égale à $14$. Expliquer le rôle de chaque clause utilisée.",
+          "correction": "SELECT Eleves.nom, AVG(Notes.valeur) AS moyenne\nFROM Eleves\nJOIN Notes ON Eleves.id_eleve = Notes.id_eleve\nGROUP BY Eleves.id_eleve\nHAVING AVG(Notes.valeur) >= 14;\n\n`JOIN ... ON` associe chaque note à l'élève correspondant, en s'appuyant sur la clé étrangère `id_eleve`. `GROUP BY Eleves.id_eleve` regroupe toutes les notes d'un même élève, ce qui permet à `AVG(Notes.valeur)` de calculer sa moyenne. Enfin, `HAVING` filtre les groupes déjà agrégés (contrairement à `WHERE`, qui filtrerait les lignes avant l'agrégation) : c'est la clause à utiliser ici pour ne garder que les élèves dont la moyenne calculée est $\\geqslant14$."
         }
       ]
     },
@@ -1358,6 +1686,30 @@
           "difficulte": 3,
           "enonce": "Un mobile a une vitesse initiale $v_0=10\\text{ m/s}$ et une accélération $a=3\\text{ m/s}^2$. Après avoir parcouru $\\Delta x=20\\text{ m}$, quelle est sa vitesse ?",
           "correction": "On utilise $v^2=v_0^2+2a\\Delta x=10^2+2\\times3\\times20=100+120=220$.\n$v=\\sqrt{220}\\approx14,8\\text{ m/s}$."
+        },
+        {
+          "id": "cn-006",
+          "numero": 6,
+          "titre": "Conversion d'unités de vitesse",
+          "difficulte": 1,
+          "enonce": "Un TGV roule à $320\\text{ km/h}$. Exprimer cette vitesse en m/s.",
+          "correction": "$320\\text{ km/h}=\\dfrac{320\\times1000}{3600}\\approx88,9\\text{ m/s}$."
+        },
+        {
+          "id": "cn-007",
+          "numero": 7,
+          "titre": "Vitesse moyenne sur un trajet à deux allures",
+          "difficulte": 2,
+          "enonce": "Un randonneur parcourt $8\\text{ km}$ à $4\\text{ km/h}$, puis $6\\text{ km}$ à $3\\text{ km/h}$. Calculer la durée totale du trajet, puis sa vitesse moyenne sur l'ensemble du parcours.",
+          "correction": "Durée du premier tronçon : $t_1=\\dfrac{8}{4}=2\\text{ h}$. Durée du second tronçon : $t_2=\\dfrac{6}{3}=2\\text{ h}$. Durée totale : $t=t_1+t_2=4\\text{ h}$.\nLa vitesse moyenne se calcule sur la distance totale et la durée totale (ce n'est pas la moyenne des deux vitesses) : $d_{totale}=8+6=14\\text{ km}$, donc $v_{moy}=\\dfrac{14}{4}=3,5\\text{ km/h}$."
+        },
+        {
+          "id": "cn-008",
+          "numero": 8,
+          "titre": "Freinage et distance de sécurité",
+          "difficulte": 3,
+          "enonce": "Une voiture roule à $v_0=20\\text{ m/s}$ lorsque le conducteur freine avec une décélération constante $a=-4\\text{ m/s}^2$. 1. Calculer le temps nécessaire pour s'arrêter. 2. Calculer la distance de freinage. 3. Un obstacle se trouve à $45\\text{ m}$ au moment où le freinage commence : la voiture parvient-elle à s'arrêter avant l'obstacle ? 4. Avec la même décélération, quelle vitesse initiale maximale la voiture pourrait-elle avoir pour s'arrêter tout juste à $45\\text{ m}$ ?",
+          "correction": "1. $t=\\dfrac{v_0}{|a|}=\\dfrac{20}{4}=5\\text{ s}$.\n2. $\\Delta x=\\dfrac{v_0^2}{2|a|}=\\dfrac{20^2}{2\\times4}=\\dfrac{400}{8}=50\\text{ m}$.\n3. Comme $50\\text{ m}>45\\text{ m}$, la voiture ne s'arrête pas à temps : elle percute l'obstacle avant d'avoir pu s'immobiliser.\n4. On cherche $v_{0,max}$ tel que $\\dfrac{v_{0,max}^2}{2\\times4}=45$, soit $v_{0,max}^2=2\\times4\\times45=360$, donc $v_{0,max}=\\sqrt{360}\\approx19,0\\text{ m/s}$."
         }
       ]
     },
@@ -1413,6 +1765,30 @@
           "difficulte": 3,
           "enonce": "On mélange $0,5\\text{ mol}$ de $A$ et $0,5\\text{ mol}$ de $B$ pour la réaction $A+2B\\rightarrow C$. Déterminer le réactif limitant, l'avancement maximal, puis la composition finale du mélange.",
           "correction": "Pour consommer tout $A$ ($0,5\\text{ mol}$), il faudrait $2\\times0,5=1\\text{ mol}$ de $B$, mais on n'en a que $0,5\\text{ mol}$ : c'est donc $B$ le réactif limitant.\n$x_{max}$ vérifie $n_0(B)-2x_{max}=0$, donc $x_{max}=\\dfrac{0,5}{2}=0,25\\text{ mol}$.\nComposition finale : $n_f(A)=0,5-0,25=0,25\\text{ mol}$, $n_f(B)=0,5-2\\times0,25=0\\text{ mol}$, $n_f(C)=0,25\\text{ mol}$."
+        },
+        {
+          "id": "av-006",
+          "numero": 6,
+          "titre": "Quantité de matière à partir d'une concentration",
+          "difficulte": 1,
+          "enonce": "On dispose de $V=50\\text{ mL}$ d'une solution de concentration $C=0,4\\text{ mol/L}$ en réactif $A$. Calculer la quantité de matière initiale $n_0(A)$.",
+          "correction": "$n_0(A)=C\\times V=0,4\\times0,050=0,02\\text{ mol}$ (avec $V=50\\text{ mL}=0,050\\text{ L}$)."
+        },
+        {
+          "id": "av-007",
+          "numero": 7,
+          "titre": "Réactif limitant avec coefficients différents (bis)",
+          "difficulte": 2,
+          "enonce": "Réaction $A+3B\\rightarrow2C$. $n_0(A)=0,6\\text{ mol}$, $n_0(B)=1,5\\text{ mol}$. 1. Identifier le réactif limitant. 2. Calculer la quantité de matière de $A$ (le réactif en excès) restant à l'état final.",
+          "correction": "1. Pour consommer tout $A$ ($0,6\\text{ mol}$), il faudrait $3\\times0,6=1,8\\text{ mol}$ de $B$. Or on ne dispose que de $1,5\\text{ mol}$ de $B$, ce qui est insuffisant : c'est donc $B$ le réactif limitant.\n2. L'avancement maximal vérifie $n_0(B)-3x_{max}=0$, donc $x_{max}=\\dfrac{1,5}{3}=0,5\\text{ mol}$. Il reste alors $n_f(A)=n_0(A)-x_{max}=0,6-0,5=0,1\\text{ mol}$ de $A$ en excès."
+        },
+        {
+          "id": "av-008",
+          "numero": 8,
+          "titre": "Du fer à l'acide chlorhydrique : volume de gaz dégagé",
+          "difficulte": 3,
+          "enonce": "On fait réagir du fer en poudre avec de l'acide chlorhydrique en excès, selon l'équation $Fe+2HCl\\rightarrow FeCl_2+H_2$. On introduit $m=5,6\\text{ g}$ de fer ($M(Fe)=56\\text{ g/mol}$). 1. Calculer la quantité de matière initiale de fer $n_0(Fe)$. 2. Le fer étant le réactif limitant (l'acide étant en excès), calculer l'avancement maximal $x_{max}$. 3. Calculer la quantité de matière de dihydrogène $H_2$ formé. 4. Sachant que le volume molaire des gaz dans les conditions de l'expérience est $V_m=24\\text{ L/mol}$, calculer le volume de dihydrogène dégagé.",
+          "correction": "1. $n_0(Fe)=\\dfrac{m}{M}=\\dfrac{5,6}{56}=0,1\\text{ mol}$.\n2. Le fer ayant un coefficient stœchiométrique de $1$ et étant limitant, $x_{max}=n_0(Fe)=0,1\\text{ mol}$.\n3. Le dihydrogène a également un coefficient $1$ dans l'équation, donc $n(H_2)=x_{max}=0,1\\text{ mol}$.\n4. $V(H_2)=n(H_2)\\times V_m=0,1\\times24=2,4\\text{ L}$."
         }
       ]
     },
@@ -1468,6 +1844,30 @@
           "difficulte": 3,
           "enonce": "Le code suivant boucle indéfiniment. Expliquer pourquoi, puis proposer une correction.\nn = 10\nwhile n > 0:\n    print(n)",
           "correction": "La variable `n` n'est jamais modifiée à l'intérieur de la boucle : la condition `n > 0` reste donc toujours vraie, et la boucle ne se termine jamais.\nCorrection : il faut faire décroître `n` à chaque itération, par exemple :\nn = 10\nwhile n > 0:\n    print(n)\n    n = n - 1"
+        },
+        {
+          "id": "bc-006",
+          "numero": 6,
+          "titre": "Lecture d'une condition avec elif",
+          "difficulte": 1,
+          "enonce": "Que fait ce code pour `n = 0` ?\n\nn = 0\nif n > 0:\n    print(\"positif\")\nelif n < 0:\n    print(\"négatif\")\nelse:\n    print(\"nul\")",
+          "correction": "Pour $n=0$ : la condition `n > 0` est fausse, la condition `n < 0` est également fausse. Python exécute donc le bloc `else`, et le programme affiche `\"nul\"`."
+        },
+        {
+          "id": "bc-007",
+          "numero": 7,
+          "titre": "Somme conditionnelle avec une boucle for",
+          "difficulte": 2,
+          "enonce": "Écrire une fonction `somme_positifs(l)` qui calcule la somme des éléments strictement positifs d'une liste `l`. Dérouler sur `l = [3, -2, 5, -1, 4]`.",
+          "correction": "def somme_positifs(l):\n    s = 0\n    for x in l:\n        if x > 0:\n            s = s + x\n    return s\n\nDéroulé sur $[3,-2,5,-1,4]$ : $x=3>0$, $s=3$ ; $x=-2$, ignoré ; $x=5>0$, $s=3+5=8$ ; $x=-1$, ignoré ; $x=4>0$, $s=8+4=12$. Résultat : $12$."
+        },
+        {
+          "id": "bc-008",
+          "numero": 8,
+          "titre": "Boucle while : premier rang dépassant un seuil",
+          "difficulte": 3,
+          "enonce": "Une suite est définie par $u_0=1$ et $u_{n+1}=u_n\\times1{,}5$. On souhaite déterminer, à l'aide d'une boucle `while`, le plus petit rang $n$ pour lequel $u_n$ dépasse $100$. 1. Écrire une fonction Python `premier_rang(seuil)` qui renvoie ce rang $n$. 2. Dérouler l'exécution de `premier_rang(100)` en donnant la valeur de `u` à chaque tour de boucle, jusqu'à l'arrêt.",
+          "correction": "1. def premier_rang(seuil):\n    u = 1\n    n = 0\n    while u <= seuil:\n        u = u * 1.5\n        n = n + 1\n    return n\n\n2. Évolution de `u` à chaque tour (on multiplie par $1,5$ tant que `u` $\\leqslant100$) : $n{=}0${:} $u{=}1$ ; $n{=}1${:} $u{=}1,5$ ; $n{=}2${:} $u{=}2,25$ ; $n{=}3${:} $u{=}3,375$ ; $n{=}4${:} $u\\approx5,06$ ; $n{=}5${:} $u\\approx7,59$ ; $n{=}6${:} $u\\approx11,39$ ; $n{=}7${:} $u\\approx17,09$ ; $n{=}8${:} $u\\approx25,63$ ; $n{=}9${:} $u\\approx38,44$ ; $n{=}10${:} $u\\approx57,67$ ; $n{=}11${:} $u\\approx86,50$ ; $n{=}12${:} $u\\approx129,75$.\nÀ $n=11$ ($u\\approx86,50\\leqslant100$), la condition de la boucle est encore vraie : un dernier tour a lieu et $u$ devient $\\approx129,75$ ($n=12$). Cette fois $u>100$ : la boucle s'arrête et la fonction renvoie $n=12$."
         }
       ]
     },
@@ -1578,6 +1978,30 @@
           "difficulte": 3,
           "enonce": "La distance moyenne Terre-Lune est d'environ $384\\,000\\text{ km}$. Calculer la durée mise par la lumière pour parcourir cette distance.",
           "correction": "$d=384\\,000\\text{ km}=384\\times10^6\\text{ m}$.\n$t=\\dfrac{d}{c}=\\dfrac{384\\times10^6}{3\\times10^8}\\approx1,28\\text{ s}$."
+        },
+        {
+          "id": "lu-006",
+          "numero": 6,
+          "titre": "Durée de trajet de la lumière",
+          "difficulte": 1,
+          "enonce": "La lumière parcourt une distance de $3000\\text{ km}$ dans l'air. Calculer la durée de ce trajet.",
+          "correction": "$d=3000\\text{ km}=3\\times10^6\\text{ m}$. $t=\\dfrac{d}{c}=\\dfrac{3\\times10^6}{3\\times10^8}=0,01\\text{ s}=10\\text{ ms}$."
+        },
+        {
+          "id": "lu-007",
+          "numero": 7,
+          "titre": "Ombres portées proportionnelles",
+          "difficulte": 2,
+          "enonce": "À midi, un poteau de hauteur $3\\text{ m}$ projette une ombre portée de $2\\text{ m}$ au sol. Au même moment, un arbre proche projette une ombre portée de $5\\text{ m}$. Les rayons du Soleil étant considérés parallèles, quelle est la hauteur de l'arbre ?",
+          "correction": "Les rayons du Soleil étant parallèles au même instant, le rapport entre la hauteur d'un objet et la longueur de son ombre portée est le même pour tous les objets : $\\dfrac{h_{arbre}}{ombre_{arbre}}=\\dfrac{h_{poteau}}{ombre_{poteau}}$.\nDonc $h_{arbre}=5\\times\\dfrac{3}{2}=7,5\\text{ m}$."
+        },
+        {
+          "id": "lu-008",
+          "numero": 8,
+          "titre": "Éclipse de Soleil et durée de propagation",
+          "difficulte": 3,
+          "enonce": "La distance Terre-Soleil est d'environ $150$ millions de km, et la distance Terre-Lune d'environ $384\\,000\\text{ km}$. 1. Calculer la durée mise par la lumière du Soleil pour atteindre directement la Terre. 2. Lors d'une éclipse totale de Soleil, la Lune se trouve exactement alignée entre la Terre et le Soleil. Calculer alors la distance parcourue par la lumière du Soleil pour atteindre la Lune. 3. En déduire la durée totale entre l'émission de la lumière par le Soleil et sa réception sur Terre après réflexion sur la Lune (réflexion supposée instantanée), et comparer au résultat de la question 1.",
+          "correction": "1. $d=150\\times10^9\\text{ m}$. $t=\\dfrac{d}{c}=\\dfrac{150\\times10^9}{3\\times10^8}=500\\text{ s}\\approx8\\text{ min }20\\text{ s}$.\n2. Pendant l'éclipse, la Lune est alignée entre la Terre et le Soleil, donc la distance Soleil-Lune est $d_{SL}=150\\,000\\,000-384\\,000=149\\,616\\,000\\text{ km}=149,616\\times10^9\\text{ m}$.\n3. Trajet Soleil→Lune : $t_1=\\dfrac{149,616\\times10^9}{3\\times10^8}\\approx498,7\\text{ s}$. Trajet Lune→Terre : $t_2=\\dfrac{384\\times10^6}{3\\times10^8}\\approx1,28\\text{ s}$. Durée totale : $t_1+t_2\\approx498,7+1,3=500\\text{ s}$. On retrouve exactement la même durée qu'à la question 1 : c'est logique, puisque pendant l'éclipse la Lune se trouve précisément sur le trajet direct Soleil-Terre, la distance totale parcourue par la lumière est donc la même."
         }
       ]
     },
@@ -1633,6 +2057,30 @@
           "difficulte": 3,
           "enonce": "Lors de la combustion du carbone dans le dioxygène, on obtient du dioxyde de carbone. Identifier les réactifs et le produit de cette transformation, puis proposer un test permettant de vérifier la nature du gaz produit.",
           "correction": "Réactifs : le carbone et le dioxygène.\nProduit : le dioxyde de carbone.\nTest : faire barboter le gaz obtenu dans de l'eau de chaux ; si elle se trouble, cela confirme qu'il s'agit bien de dioxyde de carbone."
+        },
+        {
+          "id": "mc-006",
+          "numero": 6,
+          "titre": "Solidification de l'eau",
+          "difficulte": 1,
+          "enonce": "À pression atmosphérique normale, à quelle température l'eau pure se solidifie-t-elle ? Que se passe-t-il pour la température si on continue à refroidir une fois la solidification terminée ?",
+          "correction": "L'eau pure se solidifie à $0°C$ sous pression atmosphérique normale. Une fois la solidification terminée (toute l'eau devenue glace), la température de la glace continue de diminuer si on poursuit le refroidissement — le palier à $0°C$ ne dure que le temps du changement d'état lui-même."
+        },
+        {
+          "id": "mc-007",
+          "numero": 7,
+          "titre": "Miscibilité de deux liquides",
+          "difficulte": 2,
+          "enonce": "On mélange de l'eau et de l'alcool (éthanol) : obtient-on un mélange homogène ou hétérogène ? Et si on mélange de l'eau et de l'huile ?",
+          "correction": "Eau et éthanol sont miscibles : leur mélange est homogène, on ne distingue plus les deux liquides à l'œil nu.\nEau et huile ne sont pas miscibles : leur mélange est hétérogène, on observe deux phases distinctes (l'huile flotte à la surface de l'eau)."
+        },
+        {
+          "id": "mc-008",
+          "numero": 8,
+          "titre": "Identifier un liquide par sa température d'ébullition",
+          "difficulte": 3,
+          "enonce": "On dispose d'un liquide inconnu et incolore. On mesure sa température d'ébullition sous pression atmosphérique normale : elle reste constante à $78°C$ pendant toute la durée de l'ébullition. 1. Que peut-on en déduire quant à la nature (corps pur ou mélange) de ce liquide ? Justifier. 2. Sachant que la température d'ébullition de l'éthanol pur est de $78°C$, quelle est l'identité probable de ce liquide ? 3. Si ce liquide avait été un mélange eau-éthanol, la température d'ébullition serait-elle restée constante pendant tout le chauffage ? Justifier.",
+          "correction": "1. Un corps pur bout à une température constante et caractéristique tant que le changement d'état n'est pas terminé. Comme la température reste ici constante à $78°C$ pendant toute l'ébullition, il s'agit d'un corps pur (un mélange n'a généralement pas de température d'ébullition constante : elle évolue au cours du chauffage).\n2. Cette température de $78°C$ correspond exactement à celle de l'éthanol pur : il s'agit très probablement d'éthanol.\n3. Non : pour un mélange comme eau-éthanol, la température d'ébullition évolue en général au cours du chauffage (elle n'est pas constante), car la composition du mélange restant se modifie progressivement à mesure que le constituant le plus volatil (l'éthanol) s'évapore préférentiellement."
         }
       ]
     }

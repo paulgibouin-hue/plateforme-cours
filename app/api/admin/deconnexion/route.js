@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-
-const NOM_COOKIE = "admin_session";
+import { NOM_COOKIE } from "@/lib/adminAuth";
 
 export async function POST() {
   const reponse = NextResponse.json({ ok: true });

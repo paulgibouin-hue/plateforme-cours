@@ -1,11 +1,9 @@
 import { NextResponse } from "next/server";
 import { creerDevoir, supprimerDevoir } from "@/lib/devoirs";
-
-const NOM_COOKIE = "admin_session";
+import { NOM_COOKIE, estJetonValide } from "@/lib/adminAuth";
 
 function estAutorise(request) {
-  const cookie = request.cookies.get(NOM_COOKIE)?.value;
-  return Boolean(cookie) && cookie === process.env.ADMIN_PASSWORD;
+  return estJetonValide(request.cookies.get(NOM_COOKIE)?.value);
 }
 
 export async function POST(request) {

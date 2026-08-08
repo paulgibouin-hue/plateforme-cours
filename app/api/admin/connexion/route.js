@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
+import { NOM_COOKIE, jetonAdmin } from "@/lib/adminAuth";
 
-const NOM_COOKIE = "admin_session";
 const DUREE_COOKIE = 60 * 60 * 8; // 8 heures
 
 export async function POST(request) {
@@ -29,7 +29,7 @@ export async function POST(request) {
   }
 
   const reponse = NextResponse.json({ ok: true });
-  reponse.cookies.set(NOM_COOKIE, motDePasse, {
+  reponse.cookies.set(NOM_COOKIE, jetonAdmin(motDePasse), {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",

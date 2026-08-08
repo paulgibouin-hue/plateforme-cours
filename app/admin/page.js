@@ -9,8 +9,7 @@ import DeconnexionAdmin from "@/components/admin/DeconnexionAdmin";
 import GestionCodes from "@/components/admin/GestionCodes";
 import SuiviEleves from "@/components/admin/SuiviEleves";
 import CahierTexteAdmin from "@/components/admin/CahierTexteAdmin";
-
-const NOM_COOKIE = "admin_session";
+import { NOM_COOKIE, estJetonValide } from "@/lib/adminAuth";
 
 export const metadata = {
   title: "Administration",
@@ -20,9 +19,7 @@ export const metadata = {
 export default async function AdminPage() {
   const cookieStore = await cookies();
   const session = cookieStore.get(NOM_COOKIE)?.value;
-  const estAuthentifie =
-    Boolean(process.env.ADMIN_PASSWORD) &&
-    session === process.env.ADMIN_PASSWORD;
+  const estAuthentifie = estJetonValide(session);
 
   if (!estAuthentifie) {
     return (
